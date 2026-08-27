@@ -44,6 +44,16 @@ CSS = """
   blockquote cite{display:block;margin-top:8px;color:var(--fraco);font-size:12px;
                   font-style:normal}
   .duas{color:var(--ouro);font-size:12.5px;margin:-6px 0 12px 26px}
+  .pordentro{margin:12px 0 2px;padding-top:10px;border-top:1px dashed #24395c;
+             color:var(--fraco);font-size:12.5px}
+  .pordentro b{color:#9fadc0}
+  details.dentro>summary{cursor:pointer;color:#9fadc0;font-size:13px;padding:6px 0;
+             list-style:none}
+  details.dentro>summary::before{content:"·  ";color:var(--ouro)}
+  details.dentro>summary span{color:var(--fraco)}
+  ul.soltas{list-style:none;padding:0;margin:14px 0 0}
+  ul.soltas li{background:var(--cartao);border:1px solid var(--borda);border-radius:5px;
+             padding:11px 15px;margin:0 0 8px;font-size:13.5px}
   ul.falta{list-style:none;padding:0;margin:14px 0 0}
   ul.falta li{background:var(--cartao);border:1px dashed #33465f;border-radius:5px;
               padding:9px 14px;margin:0 0 7px;color:var(--falta);font-size:13.5px}
@@ -69,6 +79,19 @@ def main():
             print(f"ABORTADO: a aresta {de}→{para} cita degrau inexistente.", file=sys.stderr)
             return 1
 
+    for degrau, peca, feita, fonte, ref, cit in D.CONSTRUCAO:
+        if not cit.strip():
+            print(f"ABORTADO: a construção {peca} não tem citação.", file=sys.stderr)
+            return 1
+        if degrau is not None and degrau not in nos:
+            print(f"ABORTADO: a construção {peca} cita degrau inexistente "
+                  f"{degrau!r}.", file=sys.stderr)
+            return 1
+
+    dentro = {}
+    for degrau, peca, feita, fonte, ref, cit in D.CONSTRUCAO:
+        dentro.setdefault(degrau, []).append((peca, feita, fonte, ref, cit))
+
     entrada = {}
     for de, para, classe, fonte, ref, cit in D.ARESTAS:
         entrada.setdefault(para, []).append((de, classe, fonte, ref, cit))
@@ -91,10 +114,25 @@ def main():
                     f'<p class="duas">Duas testemunhas independentes, chegando de lados '
                     f'opostos da escada — uma construindo a máquina, a outra definindo-a.</p>')
             partes.append('</details>')
+        dd = "".join(
+            f'<details class="dentro"><summary>{html.escape(pc)} '
+            f'<span>&larr; {html.escape(ft)}</span></summary>'
+            f'<blockquote>\u201c{ct}\u201d<cite>{D.FONTES[fo]} · {html.escape(rf)}</cite>'
+            f'</blockquote></details>'
+            for pc, ft, fo, rf, ct in dentro.get(i, []))
+        if dd:
+            dd = ('<div class="pordentro"><b>por dentro</b> — peças da mesma camada, '
+                  'com a frase que sustenta cada uma:' + dd + '</div>')
         partes.append(
             f'<div class="degrau"><span class="nivel">nível {nivel}</span>'
             f'<div class="nome">{html.escape(nome)}</div>'
-            f'<div class="diz">{diz}</div></div>')
+            f'<div class="diz">{diz}</div>{dd}</div>')
+
+    soltas = "\n".join(
+        f'  <li><b>{html.escape(pc)}</b> &larr; {html.escape(ft)}'
+        f'<blockquote>\u201c{ct}\u201d<cite>{D.FONTES[fo]} · {html.escape(rf)}</cite>'
+        f'</blockquote></li>'
+        for pc, ft, fo, rf, ct in dentro.get(None, []))
 
     falta = "\n".join(
         f'  <li><b>{html.escape(a)}</b><span>{html.escape(f)}</span></li>'
@@ -116,7 +154,8 @@ def main():
 <b>cada seta abre a frase que a sustenta</b>, copiada do livro, com capítulo.</p>
 <p class="lede">Este mapa começa quase vazio de propósito. Ele só admite o que
 alguém <b>leu</b>: nada entra por plausibilidade, por consenso, nem porque um
-modelo escreveu. <b>{len(D.ARESTAS)} arestas lidas</b> contra
+modelo escreveu. <b>{len(D.ARESTAS)} arestas lidas</b> e
+<b>{len(D.CONSTRUCAO)} construções verificadas</b>, contra
 <b>{len(D.NAO_LIDO)} que se sabe existirem e ainda não foram abertas</b>, listadas
 no fim — porque mapa que esconde o que falta mente sobre o próprio tamanho.</p>
 
@@ -124,6 +163,14 @@ no fim — porque mapa que esconde o que falta mente sobre o próprio tamanho.</
 <div class="escada">
 {chr(10).join(reversed(partes))}
 </div>
+
+<h2>Verificado, ainda fora da escada</h2>
+<p class="nota">Estas {len(dentro.get(None, []))} construções passaram no portão da
+citação literal, mas o degrau em que elas pousam ainda não foi lido — então elas
+esperam aqui, à vista, em vez de entrar na escada por conveniência.</p>
+<ul class="soltas">
+{soltas}
+</ul>
 
 <h2>O que falta ler</h2>
 <p class="nota">Cada linha aqui é uma aresta que a bibliografia sustenta e que
@@ -140,8 +187,13 @@ os verbetes foram escritos por um modelo local e um deles afirma, no ar até
 hoje, que dois conjuntos com os mesmos elementos podem ser diferentes. É falso,
 e passou porque ninguém leu.</p>
 <p class="nota">Aqui a ordem se inverteu: o portão da leitura humana vem
-<b>antes</b> do conteúdo, e o preço é este mapa pequeno. A aposta é que seis
+<b>antes</b> do conteúdo, e o preço é este mapa pequeno. A aposta é que onze
 arestas que se pode conferir valem mais que sessenta que não.</p>
+<p class="nota">As arestas novas entram por um funil: um modelo local <b>propõe</b>
+candidatos, um portão confere a frase caractere a caractere contra o livro, e o
+que sobrevive só vira aresta depois de <b>julgamento humano</b>. Na primeira
+rodada: 48 propostos, 46 passaram no portão, 27 aceitos. O modelo pode achar;
+ele não pode afirmar.</p>
 
 <footer>
 <b>A escada de abstrações</b> — Mateus Alkimim · código <b>MIT</b>, conteúdo
