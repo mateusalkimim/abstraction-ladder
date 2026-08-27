@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A escada de abstrações — só o que foi lido</title>
+<style>
+  :root{ --fundo:#0a1424; --creme:#e8e2d6; --fraco:#5b6b86; --ouro:#c9a266;
+         --cartao:#0d1c30; --borda:#1e3050; --lido:#6fbf6a; --falta:#8a94a4; }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--fundo);color:var(--creme);
+       font-family:Inter,-apple-system,"Segoe UI",system-ui,sans-serif;
+       padding:44px 26px 60px;line-height:1.6}
+  .caixa{max-width:940px;margin:0 auto}
+  h1{font-family:Cormorant,Georgia,serif;font-weight:600;font-size:44px;margin:0 0 6px}
+  .lede{color:#b9c4d4;font-size:16px;max-width:740px;margin:0 0 4px}
+  .nota{color:var(--fraco);font-size:13.5px;max-width:740px;margin:12px 0 0}
+  h2{font-family:Cormorant,Georgia,serif;font-size:25px;margin:44px 0 10px;font-weight:600}
+  .escada{margin:22px 0 0}
+  .degrau{background:var(--cartao);border:1px solid var(--borda);border-radius:6px;
+          padding:14px 18px;margin:0}
+  .nome{font-family:Cormorant,Georgia,serif;font-size:22px;font-weight:600}
+  .nivel{color:var(--fraco);font-size:12px;float:right;font-variant-numeric:tabular-nums}
+  .diz{color:#9fadc0;font-size:13.5px;margin-top:4px}
+  details.seta{margin:0;padding:0 0 0 26px;border-left:2px solid var(--lido)}
+  details.seta>summary{cursor:pointer;color:var(--lido);font-size:13px;
+          padding:9px 0;list-style:none}
+  details.seta>summary::before{content:"▲  ";}
+  details.seta[open]>summary{color:var(--creme)}
+  blockquote{margin:2px 0 12px;padding:12px 16px;background:#132440;
+             border-left:3px solid var(--ouro);border-radius:0 5px 5px 0;
+             color:#cfd6e2;font-size:13.5px}
+  blockquote cite{display:block;margin-top:8px;color:var(--fraco);font-size:12px;
+                  font-style:normal}
+  .duas{color:var(--ouro);font-size:12.5px;margin:-6px 0 12px 26px}
+  ul.falta{list-style:none;padding:0;margin:14px 0 0}
+  ul.falta li{background:var(--cartao);border:1px dashed #33465f;border-radius:5px;
+              padding:9px 14px;margin:0 0 7px;color:var(--falta);font-size:13.5px}
+  ul.falta li b{color:#b9c4d4}
+  ul.falta li span{float:right;font-size:12px;color:var(--fraco)}
+  footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--borda);
+         color:var(--fraco);font-size:13px}
+  footer a{color:var(--ouro)}
+  code{background:#132440;padding:1px 6px;border-radius:3px;font-size:13px;color:var(--ouro)}
+</style>
+</head>
+<body>
+<div class="caixa">
+
+<h1>A escada de abstrações</h1>
+<p class="lede">Do relé à máquina de registradores, um degrau de cada vez — e
+<b>cada seta abre a frase que a sustenta</b>, copiada do livro, com capítulo.</p>
+<p class="lede">Este mapa começa quase vazio de propósito. Ele só admite o que
+alguém <b>leu</b>: nada entra por plausibilidade, por consenso, nem porque um
+modelo escreveu. <b>6 arestas lidas</b> contra
+<b>10 que se sabe existirem e ainda não foram abertas</b>, listadas
+no fim — porque mapa que esconde o que falta mente sobre o próprio tamanho.</p>
+
+<h2>Os degraus, de baixo para cima</h2>
+<div class="escada">
+<div class="degrau"><span class="nivel">nível 5</span><div class="nome">máquina de registradores</div><div class="diz">Registradores e operações, mais um controlador que sequencia as operações. É onde a construção física encontra a descrição de linguagem.</div></div>
+</details>
+<blockquote>“…control signals, so called because they control these components to work together in executing instructions stored in memory. … The CPU control signals are the strings.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · caps. 22–23 — Registers and Busses · CPU Control Signals</cite></blockquote><p class="duas">Duas testemunhas independentes, chegando de lados opostos da escada — uma construindo a máquina, a outra definindo-a.</p>
+<details class="seta"><summary>é feito de <b>registrador (latch)</b> — definicao, e a fonte diz:</summary><blockquote>“To design a register machine, we must design its data paths (registers and operations) and the controller that sequences these operations. … If we view the arrows as wires and the X buttons as switches, the data-path diagram is very like the wiring diagram for a machine that could be constructed from electrical components.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · §5.1 — Designing Register Machines</cite></blockquote>
+<div class="degrau"><span class="nivel">nível 4</span><div class="nome">registrador (latch)</div><div class="diz">Guarda um byte e o devolve quando mandarem. É a memória de trabalho da máquina, não a de armazenamento.</div></div>
+</details>
+<details class="seta"><summary>é feito de <b>flip-flop de borda</b> — definicao, e a fonte diz:</summary><blockquote>“The latch is built from edge-triggered flip-flops as well, and edge-triggered flip-flops have been used for generating the control signals.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 20 — Automating Arithmetic</cite></blockquote>
+<div class="degrau"><span class="nivel">nível 4</span><div class="nome">contador</div><div class="diz">Conta pulsos de relógio. Vira o endereço que a máquina lê em seguida — o embrião do contador de programa.</div></div>
+</details>
+<details class="seta"><summary>é feito de <b>flip-flop de borda</b> — definicao, e a fonte diz:</summary><blockquote>“The counter providing the memory address is built from edge-triggered flip-flops, so it probably has a Clear input.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 20 — Automating Arithmetic</cite></blockquote>
+<div class="degrau"><span class="nivel">nível 3</span><div class="nome">flip-flop de borda</div><div class="diz">Lembra no <i>instante</i> da transição do relógio, e não enquanto ele está alto. É o que torna o tempo discreto.</div></div>
+</details>
+<details class="seta"><summary>é feito de <b>flip-flop de nível</b> — definicao, e a fonte diz:</summary><blockquote>“…an edge-triggered D-type flip-flop [is made from] two stages of level-triggered D-type flip-flops, wired together…”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 17 — Feedback and Flip-Flops</cite></blockquote>
+<div class="degrau"><span class="nivel">nível 2</span><div class="nome">flip-flop de nível</div><div class="diz">O primeiro circuito que <b>lembra</b>: a saída depende do que entrou antes, não só do que entra agora.</div></div>
+</details>
+<details class="seta"><summary>é feito de <b>porta lógica</b> — definicao, e a fonte diz:</summary><blockquote>“…is made from an inverter, two AND gates, and two NOR gates: When the Clock input is 1, the Q output is the same as the Data input.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 19 — An Assemblage of Memory</cite></blockquote>
+<div class="degrau"><span class="nivel">nível 1</span><div class="nome">porta lógica</div><div class="diz">AND, OR, NOR, inversor. A partir daqui o assunto deixa de ser eletricidade e passa a ser lógica.</div></div>
+</details>
+<details class="seta"><summary>é feito de <b>relé</b> — definicao, e a fonte diz:</summary><blockquote>“…are made from relays, of course, but we don’t actually have to look at the relays anymore.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 8 — Relays and Gates</cite></blockquote>
+<div class="degrau"><span class="nivel">nível 0</span><div class="nome">relé</div><div class="diz">Um interruptor que outro circuito aciona. É o primeiro componente que deixa um circuito controlar outro — e é daí que tudo sobe.</div></div>
+</div>
+
+<h2>O que falta ler</h2>
+<p class="nota">Cada linha aqui é uma aresta que a bibliografia sustenta e que
+ninguém abriu ainda. Elas entram quando forem lidas, com a citação — não antes.</p>
+<ul class="falta">
+  <li><b>relé ← interruptor</b><span>Petzold caps. 4–7</span></li>
+  <li><b>somador ← portas lógicas</b><span>Petzold cap. 14</span></li>
+  <li><b>relógio ← oscilador</b><span>Petzold cap. 18</span></li>
+  <li><b>ULA ← somador e portas</b><span>Petzold cap. 21</span></li>
+  <li><b>instrução ← sinais de controle</b><span>Petzold caps. 23–24</span></li>
+  <li><b>sistema operacional ← máquina</b><span>Petzold cap. 26</span></li>
+  <li><b>assembler ← máquina de registradores</b><span>SICP §5.2</span></li>
+  <li><b>compilador ← assembler e avaliador</b><span>SICP §5.5</span></li>
+  <li><b>interpretação × compilação</b><span>SICP §5.5.7</span></li>
+  <li><b>paradigma como variação do avaliador</b><span>SICP §§4.2–4.4</span></li>
+</ul>
+
+<h2>Por que assim</h2>
+<p class="nota">Um mapa de computação gerado por modelo custa uma tarde e
+parece completo. O problema aparece depois: no mapa irmão desta casa, o
+<a href="https://github.com/mateusalkimim/math-prerequisite-map">math-prerequisite-map</a>,
+os verbetes foram escritos por um modelo local e um deles afirma, no ar até
+hoje, que dois conjuntos com os mesmos elementos podem ser diferentes. É falso,
+e passou porque ninguém leu.</p>
+<p class="nota">Aqui a ordem se inverteu: o portão da leitura humana vem
+<b>antes</b> do conteúdo, e o preço é este mapa pequeno. A aposta é que seis
+arestas que se pode conferir valem mais que sessenta que não.</p>
+
+<footer>
+<b>A escada de abstrações</b> — Mateus Alkimim · código <b>MIT</b>, conteúdo
+<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br">CC BY-SA 4.0</a>.<br>
+As citações pertencem aos seus autores e aparecem sob direito de citação, com
+fonte e capítulo.
+</footer>
+
+</div>
+</body>
+</html>
