@@ -13,7 +13,12 @@ import html, os, sys
 import degraus as D
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
-SAIDA = os.path.join(AQUI, "index.html")
+# O sítio virou bilíngue: `pt/` guarda a página gerada em português, `en/` é
+# derivada dela pelas tabelas de `traducao/`, e a raiz virou a porta que
+# encaminha por idioma. Sem esta linha o gerador sobrescreveria a porta a cada
+# rodada — e ninguém veria, porque uma página válida ficaria no lugar certo.
+SAIDA = os.path.join(AQUI, "pt" if os.path.isdir(os.path.join(AQUI, "pt")) else "",
+                     "index.html")
 
 CSS = """
   :root{ --fundo:#0a1424; --creme:#e8e2d6; --fraco:#5b6b86; --ouro:#c9a266;
