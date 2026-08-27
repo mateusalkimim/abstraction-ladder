@@ -1,3 +1,6 @@
+<!-- idioma: linha gerada por i18n.py -->
+*[Read this in English](README.en.md)*
+
 # A escada de abstrações — `abstraction-ladder`
 
 **Um mapa da computação que só admite o que alguém leu.** Do relé à máquina de
