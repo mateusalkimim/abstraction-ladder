@@ -1,29 +1,29 @@
 <!-- idioma: linha gerada por i18n.py -->
-*[Read this in English](README.en.md)*
+> [!NOTE]
+> ### 🇧🇷 **[Leia esta página em português →](README.pt-BR.md)**
 
-# A escada de abstrações — `abstraction-ladder`
+# The ladder of abstractions — `abstraction-ladder`
 
-**Um mapa da computação que só admite o que alguém leu.** Do relé à máquina de
-registradores, um degrau por vez — e **cada seta abre a frase que a sustenta**,
-copiada do livro, com capítulo. Nada entra por plausibilidade, por consenso, nem
-porque um modelo escreveu.
+**A map of computation that only admits what someone has read.** From the relay to the register machine, one step at a time — and **each arrow opens the supporting sentence**, copied from the book, with chapter. Nothing enters by plausibility, by consensus, nor because a model wrote it.
 
-A garantia é essa, e ela é estrutural: **o gerador aborta se uma aresta vier sem
-citação.** Não é convenção que se pode esquecer — a página não é escrita.
+The guarantee is this, and it is structural: **the generator aborts if an edge  
+comes without citation.** It is not a convention that can be forgotten — the page  
+is not written.
 
-No ar em <https://mateusalkimim.github.io/abstraction-ladder/>.
+Available online at <https://mateusalkimim.github.io/abstraction-ladder/>.
 
-Hoje: **11 arestas lidas** e **24 construções verificadas**, contra **10 arestas
-que se sabe existirem e ainda não foram abertas**, listadas na própria página.
-Mapa que esconde o que falta mente sobre o próprio tamanho.
+Today: **11 edges read** and **24 constructions verified**, against **10 edges  
+that are known to exist but have not yet been opened**, listed on the page itself.  
+A map that hides what is missing lies about its own size.
 
-**Toda citação é conferida contra a fonte por máquina** — 35 das 36 hoje; a única
-que falta é a de SICP, cujo livro ainda não está dissecado no acervo, e isso está
-dito aqui em vez de arredondado para "todas". O verificador é
-[`conferir_citacoes.py`](conferir_citacoes.py) e ele **nunca devolve "ok" por
-ausência de prova**: sem o livro à mão, sai com erro.
+**Every citation is verified against the source by machine** — 35 of 36 today;  
+the one that is missing is the one from SICP, whose book has not yet been  
+dissected in the archive, and this is stated here instead of rounded to "all".  
+The verifier is  
+[`verify_citations.py`](conferir_citacoes.py) and it **never returns "ok" for lack  
+of proof**: without the book at hand, it exits with an error.
 
-## Início rápido
+## Quick Start
 
 ```bash
 git clone https://github.com/mateusalkimim/abstraction-ladder.git
@@ -31,109 +31,92 @@ cd abstraction-ladder
 xdg-open index.html          # no Windows, duplo clique
 ```
 
-Ou <https://mateusalkimim.github.io/abstraction-ladder/>. Para regerar a página
-(só Python 3, biblioteca padrão):
+Or <https://mateusalkimim.github.io/abstraction-ladder/>. To regenerate the page  
+(only Python 3, standard library):
 
 ```bash
 python3 gerar_escada.py
 ```
 
-Passo a passo em [`docs/INSTALACAO.md`](docs/INSTALACAO.md).
+Step by step in [`docs/INSTALLATION.md`](docs/INSTALACAO.en.md).
 
-## O que tem aqui
+## What's Here
 
 ```
-index.html          a página — GERADA, não editar à mão
-degraus.py          os degraus, as arestas e as CITAÇÕES que as sustentam
-gerar_escada.py     o gerador, que aborta se faltar warrant
-conferir_citacoes.py  confere cada citação contra o livro, trecho a trecho
-pharo/              por que um mapa pequeno e lido vence um grande e gerado
-docs/INSTALACAO.md  passo a passo
-LICENSE             MIT, para o código
-LICENSE-CONTENT     CC BY-SA 4.0, para o conteúdo
+index.html          the page — GENERATED, do not edit by hand
+degraus.py          the steps, the edges, and the QUOTATIONS that support them
+gerar_escada.py     the generator, which aborts if there is no warrant
+conferir_citacoes.py  verifies each quotation against the book, section by section
+pharo/              why a small and readable map wins over a large and generated one
+docs/INSTALACAO.md  step by step
+LICENSE             MIT, for the code
+LICENSE-CONTENT     CC BY-SA 4.0, for the content
 ```
 
-## O lugar no ciclo maior
+## The Place in the Larger Cycle
 
-É o primeiro pedaço de um mapa maior da computação, organizado por dois eixos:
-**substância** (pixel · tensor · estado, cada uma virando um órgão de silício —
-GPU · GPU/NPU · CPU) e **profundidade** (esta escada). Só o segundo eixo tem
-warrant hoje, e por isso só ele está publicado.
+This is the first piece of a larger map of computing, organized by two axes:  
+**substance** (pixel · tensor · state, each becoming a silicon organ —  
+GPU · GPU/NPU · CPU) and **depth** (this ladder). Only the second axis has  
+warrant today, and that's why only it is published.
 
-A máquina veio do
-[math-prerequisite-map](https://github.com/mateusalkimim/math-prerequisite-map):
-nós, arestas com warrant declarado, e a página gerada da fonte. O parente novo é o
+The machine came from the  
+[math-prerequisite-map](https://github.com/mateusalkimim/math-prerequisite-map): we, edges with declared warrant, and the page generated from the source. The new relative is the  
 [seeing-calculus](https://github.com/mateusalkimim/seeing-calculus).
 
-## Proveniência e garantias
+## Provenance and Guarantees
 
-- **As arestas vêm de dois livros**, lidos: Petzold, *Code* (2ª ed.) e
-  Abelson & Sussman, *SICP* (2ª ed.). As citações aparecem sob direito de
-  citação, com fonte e capítulo, e pertencem aos seus autores.
-- **Uma aresta tem duas testemunhas independentes** — `registrador → máquina de
-  registradores`. Petzold constrói a máquina a partir de portas; SICP a define
-  como caminhos de dados mais controlador e declara que seu diagrama corresponde
-  a *"uma máquina que poderia ser construída de componentes elétricos"*. Os dois
-  chegam de lados opostos ao mesmo objeto.
-- **Como as arestas entram, desde 27/08/2026.** Um modelo local varre o capítulo
-  e **propõe** candidatos — ele é garimpeiro, nunca autor. Cada candidato carrega
-  a frase que o sustentaria, e um portão confere essa frase **caractere a
-  caractere** contra o original em inglês; o que não bate morre ali, sem custar
-  leitura humana. O que sobrevive tem a citação provada e **ainda não é aresta**:
-  vai para julgamento humano, item a item, e só então sobe. Na primeira rodada
-  foram 48 propostos → 46 passaram no portão → **34 aceitos por mim** (27 direto e
-  7 depois de corrigir um rótulo circular, anafórico ou duplicado — a citação
-  segue intacta), e **12 descartadas**, cada decisão registrada com o motivo.
-- **A regra que isso preserva**: toda citação verificada contra a fonte, toda
-  interpretação aceita por um humano. O modelo pode achar; ele não pode afirmar.
-- **O que o portão não pega**, e por isso o julgamento humano continua: citação
-  real que não sustenta a aresta. Das 46 verificadas, 11 caíram exatamente aí —
-  `CPU ← Intel 8080` é instância, não composição; `ULA ← operações aritméticas` é
-  função, não peças; e uma trazia como warrant a frase *"Much of this module
-  should look familiar:"*, que não afirma nada.
-- **Nenhum verbete gerado por modelo.** As descrições dos degraus são minhas e
-  curtas; onde não há leitura, não há texto.
-- Sem rede, sem telemetria, sem dependência. A página abre offline.
-- Os livros **não estão** neste repositório: são obra de terceiro e ficam fora.
+- **Edges come from two books**, read: Petzold, *Code* (2nd ed.) and
+  Abelson & Sussman, *SICP* (2nd ed.). The citations appear under fair use,
+  with source and chapter, and belong to their authors.
+- **An edge has two independent witnesses** — `register → register machine`. Petzold
+  builds the machine from gates; SICP defines it as data paths plus controller
+  and declares that its diagram corresponds to *"a machine that could be built
+  from electrical components"*. The two arrive at the same object from opposite
+  directions.
+- **How edges enter, since 27/08/2026.** A local model sweeps the chapter and
+  **proposes** candidates — it is a prospector, never an author. Each candidate
+  carries the sentence that would support it, and a gate checks that sentence
+  **character by character** against the original in English; what doesn't match
+  dies there, without costing human reading. What survives has the citation
+  proven and **is not yet an edge**: it goes to human judgment, item by item, and
+  only then rises. In the first round, 48 were proposed → 46 passed the gate →
+  **34 accepted by me** (27 directly and 7 after correcting a circular, anaphoric,
+  or duplicated label — the citation remains intact), and **12 discarded**, each
+  decision recorded with the reason.
+- **The rule this preserves**: every citation verified against the source, every
+  interpretation accepted by a human. The model can find; it cannot assert.
+- **What the gate doesn't catch**, and why human judgment continues: a real
+  citation that does not support the edge. Of the 46 verified, 11 fell exactly
+  here — `CPU ← Intel 8080` is an instance, not a composition; `ULA ← arithmetic
+  operations` is a function, not pieces; and one carried as a warrant the sentence
+  *"Much of this module should look familiar:"*, which states nothing.
+- **No entry generated by a model.** The descriptions of the steps are mine and
+  short; where there is no reading, there is no text.
+- No network, no telemetry, no dependency. The page opens offline.
+- The books **are not** in this repository: they are third-party work and stay
+  out.
 
-## Por que assim
+## Why This Way
 
-Um mapa de computação gerado por modelo custa uma tarde e parece completo. O
-problema aparece depois: no mapa irmão desta casa, os verbetes foram escritos por
-um modelo local e um deles afirma, publicado até hoje, que dois conjuntos com os
-mesmos elementos podem ser diferentes. É falso, e passou porque ninguém leu.
+A computation map generated by a model costs an afternoon and seems complete. The problem appears later: in the sibling map of this house, the entries were written by a local model and one of them claims, published until today, that two sets with the same elements can be different. It is false, and it passed because no one read it.
 
-Aqui a ordem se inverteu — o portão da leitura humana vem **antes** do conteúdo — e
-o preço é este mapa pequeno. A aposta é que onze arestas conferíveis valem mais
-que sessenta que não.
+Here the order is inverted — the human reading gate comes **before** the content —  
+and the cost is this small map. The bet is that eleven verifiable edges are worth  
+more than sixty that are not.
 
-O funil não afrouxa essa ordem: ele só barateia o **achar**. O julgamento continua
-sendo humano, e a prova continua sendo a frase no livro.
+The funnel does not loosen this order: it only makes **finding** cheaper. The judgment remains human, and the proof remains the sentence in the book.
 
-## Estado, e o que falta
+## State, and what is missing
 
-- **10 arestas conhecidas e não lidas**, listadas na página com a referência de
-  onde estão. Elas entram quando forem lidas, com a citação;
-- **9 construções verificadas que ainda não pousaram em degrau nenhum** (RAM,
-  ULA, PSW, oscilador, transistor, decodificador de sete segmentos). A citação
-  está provada; o degrau
-  abaixo delas é que não foi lido. Ficam à vista, em seção própria, em vez de
-  entrar na escada por conveniência;
-- **a escada tem um fim medido.** Do capítulo 5 ao 20 de Petzold, uma só proposta
-  não sustentava; dos capítulos 21 ao 24, oito de onze. É onde o livro para de
-  construir e passa a descrever um chip que já existe — e é por isso que os
-  degraus provados param antes do 8080;
-- **o eixo da substância** (pixel/tensor/estado → GPU/NPU/CPU) não tem nenhuma
-  aresta ainda, embora a bibliografia exista no acervo;
-- **as linguagens de programação** não estão aqui e não estarão até haver fonte:
-  o acervo não tem livro de projeto ou comparação de linguagens. O que o SICP
-  sustenta é classificação por **mecanismo** — interpretada × compilada, paradigma
-  como variação do avaliador — e não por história ou adoção;
-- **a tese de que a IA é a primeira camada que quebra o determinismo** é minha, sem
-  livro atrás. Quando entrar, entra como warrant de classe `orientacao`, datado —
-  nunca disfarçada de fato de livro.
+- **10 known and unread edges**, listed on the page with a reference to where they are. They enter when they are read, with the citation;
+- **9 constructions verified that have not yet landed on any step** (RAM, ULA, PSW, oscillator, transistor, seven-segment decoder). The citation is proven; the step below them is that which was not read. They are visible in their own section, instead of entering the staircase for convenience;
+- **the staircase has a measured end.** From chapter 5 to 20 of Petzold, only one proposal did not sustain; from chapters 21 to 24, eight of eleven. This is where the book stops building and starts describing a chip that already exists — and that's why the proven steps stop before the 8080;
+- **the axis of substance** (pixel/tensor/state → GPU/NPU/CPU) has no edge yet, although the bibliography exists in the archive;
+- **programming languages** are not here and will not be until there is a source: the archive does not have a project book or a comparison of languages. What SICP supports is classification by **mechanism** — interpreted × compiled, paradigm as a variation of the evaluator — and not by history or adoption;
+- **the thesis that AI is the first layer that breaks determinism** is mine, without a book behind it. When it enters, it enters as a warrant of class `orientation`, dated — never disguised as a fact of a book.
 
-## Licença
+## License
 
-Código sob **MIT**. Conteúdo sob **CC BY-SA 4.0**. As citações dos livros
-pertencem aos seus autores.
+Code under **MIT**. Content under **CC BY-SA 4.0**. The citations from the books  
+belong to their authors.
