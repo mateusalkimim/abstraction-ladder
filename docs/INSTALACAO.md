@@ -1,3 +1,6 @@
+<!-- idioma: linha gerada por i18n.py -->
+*[Read this in English](INSTALACAO.en.md)*
+
 # Instalação
 
 Não há instalação para **usar**: `index.html` é uma página autocontida, abre

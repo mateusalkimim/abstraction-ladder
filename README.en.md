@@ -1,5 +1,5 @@
 <!-- idioma: linha gerada por i18n.py -->
-*[Leia em português](README.md)*
+*[Leia em português](README.en.md)*
 
 # The ladder of abstractions — `abstraction-ladder`
 
@@ -37,7 +37,7 @@ Or <https://mateusalkimim.github.io/abstraction-ladder/>. To regenerate the page
 python3 gerar_escada.py
 ```
 
-Step by step in [`docs/INSTALLATION.md`](docs/INSTALACAO.md).
+Step by step in [`docs/INSTALLATION.md`](docs/INSTALACAO.en.md).
 
 ## What's Here
 

@@ -1,0 +1,127 @@
+{
+ "atualizado_em": "2026-08-27 14:38:53",
+ "blocos": {
+  "0a5c82562c": {
+   "en": "# Installation",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "# Instalação",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "0b0ca37fcf": {
+   "en": "1. Open the chapter in the source and find the sentence where the author says what the piece is made of;  \n2. Add the step in `STEPS`, if it does not already exist;  \n3. Add the edge in `EDGES`, with the **literal quote**, the source, and the chapter;  \n4. Remove the corresponding line from `UNREAD`;  \n5. `python3 generate_staircase.py`.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "1. abra o capítulo na fonte e encontre a frase em que o autor diz de que a peça\n   é feita;\n2. acrescente o degrau em `DEGRAUS`, se ele ainda não existir;\n3. acrescente a aresta em `ARESTAS`, com a **citação literal**, a fonte e o\n   capítulo;\n4. remova a linha correspondente de `NAO_LIDO`;\n5. `python3 gerar_escada.py`.",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "3fbdd7462b": {
+   "en": "**Windows** — download (Code → Download ZIP, or `git clone`), extract, and double-click on `index.html`.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "**Windows** — baixe (Code → Download ZIP, ou `git clone`), extraia, e dê duplo\nclique em `index.html`.",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "452166b760": {
+   "en": "The `index.html` is **derived** from `steps.py`. Editing it by hand is a mistake: the next generation will overwrite it.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "O `index.html` é **derivado** de `degraus.py`. Editá-lo à mão é o defeito: a\npróxima geração apaga.",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "45e6d9cf8d": {
+   "en": "## Regenerate the Page",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "## Regerar a página",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "53bf49278d": {
+   "en": "**macOS** — the same, with `open index.html`.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "**macOS** — o mesmo, com `open index.html`.",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "53c97c5b95": {
+   "en": "## Use",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "## Usar",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "9082264b75": {
+   "en": "There is no installation to **use**: `index.html` is a self-contained page, opens offline in any modern browser.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Não há instalação para **usar**: `index.html` é uma página autocontida, abre\noffline em qualquer navegador moderno.",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "97f553b807": {
+   "en": "The generator **aborts** if the citation is empty or if the edge points to a step that does not exist. This is intentional: an arrow without warrant is not drawn.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "O gerador **aborta** se a citação estiver vazia ou se a aresta apontar para um\ndegrau que não existe. Isso é proposital: seta sem warrant não é desenhada.",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "9989292d8d": {
+   "en": "An edge only enters **after being read**. The procedure is:",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Uma aresta só entra **depois de lida**. O procedimento é:",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "9ba3948140": {
+   "en": "Only those who are **editing** the map need this. Python 3, standard library, no package.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Só quem for **editar** o mapa precisa disto. Python 3, biblioteca padrão, nenhum\npacote.",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "9cb0113cbd": {
+   "en": "Check that it still aborts, by deleting a citation on purpose and running again — this is the negative control, and the same rule applies to the rest of the house: a gate that never failed is worthless.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Confira que ele ainda aborta, apagando uma citação de propósito e rodando de\nnovo — é o controle negativo, e vale a mesma regra do resto da casa: portão que\nnunca reprovou não vale nada.\n",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "b4f62871a8": {
+   "en": "**Linux** — `git clone … && cd abstraction-ladder && xdg-open index.html`",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "**Linux** — `git clone … && cd abstraction-ladder && xdg-open index.html`",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "bbf22dac07": {
+   "en": "## Add an Edge",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "## Acrescentar uma aresta",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "f3e0e511da": {
+   "en": "**Without downloading** — <https://mateusalkimim.github.io/abstraction-ladder/>",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "**Sem baixar** — <https://mateusalkimim.github.io/abstraction-ladder/>",
+   "qa": "ok",
+   "tipo": "md"
+  }
+ },
+ "fatia": "INSTALACAO",
+ "idioma": "en-US"
+}
