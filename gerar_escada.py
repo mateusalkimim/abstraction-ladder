@@ -192,7 +192,7 @@ arestas que se pode conferir valem mais que sessenta que não.</p>
 <p class="nota">As arestas novas entram por um funil: um modelo local <b>propõe</b>
 candidatos, um portão confere a frase caractere a caractere contra o livro, e o
 que sobrevive só vira aresta depois de <b>julgamento humano</b>. Na primeira
-rodada: 48 propostos, 46 passaram no portão, 27 aceitos. O modelo pode achar;
+rodada: 48 propostos, 46 passaram no portão, 34 aceitos. O modelo pode achar;
 ele não pode afirmar.</p>
 
 <footer>

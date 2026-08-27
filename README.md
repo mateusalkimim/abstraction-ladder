@@ -10,11 +10,11 @@ citação.** Não é convenção que se pode esquecer — a página não é escr
 
 No ar em <https://mateusalkimim.github.io/abstraction-ladder/>.
 
-Hoje: **11 arestas lidas** e **17 construções verificadas**, contra **10 arestas
+Hoje: **11 arestas lidas** e **24 construções verificadas**, contra **10 arestas
 que se sabe existirem e ainda não foram abertas**, listadas na própria página.
 Mapa que esconde o que falta mente sobre o próprio tamanho.
 
-**Toda citação é conferida contra a fonte por máquina** — 28 das 29 hoje; a única
+**Toda citação é conferida contra a fonte por máquina** — 35 das 36 hoje; a única
 que falta é a de SICP, cujo livro ainda não está dissecado no acervo, e isso está
 dito aqui em vez de arredondado para "todas". O verificador é
 [`conferir_citacoes.py`](conferir_citacoes.py) e ele **nunca devolve "ok" por
@@ -78,8 +78,9 @@ nós, arestas com warrant declarado, e a página gerada da fonte. O parente novo
   caractere** contra o original em inglês; o que não bate morre ali, sem custar
   leitura humana. O que sobrevive tem a citação provada e **ainda não é aresta**:
   vai para julgamento humano, item a item, e só então sobe. Na primeira rodada
-  foram 48 propostos → 46 passaram no portão → **27 aceitos por mim**, com as 12
-  descartas e as 7 renomeações registradas com o motivo de cada uma.
+  foram 48 propostos → 46 passaram no portão → **34 aceitos por mim** (27 direto e
+  7 depois de corrigir um rótulo circular, anafórico ou duplicado — a citação
+  segue intacta), e **12 descartadas**, cada decisão registrada com o motivo.
 - **A regra que isso preserva**: toda citação verificada contra a fonte, toda
   interpretação aceita por um humano. O modelo pode achar; ele não pode afirmar.
 - **O que o portão não pega**, e por isso o julgamento humano continua: citação
@@ -110,8 +111,9 @@ sendo humano, e a prova continua sendo a frase no livro.
 
 - **10 arestas conhecidas e não lidas**, listadas na página com a referência de
   onde estão. Elas entram quando forem lidas, com a citação;
-- **6 construções verificadas que ainda não pousaram em degrau nenhum** (RAM,
-  ULA, PSW, decodificador de sete segmentos). A citação está provada; o degrau
+- **9 construções verificadas que ainda não pousaram em degrau nenhum** (RAM,
+  ULA, PSW, oscilador, transistor, decodificador de sete segmentos). A citação
+  está provada; o degrau
   abaixo delas é que não foi lido. Ficam à vista, em seção própria, em vez de
   entrar na escada por conveniência;
 - **a escada tem um fim medido.** Do capítulo 5 ao 20 de Petzold, uma só proposta

@@ -142,6 +142,30 @@ CONSTRUCAO = [
     (None, 'PSW', 'accumulator and ALU flags',
      "petzold", 'cap. 24 — Loops, Jumps, and Calls',
      'It’s just the accumulator in one byte and the ALU flags in another byte.'),
+
+    # Rótulo corrigido no julgamento (circular, anafórico ou duplicado);
+    # a citação é a mesma que passou no portão, intacta.
+    (None, 'speaker wire', 'a pair of two insulated wires',
+     "petzold", 'cap. 5 — Communicating Around Corners',
+     'Speaker wire consists of a pair of two insulated wires conveniently stuck together, so it’s a good choice for our telegraph system.'),
+    ('porta', 'prewired gate bank', 'relays',
+     "petzold", 'cap. 14 — Adding with Logic Gates',
+     'relays that have been prewired into various logic gates'),
+    ('porta', 'logic gate', 'two relays',
+     "petzold", 'cap. 14 — Adding with Logic Gates',
+     'each of those gates consists of two relays'),
+    (None, 'oscillator', 'quartz crystals',
+     "petzold", 'cap. 17 — Feedback and Flip-Flops',
+     'The oscillators in real computers are somewhat more sophisticated, however, consisting of quartz crystals wired in such a way that they vibrate very consistently and very quickly.'),
+    (None, 'transistor', 'base, collector, and emitter',
+     "petzold", 'cap. 18 — Let’s Build a Clock!',
+     'The three letters stand for base, collector, and emitter.'),
+    ('registrador', 'register', '8-bit latch',
+     "petzold", 'cap. 22 — Registers and Busses',
+     'These latches are called registers, and a primary purpose of these registers is to store bytes as they are processed by the ALU.'),
+    ('registrador', '16-bit address', 'H and L registers',
+     "petzold", 'cap. 22 — Registers and Busses',
+     'The H and L registers form a 16-bit address—for example, in the MOV A,M instruction. When used in this way, HL is called a register pair.'),
 ]
 
 # O que se sabe que existe e ainda NÃO foi lido. Aparece na página como buraco
