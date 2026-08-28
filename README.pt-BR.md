@@ -35,7 +35,7 @@ Cada um carrega o seu próprio selo de procedência:
 |---|---|---|
 | `citação` | 10 | tradução fiel de uma passagem, e a passagem abre ao lado |
 | `síntese` | 9 | resumo de passagem citada — a passagem abre junto, para você conferir se o resumo é honesto |
-| `ofício · proposta` | 17 | julgamento de quem ensina, que nenhum livro escreve. Em **proposta**, aguardando ratificação |
+| `ofício · ratificado` | 17 | julgamento de quem ensina, que nenhum livro escreve — **ratificado pelo autor em 2026-08-27**, e cada campo estampa a data |
 
 Os **9 campos "o que é" são todos citação do livro**: nenhum conceito desta
 escada foi definido por mim. Não existe selo para *"um modelo escreveu"*, e é de
@@ -186,8 +186,11 @@ Esta página tem **os mesmos quatro campos daquele mapa**, e é por isso que a
 diferença importa. Aqui nenhum deles saiu de um modelo: os que descrevem a peça
 saíram do próprio Petzold — que é professor, e já responde *o que é* e *por que
 existe* em prosa, com capítulo —, e a passagem vai junto de cada campo. Os que
-dizem **onde o aluno trava** nenhum livro escreve: são ofício de quem ensina,
-entram marcados como proposta, e esperam ratificação.
+dizem **onde o aluno trava** nenhum livro escreve: são ofício de quem ensina, e
+entram pelo rito da casa — proposta primeiro, ratificação depois. Os 17 foram
+ratificados em **27/08/2026**, e cada um estampa a data. Ela não é enfeite: diz
+**a partir de quando alguém responde pelo texto**, e um campo que mudar depois
+dela volta a ser proposta até ser relido.
 
 Aqui a ordem se inverteu — o portão da leitura humana vem **antes** do conteúdo —
 e o preço é este mapa pequeno. A aposta é que nove arestas conferíveis valem mais
@@ -199,8 +202,6 @@ ao lado, quando a peça pode ser construída.
 
 ## Estado, e o que falta
 
-- **17 dos 36 campos estão em `proposta`** e aguardam ratificação. São os que
-  dizem onde o aluno trava, e é justamente o campo que nenhum livro escreve;
 - **10 arestas conhecidas e não lidas**, listadas na página com a referência de
   onde estão. Elas entram quando forem lidas, com a citação;
 - **9 construções verificadas que ainda não pousaram em degrau nenhum** (RAM,

@@ -1,11 +1,11 @@
 {
- "atualizado_em": "2026-08-27 21:45:15",
+ "atualizado_em": "2026-08-27 22:01:05",
  "blocos": {
   "0001cdebc0": {
    "decisao_humana": "Vocabulário fechado do glossário (traducao/glossario.txt). A mesma cadeia saiu de três jeitos entre a página e o README; o selo e os nomes dos degraus são termo fixo, não escolha de bloco.",
    "en": "| label | how many | what it means |\n|---|---|---|\n| `citation` | 10 | faithful translation of a passage, and the passage opens to the side |\n| `synthesis` | 9 | summary of the cited passage — the passage opens nearby, so you can check if the summary is honest |\n| `craft · proposal` | 17 | judgment of who teaches, which no book writes. In **proposal**, awaiting ratification |",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "| selo | quantos | o que significa |\n|---|---|---|\n| `citação` | 10 | tradução fiel de uma passagem, e a passagem abre ao lado |\n| `síntese` | 9 | resumo de passagem citada — a passagem abre junto, para você conferir se o resumo é honesto |\n| `ofício · proposta` | 17 | julgamento de quem ensina, que nenhum livro escreve. Em **proposta**, aguardando ratificação |",
    "qa": "ok",
    "tipo": "md"
@@ -37,7 +37,7 @@
   "0c3d7ccd13": {
    "en": "- **17 of the 36 fields are in `proposal`** and await ratification. These are the fields that indicate where the student struggles, and it is precisely the field that no book writes about;\n- **10 known but unread edges**, listed on the page with the reference of where they are. They will be entered once read, with the citation;\n- **9 constructions verified that have not yet landed on any step** (RAM, ULA, PSW, oscillator, transistor, seven-segment decoder). The citation is proven; the step below them has not been read. They are visible in their own section, instead of being entered into the staircase for convenience;\n- **four steps still do not have an instrument** — electromagnet, relay, recorder, and register machine. The two at the bottom are physics, and the top one is too large for a `canvas`;\n- **there is no glossary of the terms of the house**, and this produced the six variants of label in the translation;\n- **the staircase has a measured end.** From chapter 5 to 20 of Petzold, a single proposal did not sustain; from chapters 21 to 24, eight of eleven. This is where the book stops building and starts describing a chip that already exists — and this is why the proven steps stop before the 8080;\n- **the axis of substance** (pixel/tensor/state → GPU/NPU/CPU) has no edges yet, although the bibliography exists in the archive;\n- **programming languages** are not here and will not be until there is a source: the archive does not have a book on design or comparison of languages. What SICP supports is classification by **mechanism** — interpreted × compiled, paradigm as a variation of the evaluator — and not by history or adoption;\n- **the thesis that AI is the first layer that breaks determinism** is mine, without a book behind it. When it enters, it enters as a warrant of class `orientation`, dated — never disguised as a fact of a book.",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "- **17 dos 36 campos estão em `proposta`** e aguardam ratificação. São os que\n  dizem onde o aluno trava, e é justamente o campo que nenhum livro escreve;\n- **10 arestas conhecidas e não lidas**, listadas na página com a referência de\n  onde estão. Elas entram quando forem lidas, com a citação;\n- **9 construções verificadas que ainda não pousaram em degrau nenhum** (RAM,\n  ULA, PSW, oscilador, transistor, decodificador de sete segmentos). A citação\n  está provada; o degrau abaixo delas é que não foi lido. Ficam à vista, em seção\n  própria, em vez de entrar na escada por conveniência;\n- **quatro degraus ainda não têm instrumento** — eletroímã, relé, registrador e\n  máquina de registradores. Os dois de baixo são física, e o de cima é grande\n  demais para um `canvas`;\n- **não há glossário dos termos da casa**, e foi isso que produziu as seis\n  variantes de rótulo na tradução;\n- **a escada tem um fim medido.** Do capítulo 5 ao 20 de Petzold, uma só proposta\n  não sustentava; dos capítulos 21 ao 24, oito de onze. É onde o livro para de\n  construir e passa a descrever um chip que já existe — e é por isso que os\n  degraus provados param antes do 8080;\n- **o eixo da substância** (pixel/tensor/estado → GPU/NPU/CPU) não tem nenhuma\n  aresta ainda, embora a bibliografia exista no acervo;\n- **as linguagens de programação** não estão aqui e não estarão até haver fonte:\n  o acervo não tem livro de projeto ou comparação de linguagens. O que o SICP\n  sustenta é classificação por **mecanismo** — interpretada × compilada, paradigma\n  como variação do avaliador — e não por história ou adoção;\n- **a tese de que a IA é a primeira camada que quebra o determinismo** é minha, sem\n  livro atrás. Quando entrar, entra como warrant de classe `orientacao`, datado —\n  nunca disfarçada de fato de livro.",
    "qa": "ok",
    "tipo": "md"
@@ -131,6 +131,14 @@
    "qa": "ok",
    "tipo": "md"
   },
+  "4e531656c8": {
+   "en": "This page has **the same four fields as that map**, and that's why the difference matters. Here, none of them came from a model: those that describe the piece came from Petzold himself—who is a professor and has already answered *what it is* and *why it exists* in prose, with a chapter—and the passage goes along with each field. Those that say **where the student gets stuck** no book writes: they are the craft of those who teach, and they enter through the ritual of the house—proposal first, ratification later. The 17 were ratified on **2026-08-27**, and each one stamps the date. It's not decoration: it says **from when someone is responsible for the text**, and a field that changes after that reverts to being a proposal until it is reread.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Esta página tem **os mesmos quatro campos daquele mapa**, e é por isso que a\ndiferença importa. Aqui nenhum deles saiu de um modelo: os que descrevem a peça\nsaíram do próprio Petzold — que é professor, e já responde *o que é* e *por que\nexiste* em prosa, com capítulo —, e a passagem vai junto de cada campo. Os que\ndizem **onde o aluno trava** nenhum livro escreve: são ofício de quem ensina, e\nentram pelo rito da casa — proposta primeiro, ratificação depois. Os 17 foram\nratificados em **27/08/2026**, e cada um estampa a data. Ela não é enfeite: diz\n**a partir de quando alguém responde pelo texto**, e um campo que mudar depois\ndela volta a ser proposta até ser relido.",
+   "qa": "ok",
+   "tipo": "md"
+  },
   "522b3d2335": {
    "en": "Available online at <https://mateusalkimim.github.io/abstraction-ladder/>.",
    "modelo": "phi-4",
@@ -184,6 +192,14 @@
    "modelo": "phi-4",
    "orfao": false,
    "pt": "Passo a passo em [`docs/INSTALACAO.md`](docs/INSTALACAO.md).",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "8e6a66049b": {
+   "en": "| seal | how many | what it means |\n|---|---|---|\n| `citation` | 10 | faithful translation of a passage, and the passage opens beside it |\n| `synthesis` | 9 | summary of the cited passage—the passage opens alongside, so you can check if the summary is honest |\n| `craft · ratified` | 17 | judgment of those who teach, which no book writes—**ratified by the author on 2026-08-27**, and each field stamps the date |",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "| selo | quantos | o que significa |\n|---|---|---|\n| `citação` | 10 | tradução fiel de uma passagem, e a passagem abre ao lado |\n| `síntese` | 9 | resumo de passagem citada — a passagem abre junto, para você conferir se o resumo é honesto |\n| `ofício · ratificado` | 17 | julgamento de quem ensina, que nenhum livro escreve — **ratificado pelo autor em 2026-08-27**, e cada campo estampa a data |",
    "qa": "ok",
    "tipo": "md"
   },
@@ -262,7 +278,7 @@
   "b276ae5292": {
    "en": "This page has **the same four fields as that map**, and that's why the difference matters. Here none of them came from a template: the ones that describe the piece came from Petzold himself — who is a teacher, and already answers *what it is* and *why it exists* in prose, with a chapter —, and the passage goes along with each field. The ones that say **where the student gets stuck** no book writes: they are the work of those who teach, enter marked as a proposal, and await ratification.",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "Esta página tem **os mesmos quatro campos daquele mapa**, e é por isso que a\ndiferença importa. Aqui nenhum deles saiu de um modelo: os que descrevem a peça\nsaíram do próprio Petzold — que é professor, e já responde *o que é* e *por que\nexiste* em prosa, com capítulo —, e a passagem vai junto de cada campo. Os que\ndizem **onde o aluno trava** nenhum livro escreve: são ofício de quem ensina,\nentram marcados como proposta, e esperam ratificação.",
    "qa": "ok",
    "tipo": "md"
@@ -305,6 +321,14 @@
    "modelo": "phi-4",
    "orfao": false,
    "pt": "| instrumento | a aresta que ele prova |\n|---|---|\n| dois relés viram uma porta | relé → porta lógica |\n| duas portas viram uma conta | porta lógica → somador |\n| o circuito que lembra | porta lógica → flip-flop de nível |\n| nível × borda, no mesmo relógio | flip-flop de nível → flip-flop de borda |\n| a contagem aparece sozinha | flip-flop de borda → contador |",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "d3b49b3913": {
+   "en": "- **10 known but unread edges**, listed on the page with the reference of where they are. They enter when they are read, with the citation;\n- **9 verified constructions that have not yet landed on any step** (RAM, ALU, PSW, oscillator, transistor, seven-segment decoder). The citation is proven; the step below them is what hasn't been read. They are visible in their own section, instead of entering the ladder for convenience;\n- **four steps still do not have an instrument** — electromagnet, relay, register, and register machine. The two lower ones are physics, and the top one is too large for a `canvas`;\n- **there is no glossary of the terms of the house**, and this produced the six label variants in the translation;\n- **the ladder has a measured end.** From chapter 5 to 20 in Petzold, a single proposal did not sustain; from chapters 21 to 24, eight out of eleven. This is where the book stops building and starts describing a chip that already exists — and this is why the proven steps stop before the 8080;\n- **the axis of substance** (pixel/tensor/state → GPU/NPU/CPU) has no edge yet, although the bibliography exists in the archive;\n- **programming languages** are not here and will not be until there is a source: the archive does not have a book on design or comparison of languages. What SICP supports is classification by **mechanism** — interpreted × compiled, paradigm as a variation of the evaluator — and not by history or adoption;\n- **the thesis that AI is the first layer that breaks determinism** is mine, without a book behind it. When it enters, it enters as a warrant of class `orientacao`, dated — never disguised as a fact of a book.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "- **10 arestas conhecidas e não lidas**, listadas na página com a referência de\n  onde estão. Elas entram quando forem lidas, com a citação;\n- **9 construções verificadas que ainda não pousaram em degrau nenhum** (RAM,\n  ULA, PSW, oscilador, transistor, decodificador de sete segmentos). A citação\n  está provada; o degrau abaixo delas é que não foi lido. Ficam à vista, em seção\n  própria, em vez de entrar na escada por conveniência;\n- **quatro degraus ainda não têm instrumento** — eletroímã, relé, registrador e\n  máquina de registradores. Os dois de baixo são física, e o de cima é grande\n  demais para um `canvas`;\n- **não há glossário dos termos da casa**, e foi isso que produziu as seis\n  variantes de rótulo na tradução;\n- **a escada tem um fim medido.** Do capítulo 5 ao 20 de Petzold, uma só proposta\n  não sustentava; dos capítulos 21 ao 24, oito de onze. É onde o livro para de\n  construir e passa a descrever um chip que já existe — e é por isso que os\n  degraus provados param antes do 8080;\n- **o eixo da substância** (pixel/tensor/estado → GPU/NPU/CPU) não tem nenhuma\n  aresta ainda, embora a bibliografia exista no acervo;\n- **as linguagens de programação** não estão aqui e não estarão até haver fonte:\n  o acervo não tem livro de projeto ou comparação de linguagens. O que o SICP\n  sustenta é classificação por **mecanismo** — interpretada × compilada, paradigma\n  como variação do avaliador — e não por história ou adoção;\n- **a tese de que a IA é a primeira camada que quebra o determinismo** é minha, sem\n  livro atrás. Quando entrar, entra como warrant de classe `orientacao`, datado —\n  nunca disfarçada de fato de livro.",
    "qa": "ok",
    "tipo": "md"
   },

@@ -61,7 +61,7 @@ def main():
     campos = []
     for chave, no in CO.CONCEITOS.items():
         for campo, _rot in CO.CAMPOS:
-            texto, classe, ref, cit = no[campo]
+            texto, classe, ref, cit, ratificado = no[campo]
             if not cit:
                 continue      # classe "ofício": não alega fonte, nada a conferir
             fonte = "sicp" if "SICP" in (ref or "") else "petzold"
@@ -89,8 +89,30 @@ def main():
         else:
             ok += 1
 
+    # A ratificação também é MEDIDA, não alegada. A página estampa uma data em
+    # cada campo de ofício; se a data não estiver na fonte, a página mente.
+    import re as _re
+    rat = prop = ruim_data = 0
+    for chave, no in CO.CONCEITOS.items():
+        for campo, _r in CO.CAMPOS:
+            _t, classe, _ref, _c, quando = no[campo]
+            if classe != "d":
+                continue
+            if not quando:
+                prop += 1
+            elif _re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(quando)):
+                rat += 1
+            else:
+                ruim_data += 1
+                print(f"  ✗ {chave}.{campo}: data de ratificação inválida "
+                      f"({quando!r}) — sem data legível não há a partir de quando")
+
     print(f"\n  {ok} conferem · {mau} NÃO conferem · "
           f"{sem_fonte} sem a fonte no acervo")
+    print(f"  ofício: {rat} ratificados · {prop} em proposta"
+          + (f" · {ruim_data} com data inválida" if ruim_data else ""))
+    if ruim_data:
+        mau += ruim_data
     if mau:
         print("\n  Uma citação que não confere é uma seta sem warrant. "
               "Conserte ou remova a aresta antes de publicar.", file=sys.stderr)

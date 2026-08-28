@@ -80,7 +80,10 @@ INSTRUMENTOS = {
 MARCA_CLASSE = {
     "a": ("citação", "lido"),
     "b": ("síntese", "lido"),
-    "d": ("ofício · proposta", "oficio"),
+    "d": ("ofício · ratificado", "oficio"),
+    # um campo de ofício SEM data de ratificação volta a ser proposta — é o que
+    # torna a data uma medida e não um carimbo
+    "d?": ("ofício · proposta", "oficio"),
 }
 
 CSS = """
@@ -204,22 +207,32 @@ def campos_de(chave):
     c = CO.CONCEITOS[chave]
     fora = []
     for campo, rotulo in CO.CAMPOS:
-        texto, classe, ref, cit = c[campo]
-        marca, css = MARCA_CLASSE[classe]
+        texto, classe, ref, cit, ratificado = c[campo]
+        marca, css = MARCA_CLASSE[classe if classe != "d" or ratificado else "d?"]
         proc = ""
         if cit:
             proc = (f'<details class="proc"><summary>a passagem que sustenta'
                     f'</summary><blockquote>“{cit}”'
                     f'<cite>{D.FONTES["petzold" if "SICP" not in (ref or "") else "sicp"]}'
                     f' · {html.escape(ref)}</cite></blockquote></details>')
+        elif ratificado:
+            proc = ('<details class="proc"><summary>de onde vem este campo'
+                    '</summary><blockquote>Nenhum livro escreve onde o aluno '
+                    'trava; isso vem da sala de aula. Este campo é julgamento '
+                    'didático do autor, <b>ratificado em '
+                    f'{ratificado}</b> — o rito da casa é proposta mais '
+                    'ratificação, e conteúdo não é diferente de norma. A data '
+                    'diz a partir de quando alguém responde pelo texto; se ele '
+                    'mudar, volta a ser proposta até ser relido. Ele não foi '
+                    'escrito por modelo.</blockquote></details>')
         else:
             proc = ('<details class="proc"><summary>de onde vem este campo'
                     '</summary><blockquote>Nenhum livro escreve onde o aluno '
                     'trava; isso vem da sala de aula. Este campo é julgamento '
                     'didático do autor e está em <b>PROPOSTA</b> — o rito da '
-                    'casa é norma = proposta + ratificação, e conteúdo não é '
-                    'diferente. Ele não foi escrito por modelo.</blockquote>'
-                    '</details>')
+                    'casa é proposta mais ratificação, e conteúdo não é '
+                    'diferente de norma. Ele não foi escrito por modelo.'
+                    '</blockquote></details>')
         fora.append(
             f'<div class="campo"><dt>{rotulo}<span class="selo {css}">{marca}'
             f'</span></dt><dd>{texto}{proc}</dd></div>')
@@ -272,7 +285,7 @@ def main():
             if campo not in CO.CONCEITOS[chave]:
                 print(f"ABORTADO: {chave}.{campo} não existe.", file=sys.stderr)
                 return 1
-            texto, classe, ref, cit = CO.CONCEITOS[chave][campo]
+            texto, classe, ref, cit, ratificado = CO.CONCEITOS[chave][campo]
             if not texto.strip():
                 print(f"ABORTADO: {chave}.{campo} está vazio.", file=sys.stderr)
                 return 1
@@ -371,9 +384,11 @@ Dentro de cada degrau, os quatro campos vêm com um <b>selo de procedência</b>:
 <span class="selo lido">citação</span> quando o texto é do livro,
 <span class="selo lido">síntese</span> quando é resumo de passagem citada — e a
 passagem abre ao lado, para você conferir se o resumo é honesto —, e
-<span class="selo oficio">ofício · proposta</span> quando é julgamento de quem
-ensina, que nenhum livro escreve. <b>Não existe selo para “um modelo escreveu”</b>,
-e é de propósito: veja a última seção.
+<span class="selo oficio">ofício · ratificado</span> quando é julgamento de quem
+ensina, que nenhum livro escreve — e cada um traz <b>a data em que o autor
+respondeu por ele</b>, porque campo que mudar depois dela volta a ser proposta.
+<b>Não existe selo para “um modelo escreveu”</b>, e é de propósito: veja a
+última seção.
 </div>
 
 <h2>Os degraus, de baixo para cima</h2>

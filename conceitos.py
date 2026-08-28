@@ -35,11 +35,19 @@ Fonte da prosa citada: o `livro.md` da dissecação `petzold-code-2ed` do
 Mouseion (classe A, epub nato-digital), conferido capítulo a capítulo.
 """
 
-# (texto em português, classe, referência, passagem original)
-# classe: "a" citação · "b" síntese de passagem citada · "d" ofício (PROPOSTA)
-C = lambda t, ref, cit: (t, "a", ref, cit)
-S = lambda t, ref, cit: (t, "b", ref, cit)
-O = lambda t: (t, "d", None, None)
+# (texto em português, classe, referência, passagem original, ratificado_em)
+# classe: "a" citação · "b" síntese de passagem citada · "d" ofício
+#
+# RATIFICAÇÃO (2026-08-27). Os 17 campos de classe "d" nasceram em PROPOSTA —
+# rito da casa: norma é proposta mais ratificação, e conteúdo não é diferente.
+# Nesta data o operador os leu e ratificou, e o selo deixou de dizer "proposta".
+# A data não é enfeite: ela diz A PARTIR DE QUANDO alguém responde pelo texto,
+# e um campo que mudar depois dela volta para proposta até ser relido.
+RATIFICADO_EM = "2026-08-27"
+
+C = lambda t, ref, cit: (t, "a", ref, cit, None)
+S = lambda t, ref, cit: (t, "b", ref, cit, None)
+O = lambda t, em=RATIFICADO_EM: (t, "d", None, None, em)
 
 CONCEITOS = {
 

@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-08-27 21:29:42",
+ "atualizado_em": "2026-08-27 22:02:55",
  "blocos": {
   "01a7ad924e": {
    "en": "Hold R",
@@ -62,6 +62,14 @@
    "modelo": "phi-4",
    "orfao": false,
    "pt": "<b>oscillator</b> &larr; quartz crystals",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
+  "073196ddfe": {
+   "en": "where it appears<span class=\"selo oficio\">craft · ratified</span>",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "onde aparece<span class=\"selo oficio\">ofício · ratificado</span>",
    "qa": "ok",
    "tipo": "prosa"
   },
@@ -184,6 +192,14 @@
    "qa": "ok",
    "tipo": "prosa"
   },
+  "139e77183d": {
+   "en": "No textbook, there's no mention of where the student gets stuck; that comes from the classroom. This field is the author's didactic judgment, <b>ratified on 2026-08-27</b> — the house's rite is proposal and ratification, and content is no different from a norm. The date indicates from when someone is responsible for the text; if it changes, it reverts to a proposal until it's reviewed again. It wasn't written by a model.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Nenhum livro escreve onde o aluno trava; isso vem da sala de aula. Este campo é julgamento didático do autor, <b>ratificado em 2026-08-27</b> — o rito da casa é proposta mais ratificação, e conteúdo não é diferente de norma. A data diz a partir de quando alguém responde pelo texto; se ele mudar, volta a ser proposta até ser relido. Ele não foi escrito por modelo.",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "14b85fa8e8": {
    "en": "loading",
    "modelo": "phi-4",
@@ -214,6 +230,14 @@
    "pt": "o instrumento não subiu neste navegador (",
    "qa": "ok",
    "tipo": "js"
+  },
+  "15e315439d": {
+   "en": "why it exists<span class=\"selo oficio\">craft · ratified</span>",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "por que existe<span class=\"selo oficio\">ofício · ratificado</span>",
+   "qa": "ok",
+   "tipo": "prosa"
   },
   "165daeb2b1": {
    "en": null,
@@ -273,7 +297,7 @@
    "decisao_humana": "Rótulo estrutural: os quatro campos são os mesmos nos 9 degraus e têm de ler igual. A tradução bloco a bloco produziu seis variantes, e 'where it locks' inverteu o sentido ('travar' aqui é o aluno empacar, não fechadura). Vocabulário fechado, fixado em 2026-08-27.",
    "en": "where you get stuck<span class=\"selo oficio\">craft · proposal</span>",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "onde se trava<span class=\"selo oficio\">ofício · proposta</span>",
    "qa": "ok",
    "tipo": "prosa"
@@ -462,7 +486,7 @@
   "30d1577cec": {
    "en": "No book writes where the student locks; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the rite of the house is norm = proposal + ratification, and content is not different. It was not written by a model.",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "Nenhum livro escreve onde o aluno trava; isso vem da sala de aula. Este campo é julgamento didático do autor e está em <b>PROPOSTA</b> — o rito da casa é norma = proposta + ratificação, e conteúdo não é diferente. Ele não foi escrito por modelo.",
    "qa": "ok",
    "tipo": "prosa"
@@ -519,6 +543,14 @@
    "ja_en": true,
    "orfao": false,
    "pt": "“We can use the half adder only for the addition of the rightmost column: 1 plus 1 equals 0, carry the 1. For the second column from the right, we really need to add three binary numbers because of the carry. And that goes for all subsequent columns.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 14 — Adding with Logic Gates</cite>",
+   "tipo": "prosa"
+  },
+  "395f5c58ed": {
+   "en": "where you get stuck<span class=\"selo oficio\">craft · ratified</span>",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "onde se trava<span class=\"selo oficio\">ofício · ratificado</span>",
+   "qa": "ok",
    "tipo": "prosa"
   },
   "3c1fcfacde": {
@@ -945,6 +977,14 @@
    "qa": "ok",
    "tipo": "js"
   },
+  "6eae20c66a": {
+   "en": "<b>How to read.</b> The map ascends: the electromagnet is the ground, the machine is the top — and the dotted golden line marks the place where the subject <b>stops being electricity and becomes logic</b>. The node's color indicates the regime; the key is right below it. A solid arrow has a verified citation against the book; a dashed arrow is something no one has read yet, and it is drawn because <b>a map that hides what is missing lies about its own size</b>.<br><br>  \nWithin each step, the four fields come with a <b>stamp of origin</b>:  \n<span class=\"selo lido\">citation</span> when the text is from the book,  \n<span class=\"selo lido\">synthesis</span> when it is a summary of a cited passage — and the passage opens beside it, so you can check if the summary is honest —, and  \n<span class=\"selo oficio\">craft · ratified</span> when it is a judgment of the teacher, which no book writes — and each one brings <b>the date when the author stood by it</b>, because a field that changes after that date reverts to being a proposal.  \n<b>There is no stamp for “a model wrote”</b>, and it is on purpose: see the last section.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "\n<b>Como ler.</b> O mapa sobe: o eletroímã é o chão, a máquina é o topo — e a\nlinha pontilhada dourada marca o lugar em que o assunto <b>deixa de ser\neletricidade e passa a ser lógica</b>. A cor do nó diz o regime; a chave está\nlogo abaixo dele. Seta cheia tem citação conferida contra o livro; seta\ntracejada é o que ninguém leu ainda, e ela está desenhada porque\n<b>mapa que esconde o que falta mente sobre o próprio tamanho</b>.<br><br>\nDentro de cada degrau, os quatro campos vêm com um <b>selo de procedência</b>:\n<span class=\"selo lido\">citação</span> quando o texto é do livro,\n<span class=\"selo lido\">síntese</span> quando é resumo de passagem citada — e a\npassagem abre ao lado, para você conferir se o resumo é honesto —, e\n<span class=\"selo oficio\">ofício · ratificado</span> quando é julgamento de quem\nensina, que nenhum livro escreve — e cada um traz <b>a data em que o autor\nrespondeu por ele</b>, porque campo que mudar depois dela volta a ser proposta.\n<b>Não existe selo para “um modelo escreveu”</b>, e é de propósito: veja a\núltima seção.\n",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "6fba472c9b": {
    "en": "<b>seven-segment decoder</b> &larr; BCD decoder",
    "modelo": "phi-4",
@@ -1092,6 +1132,14 @@
    "pt": "agora eles discordam: nível = ",
    "qa": "ok",
    "tipo": "js"
+  },
+  "829076927f": {
+   "en": "No book writes where the student gets stuck; that comes from the classroom. This field is a didactic judgment by the author, <b>ratified by him on 2026-08-27</b> — the house's ritual is proposal plus ratification, and content is no different from a norm. The date indicates from when someone stands by the text; if it changes, it reverts to being a proposal until it is reread. It was not written by a model.",
+   "modelo": "phi-4",
+   "orfao": true,
+   "pt": "Nenhum livro escreve onde o aluno trava; isso vem da sala de aula. Este campo é julgamento didático do autor, <b>ratificado por ele em 2026-08-27</b> — o rito da casa é proposta mais ratificação, e conteúdo não é diferente de norma. A data diz a partir de quando alguém responde pelo texto; se ele mudar, volta a ser proposta até ser relido. Ele não foi escrito por modelo.",
+   "qa": "ok",
+   "tipo": "prosa"
   },
   "82ed1302db": {
    "en": null,
@@ -1332,7 +1380,7 @@
    "decisao_humana": "'ofício · proposta' é vocabulário da casa e o modelo o deixou intacto. Em inglês o selo diz de onde o campo veio: não de um livro, mas da prática de quem ensina — 'craft · proposal'. Decidido em 2026-08-27, não derivado por modelo.",
    "en": "where it appears<span class=\"selo oficio\">craft · proposal</span>",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "onde aparece<span class=\"selo oficio\">ofício · proposta</span>",
    "qa": "ok",
    "tipo": "prosa"
@@ -1341,7 +1389,7 @@
    "decisao_humana": "'ofício · proposta' é vocabulário da casa e o modelo o deixou intacto. Em inglês o selo diz de onde o campo veio: não de um livro, mas da prática de quem ensina — 'craft · proposal'. Decidido em 2026-08-27, não derivado por modelo.",
    "en": "why it exists<span class=\"selo oficio\">craft · proposal</span>",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "por que existe<span class=\"selo oficio\">ofício · proposta</span>",
    "qa": "ok",
    "tipo": "prosa"
@@ -1567,7 +1615,7 @@
    "decisao_humana": "O modelo verteu o mesmo selo de tres maneiras ao longo da pagina ('craft', 'profession', e 'ofício' intacto). Selo é vocabulário fechado: uma cadeia, sempre a mesma, senão o leitor acha que sao tres categorias diferentes. Uniformizado em 2026-08-27.",
    "en": "<b>How to read.</b> The map rises: the electromagnet is the floor, the machine is the top — and the dotted golden line marks the place where the subject <b>stops being electricity and becomes logic</b>. The node's color indicates the regime; the key is right below it. A solid arrow has a citation checked against the book; a dashed arrow is what no one has read yet, and it is drawn because <b>a map that hides what is missing lies about its own size</b>.<br><br>  \nWithin each step, the four fields come with a <b>source label</b>: <span class=\"selo lido\">citation</span> when the text is from the book, <span class=\"selo lido\">synthesis</span> when it is a summary of a cited passage — and the passage opens to the side, so you can check if the summary is honest —, and <span class=\"selo oficio\">craft · proposal</span> when it is the judgment of the teacher, which no book writes. <b>There is no label for “a model wrote”</b>, and it is on purpose: see the last section.",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "\n<b>Como ler.</b> O mapa sobe: o eletroímã é o chão, a máquina é o topo — e a\nlinha pontilhada dourada marca o lugar em que o assunto <b>deixa de ser\neletricidade e passa a ser lógica</b>. A cor do nó diz o regime; a chave está\nlogo abaixo dele. Seta cheia tem citação conferida contra o livro; seta\ntracejada é o que ninguém leu ainda, e ela está desenhada porque\n<b>mapa que esconde o que falta mente sobre o próprio tamanho</b>.<br><br>\nDentro de cada degrau, os quatro campos vêm com um <b>selo de procedência</b>:\n<span class=\"selo lido\">citação</span> quando o texto é do livro,\n<span class=\"selo lido\">síntese</span> quando é resumo de passagem citada — e a\npassagem abre ao lado, para você conferir se o resumo é honesto —, e\n<span class=\"selo oficio\">ofício · proposta</span> quando é julgamento de quem\nensina, que nenhum livro escreve. <b>Não existe selo para “um modelo escreveu”</b>,\ne é de propósito: veja a última seção.\n",
    "qa": "ok",
    "tipo": "prosa"

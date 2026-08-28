@@ -41,3 +41,8 @@ warrant = warrant
 portão = gate
 regime = regime
 segunda testemunha = second witness
+
+# --- ratificação (2026-08-27) ---
+ofício · ratificado = craft · ratified
+ratificado = ratified
+proposta = proposal
