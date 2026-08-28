@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-08-27 22:02:55",
+ "atualizado_em": "2026-08-27 22:22:47",
  "blocos": {
   "01a7ad924e": {
    "en": "Hold R",
@@ -65,6 +65,14 @@
    "qa": "ok",
    "tipo": "prosa"
   },
+  "0721323f78": {
+   "en": "Prolog is automatic search turned into language. `<code>async/await</code>` is a change in evaluation order. Lazy evaluation is another. They all reside in the same place: the rule that decides what to evaluate and when.  \n<details class=\"proc\">",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Prolog é a busca automática virada linguagem. <code>async/await</code> é uma mudança na ordem de avaliação. Avaliação preguiçosa é outra. Todas moram no mesmo lugar: na regra que decide o que avaliar e quando.<details class=\"proc\">",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "073196ddfe": {
    "en": "where it appears<span class=\"selo oficio\">craft · ratified</span>",
    "modelo": "phi-4",
@@ -84,7 +92,7 @@
   "08f013c1fc": {
    "en": "<b>compiler ← assembler and evaluator</b><span>SICP §5.5</span>",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "<b>compilador ← assembler e avaliador</b><span>SICP §5.5</span>",
    "qa": "ok",
    "tipo": "prosa"
@@ -94,6 +102,15 @@
    "modelo": "phi-4",
    "orfao": false,
    "pt": "O circuito que lembra",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
+  "0caadb959a": {
+   "decisao_humana": "O modelo grudou um <details class=\"proc\"> no fim do bloco, que não existe no original — ele copia o padrão dos blocos vizinhos. Removido deterministicamente; o texto traduzido não foi tocado.",
+   "en": "<b>compiler ← evaluator</b><span>SICP §5.5</span>",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "<b>compilador ← avaliador</b><span>SICP §5.5</span>",
    "qa": "ok",
    "tipo": "prosa"
   },
@@ -129,6 +146,15 @@
    "qa": "ok",
    "tipo": "js"
   },
+  "0f1dbab2ed": {
+   "decisao_humana": "O modelo grudou um <details class=\"proc\"> no fim do bloco, que não existe no original — ele copia o padrão dos blocos vizinhos. Removido deterministicamente; o texto traduzido não foi tocado.",
+   "en": "<b>memory (RAM) ← flip-flop, decoder, and selector</b><span>Petzold chap. 19</span>",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "<b>memória (RAM) ← flip-flop, decodificador e seletor</b><span>Petzold cap. 19</span>",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "0f6f83216d": {
    "en": "prewired gate bank <span>&larr; relays</span>",
    "modelo": "phi-4",
@@ -144,6 +170,14 @@
    "pt": "instrução",
    "qa": "ok",
    "tipo": "svg"
+  },
+  "0fa0045983": {
+   "en": "Treating paradigm as a school or as a preference — “I am functional,” “I am object-oriented.” Here it is a <b>mechanical</b> thing: a change in the loop that evaluates. As long as it is identity, you can't ask the only useful question, which is <i>what exactly changes in the evaluator</i>.  \n<details class=\"proc\">",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Tratar paradigma como escola ou como gosto — “sou funcional”, “sou orientado a objetos”. Aqui ele é uma coisa <b>mecânica</b>: uma alteração no laço que avalia. Enquanto for identidade, não dá para perguntar a única coisa útil, que é <i>o que exatamente muda no avaliador</i>.<details class=\"proc\">",
+   "qa": "ok",
+   "tipo": "prosa"
   },
   "106d235307": {
    "en": "the pair (carry, sum) read as binary number IS the sum.",
@@ -254,6 +288,13 @@
    "qa": "ok",
    "tipo": "svg"
   },
+  "17007b1cfb": {
+   "en": null,
+   "ja_en": true,
+   "orfao": false,
+   "pt": "“The Carry Out from the adder becomes the CY Out from the Add/Subtract module.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 21 — The Arithmetic Logic Unit</cite>",
+   "tipo": "prosa"
+  },
   "1702ba7ecc": {
    "en": "Because the level <b>leaks</b>. While the clock is at 1, the data can change — and these changes pass through to the output. In a circuit that feeds back into its own output, this becomes an infinite loop.<details class=\"proc\">",
    "modelo": "phi-4",
@@ -293,11 +334,20 @@
    "qa": "ok",
    "tipo": "prosa"
   },
+  "1998c3c150": {
+   "decisao_humana": "O modelo grudou um <details class=\"proc\"> no fim do bloco, que não existe no original — ele copia o padrão dos blocos vizinhos. Removido deterministicamente; o texto traduzido não foi tocado.",
+   "en": "The sentence says that <i>“an oscillator is sometimes referred to as a clock”</i> — this is identity, not composition. A clock is not <b>made</b> of an oscillator according to this sentence; it is <b>called</b> that. The published reference said chap. 18 and has been corrected.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "A frase diz que <i>“an oscillator is sometimes referred to as a clock”</i> — isso é identidade, não composição. Um relógio não é <b>feito</b> de oscilador segundo esta frase; ele é <b>chamado</b> assim. A referência publicada dizia cap. 18 e está corrigida.",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "19d1997e67": {
    "decisao_humana": "Rótulo estrutural: os quatro campos são os mesmos nos 9 degraus e têm de ler igual. A tradução bloco a bloco produziu seis variantes, e 'where it locks' inverteu o sentido ('travar' aqui é o aluno empacar, não fechadura). Vocabulário fechado, fixado em 2026-08-27.",
    "en": "where you get stuck<span class=\"selo oficio\">craft · proposal</span>",
    "modelo": "phi-4",
-   "orfao": true,
+   "orfao": false,
    "pt": "onde se trava<span class=\"selo oficio\">ofício · proposta</span>",
    "qa": "ok",
    "tipo": "prosa"
@@ -345,7 +395,7 @@
   "1d80f30415": {
    "en": "From electromagnet to machine of latches, one step at a time.  \nEach step responds <b>what it is</b>, <b>why it exists</b>, <b>where it appears</b> and  \n<b>where it locks</b> — and 5 of the passages you do not need to accept by  \nword: they <b>assemble the piece on this screen</b>.",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "Do eletroímã à máquina de registradores, um degrau de cada vez.\nCada degrau responde <b>o que é</b>, <b>por que existe</b>, <b>onde aparece</b> e\n<b>onde se trava</b> — e 5 das passagens você não precisa aceitar de\npalavra: elas <b>montam a peça aqui na tela</b>.",
    "qa": "ok",
    "tipo": "prosa"
@@ -371,6 +421,14 @@
    "modelo": "phi-4",
    "orfao": false,
    "pt": "automático",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
+  "2081f781ab": {
+   "en": "Because it closes the ladder: written this way, it serves as an implementation of an interpreter in a language very similar to the machine language of common computers.  \n<details class=\"proc\">",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Porque é ele que fecha a escada: escrito assim, ele serve como implementação de um interpretador numa linguagem muito parecida com a linguagem de máquina dos computadores comuns.<details class=\"proc\">",
    "qa": "ok",
    "tipo": "prosa"
   },
@@ -436,6 +494,13 @@
    "pt": "“These latches are called registers, and a primary purpose of these registers is to store bytes as they are processed by the ALU.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 22 — Registers and Busses</cite>",
    "tipo": "prosa"
   },
+  "25ea306502": {
+   "en": null,
+   "ja_en": true,
+   "orfao": false,
+   "pt": "“Now that we have an evaluator expressed as a Lisp program, we can experiment with alternative choices in language design simply by modifying the evaluator. Indeed, new languages are often invented by first writing an evaluator that embeds the new language within an existing high-level language.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · SICP §4.2 — Variations on a Scheme: Lazy Evaluation</cite>",
+   "tipo": "prosa"
+  },
   "272ed58754": {
    "en": "Every “clock” that is talked about in processor. The 3.6 GHz of your machine are 3.6 billion of these edges per second — not 3.6 billion instants in which the clock is on.<details class=\"proc\">",
    "modelo": "phi-4",
@@ -460,12 +525,46 @@
    "qa": "ok",
    "tipo": "svg"
   },
+  "299ca3404a": {
+   "decisao_humana": "O modelo grudou um <details class=\"proc\"> no fim do bloco, que não existe no original — ele copia o padrão dos blocos vizinhos. Removido deterministicamente; o texto traduzido não foi tocado.",
+   "en": "language",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "linguagem",
+   "qa": "ok",
+   "tipo": "svg"
+  },
+  "29dbb5ca84": {
+   "en": null,
+   "ja_en": true,
+   "orfao": false,
+   "pt": "“the explicit-control evaluator can serve as an implementation of a Scheme interpreter, written in a language that is very similar to the native machine language of conventional computers.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · SICP §5.4 — The Explicit-Control Evaluator</cite>",
+   "tipo": "prosa"
+  },
+  "2c67162547": {
+   "decisao_humana": "O modelo grudou um <details class=\"proc\"> no fim do bloco, que não existe no original — ele copia o padrão dos blocos vizinhos. Removido deterministicamente; o texto traduzido não foi tocado.",
+   "en": "<tspan x=\"200\" dy=\"0\">ULA</tspan>",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "<tspan x=\"200\" dy=\"0\">ULA</tspan>",
+   "qa": "ok",
+   "tipo": "svg"
+  },
   "2d0ff8594d": {
    "en": null,
    "ja_en": true,
    "orfao": false,
    "pt": "“A relay is like a sounder in that an incoming current is used to power an electromagnet that pulls down a metal lever.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 7 — Telegraphs and Relays</cite>",
    "tipo": "prosa"
+  },
+  "2ea9f61cad": {
+   "decisao_humana": "O modelo grudou um <details class=\"proc\"> no fim do bloco, que não existe no original — ele copia o padrão dos blocos vizinhos. Removido deterministicamente; o texto traduzido não foi tocado.",
+   "en": "<tspan x=\"200\" dy=\"0\">assembler</tspan>",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "<tspan x=\"200\" dy=\"0\">assembler</tspan>",
+   "qa": "ok",
+   "tipo": "svg"
   },
   "2f1200e4cb": {
    "en": "The map begins almost empty on purpose. It only admits what  \nsomeone <b>read</b>: nothing enters by plausibility, by consensus, nor because a model wrote it.",
@@ -538,11 +637,42 @@
    "qa": "ok",
    "tipo": "prosa"
   },
+  "353f0acb2d": {
+   "en": "Because the adder alone solves a column. An 8-bit processor needs to handle 16, 24, 32-bit numbers — and that's adding byte by byte, from the least significant up, each carrying the carry from the previous one. The ALU is the adder <b>with the machine around it</b> that makes this sequence.  \n<details class=\"proc\">",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Porque o somador sozinho resolve uma coluna. Um processador de 8 bits precisa lidar com números de 16, 24, 32 bits — e isso é somar byte a byte, do menos significativo para cima, cada um carregando o vai-um do anterior. A ULA é o somador <b>com a máquina em volta</b> que faz essa sequência.<details class=\"proc\">",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
+  "3678bca37b": {
+   "en": "It is the “A” of any CPU diagram you have ever seen, and what your profiler calls <i>arithmetic throughput</i>. It is also where the flags are born: zero, sign, carry — the ones your `<code>if</code>` queries without you knowing.  \n<details class=\"proc\">",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "É o “A” de qualquer diagrama de CPU que você já viu, e o que o seu profiler chama de <i>arithmetic throughput</i>. Também é onde nascem as flags: zero, sinal, vai-um — as que o seu <code>if</code> consulta sem você saber.<details class=\"proc\">",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
+  "36aee1ec22": {
+   "en": "This is what runs when you type into a REPL. And it's the diagram that the JVM, CPython, and V8 are executing underneath—each with its own fetch-decide-apply loop. <details class=\"proc\">",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "É o que roda quando você digita numa REPL. E é o desenho que a JVM, a CPython e o V8 estão executando por baixo — cada um com o seu laço de buscar, decidir, aplicar.<details class=\"proc\">",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "38e2feafb1": {
    "en": null,
    "ja_en": true,
    "orfao": false,
    "pt": "“We can use the half adder only for the addition of the rightmost column: 1 plus 1 equals 0, carry the 1. For the second column from the right, we really need to add three binary numbers because of the carry. And that goes for all subsequent columns.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 14 — Adding with Logic Gates</cite>",
+   "tipo": "prosa"
+  },
+  "394c96a4d2": {
+   "en": null,
+   "ja_en": true,
+   "orfao": false,
+   "pt": "“Before it can generate the instruction execution procedures, the assembler must know what all the labels refer to, so it begins by scanning the controller text to separate the labels from the instructions.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · SICP §5.2.2 — The Assembler</cite>",
    "tipo": "prosa"
   },
   "395f5c58ed": {
@@ -576,6 +706,14 @@
    "pt": "ninguém projetou a contagem: cada estágio vira na METADE da ",
    "qa": "ok",
    "tipo": "js"
+  },
+  "3d904e4d13": {
+   "en": "<b>clock ← oscillator</b><span>Petzold chap. 17</span>",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "<b>relógio ← oscilador</b><span>Petzold cap. 17</span>",
+   "qa": "ok",
+   "tipo": "prosa"
   },
   "3dfdfa96d9": {
    "en": "The “controller” sounds like someone who decides. It's not: it's <b>more circuit</b> — counter, decoder, and gates, made from the same basic components. As long as there's a little man inside the machine, the ladder isn't closed; and it's exactly here that almost every course stops descending.<details class=\"proc\">",
@@ -632,6 +770,14 @@
    "pt": "“The entire arithmetic logic unit combines the Add/Subtract module and the Logic module with some rather messy support circuity:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 21 — The Arithmetic Logic Unit</cite>",
    "tipo": "prosa"
   },
+  "45c7191373": {
+   "en": "Transforms the sequence of expressions from a machine's controller into a list of instructions, each with its execution procedure. <details class=\"proc\">",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Transforma a sequência de expressões do controlador de uma máquina numa lista de instruções, cada uma com o seu procedimento de execução.<details class=\"proc\">",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "47214443ff": {
    "en": "Press <b>S</b>, release. Press <b>R</b>, release. In both cases, the input returns to (0,0) — and the output is different. This is the definition of remembering, and it's what no single gate can do on its own.",
    "modelo": "phi-4",
@@ -647,6 +793,14 @@
    "pt": "<tspan x=\"740\" dy=\"0\">flip-flop de borda</tspan>",
    "qa": "ok",
    "tipo": "svg"
+  },
+  "48c3701231": {
+   "en": "The apparent circularity: a Scheme evaluator written in Scheme seems to explain nothing. It explains—provided one sees that the one <b>inside</b> is described in register operations, not in Scheme. This is where the ladder meets itself, and it's the most foolish passage to cross if no one says so. <details class=\"proc\">",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "A circularidade aparente: um avaliador de Scheme escrito em Scheme parece não explicar nada. Ele explica — desde que se veja que o de <b>dentro</b> está descrito em operações de registrador, e não em Scheme. É onde a escada se encontra consigo mesma, e é a passagem mais tonta de atravessar se ninguém disser isso.<details class=\"proc\">",
+   "qa": "ok",
+   "tipo": "prosa"
   },
   "4a45070ddb": {
    "en": "where this field comes from",
@@ -704,11 +858,27 @@
    "qa": "ok",
    "tipo": "prosa"
   },
+  "514802106d": {
+   "en": "read — not an edge, a contrast",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "lida — não é aresta, é contraste",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "51a0533621": {
    "en": "Verified, still outside the ladder",
    "modelo": "phi-4",
    "orfao": false,
    "pt": "Verificado, ainda fora da escada",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
+  "51ab13dd3d": {
+   "en": "The chapter defines what an operating system <b>is</b> and what it offers (API, interface), but it does not assert what it relies on. No sentence found sustains the edge.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "O capítulo define o que um sistema operacional <b>é</b> e o que ele oferece (API, interface), mas não afirma sobre o que ele se apoia. Nenhuma frase encontrada sustenta a aresta.",
    "qa": "ok",
    "tipo": "prosa"
   },
@@ -790,12 +960,27 @@
    "qa": "ok",
    "tipo": "js"
   },
+  "5d282f82cd": {
+   "en": "This list changed on 27/08/2026. Before, it said only <i>“nobody opened yet”</i>. The ten were read, and the reading showed that <b>“not read” and “read and does not sustain” are different states</b>—and that hiding the difference is the same lie as hiding the entire list. Of the ten: <b>three became an edge</b>, <b>one was already in the repository</b> (the line was redundant), and these six remained, each with the reason. None of them failed at the citation literal gate: all ten passed character by character. <b>Passing the gate does not sustain the edge</b>, and it is exactly here that the difference appears.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Esta lista mudou em 27/08/2026. Antes ela dizia só <i>“ninguém\nabriu ainda”</i>. As dez foram lidas, e a leitura mostrou que <b>“não lido” e\n“lido e não sustenta” são estados diferentes</b> — e que esconder a diferença é\na mesma mentira que esconder a lista inteira. Das dez: <b>três viraram aresta</b>,\n<b>uma já estava no repositório</b> (a linha sobrava), e estas seis ficaram, cada\numa com o motivo. Nenhuma delas reprovou no portão da citação literal: todas as\ndez passaram caractere a caractere. <b>Passar no portão não é sustentar a\naresta</b>, e é exatamente aqui que a diferença aparece.",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "5d9b7ce306": {
    "en": "electromagnet",
    "modelo": "phi-4",
    "orfao": false,
    "pt": "eletroímã",
    "qa": "ok",
+   "tipo": "prosa"
+  },
+  "5defccab94": {
+   "en": null,
+   "ja_en": true,
+   "orfao": false,
+   "pt": "“The assembler transforms the sequence of controller expressions for a machine into a corresponding list of machine instructions, each with its execution procedure.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · SICP §5.2.2 — The Assembler</cite>",
    "tipo": "prosa"
   },
   "5ececf2bdd": {
@@ -829,6 +1014,14 @@
    "qa": "ok",
    "tipo": "prosa"
   },
+  "623fffd7db": {
+   "en": "read — the sentence does not sustain it",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "lida — a frase não sustenta",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "63ba2a3a18": {
    "en": "It is not an <i>electromagnet</i>: it is an electromagnet <b>while</b> current flows. Whoever reads “becomes an electromagnet” and keeps “is an electromagnet” loses the only important property, which is it <b>turning off</b>. The entire ladder above depends on turning off.<details class=\"proc\">",
    "modelo": "phi-4",
@@ -853,11 +1046,34 @@
    "qa": "ok",
    "tipo": "prosa"
   },
+  "65652f766b": {
+   "en": "is made of <b>evaluator</b> — construction, and the source says:",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "é feito de <b>avaliador</b> — construção, e a fonte diz:",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
+  "65968b3d25": {
+   "en": null,
+   "ja_en": true,
+   "orfao": false,
+   "pt": "the entire arithmetic logic unit <span>&larr; the Add/Subtract module and the Logic module</span>",
+   "tipo": "prosa"
+  },
   "65ffe13d6f": {
    "en": "<span class=\"regime r-seq\">sequential</span><span class=\"nivel\">level 3</span>",
    "modelo": "phi-4",
    "orfao": false,
    "pt": "<span class=\"regime r-seq\">sequencial</span><span class=\"nivel\">nível 3</span>",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
+  "687e1d044e": {
+   "en": "<span class=\"regime r-comb\">combinational</span><span class=\"nivel\">level 3</span>",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "<span class=\"regime r-comb\">combinacional</span><span class=\"nivel\">nível 3</span>",
    "qa": "ok",
    "tipo": "prosa"
   },
@@ -953,6 +1169,14 @@
    "pt": "“Chapter 20 described a Triple-Byte Accumulator that consisted of a counter to access memory, an adder, and latches.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 21 — The Arithmetic Logic Unit</cite>",
    "tipo": "prosa"
   },
+  "6d671def6a": {
+   "en": "<b>instruction ← control signals</b><span>Petzold chap. 23</span>",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "<b>instrução ← sinais de controle</b><span>Petzold cap. 23</span>",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "6d88fb8669": {
    "en": "level 3",
    "modelo": "phi-4",
@@ -982,6 +1206,22 @@
    "modelo": "phi-4",
    "orfao": false,
    "pt": "\n<b>Como ler.</b> O mapa sobe: o eletroímã é o chão, a máquina é o topo — e a\nlinha pontilhada dourada marca o lugar em que o assunto <b>deixa de ser\neletricidade e passa a ser lógica</b>. A cor do nó diz o regime; a chave está\nlogo abaixo dele. Seta cheia tem citação conferida contra o livro; seta\ntracejada é o que ninguém leu ainda, e ela está desenhada porque\n<b>mapa que esconde o que falta mente sobre o próprio tamanho</b>.<br><br>\nDentro de cada degrau, os quatro campos vêm com um <b>selo de procedência</b>:\n<span class=\"selo lido\">citação</span> quando o texto é do livro,\n<span class=\"selo lido\">síntese</span> quando é resumo de passagem citada — e a\npassagem abre ao lado, para você conferir se o resumo é honesto —, e\n<span class=\"selo oficio\">ofício · ratificado</span> quando é julgamento de quem\nensina, que nenhum livro escreve — e cada um traz <b>a data em que o autor\nrespondeu por ele</b>, porque campo que mudar depois dela volta a ser proposta.\n<b>Não existe selo para “um modelo escreveu”</b>, e é de propósito: veja a\núltima seção.\n",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
+  "6f0120fc67": {
+   "en": "The published statement said <i>“← register”</i> and the book does not say that: it says <i>“this configuration of flip-flops, decoder, and selector is sometimes known as read/write memory”</i>. The edge exists and is supported — with the correct origin node. Ready to enter.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "A afirmação publicada dizia <i>“← registrador”</i> e o livro não diz isso: diz <i>“this configuration of flip-flops, decoder, and selector is sometimes known as read/write memory”</i>. A aresta existe e está sustentada — com o nó de origem certo. Pronta para entrar.",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
+  "6f39806c70": {
+   "en": "The contrast is well supported — <i>“compared with interpretation, compilation can provide a great increase in the efficiency of program execution”</i> — but <b>×</b> is not a relationship that this ladder knows how to draw: it connects what is done with what. It stays as a note, not as an arrow. The published reference said §5.5.7 and is corrected.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "O contraste está sustentado com folga — <i>“compared with interpretation, compilation can provide a great increase in the efficiency of program execution”</i> —, mas <b>×</b> não é uma relação que esta escada saiba desenhar: ela liga o que é feito do quê. Fica como nota, não como seta. A referência publicada dizia §5.5.7 e está corrigida.",
    "qa": "ok",
    "tipo": "prosa"
   },
@@ -1015,11 +1255,27 @@
    "pt": "“The following circuit contains seven latches and seven tri-state buffers. One 3-to-8 decoder is used to latch the incoming value into one of the registers, and another 3-to-8 decoder is used to enable one of the tri-state buffers to select a value from one of the registers:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 22 — Registers and Busses</cite>",
    "tipo": "prosa"
   },
+  "720186b84e": {
+   "en": "What is missing, and why",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "O que falta, e por quê",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "72d3cad4b6": {
    "en": "<b>16×8 RAM array</b> &larr; 16 of these 16×8 memory arrays",
    "modelo": "phi-4",
    "orfao": false,
    "pt": "<b>16×8 RAM array</b> &larr; 16 of these 16×8 memory arrays",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
+  "73cc4d2993": {
+   "en": "The loop that decides what an expression means — described in terms of operations on registers and stacks, and therefore executable by the register machine itself.<details class=\"proc\">",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "O laço que decide o que uma expressão significa — descrito em termos de operações sobre registradores e pilhas, e por isso executável pela própria máquina de registradores.<details class=\"proc\">",
    "qa": "ok",
    "tipo": "prosa"
   },
@@ -1039,6 +1295,14 @@
    "qa": "ok",
    "tipo": "prosa"
   },
+  "7544956e5f": {
+   "en": "The part of the CPU that adds and subtracts, as well as does some other useful things.<details class=\"proc\">",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "A parte da CPU que soma e subtrai, além de fazer algumas outras coisas úteis.<details class=\"proc\">",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "75ed4310e7": {
    "en": "level-triggered flip-flop",
    "modelo": "phi-4",
@@ -1055,10 +1319,18 @@
    "qa": "ok",
    "tipo": "prosa"
   },
+  "77947b3e7a": {
+   "en": "<tspan x=\"470\" dy=\"0\">evaluator</tspan>",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "<tspan x=\"470\" dy=\"0\">avaliador</tspan>",
+   "qa": "ok",
+   "tipo": "svg"
+  },
   "77cc793e3c": {
    "en": "<b>paradigm as variation of the evaluator</b><span>SICP §§4.2–4.4</span>",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "<b>paradigma como variação do avaliador</b><span>SICP §§4.2–4.4</span>",
    "qa": "ok",
    "tipo": "prosa"
@@ -1086,6 +1358,14 @@
    "pt": "“The three letters stand for base, collector, and emitter.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 18 — Let’s Build a Clock!</cite>",
    "tipo": "prosa"
   },
+  "7acc158b4f": {
+   "en": "compiler",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "compilador",
+   "qa": "ok",
+   "tipo": "svg"
+  },
   "7be8812571": {
    "en": null,
    "ja_en": true,
@@ -1100,6 +1380,22 @@
    "pt": "É de 1918, dos físicos de rádio Eccles e Jordan — anterior ao computador. Hoje: cada bit de cada registrador, e o antitrepidação de todo botão físico que você aperta.<details class=\"proc\">",
    "qa": "ok",
    "tipo": "prosa"
+  },
+  "7de0f309fa": {
+   "en": "<tspan x=\"470\" dy=\"0\">paradigm</tspan>",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "<tspan x=\"470\" dy=\"0\">paradigma</tspan>",
+   "qa": "ok",
+   "tipo": "svg"
+  },
+  "7ead6d6373": {
+   "en": "level 6",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "nível 6",
+   "qa": "ok",
+   "tipo": "svg"
   },
   "7f487263a1": {
    "en": "Connect the two and observe: <b>in series</b> the lamp only lights up when both are activated — that is the E of Boolean algebra, made of metal. The truth table is not pre-filled; it fills as you visit the combinations, and while lines are missing, the instrument tells you how many are missing.",
@@ -1163,6 +1459,14 @@
    "qa": "ok",
    "tipo": "js"
   },
+  "86350dfd5c": {
+   "en": "paradigm",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "paradigma",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "86365f1636": {
    "en": "adder",
    "modelo": "phi-4",
@@ -1193,6 +1497,13 @@
    "orfao": false,
    "pt": "Dois relés viram uma porta",
    "qa": "ok",
+   "tipo": "prosa"
+  },
+  "887f65b1a1": {
+   "en": null,
+   "ja_en": true,
+   "orfao": false,
+   "pt": "“The explicit-control evaluator that we develop in this section shows how the underlying procedure-calling and argument-passing mechanisms used in the evaluation process can be described in terms of operations on registers and stacks.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · SICP §5.4 — The Explicit-Control Evaluator</cite>",
    "tipo": "prosa"
   },
   "8a7a63813e": {
@@ -1229,15 +1540,23 @@
   "8d5ff55973": {
    "en": "<b>electromagnet ← current and iron</b><span>Petzold chap. 6</span>",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "<b>eletroímã ← corrente e ferro</b><span>Petzold cap. 6</span>",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
+  "8e2c596afe": {
+   "en": "Because the controller text has <b>labels</b>, and a label is a promise of an address that does not yet exist. Before generating any execution, the assembler scans the entire text just to find out what position each label refers to. It is this scan that it exists to do.<details class=\"proc\">",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Porque o texto do controlador tem <b>rótulos</b>, e um rótulo é uma promessa de endereço que ainda não existe. Antes de gerar qualquer execução, o assembler varre o texto inteiro só para descobrir a que posição cada rótulo se refere. É essa varredura que ele existe para fazer.<details class=\"proc\">",
    "qa": "ok",
    "tipo": "prosa"
   },
   "8e417c6b17": {
    "en": "<b>assembler ← register machine</b><span>SICP §5.2</span>",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "<b>assembler ← máquina de registradores</b><span>SICP §5.2</span>",
    "qa": "ok",
    "tipo": "prosa"
@@ -1261,9 +1580,16 @@
   "9067472157": {
    "en": "<b>memory (RAM) ← register</b><span>Petzold chap. 19</span>",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "<b>memória (RAM) ← registrador</b><span>Petzold cap. 19</span>",
    "qa": "ok",
+   "tipo": "prosa"
+  },
+  "929363789b": {
+   "en": null,
+   "ja_en": true,
+   "orfao": false,
+   "pt": "“The assembler transforms the sequence of controller expressions for a machine into a corresponding list of machine instructions, each with its execution procedure.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · §5.2.2 — The Assembler</cite>",
    "tipo": "prosa"
   },
   "9294c0b287": {
@@ -1273,6 +1599,14 @@
    "pt": "Aqui <b>nada mudou fisicamente</b> — mudou a descrição. Continua sendo corrente atravessando metal; o que passou a existir foi <i>chamar</i> aquilo de verdadeiro e falso. Este é o primeiro salto de abstração da escada, e é o mais fácil de atravessar sem perceber que se atravessou — por isso quem pula aqui não entende mais nada lá em cima.<details class=\"proc\">",
    "qa": "ok",
    "tipo": "prosa"
+  },
+  "92c0c11215": {
+   "en": "level 7",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "nível 7",
+   "qa": "ok",
+   "tipo": "svg"
   },
   "9313fdd008": {
    "en": "Data paths — registers and operations — plus a <b>controller</b> that sequences the operations. Viewed this way, it's literally a wiring diagram. <details class=\"proc\">",
@@ -1288,6 +1622,13 @@
    "orfao": false,
    "pt": "Porque somar uma coluna só não basta. Da segunda coluna em diante são <b>três</b> bits para somar: os dois da coluna mais o vai-um que veio da anterior. É essa terceira entrada que separa o meio-somador do somador completo.<details class=\"proc\">",
    "qa": "ok",
+   "tipo": "prosa"
+  },
+  "94ffc26973": {
+   "en": null,
+   "ja_en": true,
+   "orfao": false,
+   "pt": "“we extend the Scheme evaluator to support a programming paradigm called nondeterministic computing by building into the evaluator a facility to support automatic search”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · §4.3 — Variations on a Scheme: Nondeterministic Computing</cite>",
    "tipo": "prosa"
   },
   "95a8b2bedb": {
@@ -1328,6 +1669,14 @@
    "pt": "“Here’s the edge-triggered D-type flip-flop with preset and clear built entirely from six 3-input NOR gates and an inverter.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 17 — Feedback and Flip-Flops</cite>",
    "tipo": "prosa"
   },
+  "992981404a": {
+   "en": "The sentence says that the signals <i>“control these components to work together in executing instructions”</i>: they <b>execute</b> the instruction, not compose it. And this same citation is already the second witness of another edge.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "A frase diz que os sinais <i>“control these components to work together in executing instructions”</i>: eles <b>executam</b> a instrução, não a compõem. E essa mesma citação já é a segunda testemunha de outra aresta.",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "997db3b08a": {
    "en": "physics",
    "modelo": "phi-4",
@@ -1344,11 +1693,27 @@
    "qa": "ok",
    "tipo": "js"
   },
+  "9c2d9f7d85": {
+   "en": "From the electromagnet to the programming paradigm, one step at a time.  \nEach step answers <b>what it is</b>, <b>why it exists</b>, <b>where it appears</b>, and <b>where you get stuck</b> — and 5 of the passages you don't need to accept at face value: they <b>build the piece right here on the screen</b>.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Do eletroímã ao paradigma de programação, um degrau de cada vez.\nCada degrau responde <b>o que é</b>, <b>por que existe</b>, <b>onde aparece</b> e\n<b>onde se trava</b> — e 5 das passagens você não precisa aceitar de\npalavra: elas <b>montam a peça aqui na tela</b>.",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "9dd85ae72e": {
    "en": "<b>The Ladder of Abstractions</b> — Mateus Alkimim · code <b>MIT</b>, content  \n<a href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br\">CC BY-SA 4.0</a>.<br>  \nThe quotes belong to their authors and appear under the right of quotation, with  \nsource and chapter.",
    "modelo": "phi-4",
    "orfao": false,
    "pt": "\n<b>A escada de abstrações</b> — Mateus Alkimim · código <b>MIT</b>, conteúdo\n<a href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br\">CC BY-SA 4.0</a>.<br>\nAs citações pertencem aos seus autores e aparecem sob direito de citação, com\nfonte e capítulo.\n",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
+  "9e5edae387": {
+   "en": "is made of <b>adder</b> — construction, and the source says:",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "é feito de <b>somador</b> — construção, e a fonte diz:",
    "qa": "ok",
    "tipo": "prosa"
   },
@@ -1359,6 +1724,14 @@
    "pt": "arquitetura",
    "qa": "ok",
    "tipo": "svg"
+  },
+  "9fa676ec64": {
+   "en": "What appears when you extend the evaluator. Non-deterministic computation, for example, is a paradigm obtained <b>by building within the evaluator</b> an automatic search.<details class=\"proc\">",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "O que aparece quando se estende o avaliador. A computação não-determinística, por exemplo, é um paradigma obtido <b>construindo dentro do avaliador</b> uma busca automática.<details class=\"proc\">",
+   "qa": "ok",
+   "tipo": "prosa"
   },
   "9faf291e06": {
    "en": "data",
@@ -1371,16 +1744,24 @@
   "a2aa97c96e": {
    "en": "current and iron",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "corrente e ferro",
    "qa": "ok",
    "tipo": "svg"
+  },
+  "a38f85399e": {
+   "en": "No book writes where the student gets stuck; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the house ritual is proposal plus ratification, and content is no different from norm. It wasn't written by model.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Nenhum livro escreve onde o aluno trava; isso vem da sala de aula. Este campo é julgamento didático do autor e está em <b>PROPOSTA</b> — o rito da casa é proposta mais ratificação, e conteúdo não é diferente de norma. Ele não foi escrito por modelo.",
+   "qa": "ok",
+   "tipo": "prosa"
   },
   "a39d42b1b6": {
    "decisao_humana": "'ofício · proposta' é vocabulário da casa e o modelo o deixou intacto. Em inglês o selo diz de onde o campo veio: não de um livro, mas da prática de quem ensina — 'craft · proposal'. Decidido em 2026-08-27, não derivado por modelo.",
    "en": "where it appears<span class=\"selo oficio\">craft · proposal</span>",
    "modelo": "phi-4",
-   "orfao": true,
+   "orfao": false,
    "pt": "onde aparece<span class=\"selo oficio\">ofício · proposta</span>",
    "qa": "ok",
    "tipo": "prosa"
@@ -1421,7 +1802,7 @@
   "a506306d89": {
    "en": "<b>instruction ← control signals</b><span>Petzold caps. 23–24</span>",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "<b>instrução ← sinais de controle</b><span>Petzold caps. 23–24</span>",
    "qa": "ok",
    "tipo": "prosa"
@@ -1459,7 +1840,7 @@
   "a95c317393": {
    "en": null,
    "ja_en": true,
-   "orfao": false,
+   "orfao": true,
    "pt": "<b>the entire arithmetic logic unit</b> &larr; the Add/Subtract module and the Logic module",
    "tipo": "prosa"
   },
@@ -1533,6 +1914,13 @@
    "pt": "“If your seven-segment display will always be displaying a digit, then a seven-segment decoder can be built from a BCD decoder as shown here:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 18 — Let’s Build a Clock!</cite>",
    "tipo": "prosa"
   },
+  "b823341060": {
+   "en": null,
+   "ja_en": true,
+   "orfao": false,
+   "pt": "“The evaluator can be executed by the register-machine simulator of section 5.2.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · §5.4 — The Explicit-Control Evaluator</cite>",
+   "tipo": "prosa"
+  },
   "b92bd6a960": {
    "en": "Every sum of every processor in the world, including the one that summed the loop index you ran today. It's also where overflow lives: the carry-out that comes from the last column and has nowhere to go. <details class=\"proc\">",
    "modelo": "phi-4",
@@ -1554,6 +1942,14 @@
    "modelo": "phi-4",
    "orfao": false,
    "pt": "Esta página tem os mesmos quatro campos daquele mapa, e é por\nisso que a diferença importa: aqui <b>nenhum deles saiu de um modelo</b>. Os que\ndescrevem a peça saíram do próprio Petzold, que é professor e já responde “o que\né” e “por que existe” em prosa, com capítulo — a passagem vai junto de cada\ncampo. Os que dizem <b>onde o aluno trava</b> nenhum livro escreve: são\njulgamento de quem ensina, entram marcados como <b>proposta</b> e esperam\nratificação.",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
+  "bb38495035": {
+   "en": "read — rewritten, ready to enter",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "lida — reescrita, pronta para entrar",
    "qa": "ok",
    "tipo": "prosa"
   },
@@ -1611,6 +2007,14 @@
    "qa": "ok",
    "tipo": "js"
   },
+  "c37dd17f3e": {
+   "en": "Thinking that the assembler “translates word for word.” It can't: it needs <b>two passes</b>, because a jump forward points to a label that it hasn't seen yet. Whoever doesn't see the two passes doesn't understand why assembling is more than substituting.<details class=\"proc\">",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Achar que o assembler “traduz palavra por palavra”. Ele não consegue: precisa de <b>duas passadas</b>, porque um salto para a frente aponta para um rótulo que ele ainda não viu. Quem não enxerga as duas passadas não entende por que montar é mais que substituir.<details class=\"proc\">",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "c43b1a9b58": {
    "decisao_humana": "O modelo verteu o mesmo selo de tres maneiras ao longo da pagina ('craft', 'profession', e 'ofício' intacto). Selo é vocabulário fechado: uma cadeia, sempre a mesma, senão o leitor acha que sao tres categorias diferentes. Uniformizado em 2026-08-27.",
    "en": "<b>How to read.</b> The map rises: the electromagnet is the floor, the machine is the top — and the dotted golden line marks the place where the subject <b>stops being electricity and becomes logic</b>. The node's color indicates the regime; the key is right below it. A solid arrow has a citation checked against the book; a dashed arrow is what no one has read yet, and it is drawn because <b>a map that hides what is missing lies about its own size</b>.<br><br>  \nWithin each step, the four fields come with a <b>source label</b>: <span class=\"selo lido\">citation</span> when the text is from the book, <span class=\"selo lido\">synthesis</span> when it is a summary of a cited passage — and the passage opens to the side, so you can check if the summary is honest —, and <span class=\"selo oficio\">craft · proposal</span> when it is the judgment of the teacher, which no book writes. <b>There is no label for “a model wrote”</b>, and it is on purpose: see the last section.",
@@ -1618,6 +2022,13 @@
    "orfao": true,
    "pt": "\n<b>Como ler.</b> O mapa sobe: o eletroímã é o chão, a máquina é o topo — e a\nlinha pontilhada dourada marca o lugar em que o assunto <b>deixa de ser\neletricidade e passa a ser lógica</b>. A cor do nó diz o regime; a chave está\nlogo abaixo dele. Seta cheia tem citação conferida contra o livro; seta\ntracejada é o que ninguém leu ainda, e ela está desenhada porque\n<b>mapa que esconde o que falta mente sobre o próprio tamanho</b>.<br><br>\nDentro de cada degrau, os quatro campos vêm com um <b>selo de procedência</b>:\n<span class=\"selo lido\">citação</span> quando o texto é do livro,\n<span class=\"selo lido\">síntese</span> quando é resumo de passagem citada — e a\npassagem abre ao lado, para você conferir se o resumo é honesto —, e\n<span class=\"selo oficio\">ofício · proposta</span> quando é julgamento de quem\nensina, que nenhum livro escreve. <b>Não existe selo para “um modelo escreveu”</b>,\ne é de propósito: veja a última seção.\n",
    "qa": "ok",
+   "tipo": "prosa"
+  },
+  "c4f74d0198": {
+   "en": null,
+   "ja_en": true,
+   "orfao": false,
+   "pt": "“these large numbers must be added and subtracted in bytes, starting with the least significant byte. Each subsequent 1-byte addition or subtraction must take into account the carry from the previous operation.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 21 — The Arithmetic Logic Unit</cite>",
    "tipo": "prosa"
   },
   "c4f8e9362f": {
@@ -1632,6 +2043,22 @@
    "ja_en": true,
    "orfao": false,
    "pt": "“As you’ll recall, an 8-bit latch uses flip-flops to store an 8-bit value.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 20 — Automating Arithmetic</cite>",
+   "tipo": "prosa"
+  },
+  "c67acfd734": {
+   "en": "The published statement said <i>“← assembler and evaluator”</i>, and the assembler doesn't appear in the sentence: <i>“translates programs written in Scheme into sequences of instructions to be executed using the explicit-control evaluator machine’s data paths”</i>. The half that the book sustains is ready to enter; the other is not.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "A afirmação publicada dizia <i>“← assembler e avaliador”</i>, e o assembler não aparece na frase: <i>“translates programs written in Scheme into sequences of instructions to be executed using the explicit-control evaluator machine’s data paths”</i>. A metade que o livro sustenta está pronta para entrar; a outra não.",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
+  "c764824095": {
+   "en": "is made of <b>register machine</b> — dependency, and the source says:",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "é feito de <b>máquina de registradores</b> — dependência, e a fonte diz:",
+   "qa": "ok",
    "tipo": "prosa"
   },
   "c7f1490f1c": {
@@ -1655,6 +2082,14 @@
    "modelo": "phi-4",
    "orfao": false,
    "pt": "8-bit latch <span>&larr; flip-flops</span>",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
+  "c960aa942c": {
+   "en": "<b>interpretation × compilation</b><span>SICP §5.5</span>",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "<b>interpretação × compilação</b><span>SICP §5.5</span>",
    "qa": "ok",
    "tipo": "prosa"
   },
@@ -1697,6 +2132,14 @@
    "qa": "ok",
    "tipo": "prosa"
   },
+  "cc0649db7b": {
+   "en": "searched — no sentence found",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "procurada — nenhuma frase encontrada",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "cc3efe599a": {
    "en": "The steps, from bottom to top",
    "modelo": "phi-4",
@@ -1712,6 +2155,14 @@
    "pt": "assembler",
    "qa": "ok",
    "tipo": "svg"
+  },
+  "cd3c10bc75": {
+   "en": "Expect it to multiply and divide. It doesn't multiply: Petzold himself warns that the circuitry is possible but is outside the book, and the 8080 didn't have it. Multiplication, at this level, is <b>program</b> — repeated addition —, not a component. Those who look for a multiplier don't find it and conclude they misunderstood.<details class=\"proc\">",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Esperar que ela multiplique e dividir. Não multiplica: o próprio Petzold avisa que a circuitaria é possível e fica fora do livro, e que o 8080 não a tinha. Multiplicação, nesse nível, é <b>programa</b> — soma repetida —, não peça. Quem procura o multiplicador não acha e conclui que entendeu errado.<details class=\"proc\">",
+   "qa": "ok",
+   "tipo": "prosa"
   },
   "ce9b1f2b91": {
    "en": null,
@@ -1731,7 +2182,7 @@
   "d3a81c31f4": {
    "en": "<b>ULA ← adder and gates</b><span>Petzold cap. 21</span>",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "<b>ULA ← somador e portas</b><span>Petzold cap. 21</span>",
    "qa": "ok",
    "tipo": "prosa"
@@ -1739,7 +2190,7 @@
   "d4c09a42e1": {
    "en": "What's left to read",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "O que falta ler",
    "qa": "ok",
    "tipo": "prosa"
@@ -1810,10 +2261,25 @@
    "qa": "ok",
    "tipo": "js"
   },
+  "dde637c5f9": {
+   "en": null,
+   "ja_en": true,
+   "orfao": false,
+   "pt": "“we extend the Scheme evaluator to support a programming paradigm called nondeterministic computing by building into the evaluator a facility to support automatic search”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · SICP §4.3 — Variations on a Scheme: Nondeterministic Computing</cite>",
+   "tipo": "prosa"
+  },
+  "de3f96addf": {
+   "en": "These 8 constructions passed through the citation literal gate, but the step where they land has not yet been read — so they wait here, in view, instead of entering the ladder for convenience.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Estas 8 construções passaram no portão da\ncitação literal, mas o degrau em que elas pousam ainda não foi lido — então elas\nesperam aqui, à vista, em vez de entrar na escada por conveniência.",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "de5f238c73": {
    "en": "<b>interpretation × compilation</b><span>SICP §5.5.7</span>",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "<b>interpretação × compilação</b><span>SICP §5.5.7</span>",
    "qa": "ok",
    "tipo": "prosa"
@@ -1823,6 +2289,14 @@
    "modelo": "phi-4",
    "orfao": false,
    "pt": "Por que assim",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
+  "dea5f0e145": {
+   "en": "Because, having the evaluator as a program, you can experiment with language design choices <b>simply by modifying it</b> — and that's how new languages typically originate, before there is a true implementation.<details class=\"proc\">",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Porque, tendo o avaliador como um programa, dá para experimentar escolhas de projeto de linguagem <b>simplesmente modificando-o</b> — e é assim que linguagens novas costumam nascer, antes de existir implementação de verdade.<details class=\"proc\">",
    "qa": "ok",
    "tipo": "prosa"
   },
@@ -1854,6 +2328,14 @@
    "modelo": "phi-4",
    "orfao": false,
    "pt": "nível -1",
+   "qa": "ok",
+   "tipo": "svg"
+  },
+  "e00fb1b5b1": {
+   "en": "From here on up, the subject is language, not circuitry.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "daqui para cima o assunto é linguagem, não circuito",
    "qa": "ok",
    "tipo": "svg"
   },
@@ -1921,6 +2403,14 @@
    "qa": "ok",
    "tipo": "svg"
   },
+  "e68a7bbef6": {
+   "en": "Every time you read <code>jmp .loop</code> in a disassembler and the <code>.loop</code> appears as an address. And in every compiler, in the final stage before the binary.<details class=\"proc\">",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Toda vez que você lê <code>jmp .loop</code> num desmontador e o <code>.loop</code> aparece como um endereço. E em todo compilador, na última etapa antes do binário.<details class=\"proc\">",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "e69d38f789": {
    "en": null,
    "ja_en": true,
@@ -1954,7 +2444,7 @@
   "eb5230e407": {
    "en": "<b>clock ← oscillator</b><span>Petzold cap. 18</span>",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "<b>relógio ← oscilador</b><span>Petzold cap. 18</span>",
    "qa": "ok",
    "tipo": "prosa"
@@ -1993,7 +2483,7 @@
   "edd9dcc822": {
    "en": "Each line here is an edge that the bibliography supports and that  \nnobody has opened yet. They enter when they are read, with the citation — not before.",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "Cada linha aqui é uma aresta que a bibliografia sustenta e que\nninguém abriu ainda. Elas entram quando forem lidas, com a citação — não antes.",
    "qa": "ok",
    "tipo": "prosa"
@@ -2025,7 +2515,7 @@
   "f106c5cb7d": {
    "en": "These 9 constructions passed through the  \nliteral quotation gate, but the step where they land has not been read yet — so they  \nwait here, in view, instead of entering the ladder for convenience.",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "Estas 9 construções passaram no portão da\ncitação literal, mas o degrau em que elas pousam ainda não foi lido — então elas\nesperam aqui, à vista, em vez de entrar na escada por conveniência.",
    "qa": "ok",
    "tipo": "prosa"
@@ -2059,6 +2549,14 @@
    "pt": "“The counter providing the memory address is built from edge-triggered flip-flops, so it probably has a Clear input. The latch is built from edge-triggered flip-flops as well, and edge-triggered flip-flops have been used for generating the control signals.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 20 — Automating Arithmetic</cite>",
    "tipo": "prosa"
   },
+  "f726b38d57": {
+   "en": "<span class=\"regime r-lingua\">language</span><span class=\"nivel\">level 7</span>",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "<span class=\"regime r-lingua\">linguagem</span><span class=\"nivel\">nível 7</span>",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "f77aef6d95": {
    "en": "Because that's how electricity <b>pulls</b> something. Morse needed a signal that acted at a distance and couldn't use a lamp: the practical lamp wouldn't appear until 1879. Magnetism was left as the option.<details class=\"proc\">",
    "modelo": "phi-4",
@@ -2090,11 +2588,34 @@
    "qa": "ok",
    "tipo": "prosa"
   },
+  "f9f206a7f1": {
+   "en": "<span class=\"regime r-lingua\">language</span><span class=\"nivel\">level 6</span>",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "<span class=\"regime r-lingua\">linguagem</span><span class=\"nivel\">nível 6</span>",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "fa2cd54828": {
    "en": null,
    "ja_en": true,
    "orfao": false,
    "pt": "“To design a register machine, we must design its data paths (registers and operations) and the controller that sequences these operations. … If we view the arrows as wires and the X buttons as switches, the data-path diagram is very like the wiring diagram for a machine that could be constructed from electrical components.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · §5.1 — Designing Register Machines</cite>",
+   "tipo": "prosa"
+  },
+  "fa58ca093c": {
+   "en": null,
+   "ja_en": true,
+   "orfao": false,
+   "pt": "“The remainder of this chapter focuses on the most fundamental part of the CPU, which is known as the arithmetic logic unit, or ALU. This is the part of the CPU that adds and subtracts, as well as performing a couple of other useful tasks.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 21 — The Arithmetic Logic Unit</cite>",
+   "tipo": "prosa"
+  },
+  "fadf821470": {
+   "en": "evaluator",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "avaliador",
+   "qa": "ok",
    "tipo": "prosa"
   },
   "fb01572492": {

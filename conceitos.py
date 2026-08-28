@@ -309,6 +309,132 @@ CONCEITOS = {
    "fechou; e é justamente aqui que quase todo curso para de descer."),
 },
 
+# ---- entram em 2026-08-27, com as arestas aceitas da leitura das dez ----
+# Os campos de OFÍCIO destes quatro nascem em PROPOSTA: a ratificação de
+# 2026-08-27 cobriu os 17 que existiam naquele momento, e ratificação não se
+# estende por analogia a texto que o operador não leu. O selo dirá "proposta"
+# até ele os ler — que é o mecanismo funcionando, não uma pendência esquecida.
+
+"ula": {
+ "o_que_e": C(
+   "A parte da CPU que soma e subtrai, além de fazer algumas outras coisas "
+   "úteis.",
+   "cap. 21 — The Arithmetic Logic Unit",
+   "The remainder of this chapter focuses on the most fundamental part of the "
+   "CPU, which is known as the arithmetic logic unit, or ALU. This is the part "
+   "of the CPU that adds and subtracts, as well as performing a couple of other "
+   "useful tasks."),
+ "por_que_existe": S(
+   "Porque o somador sozinho resolve uma coluna. Um processador de 8 bits "
+   "precisa lidar com números de 16, 24, 32 bits — e isso é somar byte a byte, "
+   "do menos significativo para cima, cada um carregando o vai-um do anterior. "
+   "A ULA é o somador <b>com a máquina em volta</b> que faz essa sequência.",
+   "cap. 21 — The Arithmetic Logic Unit",
+   "these large numbers must be added and subtracted in bytes, starting with "
+   "the least significant byte. Each subsequent 1-byte addition or subtraction "
+   "must take into account the carry from the previous operation."),
+ "onde_aparece": O(
+   "É o “A” de qualquer diagrama de CPU que você já viu, e o que o seu "
+   "profiler chama de <i>arithmetic throughput</i>. Também é onde nascem as "
+   "flags: zero, sinal, vai-um — as que o seu <code>if</code> consulta sem "
+   "você saber.", em=None),
+ "onde_se_trava": O(
+   "Esperar que ela multiplique e dividir. Não multiplica: o próprio Petzold "
+   "avisa que a circuitaria é possível e fica fora do livro, e que o 8080 não "
+   "a tinha. Multiplicação, nesse nível, é <b>programa</b> — soma repetida —, "
+   "não peça. Quem procura o multiplicador não acha e conclui que entendeu "
+   "errado.", em=None),
+},
+
+"assembler": {
+ "o_que_e": C(
+   "Transforma a sequência de expressões do controlador de uma máquina numa "
+   "lista de instruções, cada uma com o seu procedimento de execução.",
+   "SICP §5.2.2 — The Assembler",
+   "The assembler transforms the sequence of controller expressions for a "
+   "machine into a corresponding list of machine instructions, each with its "
+   "execution procedure."),
+ "por_que_existe": S(
+   "Porque o texto do controlador tem <b>rótulos</b>, e um rótulo é uma "
+   "promessa de endereço que ainda não existe. Antes de gerar qualquer "
+   "execução, o assembler varre o texto inteiro só para descobrir a que "
+   "posição cada rótulo se refere. É essa varredura que ele existe para fazer.",
+   "SICP §5.2.2 — The Assembler",
+   "Before it can generate the instruction execution procedures, the assembler "
+   "must know what all the labels refer to, so it begins by scanning the "
+   "controller text to separate the labels from the instructions."),
+ "onde_aparece": O(
+   "Toda vez que você lê <code>jmp .loop</code> num desmontador e o "
+   "<code>.loop</code> aparece como um endereço. E em todo compilador, na "
+   "última etapa antes do binário.", em=None),
+ "onde_se_trava": O(
+   "Achar que o assembler “traduz palavra por palavra”. Ele não consegue: "
+   "precisa de <b>duas passadas</b>, porque um salto para a frente aponta para "
+   "um rótulo que ele ainda não viu. Quem não enxerga as duas passadas não "
+   "entende por que montar é mais que substituir.", em=None),
+},
+
+"avaliador": {
+ "o_que_e": C(
+   "O laço que decide o que uma expressão significa — descrito em termos de "
+   "operações sobre registradores e pilhas, e por isso executável pela própria "
+   "máquina de registradores.",
+   "SICP §5.4 — The Explicit-Control Evaluator",
+   "The explicit-control evaluator that we develop in this section shows how "
+   "the underlying procedure-calling and argument-passing mechanisms used in "
+   "the evaluation process can be described in terms of operations on registers "
+   "and stacks."),
+ "por_que_existe": C(
+   "Porque é ele que fecha a escada: escrito assim, ele serve como "
+   "implementação de um interpretador numa linguagem muito parecida com a "
+   "linguagem de máquina dos computadores comuns.",
+   "SICP §5.4 — The Explicit-Control Evaluator",
+   "the explicit-control evaluator can serve as an implementation of a Scheme "
+   "interpreter, written in a language that is very similar to the native "
+   "machine language of conventional computers."),
+ "onde_aparece": O(
+   "É o que roda quando você digita numa REPL. E é o desenho que a JVM, a "
+   "CPython e o V8 estão executando por baixo — cada um com o seu laço de "
+   "buscar, decidir, aplicar.", em=None),
+ "onde_se_trava": O(
+   "A circularidade aparente: um avaliador de Scheme escrito em Scheme parece "
+   "não explicar nada. Ele explica — desde que se veja que o de <b>dentro</b> "
+   "está descrito em operações de registrador, e não em Scheme. É onde a "
+   "escada se encontra consigo mesma, e é a passagem mais tonta de atravessar "
+   "se ninguém disser isso.", em=None),
+},
+
+"paradigma": {
+ "o_que_e": C(
+   "O que aparece quando se estende o avaliador. A computação "
+   "não-determinística, por exemplo, é um paradigma obtido <b>construindo "
+   "dentro do avaliador</b> uma busca automática.",
+   "SICP §4.3 — Variations on a Scheme: Nondeterministic Computing",
+   "we extend the Scheme evaluator to support a programming paradigm called "
+   "nondeterministic computing by building into the evaluator a facility to "
+   "support automatic search"),
+ "por_que_existe": S(
+   "Porque, tendo o avaliador como um programa, dá para experimentar escolhas "
+   "de projeto de linguagem <b>simplesmente modificando-o</b> — e é assim que "
+   "linguagens novas costumam nascer, antes de existir implementação de "
+   "verdade.",
+   "SICP §4.2 — Variations on a Scheme: Lazy Evaluation",
+   "Now that we have an evaluator expressed as a Lisp program, we can "
+   "experiment with alternative choices in language design simply by modifying "
+   "the evaluator. Indeed, new languages are often invented by first writing an "
+   "evaluator that embeds the new language within an existing high-level "
+   "language."),
+ "onde_aparece": O(
+   "Prolog é a busca automática virada linguagem. <code>async/await</code> é "
+   "uma mudança na ordem de avaliação. Avaliação preguiçosa é outra. Todas "
+   "moram no mesmo lugar: na regra que decide o que avaliar e quando.", em=None),
+ "onde_se_trava": O(
+   "Tratar paradigma como escola ou como gosto — “sou funcional”, “sou "
+   "orientado a objetos”. Aqui ele é uma coisa <b>mecânica</b>: uma alteração "
+   "no laço que avalia. Enquanto for identidade, não dá para perguntar a única "
+   "coisa útil, que é <i>o que exatamente muda no avaliador</i>.", em=None),
+},
+
 }
 
 # Os quatro campos, na ordem em que a página os mostra, com o rótulo.

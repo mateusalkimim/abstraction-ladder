@@ -5,7 +5,7 @@
 # A escada de abstrações — `abstraction-ladder`
 
 **Um mapa da computação que só admite o que alguém leu — e que constrói na sua
-frente o que afirma.** Do eletroímã à máquina de registradores, um degrau por
+frente o que afirma.** Do eletroímã ao paradigma de programação, um degrau por
 vez. Cada degrau responde **o que é**, **por que existe**, **onde aparece** e
 **onde se trava**; cada seta abre a frase do livro que a sustenta; e cinco das
 passagens você não precisa aceitar de palavra, porque elas **montam a peça aqui
@@ -21,23 +21,24 @@ No ar em <https://mateusalkimim.github.io/abstraction-ladder/> — em
 
 ## As três camadas
 
-**O mapa.** Um SVG gerado, que sobe: o eletroímã é o chão, a máquina é o topo, e
-uma régua dourada marca o lugar em que o assunto **deixa de ser eletricidade e
-passa a ser lógica**. A cor do nó diz o regime (física, combinacional,
+**O mapa.** Um SVG gerado, que sobe: o eletroímã é o chão, o paradigma é o topo,
+e duas réguas marcam onde o assunto muda de matéria — a dourada, onde ele **deixa de ser eletricidade e passa a ser lógica**; a roxa, onde **deixa de ser
+circuito e passa a ser linguagem**. A cor do nó diz o regime (física, combinacional,
 sequencial, arquitetura) e a chave fica na mesma tela. As arestas que ninguém
 leu estão **desenhadas**, tracejadas, subindo para fora do mapa — porque mapa
 que esconde o que falta mente sobre o próprio tamanho.
 
-**Os quatro campos.** 36 deles, 4 por degrau, e **nenhum saiu de um modelo**.
+**Os quatro campos.** 52 deles, 4 por degrau, e **nenhum saiu de um modelo**.
 Cada um carrega o seu próprio selo de procedência:
 
 | selo | quantos | o que significa |
 |---|---|---|
-| `citação` | 10 | tradução fiel de uma passagem, e a passagem abre ao lado |
-| `síntese` | 9 | resumo de passagem citada — a passagem abre junto, para você conferir se o resumo é honesto |
-| `ofício · ratificado` | 17 | julgamento de quem ensina, que nenhum livro escreve — **ratificado pelo autor em 2026-08-27**, e cada campo estampa a data |
+| `citação` | 15 | tradução fiel de uma passagem, e a passagem abre ao lado |
+| `síntese` | 12 | resumo de passagem citada — a passagem abre junto, para você conferir se o resumo é honesto |
+| `ofício · ratificado` | 17 | julgamento de quem ensina, que nenhum livro escreve — **ratificado em 2026-08-27**, e cada campo estampa a data |
+| `ofício · proposta` | 8 | os mesmos, nos quatro degraus que entraram **depois** da ratificação. Ratificação não se estende por analogia a texto que ninguém leu |
 
-Os **9 campos "o que é" são todos citação do livro**: nenhum conceito desta
+Os **13 campos "o que é" são todos citação do livro**: nenhum conceito desta
 escada foi definido por mim. Não existe selo para *"um modelo escreveu"*, e é de
 propósito.
 
@@ -110,9 +111,10 @@ deveriam achar e falham se não acharem. Um portão que nunca reprovou não prov
 nada.
 
 - **`conferir_citacoes.py`** — cada citação conferida contra o livro, caractere a
-  caractere. Hoje: **53 conferem, 0 reprovam, 2 sem a fonte no acervo** (as duas
-  do SICP, cujo livro ainda não está dissecado). Ele **nunca devolve "ok" por
-  ausência de prova**: sem o livro à mão, sai com erro;
+  caractere. Hoje: **67 conferem, 0 reprovam, 0 sem a fonte no acervo** — o SICP foi
+  dissecado em 27/08/2026 e as duas citações que antes eram inverificáveis
+  passaram a conferir. Ele **nunca devolve "ok" por ausência de prova**: sem o
+  livro à mão, sai com erro;
 - **`conferir_mapa.py`** — mede o que a norma de diagramas manda em vez de
   prometer. Pegou um arco que raspava a caixa de um nó, e uma chave de cor que
   caía cinco pixels fora do quadro;
@@ -143,7 +145,7 @@ conferida.
 - **As arestas vêm de dois livros**, lidos: Petzold, *Code* (2ª ed.) e
   Abelson & Sussman, *SICP* (2ª ed.). As citações aparecem sob direito de
   citação, com fonte e capítulo, e pertencem aos seus autores.
-- **9 arestas entre degraus, sustentadas por 11 citações**, e **24 construções
+- **13 arestas entre degraus, sustentadas por 15 citações**, e **24 construções
   verificadas** — peças feitas de peças da mesma camada.
 - **Uma aresta tem duas testemunhas independentes** — `registrador → máquina de
   registradores`. Petzold constrói a máquina a partir de portas; SICP a define
@@ -193,7 +195,7 @@ ratificados em **27/08/2026**, e cada um estampa a data. Ela não é enfeite: di
 dela volta a ser proposta até ser relido.
 
 Aqui a ordem se inverteu — o portão da leitura humana vem **antes** do conteúdo —
-e o preço é este mapa pequeno. A aposta é que nove arestas conferíveis valem mais
+e o preço é este mapa pequeno. A aposta é que treze arestas conferíveis valem mais
 que sessenta que não.
 
 O funil não afrouxa essa ordem: ele só barateia o **achar**. O julgamento continua
@@ -202,17 +204,23 @@ ao lado, quando a peça pode ser construída.
 
 ## Estado, e o que falta
 
-- **10 arestas conhecidas e não lidas**, listadas na página com a referência de
-  onde estão. Elas entram quando forem lidas, com a citação;
-- **9 construções verificadas que ainda não pousaram em degrau nenhum** (RAM,
-  ULA, PSW, oscilador, transistor, decodificador de sete segmentos). A citação
+- **as dez que faltavam foram lidas em 27/08/2026**, e o resultado está na
+  página com o motivo de cada uma. Todas as dez passaram no portão da citação
+  literal; **três sobreviveram ao julgamento** e viraram aresta (ULA, assembler,
+  avaliador→paradigma), uma **já estava no repositório** e a linha sobrava, duas
+  foram **reescritas** porque nomeavam o nó de origem errado, uma foi
+  **rebaixada** a nota (contraste não é aresta) e três seguem sem sustentação.
+  Passar no portão não é sustentar a aresta, e é aí que a diferença aparece;
+- **8 campos de ofício em proposta**, nos quatro degraus novos, aguardando
+  leitura e ratificação;
+- **8 construções verificadas que ainda não pousaram em degrau nenhum** (RAM,
+  PSW, oscilador, transistor, decodificador de sete segmentos). A da ULA pousou
+  em 27/08/2026, quando a ULA virou degrau. A citação
   está provada; o degrau abaixo delas é que não foi lido. Ficam à vista, em seção
   própria, em vez de entrar na escada por conveniência;
 - **quatro degraus ainda não têm instrumento** — eletroímã, relé, registrador e
   máquina de registradores. Os dois de baixo são física, e o de cima é grande
   demais para um `canvas`;
-- **não há glossário dos termos da casa**, e foi isso que produziu as seis
-  variantes de rótulo na tradução;
 - **a escada tem um fim medido.** Do capítulo 5 ao 20 de Petzold, uma só proposta
   não sustentava; dos capítulos 21 ao 24, oito de onze. É onde o livro para de
   construir e passa a descrever um chip que já existe — e é por isso que os

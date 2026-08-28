@@ -45,6 +45,20 @@ DEGRAUS = [
     ("maquina",     "máquina de registradores",    5,
      "Registradores e operações, mais um controlador que sequencia as "
      "operações. É onde a construção física encontra a descrição de linguagem."),
+
+    # --- entram em 2026-08-27, da leitura das dez que faltavam ---
+    ("ula",         "ULA",                         3,
+     "A parte da CPU que soma e subtrai. É a primeira peça que junta somador e "
+     "portas num órgão com <b>nome de função</b>, e não de construção."),
+    ("assembler",   "assembler",                   6,
+     "Traduz o texto do controlador da máquina numa lista de instruções, cada "
+     "uma com o seu procedimento de execução."),
+    ("avaliador",   "avaliador",                   6,
+     "O laço que decide o que uma expressão significa, escrito ele mesmo como "
+     "uma máquina de registradores — e por isso <b>executável por ela</b>."),
+    ("paradigma",   "paradigma",                   7,
+     "Não é escola nem estilo: é o que aparece quando se <b>modifica o "
+     "avaliador</b>. Trocar a regra de avaliação troca a linguagem."),
 ]
 
 # (de, para, classe, fonte, referência, citação verificada)
@@ -79,6 +93,20 @@ ARESTAS = [
 ]
 
 # A ÚNICA aresta com duas testemunhas independentes, de lados opostos da escada.
+# Aceitas em 2026-08-27, depois da leitura das dez que faltavam. As três
+# passaram no portão literal E no julgamento do operador — e as outras sete
+# não entraram, cada uma com o motivo escrito em NAO_LIDO.
+ARESTAS += [
+    ("somador", "ula", "construção", "petzold", 'cap. 21 — The Arithmetic Logic Unit',
+     'The Carry Out from the adder becomes the CY Out from the Add/Subtract module.'),
+    ("maquina", "assembler", "dependência", "sicp", '§5.2.2 — The Assembler',
+     'The assembler transforms the sequence of controller expressions for a machine into a corresponding list of machine instructions, each with its execution procedure.'),
+    ("maquina", "avaliador", "dependência", "sicp", '§5.4 — The Explicit-Control Evaluator',
+     'The evaluator can be executed by the register-machine simulator of section 5.2.'),
+    ("avaliador", "paradigma", "construção", "sicp", '§4.3 — Variations on a Scheme: Nondeterministic Computing',
+     'we extend the Scheme evaluator to support a programming paradigm called nondeterministic computing by building into the evaluator a facility to support automatic search'),
+]
+
 SEGUNDA_TESTEMUNHA = {
     ("registrador", "maquina"): ("petzold", "caps. 22–23 — Registers and Busses · CPU Control Signals",
      "…control signals, so called because they control these components to work "
@@ -136,7 +164,9 @@ CONSTRUCAO = [
     (None, '16×8 RAM array', '16 of these 16×8 memory arrays',
      "petzold", 'cap. 19 — An Assemblage of Memory',
      'you’ll need 16 of these 16×8 memory arrays, wired up like this'),
-    (None, 'the entire arithmetic logic unit', 'the Add/Subtract module and the Logic module',
+    # Pousou em 2026-08-27: a ULA virou degrau, e esta construcao — que estava
+    # verificada e sem lugar — passou a ser a textura DELE.
+    ('ula', 'the entire arithmetic logic unit', 'the Add/Subtract module and the Logic module',
      "petzold", 'cap. 21 — The Arithmetic Logic Unit',
      'The entire arithmetic logic unit combines the Add/Subtract module and the Logic module with some rather messy support circuity:'),
     (None, 'PSW', 'accumulator and ALU flags',
@@ -170,15 +200,42 @@ CONSTRUCAO = [
 
 # O que se sabe que existe e ainda NÃO foi lido. Aparece na página como buraco
 # declarado — mapa que esconde o que falta mente sobre o próprio tamanho.
+# O que falta, agora com ESTADO por item. Antes era só (afirmação, referência),
+# e isso escondia a diferença entre "ninguém abriu o livro" e "abriu, leu, e a
+# frase não sustenta". As dez foram lidas em 2026-08-27: três viraram aresta,
+# uma já estava no repositório, e estas seis ficaram — cada uma com o motivo.
+#
+# (afirmação, referência CONFERIDA, estado, motivo)
 NAO_LIDO = [
-    ("eletroímã ← corrente e ferro", "Petzold cap. 6"),
-    ("relógio ← oscilador", "Petzold cap. 18"),
-    ("memória (RAM) ← registrador", "Petzold cap. 19"),
-    ("ULA ← somador e portas", "Petzold cap. 21"),
-    ("instrução ← sinais de controle", "Petzold caps. 23–24"),
-    ("sistema operacional ← máquina", "Petzold cap. 26"),
-    ("assembler ← máquina de registradores", "SICP §5.2"),
-    ("compilador ← assembler e avaliador", "SICP §5.5"),
-    ("interpretação × compilação", "SICP §5.5.7"),
-    ("paradigma como variação do avaliador", "SICP §§4.2–4.4"),
+    ("relógio ← oscilador", "Petzold cap. 17", "lida, não sustenta",
+     "A frase diz que <i>“an oscillator is sometimes referred to as a clock”</i> "
+     "— isso é identidade, não composição. Um relógio não é <b>feito</b> de "
+     "oscilador segundo esta frase; ele é <b>chamado</b> assim. A referência "
+     "publicada dizia cap. 18 e está corrigida."),
+    ("memória (RAM) ← flip-flop, decodificador e seletor", "Petzold cap. 19",
+     "lida, reescrita",
+     "A afirmação publicada dizia <i>“← registrador”</i> e o livro não diz isso: "
+     "diz <i>“this configuration of flip-flops, decoder, and selector is "
+     "sometimes known as read/write memory”</i>. A aresta existe e está "
+     "sustentada — com o nó de origem certo. Pronta para entrar."),
+    ("instrução ← sinais de controle", "Petzold cap. 23", "lida, não sustenta",
+     "A frase diz que os sinais <i>“control these components to work together in "
+     "executing instructions”</i>: eles <b>executam</b> a instrução, não a "
+     "compõem. E essa mesma citação já é a segunda testemunha de outra aresta."),
+    ("sistema operacional ← máquina", "Petzold cap. 26", "procurada, não achada",
+     "O capítulo define o que um sistema operacional <b>é</b> e o que ele "
+     "oferece (API, interface), mas não afirma sobre o que ele se apoia. "
+     "Nenhuma frase encontrada sustenta a aresta."),
+    ("compilador ← avaliador", "SICP §5.5", "lida, reescrita",
+     "A afirmação publicada dizia <i>“← assembler e avaliador”</i>, e o "
+     "assembler não aparece na frase: <i>“translates programs written in Scheme "
+     "into sequences of instructions to be executed using the explicit-control "
+     "evaluator machine’s data paths”</i>. A metade que o livro sustenta está "
+     "pronta para entrar; a outra não."),
+    ("interpretação × compilação", "SICP §5.5", "lida, não é aresta",
+     "O contraste está sustentado com folga — <i>“compared with interpretation, "
+     "compilation can provide a great increase in the efficiency of program "
+     "execution”</i> —, mas <b>×</b> não é uma relação que esta escada saiba "
+     "desenhar: ela liga o que é feito do quê. Fica como nota, não como seta. "
+     "A referência publicada dizia §5.5.7 e está corrigida."),
 ]

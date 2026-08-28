@@ -4,7 +4,7 @@
 
 # The ladder of abstractions — `abstraction-ladder`
 
-**A map of computation that only admits what someone has read — and constructs in front of you what it claims.** From the electromagnet to the register machine, one step at a time. Each step answers **what it is**, **why it exists**, **where it appears**, and **where it breaks**; each arrow opens the sentence of the book that supports it; and five of the passages you do not need to accept at face value, because they **assemble the piece right here on the screen**.
+**A map of computation that only admits what someone has read — and constructs in front what it claims.** From the electromagnet to the programming paradigm, one step at a time. Each step answers **what it is**, **why it exists**, **where it appears**, and **where you get stuck**; each arrow opens the sentence from the book that supports it; and five of the passages you do not need to accept at face value, because they **build the piece right here on the screen**.
 
 The guarantee is structural, not a convention that can be forgotten: **the generator aborts** if an edge comes without citation, or if a field claims a source and does not bring the passage.
 
@@ -14,25 +14,18 @@ Live at <https://mateusalkimim.github.io/abstraction-ladder/> — in
 
 ## The Three Layers
 
-**The map.** An SVG generated, that ascends: the electromagnet is the ground, the  
-machine is the top, and a golden ruler marks the place where the subject **leaves  
-electricity and becomes logic**. The color of the node indicates the regime (physics,  
-combinational, sequential, architecture) and the key is on the same screen. The  
-edges that no one read are **drawn**, dashed, ascending out of the map — because a  
-map that hides what is missing lies about its own size.
+**The map.** An SVG generated that rises: the electromagnet is the ground, the paradigm is the top, and two rulers mark where the subject changes material — the golden one, where it **stops being electricity and becomes logic**; the purple one, where it **stops being circuit and becomes language**. The node's color indicates the regime (physics, combinational, sequential, architecture) and the key stays on the same screen. The edges that no one read are **drawn**, dashed, rising out of the map — because a map that hides what's missing lies about its own size.
 
-**The four fields.** 36 of them, 4 per step, and **none came from a model**.  
-Each one carries its own label of origin:
+**The four fields.** 52 of them, 4 per step, and **none came from a model**. Each one carries its own seal of origin:
 
 | seal | how many | what it means |
 |---|---|---|
-| `citation` | 10 | faithful translation of a passage, and the passage opens beside it |
-| `synthesis` | 9 | summary of the cited passage—the passage opens alongside, so you can check if the summary is honest |
-| `craft · ratified` | 17 | judgment of those who teach, which no book writes—**ratified by the author on 2026-08-27**, and each field stamps the date |
+| `citation` | 15 | faithful translation of a passage, and the passage opens to the side |
+| `synthesis` | 12 | summary of the cited passage — the passage opens alongside, so you can check if the summary is honest |
+| `craft · ratified` | 17 | judgment of the teacher, which no book writes — **ratified on 2026-08-27**, and each field stamps the date |
+| `craft · proposal` | 8 | the same, in the four steps that entered **after** the ratification. Ratification does not extend by analogy to text that no one has read |
 
-The **9 "what is" fields are all quotes from the book**: no concept from this  
-ladder was defined by me. There is no label for *"a model wrote"*, and it is  
-intentional.
+The **13 "what it is" fields are all citations from the book**: no concept on this ladder was defined by me. There is no label for *"a model wrote it"*, and it's intentional.
 
 **The instruments.** Five, in `canvas` and arithmetic — without library, without  
 network, without server. And they do not illustrate: **they are the warrant of the  
@@ -103,9 +96,9 @@ None of them is a promise: all have **negative control** — they plant the
 defect they should find and fail if they don't find it. A gate that never  
 failed did not prove anything.
 
-- **`conferir_citacoes.py`** — each citation checked against the book, character by character. Today: **53 check out, 0 fail, 2 without the source in the collection** (the two from SICP, whose book has not yet been dissected). It **never returns "ok" for absence of proof**: without the book at hand, it exits with an error;
-- **`conferir_mapa.py`** — measures what the diagram norm mandates instead of promising. Caught an arc that scraped the box of a node, and a color key that fell five pixels outside the frame;
-- **`conferir_instrumentos.py`** — the only one that finds an entire class of defect: it **clicks**. In the first translation of this page, `"[data-acao]"` became `"[data-action]"` — an impeccable translation of a CSS selector. The five instruments lost their listener and all buttons became mute, with the HTML intact, the console clean and **all other gates in green**. No text probe finds this.
+- **`conferir_citacoes.py`** — each citation checked against the book, character by character. Today: **67 check out, 0 fail, 0 without the source in the collection** — the SICP was dissected on 27/08/2026 and the two citations that were previously unverifiable now check out. It **never returns "ok" for lack of proof**: without the book at hand, it exits with an error;
+- **`conferir_mapa.py`** — measures what the diagram standard mandates rather than promises. It caught an arc that grazed the box of a node, and a key of color that fell five pixels outside the frame;
+- **`conferir_instrumentos.py`** — the only one that finds an entire class of defect: it **clicks**. In the first translation of this page, `"[data-acao]"` became `"[data-action]"` — an impeccable translation of a CSS selector. The five instruments lost their listeners and all the buttons became mute, with the HTML intact, the console clean, and **all other gates in green**. No text probe finds this.
 
 ## The Place in the Larger Cycle
 
@@ -124,15 +117,15 @@ assertion to be verified.
 
 ## Provenance and Guarantees
 
-- **Edges come from two books**, read: Petzold, *Code* (2nd ed.) and Abelson & Sussman, *SICP* (2nd ed.). The citations appear under fair use, with source and chapter, and belong to their authors.
-- **9 edges between steps, supported by 11 citations**, and **24 constructions verified** — pieces made of pieces from the same layer.
+- **The edges come from two books**, read: Petzold, *Code* (2nd ed.) and Abelson & Sussman, *SICP* (2nd ed.). The citations appear under fair use, with source and chapter, and belong to their authors.
+- **13 edges between steps, supported by 15 citations**, and **24 constructions verified** — pieces made of pieces from the same layer.
 - **An edge has two independent witnesses** — `register → register machine`. Petzold builds the machine from gates; SICP defines it as data paths plus controller and declares that its diagram corresponds to *"a machine that could be built from electrical components"*. The two arrive from opposite sides at the same object.
-- **How the edges entered, since 27/08/2026.** A local model sweeps the chapter and **proposes** candidates — it is a prospector, never an author. Each candidate carries the sentence that would support it, and a gate checks that sentence **character by character** against the original in English; what doesn't match dies there, without costing human reading. What survives has the citation proven and **is not yet an edge**: it goes to human judgment, item by item, and only then rises. In the first round, 48 were proposed → 46 passed the gate → **34 accepted by me** (27 directly and 7 after correcting a circular, anaphoric, or duplicated label — the citation remains intact), and **12 discarded**, each decision recorded with the reason.
+- **How the edges enter, since 27/08/2026.** A local model sweeps the chapter and **proposes** candidates — it is a prospector, never an author. Each candidate carries the sentence that would sustain it, and a gate checks that sentence **character by character** against the original in English; what doesn't match dies there, without costing human reading. What survives has the citation proven and **is not yet an edge**: it goes to human judgment, item by item, and only then ascends. In the first round, 48 were proposed → 46 passed the gate → **34 accepted by me** (27 directly and 7 after correcting a circular, anaphoric, or duplicated label — the citation remains intact), and **12 discarded**, each decision recorded with the reason.
 - **The rule that this preserves**: every citation verified against the source, every interpretation accepted by a human. The model can find; it cannot assert.
-- **What the gate doesn't catch**, and therefore human judgment continues: a real citation that does not support the edge. Of the 46 verified, 11 fell exactly there — `CPU ← Intel 8080` is an instance, not a composition; `ULA ← arithmetic operations` is a function, not pieces; and one carried as a warrant the sentence *"Much of this module should look familiar:"*, which states nothing.
-- **The translation also has an owner.** The English is derived from the Portuguese by a local model, block by block, with the table keyed by the hash of the original. Where the machine did not decide, a person decided, and **the decision is written in the table** — including why. Example: the four field labels came out in six variants, and `onde se trava` became *"where it locks"* in seven of the nine steps. There "travar" is the student getting stuck, not a lock.
+- **What the gate does not catch**, and therefore human judgment continues: a real citation that does not sustain the edge. Of the 46 verified, 11 fell exactly there — `CPU ← Intel 8080` is an instance, not a composition; `ALU ← arithmetic operations` is a function, not pieces; and one carried as warrant the sentence *"Much of this module should look familiar:"*, which asserts nothing.
+- **The translation also has an owner.** The English is derived from the Portuguese by a local model, block by block, with the table keyed by hash of the original. Where the machine did not decide, a person decided, and **the decision is written in the table** — including why. Example: the four field labels came out in six variants, and `onde se trava` became *"where it locks"* in seven of the nine steps. There "travar" is the student getting stuck, not a lock.
 - No network, no telemetry, no dependency. The page opens offline.
-- The books **are not** in this repository: they are third-party work and stay out.
+- The books **are not** in this repository: they are third-party work and remain outside.
 
 ## Why This Way
 
@@ -140,9 +133,7 @@ A computation map generated by a model costs an afternoon and seems complete. Th
 
 This page has **the same four fields as that map**, and that's why the difference matters. Here, none of them came from a model: those that describe the piece came from Petzold himself—who is a professor and has already answered *what it is* and *why it exists* in prose, with a chapter—and the passage goes along with each field. Those that say **where the student gets stuck** no book writes: they are the craft of those who teach, and they enter through the ritual of the house—proposal first, ratification later. The 17 were ratified on **2026-08-27**, and each one stamps the date. It's not decoration: it says **from when someone is responsible for the text**, and a field that changes after that reverts to being a proposal until it is reread.
 
-Here the order has been reversed — the door to human reading comes **before** the content —  
-and the price is this small map. The bet is that nine verifiable edges are worth more  
-than sixty that are not.
+Here the order has been inverted — the gate of human reading comes **before** the content — and the price is this small map. The bet is that thirteen verifiable edges are worth more than sixty that are not.
 
 The funnel does not loosen this order: it only cheapens the **finding**. The judgment remains  
 human, and the proof remains the phrase in the book — now with an instrument  
@@ -150,14 +141,37 @@ beside it, when the piece can be constructed.
 
 ## State, and what is missing
 
-- **10 known but unread edges**, listed on the page with the reference of where they are. They enter when they are read, with the citation;
-- **9 verified constructions that have not yet landed on any step** (RAM, ALU, PSW, oscillator, transistor, seven-segment decoder). The citation is proven; the step below them is what hasn't been read. They are visible in their own section, instead of entering the ladder for convenience;
-- **four steps still do not have an instrument** — electromagnet, relay, register, and register machine. The two lower ones are physics, and the top one is too large for a `canvas`;
-- **there is no glossary of the terms of the house**, and this produced the six label variants in the translation;
-- **the ladder has a measured end.** From chapter 5 to 20 in Petzold, a single proposal did not sustain; from chapters 21 to 24, eight out of eleven. This is where the book stops building and starts describing a chip that already exists — and this is why the proven steps stop before the 8080;
-- **the axis of substance** (pixel/tensor/state → GPU/NPU/CPU) has no edge yet, although the bibliography exists in the archive;
-- **programming languages** are not here and will not be until there is a source: the archive does not have a book on design or comparison of languages. What SICP supports is classification by **mechanism** — interpreted × compiled, paradigm as a variation of the evaluator — and not by history or adoption;
-- **the thesis that AI is the first layer that breaks determinism** is mine, without a book behind it. When it enters, it enters as a warrant of class `orientacao`, dated — never disguised as a fact of a book.
+- **The ten that were missing were read on 27/08/2026**, and the result is on the
+  page with the reason for each one. All ten passed through the citation literal
+  gate; **three survived the judgment** and became edges (ALU, assembler,
+  evaluator→paradigm), one **was already in the repository** and the line was
+  redundant, two were **rewritten** because they named the wrong source node, one
+  was **downgraded** to a note (contrast is not an edge) and three remain
+  unsupported. Passing through the gate does not sustain the edge, and that's where
+  the difference appears;
+- **8 craft fields in proposal**, in the four new steps, awaiting reading and
+  ratification;
+- **8 constructions verified that have not yet landed on any step** (RAM, PSW,
+  oscillator, transistor, seven-segment decoder). The one for the ALU landed on
+  27/08/2026, when the ALU became a step. The citation is proven; the step below them
+  was not read. They remain visible, in their own section, instead of entering the
+  ladder for convenience;
+- **Four steps still do not have an instrument** — electromagnet, relay, register
+  and register machine. The two at the bottom are physics, and the top one is too
+  large for a `canvas`;
+- **The ladder has a measured end.** From chapter 5 to 20 of Petzold, only one
+  proposal was unsupported; from chapters 21 to 24, eight of eleven. That's where
+  the book stops building and starts describing a chip that already exists — and
+  that's why the proven steps stop before the 8080;
+- **The substance axis** (pixel/tensor/state → GPU/NPU/CPU) has no edges yet,
+  although the bibliography exists in the archive;
+- **Programming languages** are not here and will not be until there is a source:
+  the archive does not have a project book or language comparison. What SICP
+  sustains is classification by **mechanism** — interpreted × compiled, paradigm
+  as a variation of the evaluator — and not by history or adoption;
+- **The thesis that AI is the first layer that breaks determinism** is mine, with
+  no book behind it. When it enters, it enters as a warrant of class `orientacao`,
+  dated — never disguised as a book fact.
 
 ## License
 

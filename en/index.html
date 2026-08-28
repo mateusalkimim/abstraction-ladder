@@ -7,7 +7,7 @@
 <style>
   :root{ --fundo:#0a1424; --creme:#e8e2d6; --fraco:#5b6b86; --ouro:#c9a266;
          --cartao:#0d1c30; --borda:#1e3050; --lido:#6fbf6a; --falta:#8a94a4;
-         --fisica:#c1704f; --comb:#5b8fc9; --seq:#4fb3a5; }
+         --fisica:#c1704f; --comb:#5b8fc9; --seq:#4fb3a5; --lingua:#a883c9; }
   *{box-sizing:border-box}
   body{margin:0;background:var(--fundo);color:var(--creme);
        font-family:Inter,-apple-system,"Segoe UI",system-ui,sans-serif;
@@ -48,6 +48,7 @@
   .r-comb{color:var(--comb);border-color:var(--comb)}
   .r-seq{color:var(--seq);border-color:var(--seq)}
   .r-arq{color:var(--ouro);border-color:var(--ouro)}
+  .r-lingua{color:#a883c9;border-color:#a883c9}
 
   .campos{margin:14px 0 0;display:grid;gap:11px}
   @media (min-width:760px){ .campos{grid-template-columns:1fr 1fr;gap:11px 26px} }
@@ -106,6 +107,13 @@
               padding:9px 14px;margin:0 0 7px;color:var(--falta);font-size:13.5px}
   ul.falta li b{color:#b9c4d4}
   ul.falta li span{float:right;font-size:12px;color:var(--fraco)}
+  .estado{display:inline-block;font-size:11px;padding:1px 8px;border-radius:9px;
+          margin:6px 0 0;border:1px solid}
+  .e-nao-sustenta{color:#c1704f;border-color:#c1704f}
+  .e-reescrita{color:var(--lido);border-color:var(--lido)}
+  .e-nao-achada{color:var(--fraco);border-color:#33465f}
+  .e-nao-aresta{color:#a883c9;border-color:#a883c9}
+  .porque{color:#8d99ab;font-size:12.5px;margin:7px 0 0;line-height:1.55}
   .comolerpag{background:var(--cartao);border:1px solid var(--borda);
         border-radius:7px;padding:15px 20px;margin:22px 0 0;font-size:13.5px;
         color:#b0bbcb}
@@ -120,15 +128,13 @@
 <div class="caixa">
 
 <h1>The staircase of abstractions</h1>
-<p class="lede">From electromagnet to machine of latches, one step at a time.  
-Each step responds <b>what it is</b>, <b>why it exists</b>, <b>where it appears</b> and  
-<b>where it locks</b> — and 5 of the passages you do not need to accept by  
-word: they <b>assemble the piece on this screen</b>.</p>
+<p class="lede">From the electromagnet to the programming paradigm, one step at a time.  
+Each step answers <b>what it is</b>, <b>why it exists</b>, <b>where it appears</b>, and <b>where you get stuck</b> — and 5 of the passages you don't need to accept at face value: they <b>build the piece right here on the screen</b>.</p>
 <p class="lede">The map begins almost empty on purpose. It only admits what  
 someone <b>read</b>: nothing enters by plausibility, by consensus, nor because a model wrote it.</p>
 
 <div class="mapa">
-<svg viewBox="0 0 1090 1014" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa da escada de abstrações, do eletroímã à máquina de registradores">
+<svg viewBox="0 0 1090 1142" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa da escada de abstrações, do eletroímã à máquina de registradores">
 <defs>
 <marker id="ponta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6"
         markerHeight="6" orient="auto-start-reverse">
@@ -137,109 +143,145 @@ someone <b>read</b>: nothing enters by plausibility, by consensus, nor because a
         markerHeight="6" orient="auto-start-reverse">
   <path d="M0,1 L9,5 L0,9 z" fill="#33465f"/></marker>
 </defs>
-<line x1="46" y1="664.0" x2="1044" y2="664.0" stroke="#c9a266" stroke-width="1" stroke-dasharray="2 5" opacity=".65"/>
-<text x="1040" y="655.0" text-anchor="end" fill="#c9a266" font-family="Inter,sans-serif" font-size="11.5" opacity=".9">from here up, the subject is logic, not electricity</text>
+<line x1="46" y1="872.0" x2="1044" y2="872.0" stroke="#c9a266" stroke-width="1" stroke-dasharray="2 5" opacity=".65"/>
+<text x="1040" y="863.0" text-anchor="end" fill="#c9a266" font-family="Inter,sans-serif" font-size="11.5" opacity=".9">from here up, the subject is logic, not electricity</text>
+<line x1="46" y1="352.0" x2="1044" y2="352.0" stroke="#a883c9" stroke-width="1" stroke-dasharray="2 5" opacity=".55"/>
+<text x="1040" y="343.0" text-anchor="end" fill="#a883c9" font-family="Inter,sans-serif" font-size="11.5" opacity=".9">From here on up, the subject is language, not circuitry.</text>
 <rect x="100" y="53" width="200" height="42" rx="7" fill="none" stroke="#33465f" stroke-width="1.3" stroke-dasharray="5 4"/><text x="200" y="79" text-anchor="middle" fill="#6b7a90" font-family="Inter,sans-serif" font-size="12.5">operating system</text>
 <rect x="370" y="53" width="200" height="42" rx="7" fill="none" stroke="#33465f" stroke-width="1.3" stroke-dasharray="5 4"/><text x="470" y="79" text-anchor="middle" fill="#6b7a90" font-family="Inter,sans-serif" font-size="12.5">instruction</text>
-<rect x="640" y="53" width="200" height="42" rx="7" fill="none" stroke="#33465f" stroke-width="1.3" stroke-dasharray="5 4"/><text x="740" y="79" text-anchor="middle" fill="#6b7a90" font-family="Inter,sans-serif" font-size="12.5">assembler</text>
+<rect x="640" y="53" width="200" height="42" rx="7" fill="none" stroke="#33465f" stroke-width="1.3" stroke-dasharray="5 4"/><text x="740" y="79" text-anchor="middle" fill="#6b7a90" font-family="Inter,sans-serif" font-size="12.5">compiler</text>
 <text x="50" y="30" fill="#6b7a90" font-family="Inter,sans-serif" font-size="11.5">not read — the road continues, and the map does not hide this</text>
 <path d="M470,168 C470,128 200,147 200,103" fill="none" stroke="#33465f" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#pontaF)"/>
 <path d="M470,168 L470,103" fill="none" stroke="#33465f" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#pontaF)"/>
 <path d="M470,168 C470,128 740,147 740,103" fill="none" stroke="#33465f" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#pontaF)"/>
-<rect x="100" y="383" width="200" height="42" rx="7" fill="none" stroke="#33465f" stroke-width="1.3" stroke-dasharray="5 4"/><text x="200" y="409" text-anchor="middle" fill="#6b7a90" font-family="Inter,sans-serif" font-size="12.5">ALU</text>
-<path d="M200,480 L200,425" fill="none" stroke="#33465f" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#pontaF)"/>
-<rect x="370" y="903" width="200" height="42" rx="7" fill="none" stroke="#33465f" stroke-width="1.3" stroke-dasharray="5 4"/><text x="470" y="929" text-anchor="middle" fill="#6b7a90" font-family="Inter,sans-serif" font-size="12.5">current and iron</text>
-<path d="M470,903 L470,848" fill="none" stroke="#33465f" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#pontaF)"/>
-<path d="M470,792 L470,744" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
-<path d="M470,688 L470,640" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
-<path d="M470,584 C470,560.0 200,560.0 200,536" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
-<path d="M470,584 C470,560.0 740,560.0 740,536" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
-<path d="M740,480 L740,432" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
-<path d="M470,584 C970,554 970,462 740,432" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
-<path d="M740,376 L740,328" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
-<path d="M740,376 C740,352.0 470,352.0 470,328" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
-<path d="M470,272 L470,224" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/><path d="M470,272 L470,224" fill="none" stroke="#6fbf6a" stroke-width="4.6" opacity=".22"/>
+<path d="M470,1000 L470,952" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
+<path d="M470,896 L470,848" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
+<path d="M470,792 C470,768.0 200,768.0 200,744" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
+<path d="M470,792 C470,768.0 740,768.0 740,744" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
+<path d="M740,688 L740,640" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
+<path d="M470,792 C970,762 970,670 740,640" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
+<path d="M740,584 L740,536" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
+<path d="M740,584 C740,560.0 470,560.0 470,536" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
+<path d="M470,480 L470,432" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/><path d="M470,480 L470,432" fill="none" stroke="#6fbf6a" stroke-width="4.6" opacity=".22"/>
+<path d="M200,688 L200,640" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
+<path d="M470,376 C470,352.0 200,352.0 200,328" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
+<path d="M470,376 L470,328" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
+<path d="M470,272 L470,224" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
 <a href="#eletroima" class="no">
-<rect x="370" y="792" width="200" height="56" rx="7"
+<rect x="370" y="1000" width="200" height="56" rx="7"
       fill="#3a2418" stroke="#c1704f" stroke-width="1.6"/>
-<text x="470" y="825" text-anchor="middle" fill="#e6b499"
+<text x="470" y="1033" text-anchor="middle" fill="#e6b499"
       font-family="Cormorant,Georgia,serif" font-size="17.5"><tspan x="470" dy="0">electromagnet</tspan></text>
-<text x="379" y="807" fill="#c1704f" font-family="Inter,sans-serif"
+<text x="379" y="1015" fill="#c1704f" font-family="Inter,sans-serif"
       font-size="10" opacity=".75">level -1</text>
 </a>
 <a href="#rele" class="no">
-<rect x="370" y="688" width="200" height="56" rx="7"
+<rect x="370" y="896" width="200" height="56" rx="7"
       fill="#3a2418" stroke="#c1704f" stroke-width="1.6"/>
-<text x="470" y="721" text-anchor="middle" fill="#e6b499"
+<text x="470" y="929" text-anchor="middle" fill="#e6b499"
       font-family="Cormorant,Georgia,serif" font-size="17.5"><tspan x="470" dy="0">relay</tspan></text>
-<text x="379" y="703" fill="#c1704f" font-family="Inter,sans-serif"
+<text x="379" y="911" fill="#c1704f" font-family="Inter,sans-serif"
       font-size="10" opacity=".75">level 0</text>
 </a>
 <a href="#porta" class="no">
-<rect x="370" y="584" width="200" height="56" rx="7"
+<rect x="370" y="792" width="200" height="56" rx="7"
       fill="#14263f" stroke="#5b8fc9" stroke-width="1.6"/>
-<text x="470" y="617" text-anchor="middle" fill="#bcd4ec"
+<text x="470" y="825" text-anchor="middle" fill="#bcd4ec"
       font-family="Cormorant,Georgia,serif" font-size="17.5"><tspan x="470" dy="0">logic gate</tspan></text>
-<text x="379" y="599" fill="#5b8fc9" font-family="Inter,sans-serif"
+<text x="379" y="807" fill="#5b8fc9" font-family="Inter,sans-serif"
       font-size="10" opacity=".75">level 1</text>
 </a>
 <a href="#somador" class="no">
-<rect x="100" y="480" width="200" height="56" rx="7"
+<rect x="100" y="688" width="200" height="56" rx="7"
       fill="#14263f" stroke="#5b8fc9" stroke-width="1.6"/>
-<text x="200" y="513" text-anchor="middle" fill="#bcd4ec"
+<text x="200" y="721" text-anchor="middle" fill="#bcd4ec"
       font-family="Cormorant,Georgia,serif" font-size="17.5"><tspan x="200" dy="0">adder</tspan></text>
-<text x="109" y="495" fill="#5b8fc9" font-family="Inter,sans-serif"
+<text x="109" y="703" fill="#5b8fc9" font-family="Inter,sans-serif"
       font-size="10" opacity=".75">level 2</text>
 </a>
 <a href="#flipflop" class="no">
-<rect x="640" y="480" width="200" height="56" rx="7"
+<rect x="640" y="688" width="200" height="56" rx="7"
       fill="#10312e" stroke="#4fb3a5" stroke-width="1.6"/>
-<text x="740" y="513" text-anchor="middle" fill="#a8e0d7"
+<text x="740" y="721" text-anchor="middle" fill="#a8e0d7"
       font-family="Cormorant,Georgia,serif" font-size="17.5"><tspan x="740" dy="0">level-triggered flip-flop</tspan></text>
-<text x="649" y="495" fill="#4fb3a5" font-family="Inter,sans-serif"
+<text x="649" y="703" fill="#4fb3a5" font-family="Inter,sans-serif"
       font-size="10" opacity=".75">level 2</text>
 </a>
 <a href="#flipflop_b" class="no">
-<rect x="640" y="376" width="200" height="56" rx="7"
+<rect x="640" y="584" width="200" height="56" rx="7"
       fill="#10312e" stroke="#4fb3a5" stroke-width="1.6"/>
-<text x="740" y="409" text-anchor="middle" fill="#a8e0d7"
+<text x="740" y="617" text-anchor="middle" fill="#a8e0d7"
       font-family="Cormorant,Georgia,serif" font-size="17.5"><tspan x="740" dy="0">edge-triggered flip-flop</tspan></text>
-<text x="649" y="391" fill="#4fb3a5" font-family="Inter,sans-serif"
+<text x="649" y="599" fill="#4fb3a5" font-family="Inter,sans-serif"
       font-size="10" opacity=".75">level 3</text>
 </a>
 <a href="#contador" class="no">
-<rect x="640" y="272" width="200" height="56" rx="7"
+<rect x="640" y="480" width="200" height="56" rx="7"
       fill="#10312e" stroke="#4fb3a5" stroke-width="1.6"/>
-<text x="740" y="305" text-anchor="middle" fill="#a8e0d7"
+<text x="740" y="513" text-anchor="middle" fill="#a8e0d7"
       font-family="Cormorant,Georgia,serif" font-size="17.5"><tspan x="740" dy="0">counter</tspan></text>
-<text x="649" y="287" fill="#4fb3a5" font-family="Inter,sans-serif"
+<text x="649" y="495" fill="#4fb3a5" font-family="Inter,sans-serif"
       font-size="10" opacity=".75">level 4</text>
 </a>
 <a href="#registrador" class="no">
-<rect x="370" y="272" width="200" height="56" rx="7"
+<rect x="370" y="480" width="200" height="56" rx="7"
       fill="#10312e" stroke="#4fb3a5" stroke-width="1.6"/>
-<text x="470" y="305" text-anchor="middle" fill="#a8e0d7"
+<text x="470" y="513" text-anchor="middle" fill="#a8e0d7"
       font-family="Cormorant,Georgia,serif" font-size="17.5"><tspan x="470" dy="0">register (latch)</tspan></text>
-<text x="379" y="287" fill="#4fb3a5" font-family="Inter,sans-serif"
+<text x="379" y="495" fill="#4fb3a5" font-family="Inter,sans-serif"
       font-size="10" opacity=".75">level 4</text>
 </a>
 <a href="#maquina" class="no">
-<rect x="370" y="168" width="200" height="56" rx="7"
+<rect x="370" y="376" width="200" height="56" rx="7"
       fill="#33280f" stroke="#c9a266" stroke-width="1.6"/>
-<text x="470" y="191" text-anchor="middle" fill="#f0dcb4"
+<text x="470" y="399" text-anchor="middle" fill="#f0dcb4"
       font-family="Cormorant,Georgia,serif" font-size="17.5"><tspan x="470" dy="0">register</tspan><tspan x="470" dy="17">machine</tspan></text>
-<text x="379" y="183" fill="#c9a266" font-family="Inter,sans-serif"
+<text x="379" y="391" fill="#c9a266" font-family="Inter,sans-serif"
       font-size="10" opacity=".75">level 5</text>
 </a>
-<text x="50" y="968" fill="#5b6b86" font-family="Inter,sans-serif" font-size="11.5">the color indicates the regime · the filled arrow has verified citation · the dashed is what no one read</text>
-<rect x="50" y="981" width="13" height="13" rx="3" fill="#3a2418" stroke="#c1704f" stroke-width="1.4"/>
-<text x="69" y="992" fill="#8a94a4" font-family="Inter,sans-serif" font-size="11">physics</text>
-<rect x="114.4" y="981" width="13" height="13" rx="3" fill="#14263f" stroke="#5b8fc9" stroke-width="1.4"/>
-<text x="133.4" y="992" fill="#8a94a4" font-family="Inter,sans-serif" font-size="11">combinational</text>
-<rect x="223.60000000000002" y="981" width="13" height="13" rx="3" fill="#10312e" stroke="#4fb3a5" stroke-width="1.4"/>
-<text x="242.60000000000002" y="992" fill="#8a94a4" font-family="Inter,sans-serif" font-size="11">sequential</text>
-<rect x="313.6" y="981" width="13" height="13" rx="3" fill="#33280f" stroke="#c9a266" stroke-width="1.4"/>
-<text x="332.6" y="992" fill="#8a94a4" font-family="Inter,sans-serif" font-size="11">architecture</text>
+<a href="#ula" class="no">
+<rect x="100" y="584" width="200" height="56" rx="7"
+      fill="#14263f" stroke="#5b8fc9" stroke-width="1.6"/>
+<text x="200" y="617" text-anchor="middle" fill="#bcd4ec"
+      font-family="Cormorant,Georgia,serif" font-size="17.5"><tspan x="200" dy="0">ULA</tspan></text>
+<text x="109" y="599" fill="#5b8fc9" font-family="Inter,sans-serif"
+      font-size="10" opacity=".75">level 3</text>
+</a>
+<a href="#assembler" class="no">
+<rect x="100" y="272" width="200" height="56" rx="7"
+      fill="#2a1836" stroke="#a883c9" stroke-width="1.6"/>
+<text x="200" y="305" text-anchor="middle" fill="#dcc9ec"
+      font-family="Cormorant,Georgia,serif" font-size="17.5"><tspan x="200" dy="0">assembler</tspan></text>
+<text x="109" y="287" fill="#a883c9" font-family="Inter,sans-serif"
+      font-size="10" opacity=".75">level 6</text>
+</a>
+<a href="#avaliador" class="no">
+<rect x="370" y="272" width="200" height="56" rx="7"
+      fill="#2a1836" stroke="#a883c9" stroke-width="1.6"/>
+<text x="470" y="305" text-anchor="middle" fill="#dcc9ec"
+      font-family="Cormorant,Georgia,serif" font-size="17.5"><tspan x="470" dy="0">evaluator</tspan></text>
+<text x="379" y="287" fill="#a883c9" font-family="Inter,sans-serif"
+      font-size="10" opacity=".75">level 6</text>
+</a>
+<a href="#paradigma" class="no">
+<rect x="370" y="168" width="200" height="56" rx="7"
+      fill="#2a1836" stroke="#a883c9" stroke-width="1.6"/>
+<text x="470" y="201" text-anchor="middle" fill="#dcc9ec"
+      font-family="Cormorant,Georgia,serif" font-size="17.5"><tspan x="470" dy="0">paradigm</tspan></text>
+<text x="379" y="183" fill="#a883c9" font-family="Inter,sans-serif"
+      font-size="10" opacity=".75">level 7</text>
+</a>
+<text x="50" y="1096" fill="#5b6b86" font-family="Inter,sans-serif" font-size="11.5">the color indicates the regime · the filled arrow has verified citation · the dashed is what no one read</text>
+<rect x="50" y="1109" width="13" height="13" rx="3" fill="#3a2418" stroke="#c1704f" stroke-width="1.4"/>
+<text x="69" y="1120" fill="#8a94a4" font-family="Inter,sans-serif" font-size="11">physics</text>
+<rect x="114.4" y="1109" width="13" height="13" rx="3" fill="#14263f" stroke="#5b8fc9" stroke-width="1.4"/>
+<text x="133.4" y="1120" fill="#8a94a4" font-family="Inter,sans-serif" font-size="11">combinational</text>
+<rect x="223.60000000000002" y="1109" width="13" height="13" rx="3" fill="#10312e" stroke="#4fb3a5" stroke-width="1.4"/>
+<text x="242.60000000000002" y="1120" fill="#8a94a4" font-family="Inter,sans-serif" font-size="11">sequential</text>
+<rect x="313.6" y="1109" width="13" height="13" rx="3" fill="#33280f" stroke="#c9a266" stroke-width="1.4"/>
+<text x="332.6" y="1120" fill="#8a94a4" font-family="Inter,sans-serif" font-size="11">architecture</text>
+<rect x="410.0" y="1109" width="13" height="13" rx="3" fill="#2a1836" stroke="#a883c9" stroke-width="1.4"/>
+<text x="429.0" y="1120" fill="#8a94a4" font-family="Inter,sans-serif" font-size="11">language</text>
 </svg>
 </div>
 
@@ -261,38 +303,39 @@ Within each step, the four fields come with a <b>stamp of origin</b>:
 <article class="degrau" id="contador"><header><h3 class="nome">counter</h3><span class="regime r-seq">sequential</span><span class="nivel">level 4</span></header><dl class="campos"><div class="campo"><dt>what it is<span class="selo lido">citation</span></dt><dd>A row of edge-triggered flip-flops in cascade: each one triggers the next, and the row counts the clock pulses in binary.<details class="proc"><summary>the passage that supports</summary><blockquote>“This is a job for a counter built from a row of cascading flip-flops, such as the one you saw on page 237 of Chapter 17:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 20 — Automating Arithmetic</cite></blockquote></details></dd></div><div class="campo"><dt>why it exists<span class="selo oficio">craft · ratified</span></dt><dd>Because the machine needs to know <b>which is the next</b>. The number that the counter holds becomes the address it will read next — it's the embryo of the program counter.<details class="proc"><summary>where this field comes from</summary><blockquote>No textbook, there's no mention of where the student gets stuck; that comes from the classroom. This field is the author's didactic judgment, <b>ratified on 2026-08-27</b> — the house's rite is proposal and ratification, and content is no different from a norm. The date indicates from when someone is responsible for the text; if it changes, it reverts to a proposal until it's reviewed again. It wasn't written by a model.</blockquote></details></dd></div><div class="campo"><dt>where it appears<span class="selo oficio">craft · ratified</span></dt><dd>The <code>PC</code> that the debugger shows paused on a line. The digital clock on the wall. And the loop index, one layer above.<details class="proc"><summary>where this field comes from</summary><blockquote>No textbook, there's no mention of where the student gets stuck; that comes from the classroom. This field is the author's didactic judgment, <b>ratified on 2026-08-27</b> — the house's rite is proposal and ratification, and content is no different from a norm. The date indicates from when someone is responsible for the text; if it changes, it reverts to a proposal until it's reviewed again. It wasn't written by a model.</blockquote></details></dd></div><div class="campo"><dt>where you get stuck<span class="selo oficio">craft · ratified</span></dt><dd>Nobody <i>designed</i> binary counting: it <b>emerges</b> naturally when chaining flip-flop to flip-flop, because each one toggles at half the frequency of the previous one. Those who search for the component that “does the counting” don’t find it, and conclude that something is missing. Nothing is missing — the counting is in the wiring.<details class="proc"><summary>where this field comes from</summary><blockquote>No textbook, there's no mention of where the student gets stuck; that comes from the classroom. This field is the author's didactic judgment, <b>ratified on 2026-08-27</b> — the house's rite is proposal and ratification, and content is no different from a norm. The date indicates from when someone is responsible for the text; if it changes, it reverts to a proposal until it's reviewed again. It wasn't written by a model.</blockquote></details></dd></div></dl><div class="instr" id="i-contagem-aparece"><h4>The count appears alone</h4><p class="comoler">Give pulses and watch the waves: each stage turns in the <b>half</b> of the frequency of the previous. No one designed the binary count — it is the wiring. If you are looking for the piece that “does the count”, it does not exist.</p><canvas data-h="250"></canvas><div class="botoes"><button data-acao="step">a pulse</button><button data-acao="autorun">automatic</button><button data-acao="clear">reset</button></div><p class="prova">This instrument <b>is</b> the warrant for the arrow below: it constructs the piece in the browser, without the book in hand. The citation continues there, as a second witness.</p></div><details class="seta"><summary>Made of <b>edge-triggered flip-flop</b> — construction, and the source says:</summary><blockquote>“This is a job for a counter built from a row of cascading flip-flops, such as the one you saw on page 237 of Chapter 17:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 20 — Automating Arithmetic</cite></blockquote></details></article>
 <article class="degrau" id="registrador"><header><h3 class="nome">register (latch)</h3><span class="regime r-seq">sequential</span><span class="nivel">level 4</span></header><dl class="campos"><div class="campo"><dt>what it is<span class="selo lido">citation</span></dt><dd>An 8-bit latch that the processor controls by instruction. Holds bytes while the ULA works on them.<details class="proc"><summary>the passage that supports</summary><blockquote>“These latches are called registers, and a primary purpose of these registers is to store bytes as they are processed by the ALU.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 22 — Registers and Busses</cite></blockquote></details></dd></div><div class="campo"><dt>why it exists<span class="selo oficio">craft · ratified</span></dt><dd>Because the ULA needs some place to land the operands and the result <b>inside</b> the processor. Fetching from memory at each step would cost a trip across the bus for each calculation.<details class="proc"><summary>where this field comes from</summary><blockquote>No textbook, there's no mention of where the student gets stuck; that comes from the classroom. This field is the author's didactic judgment, <b>ratified on 2026-08-27</b> — the house's rite is proposal and ratification, and content is no different from a norm. The date indicates from when someone is responsible for the text; if it changes, it reverts to a proposal until it's reviewed again. It wasn't written by a model.</blockquote></details></dd></div><div class="campo"><dt>where it appears<span class="selo oficio">craft · ratified</span></dt><dd>When a processor's chip says “16 registers of 64 bits,” these are them. And that's what the compiler is contending with when deciding what stays close and what goes to memory.<details class="proc"><summary>where this field comes from</summary><blockquote>No textbook, there's no mention of where the student gets stuck; that comes from the classroom. This field is the author's didactic judgment, <b>ratified on 2026-08-27</b> — the house's rite is proposal and ratification, and content is no different from a norm. The date indicates from when someone is responsible for the text; if it changes, it reverts to a proposal until it's reviewed again. It wasn't written by a model.</blockquote></details></dd></div><div class="campo"><dt>where you get stuck<span class="selo oficio">craft · ratified</span></dt><dd>Thinking that a register is just a small memory. The difference is not in size, but in <b>addressing</b>: memory is accessed by a calculated address; a register is named in the instruction itself. That's why one fits in an instruction and the other doesn't. <details class="proc"><summary>where this field comes from</summary><blockquote>No textbook, there's no mention of where the student gets stuck; that comes from the classroom. This field is the author's didactic judgment, <b>ratified on 2026-08-27</b> — the house's rite is proposal and ratification, and content is no different from a norm. The date indicates from when someone is responsible for the text; if it changes, it reverts to a proposal until it's reviewed again. It wasn't written by a model.</blockquote></details></dd></div></dl><details class="seta"><summary>Made of <b>edge-triggered flip-flop</b> — construction, and the source says:</summary><blockquote>“The counter providing the memory address is built from edge-triggered flip-flops, so it probably has a Clear input. The latch is built from edge-triggered flip-flops as well, and edge-triggered flip-flops have been used for generating the control signals.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 20 — Automating Arithmetic</cite></blockquote></details><div class="pordentro"><b>por dentro</b> — pieces from the same layer, with the phrase that supports each one:<details class="dentro"><summary>8-bit latch <span>&larr; flip-flops</span></summary><blockquote>“As you’ll recall, an 8-bit latch uses flip-flops to store an 8-bit value.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 20 — Automating Arithmetic</cite></blockquote></details><details class="dentro"><summary>register array <span>&larr; seven latches and seven tri-state buffers</span></summary><blockquote>“The following circuit contains seven latches and seven tri-state buffers. One 3-to-8 decoder is used to latch the incoming value into one of the registers, and another 3-to-8 decoder is used to enable one of the tri-state buffers to select a value from one of the registers:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 22 — Registers and Busses</cite></blockquote></details><details class="dentro"><summary>register array <span>&larr; latches for seven registers identified by the letters A, B, C, D, E, H, and L</span></summary><blockquote>“The register array contains latches for seven registers identified by the letters A, B, C, D, E, H, and L.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 23 — CPU Control Signals</cite></blockquote></details><details class="dentro"><summary>register <span>&larr; 8-bit latch</span></summary><blockquote>“These latches are called registers, and a primary purpose of these registers is to store bytes as they are processed by the ALU.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 22 — Registers and Busses</cite></blockquote></details><details class="dentro"><summary>16-bit address <span>&larr; H and L registers</span></summary><blockquote>“The H and L registers form a 16-bit address—for example, in the MOV A,M instruction. When used in this way, HL is called a register pair.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 22 — Registers and Busses</cite></blockquote></details></div></article>
 <article class="degrau" id="maquina"><header><h3 class="nome">register machine</h3><span class="regime r-arq">architecture</span><span class="nivel">level 5</span></header><dl class="campos"><div class="campo"><dt>what it is<span class="selo lido">citation</span></dt><dd>Data paths — registers and operations — plus a <b>controller</b> that sequences the operations. Viewed this way, it's literally a wiring diagram. <details class="proc"><summary>the passage that supports</summary><blockquote>“To design a register machine, we must design its data paths (registers and operations) and the controller that sequences these operations. … If we view the arrows as wires and the X buttons as switches, the data-path diagram is very like the wiring diagram for a machine that could be constructed from electrical components.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · SICP §5.1 — Designing Register Machines</cite></blockquote></details></dd></div><div class="campo"><dt>why it exists<span class="selo lido">synthesis</span></dt><dd>Because a loose piece does nothing in order. What was missing was a signal to send the pieces working <b>together</b> to execute an instruction stored in memory — and that's the signal that stitches the machine together. <details class="proc"><summary>the passage that supports</summary><blockquote>“…control signals, so called because they control these components to work together in executing instructions stored in memory. … The CPU control signals are the strings.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · caps. 22–23 — Registers and Busses · CPU Control Signals</cite></blockquote></details></dd></div><div class="campo"><dt>where it appears<span class="selo oficio">craft · ratified</span></dt><dd>It’s the step where the physical construction meets the language description: from here up, one speaks of instruction, assembler, compiler. Below, in wire.<details class="proc"><summary>where this field comes from</summary><blockquote>No textbook, there's no mention of where the student gets stuck; that comes from the classroom. This field is the author's didactic judgment, <b>ratified on 2026-08-27</b> — the house's rite is proposal and ratification, and content is no different from a norm. The date indicates from when someone is responsible for the text; if it changes, it reverts to a proposal until it's reviewed again. It wasn't written by a model.</blockquote></details></dd></div><div class="campo"><dt>where you get stuck<span class="selo oficio">craft · ratified</span></dt><dd>The “controller” sounds like someone who decides. It's not: it's <b>more circuit</b> — counter, decoder, and gates, made from the same basic components. As long as there's a little man inside the machine, the ladder isn't closed; and it's exactly here that almost every course stops descending.<details class="proc"><summary>where this field comes from</summary><blockquote>No textbook, there's no mention of where the student gets stuck; that comes from the classroom. This field is the author's didactic judgment, <b>ratified on 2026-08-27</b> — the house's rite is proposal and ratification, and content is no different from a norm. The date indicates from when someone is responsible for the text; if it changes, it reverts to a proposal until it's reviewed again. It wasn't written by a model.</blockquote></details></dd></div></dl><details class="seta"><summary>is made of <b>register (latch)</b> — definition, and the source says:</summary><blockquote>“To design a register machine, we must design its data paths (registers and operations) and the controller that sequences these operations. … If we view the arrows as wires and the X buttons as switches, the data-path diagram is very like the wiring diagram for a machine that could be constructed from electrical components.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · §5.1 — Designing Register Machines</cite></blockquote><blockquote>“…control signals, so called because they control these components to work together in executing instructions stored in memory. … The CPU control signals are the strings.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · caps. 22–23 — Registers and Busses · CPU Control Signals</cite></blockquote><p class="duas">Two independent witnesses, arriving from opposite sides of the staircase — one building the machine, the other defining it.</p></details><div class="pordentro"><b>por dentro</b> — pieces from the same layer, with the phrase that supports each one:<details class="dentro"><summary>Triple-Byte Accumulator <span>&larr; a counter to access memory, an adder, and latches</span></summary><blockquote>“Chapter 20 described a Triple-Byte Accumulator that consisted of a counter to access memory, an adder, and latches.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 21 — The Arithmetic Logic Unit</cite></blockquote></details></div></article>
+<article class="degrau" id="ula"><header><h3 class="nome">ALU</h3><span class="regime r-comb">combinational</span><span class="nivel">level 3</span></header><dl class="campos"><div class="campo"><dt>what it is<span class="selo lido">citation</span></dt><dd>The part of the CPU that adds and subtracts, as well as does some other useful things.<details class="proc"><summary>the passage that supports</summary><blockquote>“The remainder of this chapter focuses on the most fundamental part of the CPU, which is known as the arithmetic logic unit, or ALU. This is the part of the CPU that adds and subtracts, as well as performing a couple of other useful tasks.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 21 — The Arithmetic Logic Unit</cite></blockquote></details></dd></div><div class="campo"><dt>why it exists<span class="selo lido">synthesis</span></dt><dd>Because the adder alone solves a column. An 8-bit processor needs to handle 16, 24, 32-bit numbers — and that's adding byte by byte, from the least significant up, each carrying the carry from the previous one. The ALU is the adder <b>with the machine around it</b> that makes this sequence.  
+<details class="proc"><summary>the passage that supports</summary><blockquote>“these large numbers must be added and subtracted in bytes, starting with the least significant byte. Each subsequent 1-byte addition or subtraction must take into account the carry from the previous operation.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 21 — The Arithmetic Logic Unit</cite></blockquote></details></dd></div><div class="campo"><dt>where it appears<span class="selo oficio">craft · proposal</span></dt><dd>It is the “A” of any CPU diagram you have ever seen, and what your profiler calls <i>arithmetic throughput</i>. It is also where the flags are born: zero, sign, carry — the ones your `<code>if</code>` queries without you knowing.  
+<details class="proc"><summary>where this field comes from</summary><blockquote>No book writes where the student gets stuck; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the house ritual is proposal plus ratification, and content is no different from norm. It wasn't written by model.</blockquote></details></dd></div><div class="campo"><dt>where you get stuck<span class="selo oficio">craft · proposal</span></dt><dd>Expect it to multiply and divide. It doesn't multiply: Petzold himself warns that the circuitry is possible but is outside the book, and the 8080 didn't have it. Multiplication, at this level, is <b>program</b> — repeated addition —, not a component. Those who look for a multiplier don't find it and conclude they misunderstood.<details class="proc"><summary>where this field comes from</summary><blockquote>No book writes where the student gets stuck; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the house ritual is proposal plus ratification, and content is no different from norm. It wasn't written by model.</blockquote></details></dd></div></dl><details class="seta"><summary>is made of <b>adder</b> — construction, and the source says:</summary><blockquote>“The Carry Out from the adder becomes the CY Out from the Add/Subtract module.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 21 — The Arithmetic Logic Unit</cite></blockquote></details><div class="pordentro"><b>por dentro</b> — pieces from the same layer, with the phrase that supports each one:<details class="dentro"><summary>the entire arithmetic logic unit <span>&larr; the Add/Subtract module and the Logic module</span></summary><blockquote>“The entire arithmetic logic unit combines the Add/Subtract module and the Logic module with some rather messy support circuity:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 21 — The Arithmetic Logic Unit</cite></blockquote></details></div></article>
+<article class="degrau" id="assembler"><header><h3 class="nome">assembler</h3><span class="regime r-lingua">language</span><span class="nivel">level 6</span></header><dl class="campos"><div class="campo"><dt>what it is<span class="selo lido">citation</span></dt><dd>Transforms the sequence of expressions from a machine's controller into a list of instructions, each with its execution procedure. <details class="proc"><summary>the passage that supports</summary><blockquote>“The assembler transforms the sequence of controller expressions for a machine into a corresponding list of machine instructions, each with its execution procedure.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · SICP §5.2.2 — The Assembler</cite></blockquote></details></dd></div><div class="campo"><dt>why it exists<span class="selo lido">synthesis</span></dt><dd>Because the controller text has <b>labels</b>, and a label is a promise of an address that does not yet exist. Before generating any execution, the assembler scans the entire text just to find out what position each label refers to. It is this scan that it exists to do.<details class="proc"><summary>the passage that supports</summary><blockquote>“Before it can generate the instruction execution procedures, the assembler must know what all the labels refer to, so it begins by scanning the controller text to separate the labels from the instructions.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · SICP §5.2.2 — The Assembler</cite></blockquote></details></dd></div><div class="campo"><dt>where it appears<span class="selo oficio">craft · proposal</span></dt><dd>Every time you read <code>jmp .loop</code> in a disassembler and the <code>.loop</code> appears as an address. And in every compiler, in the final stage before the binary.<details class="proc"><summary>where this field comes from</summary><blockquote>No book writes where the student gets stuck; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the house ritual is proposal plus ratification, and content is no different from norm. It wasn't written by model.</blockquote></details></dd></div><div class="campo"><dt>where you get stuck<span class="selo oficio">craft · proposal</span></dt><dd>Thinking that the assembler “translates word for word.” It can't: it needs <b>two passes</b>, because a jump forward points to a label that it hasn't seen yet. Whoever doesn't see the two passes doesn't understand why assembling is more than substituting.<details class="proc"><summary>where this field comes from</summary><blockquote>No book writes where the student gets stuck; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the house ritual is proposal plus ratification, and content is no different from norm. It wasn't written by model.</blockquote></details></dd></div></dl><details class="seta"><summary>is made of <b>register machine</b> — dependency, and the source says:</summary><blockquote>“The assembler transforms the sequence of controller expressions for a machine into a corresponding list of machine instructions, each with its execution procedure.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · §5.2.2 — The Assembler</cite></blockquote></details></article>
+<article class="degrau" id="avaliador"><header><h3 class="nome">evaluator</h3><span class="regime r-lingua">language</span><span class="nivel">level 6</span></header><dl class="campos"><div class="campo"><dt>what it is<span class="selo lido">citation</span></dt><dd>The loop that decides what an expression means — described in terms of operations on registers and stacks, and therefore executable by the register machine itself.<details class="proc"><summary>the passage that supports</summary><blockquote>“The explicit-control evaluator that we develop in this section shows how the underlying procedure-calling and argument-passing mechanisms used in the evaluation process can be described in terms of operations on registers and stacks.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · SICP §5.4 — The Explicit-Control Evaluator</cite></blockquote></details></dd></div><div class="campo"><dt>why it exists<span class="selo lido">citation</span></dt><dd>Because it closes the ladder: written this way, it serves as an implementation of an interpreter in a language very similar to the machine language of common computers.  
+<details class="proc"><summary>the passage that supports</summary><blockquote>“the explicit-control evaluator can serve as an implementation of a Scheme interpreter, written in a language that is very similar to the native machine language of conventional computers.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · SICP §5.4 — The Explicit-Control Evaluator</cite></blockquote></details></dd></div><div class="campo"><dt>where it appears<span class="selo oficio">craft · proposal</span></dt><dd>This is what runs when you type into a REPL. And it's the diagram that the JVM, CPython, and V8 are executing underneath—each with its own fetch-decide-apply loop. <details class="proc"><summary>where this field comes from</summary><blockquote>No book writes where the student gets stuck; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the house ritual is proposal plus ratification, and content is no different from norm. It wasn't written by model.</blockquote></details></dd></div><div class="campo"><dt>where you get stuck<span class="selo oficio">craft · proposal</span></dt><dd>The apparent circularity: a Scheme evaluator written in Scheme seems to explain nothing. It explains—provided one sees that the one <b>inside</b> is described in register operations, not in Scheme. This is where the ladder meets itself, and it's the most foolish passage to cross if no one says so. <details class="proc"><summary>where this field comes from</summary><blockquote>No book writes where the student gets stuck; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the house ritual is proposal plus ratification, and content is no different from norm. It wasn't written by model.</blockquote></details></dd></div></dl><details class="seta"><summary>is made of <b>register machine</b> — dependency, and the source says:</summary><blockquote>“The evaluator can be executed by the register-machine simulator of section 5.2.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · §5.4 — The Explicit-Control Evaluator</cite></blockquote></details></article>
+<article class="degrau" id="paradigma"><header><h3 class="nome">paradigm</h3><span class="regime r-lingua">language</span><span class="nivel">level 7</span></header><dl class="campos"><div class="campo"><dt>what it is<span class="selo lido">citation</span></dt><dd>What appears when you extend the evaluator. Non-deterministic computation, for example, is a paradigm obtained <b>by building within the evaluator</b> an automatic search.<details class="proc"><summary>the passage that supports</summary><blockquote>“we extend the Scheme evaluator to support a programming paradigm called nondeterministic computing by building into the evaluator a facility to support automatic search”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · SICP §4.3 — Variations on a Scheme: Nondeterministic Computing</cite></blockquote></details></dd></div><div class="campo"><dt>why it exists<span class="selo lido">synthesis</span></dt><dd>Because, having the evaluator as a program, you can experiment with language design choices <b>simply by modifying it</b> — and that's how new languages typically originate, before there is a true implementation.<details class="proc"><summary>the passage that supports</summary><blockquote>“Now that we have an evaluator expressed as a Lisp program, we can experiment with alternative choices in language design simply by modifying the evaluator. Indeed, new languages are often invented by first writing an evaluator that embeds the new language within an existing high-level language.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · SICP §4.2 — Variations on a Scheme: Lazy Evaluation</cite></blockquote></details></dd></div><div class="campo"><dt>where it appears<span class="selo oficio">craft · proposal</span></dt><dd>Prolog is automatic search turned into language. `<code>async/await</code>` is a change in evaluation order. Lazy evaluation is another. They all reside in the same place: the rule that decides what to evaluate and when.  
+<details class="proc"><summary>where this field comes from</summary><blockquote>No book writes where the student gets stuck; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the house ritual is proposal plus ratification, and content is no different from norm. It wasn't written by model.</blockquote></details></dd></div><div class="campo"><dt>where you get stuck<span class="selo oficio">craft · proposal</span></dt><dd>Treating paradigm as a school or as a preference — “I am functional,” “I am object-oriented.” Here it is a <b>mechanical</b> thing: a change in the loop that evaluates. As long as it is identity, you can't ask the only useful question, which is <i>what exactly changes in the evaluator</i>.  
+<details class="proc"><summary>where this field comes from</summary><blockquote>No book writes where the student gets stuck; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the house ritual is proposal plus ratification, and content is no different from norm. It wasn't written by model.</blockquote></details></dd></div></dl><details class="seta"><summary>is made of <b>evaluator</b> — construction, and the source says:</summary><blockquote>“we extend the Scheme evaluator to support a programming paradigm called nondeterministic computing by building into the evaluator a facility to support automatic search”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · §4.3 — Variations on a Scheme: Nondeterministic Computing</cite></blockquote></details></article>
 </div>
 
 <h2>Verified, still outside the ladder</h2>
-<p class="nota">These 9 constructions passed through the  
-literal quotation gate, but the step where they land has not been read yet — so they  
-wait here, in view, instead of entering the ladder for convenience.</p>
+<p class="nota">These 8 constructions passed through the citation literal gate, but the step where they land has not yet been read — so they wait here, in view, instead of entering the ladder for convenience.</p>
 <ul class="soltas">
   <li><b>seven-segment decoder</b> &larr; BCD decoder<blockquote>“If your seven-segment display will always be displaying a digit, then a seven-segment decoder can be built from a BCD decoder as shown here:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 18 — Let’s Build a Clock!</cite></blockquote></li>
   <li><b>byte of memory</b> &larr; 8 bits of memory<blockquote>“it’s fairly easy to assemble an entire byte of memory by wiring together 8 bits of memory.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 19 — An Assemblage of Memory</cite></blockquote></li>
   <li><b>8×8 RAM array</b> &larr; eight 8×1 RAM arrays<blockquote>“if you have eight 8×1 RAM arrays and you connect all the Address signals together and all the Write signals together, you can make an 8×8 RAM array”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 19 — An Assemblage of Memory</cite></blockquote></li>
   <li><b>16×8 RAM array</b> &larr; 16 of these 16×8 memory arrays<blockquote>“you’ll need 16 of these 16×8 memory arrays, wired up like this”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 19 — An Assemblage of Memory</cite></blockquote></li>
-  <li><b>the entire arithmetic logic unit</b> &larr; the Add/Subtract module and the Logic module<blockquote>“The entire arithmetic logic unit combines the Add/Subtract module and the Logic module with some rather messy support circuity:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 21 — The Arithmetic Logic Unit</cite></blockquote></li>
   <li><b>PSW</b> &larr; accumulator and ALU flags<blockquote>“It’s just the accumulator in one byte and the ALU flags in another byte.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 24 — Loops, Jumps, and Calls</cite></blockquote></li>
   <li><b>speaker wire</b> &larr; a pair of two insulated wires<blockquote>“Speaker wire consists of a pair of two insulated wires conveniently stuck together, so it’s a good choice for our telegraph system.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 5 — Communicating Around Corners</cite></blockquote></li>
   <li><b>oscillator</b> &larr; quartz crystals<blockquote>“The oscillators in real computers are somewhat more sophisticated, however, consisting of quartz crystals wired in such a way that they vibrate very consistently and very quickly.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 17 — Feedback and Flip-Flops</cite></blockquote></li>
   <li><b>transistor</b> &larr; base, collector, and emitter<blockquote>“The three letters stand for base, collector, and emitter.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 18 — Let’s Build a Clock!</cite></blockquote></li>
 </ul>
 
-<h2>What's left to read</h2>
-<p class="nota">Each line here is an edge that the bibliography supports and that  
-nobody has opened yet. They enter when they are read, with the citation — not before.</p>
+<h2>What is missing, and why</h2>
+<p class="nota">This list changed on 27/08/2026. Before, it said only <i>“nobody opened yet”</i>. The ten were read, and the reading showed that <b>“not read” and “read and does not sustain” are different states</b>—and that hiding the difference is the same lie as hiding the entire list. Of the ten: <b>three became an edge</b>, <b>one was already in the repository</b> (the line was redundant), and these six remained, each with the reason. None of them failed at the citation literal gate: all ten passed character by character. <b>Passing the gate does not sustain the edge</b>, and it is exactly here that the difference appears.</p>
 <ul class="falta">
-  <li><b>electromagnet ← current and iron</b><span>Petzold chap. 6</span></li>
-  <li><b>clock ← oscillator</b><span>Petzold cap. 18</span></li>
-  <li><b>memory (RAM) ← register</b><span>Petzold chap. 19</span></li>
-  <li><b>ULA ← adder and gates</b><span>Petzold cap. 21</span></li>
-  <li><b>instruction ← control signals</b><span>Petzold caps. 23–24</span></li>
-  <li><b>operating system ← machine</b><span>Petzold chap. 26</span></li>
-  <li><b>assembler ← register machine</b><span>SICP §5.2</span></li>
-  <li><b>compiler ← assembler and evaluator</b><span>SICP §5.5</span></li>
-  <li><b>interpretation × compilation</b><span>SICP §5.5.7</span></li>
-  <li><b>paradigm as variation of the evaluator</b><span>SICP §§4.2–4.4</span></li>
+  <li><b>clock ← oscillator</b><span>Petzold chap. 17</span><div class="estado e-nao-sustenta">read — the sentence does not sustain it</div><div class="porque">The sentence says that <i>“an oscillator is sometimes referred to as a clock”</i> — this is identity, not composition. A clock is not <b>made</b> of an oscillator according to this sentence; it is <b>called</b> that. The published reference said chap. 18 and has been corrected.</div></li>
+  <li><b>memory (RAM) ← flip-flop, decoder, and selector</b><span>Petzold chap. 19</span><div class="estado e-reescrita">read — rewritten, ready to enter</div><div class="porque">The published statement said <i>“← register”</i> and the book does not say that: it says <i>“this configuration of flip-flops, decoder, and selector is sometimes known as read/write memory”</i>. The edge exists and is supported — with the correct origin node. Ready to enter.</div></li>
+  <li><b>instruction ← control signals</b><span>Petzold chap. 23</span><div class="estado e-nao-sustenta">read — the sentence does not sustain it</div><div class="porque">The sentence says that the signals <i>“control these components to work together in executing instructions”</i>: they <b>execute</b> the instruction, not compose it. And this same citation is already the second witness of another edge.</div></li>
+  <li><b>operating system ← machine</b><span>Petzold chap. 26</span><div class="estado e-nao-achada">searched — no sentence found</div><div class="porque">The chapter defines what an operating system <b>is</b> and what it offers (API, interface), but it does not assert what it relies on. No sentence found sustains the edge.</div></li>
+  <li><b>compiler ← evaluator</b><span>SICP §5.5</span><div class="estado e-reescrita">read — rewritten, ready to enter</div><div class="porque">The published statement said <i>“← assembler and evaluator”</i>, and the assembler doesn't appear in the sentence: <i>“translates programs written in Scheme into sequences of instructions to be executed using the explicit-control evaluator machine’s data paths”</i>. The half that the book sustains is ready to enter; the other is not.</div></li>
+  <li><b>interpretation × compilation</b><span>SICP §5.5</span><div class="estado e-nao-aresta">read — not an edge, a contrast</div><div class="porque">The contrast is well supported — <i>“compared with interpretation, compilation can provide a great increase in the efficiency of program execution”</i> — but <b>×</b> is not a relationship that this ladder knows how to draw: it connects what is done with what. It stays as a note, not as an arrow. The published reference said §5.5.7 and is corrected.</div></li>
 </ul>
 
 <h2>Why this way</h2>

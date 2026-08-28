@@ -38,39 +38,49 @@ import degraus as D
 LARG, NO_W, NO_H = 1090, 200, 56
 FAIXA = {"L": 200, "C": 470, "R": 740}
 LINHA = 104          # altura de um nível
-TOPO  = 196          # y do nível 5 (abaixo da fronteira de cima)
+NIVEL_TOPO = 7       # o topo da escada; era 5 até 2026-08-27
+TOPO  = 196          # y do nível mais alto (abaixo da fronteira de cima)
 
-def y_de(nivel):     # nível 5 no topo, -1 embaixo — §1.2, direção declarada
-    return TOPO + (5 - nivel) * LINHA
+def y_de(nivel):     # o mais alto no topo, -1 embaixo — §1.2, direção declarada
+    return TOPO + (NIVEL_TOPO - nivel) * LINHA
 
 # faixa horizontal de cada degrau, escolhida para não cruzar nenhuma aresta
 COLUNA = {
     "eletroima": "C", "rele": "C", "porta": "C",
     "somador": "L", "flipflop": "R", "flipflop_b": "R",
+    "ula": "L",
     "registrador": "C", "contador": "R", "maquina": "C",
+    "assembler": "L", "avaliador": "C", "paradigma": "C",
 }
 REGIME = {
     "eletroima": "fisica", "rele": "fisica",
-    "porta": "comb", "somador": "comb",
+    "porta": "comb", "somador": "comb", "ula": "comb",
     "flipflop": "seq", "flipflop_b": "seq", "contador": "seq",
     "registrador": "seq", "maquina": "arq",
+    # o 5º regime entra em 2026-08-27: acima da máquina o assunto deixa de ser
+    # circuito e passa a ser LINGUAGEM. A §1.3 limita FORMA a cinco; aqui a
+    # forma é uma só, e quem carrega o regime é a cor — que a §2 permite desde
+    # que a chave esteja na mesma tela, e está.
+    "assembler": "lingua", "avaliador": "lingua", "paradigma": "lingua",
 }
 COR = {
     "fisica": ("#3a2418", "#c1704f", "#e6b499"),
     "comb":   ("#14263f", "#5b8fc9", "#bcd4ec"),
     "seq":    ("#10312e", "#4fb3a5", "#a8e0d7"),
     "arq":    ("#33280f", "#c9a266", "#f0dcb4"),
+    "lingua": ("#2a1836", "#a883c9", "#dcc9ec"),
 }
 NOME_REGIME = {
     "fisica": "física — ainda é eletricidade e ferro",
     "comb":   "combinacional — a saída depende só das entradas de agora",
     "seq":    "sequencial — a saída depende também do que veio antes",
     "arq":    "arquitetura — peças em sequência, sob um controlador",
+    "lingua": "linguagem — acima da máquina, o assunto é significado",
 }
 
 # fronteira: o que se sabe que existe e ninguém leu. Desenhada, não escondida.
 FRONTEIRA_CIMA = [
-    ("sistema operacional", "L"), ("instrução", "C"), ("assembler", "R"),
+    ("sistema operacional", "L"), ("instrução", "C"), ("compilador", "R"),
 ]
 FRONTEIRA_ULA  = ("ULA", "L")          # acima do somador
 FRONTEIRA_RAM  = ("memória (RAM)", "C") # ao lado do registrador... ver abaixo
@@ -141,7 +151,7 @@ def _niv(k): return _NIV[k]
 
 
 def desenhar():
-    ybase_chave = y_de(-1) + LINHA + 44
+    ybase_chave = y_de(min(d[2] for d in D.DEGRAUS)) + NO_H // 2 + 40
     alt = ybase_chave + 46   # a chave TERMINA dentro do quadro
     p = []
     p.append(f'<svg viewBox="0 0 {LARG} {alt}" xmlns="http://www.w3.org/2000/svg" '
@@ -164,13 +174,26 @@ def desenhar():
              f'font-family="Inter,sans-serif" font-size="11.5" opacity=".9">'
              f'daqui para cima o assunto é lógica, não eletricidade</text>')
 
+    # a 2ª régua: acima da máquina o assunto deixa de ser circuito
+    yr2 = (y_de(6) + y_de(5)) / 2
+    p.append(f'<line x1="46" y1="{yr2}" x2="{LARG-46}" y2="{yr2}" stroke="#a883c9" '
+             f'stroke-width="1" stroke-dasharray="2 5" opacity=".55"/>')
+    p.append(f'<text x="{LARG-50}" y="{yr2-9}" text-anchor="end" fill="#a883c9" '
+             f'font-family="Inter,sans-serif" font-size="11.5" opacity=".9">'
+             f'daqui para cima o assunto é linguagem, não circuito</text>')
+
     # --- fronteira de cima: a estrada continua ------------------------------
     for rot, col in FRONTEIRA_CIMA:
         p.append(_fantasma(FAIXA[col], 74, rot))
     p.append(f'<text x="50" y="30" fill="#6b7a90" font-family="Inter,sans-serif" '
              f'font-size="11.5">não lido — a estrada continua, e o mapa não '
              f'esconde isso</text>')
-    xm, ym = FAIXA["C"], y_de(5) - NO_H // 2
+    # NAO fixar o nivel aqui: quando a escada cresceu de 5 para 7, esta linha
+    # continuou apontando para o nivel 5 e as setas da fronteira passaram a
+    # ATRAVESSAR os dois degraus novos. Quem viu foi o conferir_mapa.py.
+    _topo = max(d[2] for d in D.DEGRAUS)
+    _kt = [d[0] for d in D.DEGRAUS if d[2] == _topo][0]
+    xm, ym = FAIXA[COLUNA[_kt]], y_de(_topo) - NO_H // 2
     for col in ("L", "C", "R"):
         xd, yd = FAIXA[col], 74 + 21 + 8
         d = (f"M{xm},{ym} L{xd},{yd}" if col == "C"
@@ -179,14 +202,9 @@ def desenhar():
                  f'stroke-dasharray="5 4" marker-end="url(#pontaF)"/>')
     # ULA sobre o somador, RAM sobre o registrador: as duas pontas que a
     # bibliografia sustenta e ninguém abriu
-    p.append(_fantasma(FAIXA["L"], y_de(3), "ULA"))
-    p.append(f'<path d="M{FAIXA["L"]},{y_de(2)-NO_H//2} L{FAIXA["L"]},{y_de(3)+21}" '
-             f'fill="none" stroke="#33465f" stroke-width="1.4" '
-             f'stroke-dasharray="5 4" marker-end="url(#pontaF)"/>')
-    p.append(_fantasma(FAIXA["C"], y_de(-1) + LINHA, "corrente e ferro"))
-    p.append(f'<path d="M{FAIXA["C"]},{y_de(-1)+LINHA-21} L{FAIXA["C"]},'
-             f'{y_de(-1)+NO_H//2}" fill="none" stroke="#33465f" stroke-width="1.4" '
-             f'stroke-dasharray="5 4" marker-end="url(#pontaF)"/>')
+    # A ULA saiu daqui: virou degrau em 2026-08-27. E o "corrente e ferro" saiu
+    # porque a leitura mostrou que aquela aresta JÁ ESTAVA no repositório — a
+    # linha estava sobrando na lista, não faltando no mapa.
 
     # --- arestas lidas ------------------------------------------------------
     vistas, dupla = set(), set(D.SEGUNDA_TESTEMUNHA)
@@ -207,7 +225,9 @@ def desenhar():
              f'regime · a seta cheia tem citação conferida · a tracejada é o '
              f'que ninguém leu</text>')
     x = 50
-    for reg in ("fisica", "comb", "seq", "arq"):
+    usados = [r for r in ("fisica", "comb", "seq", "arq", "lingua")
+              if r in {REGIME[d[0]] for d in D.DEGRAUS}]
+    for reg in usados:
         fundo, borda, _t = COR[reg]
         p.append(f'<rect x="{x}" y="{ybase+13}" width="13" height="13" rx="3" '
                  f'fill="{fundo}" stroke="{borda}" stroke-width="1.4"/>')

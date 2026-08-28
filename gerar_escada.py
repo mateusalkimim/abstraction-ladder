@@ -89,7 +89,7 @@ MARCA_CLASSE = {
 CSS = """
   :root{ --fundo:#0a1424; --creme:#e8e2d6; --fraco:#5b6b86; --ouro:#c9a266;
          --cartao:#0d1c30; --borda:#1e3050; --lido:#6fbf6a; --falta:#8a94a4;
-         --fisica:#c1704f; --comb:#5b8fc9; --seq:#4fb3a5; }
+         --fisica:#c1704f; --comb:#5b8fc9; --seq:#4fb3a5; --lingua:#a883c9; }
   *{box-sizing:border-box}
   body{margin:0;background:var(--fundo);color:var(--creme);
        font-family:Inter,-apple-system,"Segoe UI",system-ui,sans-serif;
@@ -130,6 +130,7 @@ CSS = """
   .r-comb{color:var(--comb);border-color:var(--comb)}
   .r-seq{color:var(--seq);border-color:var(--seq)}
   .r-arq{color:var(--ouro);border-color:var(--ouro)}
+  .r-lingua{color:#a883c9;border-color:#a883c9}
 
   .campos{margin:14px 0 0;display:grid;gap:11px}
   @media (min-width:760px){ .campos{grid-template-columns:1fr 1fr;gap:11px 26px} }
@@ -188,6 +189,13 @@ CSS = """
               padding:9px 14px;margin:0 0 7px;color:var(--falta);font-size:13.5px}
   ul.falta li b{color:#b9c4d4}
   ul.falta li span{float:right;font-size:12px;color:var(--fraco)}
+  .estado{display:inline-block;font-size:11px;padding:1px 8px;border-radius:9px;
+          margin:6px 0 0;border:1px solid}
+  .e-nao-sustenta{color:#c1704f;border-color:#c1704f}
+  .e-reescrita{color:var(--lido);border-color:var(--lido)}
+  .e-nao-achada{color:var(--fraco);border-color:#33465f}
+  .e-nao-aresta{color:#a883c9;border-color:#a883c9}
+  .porque{color:#8d99ab;font-size:12.5px;margin:7px 0 0;line-height:1.55}
   .comolerpag{background:var(--cartao);border:1px solid var(--borda);
         border-radius:7px;padding:15px 20px;margin:22px 0 0;font-size:13.5px;
         color:#b0bbcb}
@@ -199,7 +207,7 @@ CSS = """
 """
 
 NOME_REGIME_CURTO = {"fisica":"física","comb":"combinacional","seq":"sequencial",
-                     "arq":"arquitetura"}
+                     "arq":"arquitetura","lingua":"linguagem"}
 
 
 def campos_de(chave):
@@ -344,8 +352,17 @@ def main():
         f'<blockquote>“{ct}”<cite>{D.FONTES[fo]} · {html.escape(rf)}</cite>'
         f'</blockquote></li>'
         for pc, ft, fo, rf, ct in dentro.get(None, []))
-    falta = "\n".join(f'  <li><b>{html.escape(a)}</b><span>{html.escape(f)}</span></li>'
-                      for a, f in D.NAO_LIDO)
+    ESTADO = {
+        "lida, não sustenta":   ("lida — a frase não sustenta", "nao-sustenta"),
+        "lida, reescrita":      ("lida — reescrita, pronta para entrar", "reescrita"),
+        "procurada, não achada":("procurada — nenhuma frase encontrada", "nao-achada"),
+        "lida, não é aresta":   ("lida — não é aresta, é contraste", "nao-aresta"),
+    }
+    falta = "\n".join(
+        f'  <li><b>{html.escape(a)}</b><span>{html.escape(f)}</span>'
+        f'<div class="estado e-{ESTADO[e][1]}">{ESTADO[e][0]}</div>'
+        f'<div class="porque">{motivo}</div></li>'
+        for a, f, e, motivo in D.NAO_LIDO)
     js = open(os.path.join(AQUI, "instrumentos.js"), encoding="utf-8").read()
     n_inst = len(INSTRUMENTOS)
 
@@ -361,7 +378,7 @@ def main():
 <div class="caixa">
 
 <h1>A escada de abstrações</h1>
-<p class="lede">Do eletroímã à máquina de registradores, um degrau de cada vez.
+<p class="lede">Do eletroímã ao paradigma de programação, um degrau de cada vez.
 Cada degrau responde <b>o que é</b>, <b>por que existe</b>, <b>onde aparece</b> e
 <b>onde se trava</b> — e {n_inst} das passagens você não precisa aceitar de
 palavra: elas <b>montam a peça aqui na tela</b>.</p>
@@ -404,9 +421,15 @@ esperam aqui, à vista, em vez de entrar na escada por conveniência.</p>
 {soltas}
 </ul>
 
-<h2>O que falta ler</h2>
-<p class="nota">Cada linha aqui é uma aresta que a bibliografia sustenta e que
-ninguém abriu ainda. Elas entram quando forem lidas, com a citação — não antes.</p>
+<h2>O que falta, e por quê</h2>
+<p class="nota">Esta lista mudou em 27/08/2026. Antes ela dizia só <i>“ninguém
+abriu ainda”</i>. As dez foram lidas, e a leitura mostrou que <b>“não lido” e
+“lido e não sustenta” são estados diferentes</b> — e que esconder a diferença é
+a mesma mentira que esconder a lista inteira. Das dez: <b>três viraram aresta</b>,
+<b>uma já estava no repositório</b> (a linha sobrava), e estas seis ficaram, cada
+uma com o motivo. Nenhuma delas reprovou no portão da citação literal: todas as
+dez passaram caractere a caractere. <b>Passar no portão não é sustentar a
+aresta</b>, e é exatamente aqui que a diferença aparece.</p>
 <ul class="falta">
 {falta}
 </ul>
