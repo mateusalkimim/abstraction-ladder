@@ -32,7 +32,12 @@ import degraus as D
 import conceitos as CO
 
 ACERVO = os.environ.get("ACERVO", "")
-LIVROS = {"petzold": "petzold-code-2ed/livro.md"}   # fonte → caminho no acervo
+LIVROS = {"petzold": "petzold-code-2ed/livro.md",
+          # SICP dissecado em 2026-08-27 (epub nato-digital, mesma classe A do
+          # Petzold). Antes disso as duas citações do SICP saíam como "sem a
+          # fonte no acervo" — o portão dizia o que NÃO podia conferir em vez
+          # de arredondar para "todas conferem".
+          "sicp": "sicp-2ed/livro.md"}          # fonte → caminho no acervo
 
 TIPOG = {"“": '"', "”": '"', "‘": "'", "’": "'",
          "—": "-", "–": "-", "…": "\x00", " ": " "}

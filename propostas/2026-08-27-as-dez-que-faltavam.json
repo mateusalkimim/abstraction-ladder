@@ -1,0 +1,116 @@
+{
+ "data": "2026-08-27",
+ "lidas_por": "leitura assistida, para julgamento humano",
+ "candidatas": [
+  {
+   "id": "A1",
+   "aresta_declarada": "eletroímã ← corrente e ferro",
+   "ref_declarada": "Petzold cap. 6",
+   "ref_real": "Petzold cap. 7",
+   "fonte": "petzold",
+   "citacao": "If you take an iron bar, wrap it with a couple of hundred turns of thin insulated wire, and then run a current through the wire, the iron bar becomes a magnet.",
+   "portao_literal": "passou",
+   "leitura": "JÁ ESTÁ NO REPO — esta citação já sustenta eletroima/magnet. A linha da lista está a mais, e a referência aponta o capítulo errado.",
+   "julgamento_do_operador": null
+  },
+  {
+   "id": "A2",
+   "aresta_declarada": "relógio ← oscilador",
+   "ref_declarada": "Petzold cap. 18",
+   "ref_real": "Petzold cap. 17",
+   "fonte": "petzold",
+   "citacao": "an oscillator is sometimes referred to as a clock because by counting the number of oscillations you can tell time",
+   "portao_literal": "passou",
+   "leitura": "IDENTIDADE, não composição: diz que o oscilador É CHAMADO de relógio, não que o relógio é FEITO de oscilador.",
+   "julgamento_do_operador": null
+  },
+  {
+   "id": "A3",
+   "aresta_declarada": "memória (RAM) ← registrador",
+   "ref_declarada": "Petzold cap. 19",
+   "ref_real": "Petzold cap. 19",
+   "fonte": "petzold",
+   "citacao": "This configuration of flip-flops, decoder, and selector is sometimes known as read/write memory",
+   "portao_literal": "passou",
+   "leitura": "MISDECLARADA: o livro diz flip-flops, decodificador e seletor — não registrador. A aresta real é RAM ← flip-flop.",
+   "julgamento_do_operador": null
+  },
+  {
+   "id": "A4",
+   "aresta_declarada": "ULA ← somador e portas",
+   "ref_declarada": "Petzold cap. 21",
+   "ref_real": "Petzold cap. 21",
+   "fonte": "petzold",
+   "citacao": "The Carry Out from the adder becomes the CY Out from the Add/Subtract module.",
+   "portao_literal": "passou",
+   "leitura": "DOIS PASSOS: esta liga somador → módulo Soma/Subtração; a outra metade (ULA ← módulo) já está verificada no repo.",
+   "julgamento_do_operador": null
+  },
+  {
+   "id": "A5",
+   "aresta_declarada": "instrução ← sinais de controle",
+   "ref_declarada": "Petzold caps. 23–24",
+   "ref_real": "Petzold cap. 23",
+   "fonte": "petzold",
+   "citacao": "they control these components to work together in executing instructions stored in memory",
+   "portao_literal": "passou",
+   "leitura": "NÃO SUSTENTA como composição: os sinais EXECUTAM a instrução, não a compõem. E esta citação já é a 2ª testemunha de outra aresta.",
+   "julgamento_do_operador": null
+  },
+  {
+   "id": "A6",
+   "aresta_declarada": "sistema operacional ← máquina",
+   "ref_declarada": "Petzold cap. 26",
+   "ref_real": "—",
+   "fonte": "petzold",
+   "citacao": "A file system is almost always part of a larger collection of software known as an operating system.",
+   "portao_literal": "passou",
+   "leitura": "NÃO ACHEI frase que sustente a aresta: o capítulo define o que o SO É e o que ele oferece, nunca sobre o que ele se apoia.",
+   "julgamento_do_operador": null
+  },
+  {
+   "id": "A7",
+   "aresta_declarada": "assembler ← máquina de registradores",
+   "ref_declarada": "SICP §5.2",
+   "ref_real": "SICP §5.2.2",
+   "fonte": "sicp",
+   "citacao": "The assembler transforms the sequence of controller expressions for a machine into a corresponding list of machine instructions, each with its execution procedure.",
+   "portao_literal": "passou",
+   "leitura": "SUSTENTA como DEPENDÊNCIA: a linguagem de entrada do assembler é a da máquina de registradores.",
+   "julgamento_do_operador": null
+  },
+  {
+   "id": "A8",
+   "aresta_declarada": "compilador ← assembler e avaliador",
+   "ref_declarada": "SICP §5.5",
+   "ref_real": "SICP §5.5",
+   "fonte": "sicp",
+   "citacao": "The compiler that we implement in this section translates programs written in Scheme into sequences of instructions to be executed using the explicit-control evaluator machine's data paths.",
+   "portao_literal": "passou",
+   "leitura": "MEIA: sustenta compilador ← avaliador. O assembler não aparece na frase.",
+   "julgamento_do_operador": null
+  },
+  {
+   "id": "A9",
+   "aresta_declarada": "interpretação × compilação",
+   "ref_declarada": "SICP §5.5.7",
+   "ref_real": "SICP §5.5",
+   "fonte": "sicp",
+   "citacao": "Compared with interpretation, compilation can provide a great increase in the efficiency of program execution",
+   "portao_literal": "passou",
+   "leitura": "CONTEÚDO SUSTENTADO, mas NÃO É ARESTA: é contraste, e a escada não tem classe para isso.",
+   "julgamento_do_operador": null
+  },
+  {
+   "id": "A10",
+   "aresta_declarada": "paradigma como variação do avaliador",
+   "ref_declarada": "SICP §§4.2–4.4",
+   "ref_real": "SICP §4.3",
+   "fonte": "sicp",
+   "citacao": "we extend the Scheme evaluator to support a programming paradigm called nondeterministic computing by building into the evaluator a facility to support automatic search",
+   "portao_literal": "passou",
+   "leitura": "SUSTENTA com folga: o paradigma nasce de MODIFICAR o avaliador, que é exatamente a afirmação.",
+   "julgamento_do_operador": null
+  }
+ ]
+}
