@@ -3,28 +3,86 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The staircase of abstractions — only what was read</title>
+<title>The staircase of abstractions — from electromagnet to machine</title>
 <style>
   :root{ --fundo:#0a1424; --creme:#e8e2d6; --fraco:#5b6b86; --ouro:#c9a266;
-         --cartao:#0d1c30; --borda:#1e3050; --lido:#6fbf6a; --falta:#8a94a4; }
+         --cartao:#0d1c30; --borda:#1e3050; --lido:#6fbf6a; --falta:#8a94a4;
+         --fisica:#c1704f; --comb:#5b8fc9; --seq:#4fb3a5; }
   *{box-sizing:border-box}
   body{margin:0;background:var(--fundo);color:var(--creme);
        font-family:Inter,-apple-system,"Segoe UI",system-ui,sans-serif;
        padding:44px 26px 60px;line-height:1.6}
-  .caixa{max-width:940px;margin:0 auto}
+  .caixa{max-width:980px;margin:0 auto}
   h1{font-family:Cormorant,Georgia,serif;font-weight:600;font-size:44px;margin:0 0 6px}
-  .lede{color:#b9c4d4;font-size:16px;max-width:740px;margin:0 0 4px}
-  .nota{color:var(--fraco);font-size:13.5px;max-width:740px;margin:12px 0 0}
-  h2{font-family:Cormorant,Georgia,serif;font-size:25px;margin:44px 0 10px;font-weight:600}
-  .escada{margin:22px 0 0}
-  .degrau{background:var(--cartao);border:1px solid var(--borda);border-radius:6px;
-          padding:14px 18px;margin:0}
-  .nome{font-family:Cormorant,Georgia,serif;font-size:22px;font-weight:600}
-  .nivel{color:var(--fraco);font-size:12px;float:right;font-variant-numeric:tabular-nums}
-  .diz{color:#9fadc0;font-size:13.5px;margin-top:4px}
-  details.seta{margin:0;padding:0 0 0 26px;border-left:2px solid var(--lido)}
+  .lede{color:#b9c4d4;font-size:16px;max-width:760px;margin:0 0 4px}
+  .nota{color:var(--fraco);font-size:13.5px;max-width:760px;margin:12px 0 0}
+  h2{font-family:Cormorant,Georgia,serif;font-size:25px;margin:52px 0 10px;font-weight:600}
+  h3{font-family:Cormorant,Georgia,serif;font-size:23px;font-weight:600;margin:0}
+
+  /* --- o mapa. §4 da norma-de-diagramas: SVG com width:100% escala pela
+     largura e, em tela baixa, corta os dois extremos em silêncio. Daí o
+     max-height em vh — e a medida em mais de uma resolução. --- */
+  .mapa{margin:26px 0 0;background:var(--cartao);border:1px solid var(--borda);
+        border-radius:8px;padding:18px 14px}
+  .mapa svg{width:100%;height:auto;max-height:82vh;display:block}
+  /* No telefone o mapa espremido a 308px fica ilegivel — medido. Em vez de
+     encolher, ele mantem largura minima e ROLA na propria caixa; o corpo da
+     pagina nunca rola na horizontal. */
+  @media (max-width:820px){
+    .mapa{overflow-x:auto;-webkit-overflow-scrolling:touch}
+    .mapa svg{min-width:720px;max-height:none}
+    .mapa::after{content:"↔ arraste o mapa para o lado";display:block;
+      color:var(--fraco);font-size:11.5px;padding:8px 2px 0}
+  }
+  .mapa a.no{cursor:pointer}
+  .mapa a.no:hover rect{stroke-width:2.6}
+
+  /* --- cartão de degrau --- */
+  .degrau{background:var(--cartao);border:1px solid var(--borda);border-radius:7px;
+          padding:16px 20px 14px;margin:0 0 16px;scroll-margin-top:18px}
+  .degrau header{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .nivel{color:var(--fraco);font-size:12px;font-variant-numeric:tabular-nums;
+         margin-left:auto}
+  .regime{font-size:11px;padding:2px 9px;border-radius:11px;border:1px solid}
+  .r-fisica{color:var(--fisica);border-color:var(--fisica)}
+  .r-comb{color:var(--comb);border-color:var(--comb)}
+  .r-seq{color:var(--seq);border-color:var(--seq)}
+  .r-arq{color:var(--ouro);border-color:var(--ouro)}
+
+  .campos{margin:14px 0 0;display:grid;gap:11px}
+  @media (min-width:760px){ .campos{grid-template-columns:1fr 1fr;gap:11px 26px} }
+  .campo{border-top:1px solid #16283f;padding-top:9px}
+  .campo dt{font-size:11.5px;color:var(--ouro);letter-spacing:.04em;
+            text-transform:lowercase;margin:0 0 3px}
+  .campo dd{margin:0;font-size:13.5px;color:#c3ccda}
+  .selo{display:inline-block;font-size:10.5px;padding:1px 7px;border-radius:9px;
+        margin-left:6px;vertical-align:1px;white-space:nowrap}
+  .selo.lido{color:var(--lido);border:1px solid rgba(111,191,106,.45)}
+  .selo.oficio{color:var(--ouro);border:1px solid rgba(201,162,102,.45)}
+  details.proc>summary{cursor:pointer;color:var(--fraco);font-size:11.5px;
+        padding:5px 0 0;list-style:none}
+  details.proc>summary::before{content:"· ";color:var(--ouro)}
+
+  /* --- instrumento --- */
+  .instr{margin:16px 0 4px;border:1px solid #23405e;border-radius:7px;
+         background:#0a1a2e;padding:14px 16px 12px}
+  .instr h4{margin:0 0 4px;font-family:Cormorant,Georgia,serif;font-size:19px;
+            font-weight:600;color:var(--creme)}
+  .instr .comoler{color:#9fadc0;font-size:13px;margin:0 0 12px}
+  .instr canvas{width:100%;display:block;background:#0d1c30;border-radius:5px;
+                border:1px solid #16283f}
+  .botoes{display:flex;gap:8px;flex-wrap:wrap;margin:11px 0 0}
+  .botoes button{background:#17293f;color:#b9c4d4;border:1px solid #2b4767;
+        border-radius:5px;padding:6px 13px;font-size:12.5px;
+        font-family:inherit;cursor:pointer}
+  .botoes button:hover{border-color:var(--ouro);color:var(--creme)}
+  .botoes button.on{background:#1d3a2a;border-color:var(--lido);color:#cfe8cd}
+  .prova{color:var(--fraco);font-size:11.5px;margin:9px 0 0}
+  .aviso{color:var(--fisica);font-size:12px}
+
+  details.seta{margin:12px 0 0;padding:0 0 0 26px;border-left:2px solid var(--lido)}
   details.seta>summary{cursor:pointer;color:var(--lido);font-size:13px;
-          padding:9px 0;list-style:none}
+          padding:7px 0;list-style:none}
   details.seta>summary::before{content:"▲  ";}
   details.seta[open]>summary{color:var(--creme)}
   blockquote{margin:2px 0 12px;padding:12px 16px;background:#132440;
@@ -38,7 +96,7 @@
   .pordentro b{color:#9fadc0}
   details.dentro>summary{cursor:pointer;color:#9fadc0;font-size:13px;padding:6px 0;
              list-style:none}
-  details.dentro>summary::before{content:"·  ";color:var(--ouro)}
+  details.dentro>summary::before{content:"· ";color:var(--ouro)}
   details.dentro>summary span{color:var(--fraco)}
   ul.soltas{list-style:none;padding:0;margin:14px 0 0}
   ul.soltas li{background:var(--cartao);border:1px solid var(--borda);border-radius:5px;
@@ -48,6 +106,10 @@
               padding:9px 14px;margin:0 0 7px;color:var(--falta);font-size:13.5px}
   ul.falta li b{color:#b9c4d4}
   ul.falta li span{float:right;font-size:12px;color:var(--fraco)}
+  .comolerpag{background:var(--cartao);border:1px solid var(--borda);
+        border-radius:7px;padding:15px 20px;margin:22px 0 0;font-size:13.5px;
+        color:#b0bbcb}
+  .comolerpag b{color:var(--creme)}
   footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--borda);
          color:var(--fraco);font-size:13px}
   footer a{color:var(--ouro)}
@@ -58,49 +120,143 @@
 <div class="caixa">
 
 <h1>The staircase of abstractions</h1>
-<p class="lede">From relay to register machine, one step at a time — and  
-<b>each arrow opens the sentence that supports it</b>, copied from the book, with chapter.</p>
-<p class="lede">This map begins almost empty by design. It only admits what  
-someone <b>read</b>: nothing enters by plausibility, by consensus, nor because a  
-model wrote it. <b>11 edges read</b> and  
-<b>24 constructions verified</b>, against  
-<b>10 that are known to exist and have not yet been opened</b>, listed  
-at the end — because a map that hides what is missing lies about its own size.</p>
+<p class="lede">From electromagnet to machine of latches, one step at a time.  
+Each step responds <b>what it is</b>, <b>why it exists</b>, <b>where it appears</b> and  
+<b>where it locks</b> — and 5 of the passages you do not need to accept by  
+word: they <b>assemble the piece on this screen</b>.</p>
+<p class="lede">The map begins almost empty on purpose. It only admits what  
+someone <b>read</b>: nothing enters by plausibility, by consensus, nor because a model wrote it.</p>
+
+<div class="mapa">
+<svg viewBox="0 0 1090 1014" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa da escada de abstrações, do eletroímã à máquina de registradores">
+<defs>
+<marker id="ponta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6"
+        markerHeight="6" orient="auto-start-reverse">
+  <path d="M0,1 L9,5 L0,9 z" fill="#6fbf6a"/></marker>
+<marker id="pontaF" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6"
+        markerHeight="6" orient="auto-start-reverse">
+  <path d="M0,1 L9,5 L0,9 z" fill="#33465f"/></marker>
+</defs>
+<line x1="46" y1="664.0" x2="1044" y2="664.0" stroke="#c9a266" stroke-width="1" stroke-dasharray="2 5" opacity=".65"/>
+<text x="1040" y="655.0" text-anchor="end" fill="#c9a266" font-family="Inter,sans-serif" font-size="11.5" opacity=".9">from here up, the subject is logic, not electricity</text>
+<rect x="100" y="53" width="200" height="42" rx="7" fill="none" stroke="#33465f" stroke-width="1.3" stroke-dasharray="5 4"/><text x="200" y="79" text-anchor="middle" fill="#6b7a90" font-family="Inter,sans-serif" font-size="12.5">operating system</text>
+<rect x="370" y="53" width="200" height="42" rx="7" fill="none" stroke="#33465f" stroke-width="1.3" stroke-dasharray="5 4"/><text x="470" y="79" text-anchor="middle" fill="#6b7a90" font-family="Inter,sans-serif" font-size="12.5">instruction</text>
+<rect x="640" y="53" width="200" height="42" rx="7" fill="none" stroke="#33465f" stroke-width="1.3" stroke-dasharray="5 4"/><text x="740" y="79" text-anchor="middle" fill="#6b7a90" font-family="Inter,sans-serif" font-size="12.5">assembler</text>
+<text x="50" y="30" fill="#6b7a90" font-family="Inter,sans-serif" font-size="11.5">not read — the road continues, and the map does not hide this</text>
+<path d="M470,168 C470,128 200,147 200,103" fill="none" stroke="#33465f" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#pontaF)"/>
+<path d="M470,168 L470,103" fill="none" stroke="#33465f" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#pontaF)"/>
+<path d="M470,168 C470,128 740,147 740,103" fill="none" stroke="#33465f" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#pontaF)"/>
+<rect x="100" y="383" width="200" height="42" rx="7" fill="none" stroke="#33465f" stroke-width="1.3" stroke-dasharray="5 4"/><text x="200" y="409" text-anchor="middle" fill="#6b7a90" font-family="Inter,sans-serif" font-size="12.5">ALU</text>
+<path d="M200,480 L200,425" fill="none" stroke="#33465f" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#pontaF)"/>
+<rect x="370" y="903" width="200" height="42" rx="7" fill="none" stroke="#33465f" stroke-width="1.3" stroke-dasharray="5 4"/><text x="470" y="929" text-anchor="middle" fill="#6b7a90" font-family="Inter,sans-serif" font-size="12.5">current and iron</text>
+<path d="M470,903 L470,848" fill="none" stroke="#33465f" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#pontaF)"/>
+<path d="M470,792 L470,744" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
+<path d="M470,688 L470,640" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
+<path d="M470,584 C470,560.0 200,560.0 200,536" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
+<path d="M470,584 C470,560.0 740,560.0 740,536" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
+<path d="M740,480 L740,432" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
+<path d="M470,584 C970,554 970,462 740,432" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
+<path d="M740,376 L740,328" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
+<path d="M740,376 C740,352.0 470,352.0 470,328" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/>
+<path d="M470,272 L470,224" fill="none" stroke="#6fbf6a" stroke-width="1.7" marker-end="url(#ponta)"/><path d="M470,272 L470,224" fill="none" stroke="#6fbf6a" stroke-width="4.6" opacity=".22"/>
+<a href="#eletroima" class="no">
+<rect x="370" y="792" width="200" height="56" rx="7"
+      fill="#3a2418" stroke="#c1704f" stroke-width="1.6"/>
+<text x="470" y="825" text-anchor="middle" fill="#e6b499"
+      font-family="Cormorant,Georgia,serif" font-size="17.5"><tspan x="470" dy="0">electromagnet</tspan></text>
+<text x="379" y="807" fill="#c1704f" font-family="Inter,sans-serif"
+      font-size="10" opacity=".75">level -1</text>
+</a>
+<a href="#rele" class="no">
+<rect x="370" y="688" width="200" height="56" rx="7"
+      fill="#3a2418" stroke="#c1704f" stroke-width="1.6"/>
+<text x="470" y="721" text-anchor="middle" fill="#e6b499"
+      font-family="Cormorant,Georgia,serif" font-size="17.5"><tspan x="470" dy="0">relay</tspan></text>
+<text x="379" y="703" fill="#c1704f" font-family="Inter,sans-serif"
+      font-size="10" opacity=".75">level 0</text>
+</a>
+<a href="#porta" class="no">
+<rect x="370" y="584" width="200" height="56" rx="7"
+      fill="#14263f" stroke="#5b8fc9" stroke-width="1.6"/>
+<text x="470" y="617" text-anchor="middle" fill="#bcd4ec"
+      font-family="Cormorant,Georgia,serif" font-size="17.5"><tspan x="470" dy="0">logic gate</tspan></text>
+<text x="379" y="599" fill="#5b8fc9" font-family="Inter,sans-serif"
+      font-size="10" opacity=".75">level 1</text>
+</a>
+<a href="#somador" class="no">
+<rect x="100" y="480" width="200" height="56" rx="7"
+      fill="#14263f" stroke="#5b8fc9" stroke-width="1.6"/>
+<text x="200" y="513" text-anchor="middle" fill="#bcd4ec"
+      font-family="Cormorant,Georgia,serif" font-size="17.5"><tspan x="200" dy="0">adder</tspan></text>
+<text x="109" y="495" fill="#5b8fc9" font-family="Inter,sans-serif"
+      font-size="10" opacity=".75">level 2</text>
+</a>
+<a href="#flipflop" class="no">
+<rect x="640" y="480" width="200" height="56" rx="7"
+      fill="#10312e" stroke="#4fb3a5" stroke-width="1.6"/>
+<text x="740" y="513" text-anchor="middle" fill="#a8e0d7"
+      font-family="Cormorant,Georgia,serif" font-size="17.5"><tspan x="740" dy="0">level flip-flop</tspan></text>
+<text x="649" y="495" fill="#4fb3a5" font-family="Inter,sans-serif"
+      font-size="10" opacity=".75">level 2</text>
+</a>
+<a href="#flipflop_b" class="no">
+<rect x="640" y="376" width="200" height="56" rx="7"
+      fill="#10312e" stroke="#4fb3a5" stroke-width="1.6"/>
+<text x="740" y="409" text-anchor="middle" fill="#a8e0d7"
+      font-family="Cormorant,Georgia,serif" font-size="17.5"><tspan x="740" dy="0">edge-triggered flip-flop</tspan></text>
+<text x="649" y="391" fill="#4fb3a5" font-family="Inter,sans-serif"
+      font-size="10" opacity=".75">level 3</text>
+</a>
+<a href="#contador" class="no">
+<rect x="640" y="272" width="200" height="56" rx="7"
+      fill="#10312e" stroke="#4fb3a5" stroke-width="1.6"/>
+<text x="740" y="305" text-anchor="middle" fill="#a8e0d7"
+      font-family="Cormorant,Georgia,serif" font-size="17.5"><tspan x="740" dy="0">counter</tspan></text>
+<text x="649" y="287" fill="#4fb3a5" font-family="Inter,sans-serif"
+      font-size="10" opacity=".75">level 4</text>
+</a>
+<a href="#registrador" class="no">
+<rect x="370" y="272" width="200" height="56" rx="7"
+      fill="#10312e" stroke="#4fb3a5" stroke-width="1.6"/>
+<text x="470" y="305" text-anchor="middle" fill="#a8e0d7"
+      font-family="Cormorant,Georgia,serif" font-size="17.5"><tspan x="470" dy="0">register (latch)</tspan></text>
+<text x="379" y="287" fill="#4fb3a5" font-family="Inter,sans-serif"
+      font-size="10" opacity=".75">level 4</text>
+</a>
+<a href="#maquina" class="no">
+<rect x="370" y="168" width="200" height="56" rx="7"
+      fill="#33280f" stroke="#c9a266" stroke-width="1.6"/>
+<text x="470" y="191" text-anchor="middle" fill="#f0dcb4"
+      font-family="Cormorant,Georgia,serif" font-size="17.5"><tspan x="470" dy="0">register</tspan><tspan x="470" dy="17">machine</tspan></text>
+<text x="379" y="183" fill="#c9a266" font-family="Inter,sans-serif"
+      font-size="10" opacity=".75">level 5</text>
+</a>
+<text x="50" y="968" fill="#5b6b86" font-family="Inter,sans-serif" font-size="11.5">the color indicates the regime · the filled arrow has verified citation · the dashed is what no one read</text>
+<rect x="50" y="981" width="13" height="13" rx="3" fill="#3a2418" stroke="#c1704f" stroke-width="1.4"/>
+<text x="69" y="992" fill="#8a94a4" font-family="Inter,sans-serif" font-size="11">physics</text>
+<rect x="114.4" y="981" width="13" height="13" rx="3" fill="#14263f" stroke="#5b8fc9" stroke-width="1.4"/>
+<text x="133.4" y="992" fill="#8a94a4" font-family="Inter,sans-serif" font-size="11">combinational</text>
+<rect x="223.60000000000002" y="981" width="13" height="13" rx="3" fill="#10312e" stroke="#4fb3a5" stroke-width="1.4"/>
+<text x="242.60000000000002" y="992" fill="#8a94a4" font-family="Inter,sans-serif" font-size="11">sequential</text>
+<rect x="313.6" y="981" width="13" height="13" rx="3" fill="#33280f" stroke="#c9a266" stroke-width="1.4"/>
+<text x="332.6" y="992" fill="#8a94a4" font-family="Inter,sans-serif" font-size="11">architecture</text>
+</svg>
+</div>
+
+<div class="comolerpag"><b>How to read.</b> The map rises: the electromagnet is the floor, the machine is the top — and the dotted golden line marks the place where the subject <b>stops being electricity and becomes logic</b>. The node's color indicates the regime; the key is right below it. A solid arrow has a citation checked against the book; a dashed arrow is what no one has read yet, and it is drawn because <b>a map that hides what is missing lies about its own size</b>.<br><br>  
+Within each step, the four fields come with a <b>source label</b>: <span class="selo lido">citation</span> when the text is from the book, <span class="selo lido">synthesis</span> when it is a summary of a cited passage — and the passage opens to the side, so you can check if the summary is honest —, and <span class="selo oficio">craft · proposal</span> when it is the judgment of the teacher, which no book writes. <b>There is no label for “a model wrote”</b>, and it is on purpose: see the last section.</div>
 
 <h2>The steps, from bottom to top</h2>
 <div class="escada">
-<div class="degrau"><span class="nivel">level 5</span><div class="nome">register machine</div><div class="diz">Registers and operations, plus a controller that sequences the operations. It's where the physical construction meets the language description.</div><div class="pordentro"><b>por dentro</b> — pieces from the same layer, with the phrase that supports each one:<details class="dentro"><summary>Triple-Byte Accumulator <span>&larr; a counter to access memory, an adder, and latches</span></summary><blockquote>“Chapter 20 described a Triple-Byte Accumulator that consisted of a counter to access memory, an adder, and latches.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 21 — The Arithmetic Logic Unit</cite></blockquote></details></div></div>
-</details>
-<blockquote>“…control signals, so called because they control these components to work together in executing instructions stored in memory. … The CPU control signals are the strings.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · caps. 22–23 — Registers and Busses · CPU Control Signals</cite></blockquote><p class="duas">Two independent witnesses, arriving from opposite sides of the staircase — one building the machine, the other defining it.</p>
-<details class="seta"><summary>is made of <b>register (latch)</b> — definition, and the source says:</summary><blockquote>“To design a register machine, we must design its data paths (registers and operations) and the controller that sequences these operations. … If we view the arrows as wires and the X buttons as switches, the data-path diagram is very like the wiring diagram for a machine that could be constructed from electrical components.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · §5.1 — Designing Register Machines</cite></blockquote>
-<div class="degrau"><span class="nivel">level 4</span><div class="nome">register (latch)</div><div class="diz">Holds a byte and returns it when asked. It is the machine's working memory, not the storage memory.</div><div class="pordentro"><b>por dentro</b> — pieces from the same layer, with the phrase that supports each one:<details class="dentro"><summary>8-bit latch <span>&larr; flip-flops</span></summary><blockquote>“As you’ll recall, an 8-bit latch uses flip-flops to store an 8-bit value.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 20 — Automating Arithmetic</cite></blockquote></details><details class="dentro"><summary>register array <span>&larr; seven latches and seven tri-state buffers</span></summary><blockquote>“The following circuit contains seven latches and seven tri-state buffers. One 3-to-8 decoder is used to latch the incoming value into one of the registers, and another 3-to-8 decoder is used to enable one of the tri-state buffers to select a value from one of the registers:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 22 — Registers and Busses</cite></blockquote></details><details class="dentro"><summary>register array <span>&larr; latches for seven registers identified by the letters A, B, C, D, E, H, and L</span></summary><blockquote>“The register array contains latches for seven registers identified by the letters A, B, C, D, E, H, and L.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 23 — CPU Control Signals</cite></blockquote></details><details class="dentro"><summary>register <span>&larr; 8-bit latch</span></summary><blockquote>“These latches are called registers, and a primary purpose of these registers is to store bytes as they are processed by the ALU.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 22 — Registers and Busses</cite></blockquote></details><details class="dentro"><summary>16-bit address <span>&larr; H and L registers</span></summary><blockquote>“The H and L registers form a 16-bit address—for example, in the MOV A,M instruction. When used in this way, HL is called a register pair.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 22 — Registers and Busses</cite></blockquote></details></div></div>
-</details>
-<details class="seta"><summary>Made of <b>edge-triggered flip-flop</b> — construction, and the source says:</summary><blockquote>“The counter providing the memory address is built from edge-triggered flip-flops, so it probably has a Clear input. The latch is built from edge-triggered flip-flops as well, and edge-triggered flip-flops have been used for generating the control signals.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 20 — Automating Arithmetic</cite></blockquote>
-<div class="degrau"><span class="nivel">level 4</span><div class="nome">counter</div><div class="diz">Counts clock pulses. Turns the address that the machine reads next — the embryo of the program counter.</div></div>
-</details>
-<details class="seta"><summary>Made of <b>edge-triggered flip-flop</b> — construction, and the source says:</summary><blockquote>“This is a job for a counter built from a row of cascading flip-flops, such as the one you saw on page 237 of Chapter 17:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 20 — Automating Arithmetic</cite></blockquote>
-<div class="degrau"><span class="nivel">level 3</span><div class="nome">edge-triggered flip-flop</div><div class="diz">Remembers at the <i>instant</i> of the clock transition, and not while it is high. That's what makes time discrete.</div></div>
-</details>
-<details class="seta"><summary>Made of <b>logic gate</b> — construction, and the source says:</summary><blockquote>“Here’s the edge-triggered D-type flip-flop with preset and clear built entirely from six 3-input NOR gates and an inverter.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 17 — Feedback and Flip-Flops</cite></blockquote>
-</details>
-<details class="seta"><summary>is made of <b>level-triggered flip-flop</b> — construction, and the source says:</summary><blockquote>“An edge-triggered D-type flip-flop is constructed from two stages of level-triggered D-type flip-flops, wired together this way:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 17 — Feedback and Flip-Flops</cite></blockquote>
-<div class="degrau"><span class="nivel">level 2</span><div class="nome">level-triggered flip-flop</div><div class="diz">The first circuit that <b>remembers</b>: the output depends on what entered before, not just on what enters now.</div></div>
-</details>
-<details class="seta"><summary>Made of <b>logic gate</b> — construction, and the source says:</summary><blockquote>“the level-triggered D-type flip-flop, which is made from an inverter, two AND gates, and two NOR gates”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 19 — An Assemblage of Memory</cite></blockquote>
-<div class="degrau"><span class="nivel">level 2</span><div class="nome">adder</div><div class="diz">Adds two bits and passes the carry forward. It's the first piece that does <b>count</b>, and is made only of gates.</div><div class="pordentro"><b>por dentro</b> — pieces from the same layer, with the phrase that supports each one:<details class="dentro"><summary>full adder <span>&larr; two half adders and an OR gate</span></summary><blockquote>“Each full adder is two half adders and an OR gate”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 14 — Adding with Logic Gates</cite></blockquote></details></div></div>
-</details>
-<details class="seta"><summary>Made of <b>logic gate</b> — construction, and the source says:</summary><blockquote>“A half adder is an XOR gate and an AND gate”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 14 — Adding with Logic Gates</cite></blockquote>
-<div class="degrau"><span class="nivel">level 1</span><div class="nome">logic gate</div><div class="diz">AND, OR, NOR, inverter. From here on, the subject leaves electricity and becomes logic.</div><div class="pordentro"><b>por dentro</b> — pieces from the same layer, with the phrase that supports each one:<details class="dentro"><summary>NOR <span>&larr; an OR gate followed by an inverter</span></summary><blockquote>“The NOR is the same as an OR gate followed by an inverter.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 8 — Relays and Gates</cite></blockquote></details><details class="dentro"><summary>NAND <span>&larr; the inverse of the AND gate</span></summary><blockquote>“The NAND gate is drawn just like the AND gate but with a circle at the output, meaning the output is the inverse of the AND gate:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 8 — Relays and Gates</cite></blockquote></details><details class="dentro"><summary>inverter <span>&larr; a NAND gate</span></summary><blockquote>“For example, here’s how to combine the inputs of a NAND gate to create an inverter:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 8 — Relays and Gates</cite></blockquote></details><details class="dentro"><summary>AND gate <span>&larr; an inverter and a NAND gate</span></summary><blockquote>“You can use that inverter on the output of another NAND gate to make an AND gate.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 8 — Relays and Gates</cite></blockquote></details><details class="dentro"><summary>XOR gate <span>&larr; an OR gate, a NAND gate, and an AND gate</span></summary><blockquote>“The XOR gate is actually a combination of an OR gate, a NAND gate, and an AND gate”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 14 — Adding with Logic Gates</cite></blockquote></details><details class="dentro"><summary>prewired gate bank <span>&larr; relays</span></summary><blockquote>“relays that have been prewired into various logic gates”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 14 — Adding with Logic Gates</cite></blockquote></details><details class="dentro"><summary>logic gate <span>&larr; two relays</span></summary><blockquote>“each of those gates consists of two relays”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 14 — Adding with Logic Gates</cite></blockquote></details></div></div>
-</details>
-<details class="seta"><summary>is made of <b>relay</b> — construction, and the source says:</summary><blockquote>“A single relay wired in this way is called an inverter.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 8 — Relays and Gates</cite></blockquote>
-</details>
-<details class="seta"><summary>is made of <b>relay</b> — construction, and the source says:</summary><blockquote>“The next logic gate requires two relays that are wired in parallel, like this:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 8 — Relays and Gates</cite></blockquote>
-</details>
-<details class="seta"><summary>is made of <b>relay</b> — construction, and the source says:</summary><blockquote>“These two relays wired in series are known as an AND gate because it is performing a Boolean AND operation.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 8 — Relays and Gates</cite></blockquote>
-<div class="degrau"><span class="nivel">level 0</span><div class="nome">relay</div><div class="diz">A switch that another circuit activates. It is the first component that allows a circuit to control another — and it is from there that everything grows.</div></div>
-</details>
-<details class="seta"><summary>is made of <b>electromagnet</b> — construction, and the source says:</summary><blockquote>“A relay is like a sounder in that an incoming current is used to power an electromagnet that pulls down a metal lever.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 7 — Telegraphs and Relays</cite></blockquote>
-<div class="degrau"><span class="nivel">level -1</span><div class="nome">electromagnet</div><div class="diz">A piece of iron that becomes a magnet while current passes through it. It's the only step that isn't made of another step: below it begins physics.</div><div class="pordentro"><b>por dentro</b> — pieces from the same layer, with the phrase that supports each one:<details class="dentro"><summary>magnet <span>&larr; iron bar, wrap it with a couple of hundred turns of thin insulated wire</span></summary><blockquote>“If you take an iron bar, wrap it with a couple of hundred turns of thin insulated wire, and then run a current through the wire, the iron bar becomes a magnet.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 7 — Telegraphs and Relays</cite></blockquote></details></div></div>
+<article class="degrau" id="eletroima"><header><h3 class="nome">electromagnet</h3><span class="regime r-fisica">physics</span><span class="nivel">level -1</span></header><dl class="campos"><div class="campo"><dt>what it is<span class="selo lido">citation</span></dt><dd>An iron bar that becomes an electromagnet while current flows through the wire wrapped around it.<details class="proc"><summary>the passage that supports</summary><blockquote>“If you take an iron bar, wrap it with a couple of hundred turns of thin insulated wire, and then run a current through the wire, the iron bar becomes a magnet.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 7 — Telegraphs and Relays</cite></blockquote></details></dd></div><div class="campo"><dt>why it exists<span class="selo lido">synthesis</span></dt><dd>Because that's how electricity <b>pulls</b> something. Morse needed a signal that acted at a distance and couldn't use a lamp: the practical lamp wouldn't appear until 1879. Magnetism was left as the option.<details class="proc"><summary>the passage that supports</summary><blockquote>“Morse couldn’t use a lightbulb as his signaling device because a practical one wouldn’t be invented until 1879. Instead, Morse relied upon the phenomenon of electromagnetism.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 7 — Telegraphs and Relays</cite></blockquote></details></dd></div><div class="campo"><dt>where it appears<span class="selo oficio">craft · proposal</span></dt><dd>The doorbell, the electric lock on the gate, the speaker that is playing now, the breaker that trips the panel. And the relay — which is the next step.<details class="proc"><summary>where this field comes from</summary><blockquote>No book writes where the student locks; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the rite of the house is norm = proposal + ratification, and content is not different. It was not written by a model.</blockquote></details></dd></div><div class="campo"><dt>where you get stuck<span class="selo oficio">craft · proposal</span></dt><dd>It is not an <i>electromagnet</i>: it is an electromagnet <b>while</b> current flows. Whoever reads “becomes an electromagnet” and keeps “is an electromagnet” loses the only important property, which is it <b>turning off</b>. The entire ladder above depends on turning off.<details class="proc"><summary>where this field comes from</summary><blockquote>No book writes where the student locks; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the rite of the house is norm = proposal + ratification, and content is not different. It was not written by a model.</blockquote></details></dd></div></dl><div class="pordentro"><b>por dentro</b> — pieces from the same layer, with the phrase that supports each one:<details class="dentro"><summary>magnet <span>&larr; iron bar, wrap it with a couple of hundred turns of thin insulated wire</span></summary><blockquote>“If you take an iron bar, wrap it with a couple of hundred turns of thin insulated wire, and then run a current through the wire, the iron bar becomes a magnet.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 7 — Telegraphs and Relays</cite></blockquote></details></div></article>
+<article class="degrau" id="rele"><header><h3 class="nome">relay</h3><span class="regime r-fisica">physics</span><span class="nivel">level 0</span></header><dl class="campos"><div class="campo"><dt>what it is<span class="selo lido">citation</span></dt><dd>An electromagnet that pulls a metal lever, and the lever is part of a switch that connects a battery to an output wire.<details class="proc"><summary>the passage that supports</summary><blockquote>“A relay is like a sounder in that an incoming current is used to power an electromagnet that pulls down a metal lever. The lever, however, is used as part of a switch connecting a battery to an outgoing wire.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 7 — Telegraphs and Relays</cite></blockquote></details></dd></div><div class="campo"><dt>why it exists<span class="selo lido">synthesis</span></dt><dd>Because wire has resistance: the longer it is, the more it weakens the signal, and the telegraph line couldn't grow indefinitely. The relay listens to the weak signal that remains and uses a local <b>battery</b> to retransmit it strongly. It doesn't fix the wire—it restarts the signal.<details class="proc"><summary>the passage that supports</summary><blockquote>“the longer a length of wire becomes, the more resistance it has to the flow of electricity. This was a major impediment to long-distance telegraphy. … In this way, a weak incoming current is “amplified” to make a stronger outgoing current.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 7 — Telegraphs and Relays</cite></blockquote></details></dd></div><div class="campo"><dt>where it appears<span class="selo lido">synthesis</span></dt><dd>The start of your car, the contactor for the air conditioner, the control panel of a warehouse's automation. And, historically, the entire computer. <details class="proc"><summary>the passage that supports</summary><blockquote>“It’s a switch, surely, but a switch that’s turned on and off not by human hands but by an electrical current. You could do amazing things with such devices. You could actually assemble much of a computer with them.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 7 — Telegraphs and Relays</cite></blockquote></details></dd></div><div class="campo"><dt>where you get stuck<span class="selo oficio">craft · proposal</span></dt><dd>The circuit that <b>controls</b> and the circuit <b>controlled</b> are two separate circuits that do not touch — only the magnetic field passes through. Those who merge the two into one cannot see why it's possible to chain relay to relay. And chaining is everything that comes after. <details class="proc"><summary>where this field comes from</summary><blockquote>No book writes where the student locks; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the rite of the house is norm = proposal + ratification, and content is not different. It was not written by a model.</blockquote></details></dd></div></dl><details class="seta"><summary>is made of <b>electromagnet</b> — construction, and the source says:</summary><blockquote>“A relay is like a sounder in that an incoming current is used to power an electromagnet that pulls down a metal lever.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 7 — Telegraphs and Relays</cite></blockquote></details></article>
+<article class="degrau" id="porta"><header><h3 class="nome">logic gate</h3><span class="regime r-comb">combinational</span><span class="nivel">level 1</span></header><dl class="campos"><div class="campo"><dt>what it is<span class="selo lido">citation</span></dt><dd>The component where Boolean algebra meets electricity: it performs logical operation by <b>blocking or allowing</b> the current to pass.<details class="proc"><summary>the passage that supports</summary><blockquote>“Reduced to its essentials, a computer is a synthesis of Boolean algebra and electricity. The crucial components that embody this melding of math and hardware are known as logic gates. … Logic gates perform simple operations in Boolean logic by blocking or letting through the flow of electrical current.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 8 — Relays and Gates</cite></blockquote></details></dd></div><div class="campo"><dt>why it exists<span class="selo lido">synthesis</span></dt><dd>Two relays in series only light the bulb if the <b>two</b> are activated — the E of Boolean, made of metal. And the advantage of the relay over the switch is that it is activated by another relay, not by a finger: that's it, and only that, which allows combining gate with gate until it becomes arithmetic.<details class="proc"><summary>the passage that supports</summary><blockquote>“Relays have an advantage over switches in that relays can be switched on and off by other relays rather than by fingers. This means that logic gates can be combined to perform more complex tasks, such as simple functions in arithmetic and, eventually, the workings of entire computers.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 8 — Relays and Gates</cite></blockquote></details></dd></div><div class="campo"><dt>where it appears<span class="selo oficio">craft · proposal</span></dt><dd>Every condition of every program you've ever written. The <code>if (a && b)</code> of your last function is this gate, with sixty years of layers on top.<details class="proc"><summary>where this field comes from</summary><blockquote>No book writes where the student locks; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the rite of the house is norm = proposal + ratification, and content is not different. It was not written by a model.</blockquote></details></dd></div><div class="campo"><dt>where you get stuck<span class="selo oficio">craft · proposal</span></dt><dd>Here <b>nothing physically changed</b> — the description changed. It's still current flowing through metal; what now exists is <i>calling</i> that true and false. This is the first abstraction leap on the ladder, and it's the easiest to cross without noticing you've crossed it — which is why those who skip here don't understand anything up there. <details class="proc"><summary>where this field comes from</summary><blockquote>No book writes where the student locks; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the rite of the house is norm = proposal + ratification, and content is not different. It was not written by a model.</blockquote></details></dd></div></dl><div class="instr" id="i-rele-vira-porta"><h4>Two relays flip a switch</h4><p class="comoler">Connect the two and observe: <b>in series</b> the lamp only lights up when both are activated — that is the E of Boolean algebra, made of metal. The truth table is not pre-filled; it fills as you visit the combinations, and while lines are missing, the instrument tells you how many are missing.</p><canvas data-h="230"></canvas><div class="botoes"><button data-acao="mode">in series</button><button data-acao="inA">relay A</button><button data-acao="inB">relay B</button></div><p class="prova">This instrument <b>is</b> the warrant for the arrow below: it constructs the piece in the browser, without the book in hand. The citation continues there, as a second witness.</p></div><details class="seta"><summary>is made of <b>relay</b> — construction, and the source says:</summary><blockquote>“These two relays wired in series are known as an AND gate because it is performing a Boolean AND operation.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 8 — Relays and Gates</cite></blockquote></details><details class="seta"><summary>is made of <b>relay</b> — construction, and the source says:</summary><blockquote>“The next logic gate requires two relays that are wired in parallel, like this:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 8 — Relays and Gates</cite></blockquote></details><details class="seta"><summary>is made of <b>relay</b> — construction, and the source says:</summary><blockquote>“A single relay wired in this way is called an inverter.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 8 — Relays and Gates</cite></blockquote></details><div class="pordentro"><b>por dentro</b> — pieces from the same layer, with the phrase that supports each one:<details class="dentro"><summary>NOR <span>&larr; an OR gate followed by an inverter</span></summary><blockquote>“The NOR is the same as an OR gate followed by an inverter.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 8 — Relays and Gates</cite></blockquote></details><details class="dentro"><summary>NAND <span>&larr; the inverse of the AND gate</span></summary><blockquote>“The NAND gate is drawn just like the AND gate but with a circle at the output, meaning the output is the inverse of the AND gate:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 8 — Relays and Gates</cite></blockquote></details><details class="dentro"><summary>inverter <span>&larr; a NAND gate</span></summary><blockquote>“For example, here’s how to combine the inputs of a NAND gate to create an inverter:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 8 — Relays and Gates</cite></blockquote></details><details class="dentro"><summary>AND gate <span>&larr; an inverter and a NAND gate</span></summary><blockquote>“You can use that inverter on the output of another NAND gate to make an AND gate.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 8 — Relays and Gates</cite></blockquote></details><details class="dentro"><summary>XOR gate <span>&larr; an OR gate, a NAND gate, and an AND gate</span></summary><blockquote>“The XOR gate is actually a combination of an OR gate, a NAND gate, and an AND gate”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 14 — Adding with Logic Gates</cite></blockquote></details><details class="dentro"><summary>prewired gate bank <span>&larr; relays</span></summary><blockquote>“relays that have been prewired into various logic gates”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 14 — Adding with Logic Gates</cite></blockquote></details><details class="dentro"><summary>logic gate <span>&larr; two relays</span></summary><blockquote>“each of those gates consists of two relays”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 14 — Adding with Logic Gates</cite></blockquote></details></div></article>
+<article class="degrau" id="somador"><header><h3 class="nome">adder</h3><span class="regime r-comb">combinational</span><span class="nivel">level 2</span></header><dl class="campos"><div class="campo"><dt>what it is<span class="selo lido">citation</span></dt><dd>Adds two bits and returns <b>two</b>: the sum bit and the carry bit.<details class="proc"><summary>the passage that supports</summary><blockquote>“adding a pair of binary numbers results in two bits, which are called the sum bit and the carry bit (as in “1 plus 1 equals 0, carry the 1”)”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 14 — Adding with Logic Gates</cite></blockquote></details></dd></div><div class="campo"><dt>why it exists<span class="selo lido">synthesis</span></dt><dd>Because adding a single column isn't enough. From the second column onward, there are <b>three</b> bits to add: the two from the column plus the carry-one that came from the previous one. That third input is what distinguishes the half-adder from the full adder. <details class="proc"><summary>the passage that supports</summary><blockquote>“We can use the half adder only for the addition of the rightmost column: 1 plus 1 equals 0, carry the 1. For the second column from the right, we really need to add three binary numbers because of the carry. And that goes for all subsequent columns.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 14 — Adding with Logic Gates</cite></blockquote></details></dd></div><div class="campo"><dt>where it appears<span class="selo oficio">craft · proposal</span></dt><dd>Every sum of every processor in the world, including the one that summed the loop index you ran today. It's also where overflow lives: the carry-out that comes from the last column and has nowhere to go. <details class="proc"><summary>where this field comes from</summary><blockquote>No book writes where the student locks; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the rite of the house is norm = proposal + ratification, and content is not different. It was not written by a model.</blockquote></details></dd></div><div class="campo"><dt>where you get stuck<span class="selo lido">synthesis</span></dt><dd>The trap is to treat the adder as a black box — this goes in, that comes out, don't ask. Petzold himself corrects: since you know what's inside, the right name is <b>transparent box</b>. Whoever accepts the black box here accepts it in all subsequent steps, and the whole staircase becomes magical.<details class="proc"><summary>the passage that supports</summary><blockquote>“Sometimes a box like this is called a black box. A particular combination of inputs results in particular outputs, but the implementation is hidden. But since we know what goes on inside the half adder, it’s more correctly termed a clear box.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 14 — Adding with Logic Gates</cite></blockquote></details></dd></div></dl><div class="instr" id="i-portas-viram-conta"><h4>Two gates turn into a count</h4><p class="comoler">The XOR gives the sum, the AND gives the carry. The binary count appears beside to confirm it's not a coincidence—and the case that matters is <b>1 + 1</b>.</p><canvas data-h="220"></canvas><div class="botoes"><button data-acao="inA">A</button><button data-acao="inB">B</button></div><p class="prova">This instrument <b>is</b> the warrant for the arrow below: it constructs the piece in the browser, without the book in hand. The citation continues there, as a second witness.</p></div><details class="seta"><summary>Made of <b>logic gate</b> — construction, and the source says:</summary><blockquote>“A half adder is an XOR gate and an AND gate”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 14 — Adding with Logic Gates</cite></blockquote></details><div class="pordentro"><b>por dentro</b> — pieces from the same layer, with the phrase that supports each one:<details class="dentro"><summary>full adder <span>&larr; two half adders and an OR gate</span></summary><blockquote>“Each full adder is two half adders and an OR gate”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 14 — Adding with Logic Gates</cite></blockquote></details></div></article>
+<article class="degrau" id="flipflop"><header><h3 class="nome">level-triggered flip-flop</h3><span class="regime r-seq">sequential</span><span class="nivel">level 2</span></header><dl class="campos"><div class="campo"><dt>what it is<span class="selo lido">citation</span></dt><dd>The first circuit with <b>two stable states</b> for the same input. It stores information: remembers which switch was closed last.<details class="proc"><summary>the passage that supports</summary><blockquote>“We can say that this circuit has two stable states when both switches are open. Such a circuit is called a flip-flop… A flip-flop circuit retains information. It “remembers.” It only remembers what switch was most recently closed, but that is significant.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 17 — Feedback and Flip-Flops</cite></blockquote></details></dd></div><div class="campo"><dt>why it exists<span class="selo oficio">craft · proposal</span></dt><dd>Up to this step, the output depended only on the inputs <i>of now</i>. Without memory, there is no “before”: there is no accumulated count, no counting, no program. Everything the machine does over time begins here.<details class="proc"><summary>where this field comes from</summary><blockquote>No book writes where the student locks; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the rite of the house is norm = proposal + ratification, and content is not different. It was not written by a model.</blockquote></details></dd></div><div class="campo"><dt>where it appears<span class="selo lido">synthesis</span></dt><dd>From 1918, by radio physicists Eccles and Jordan — before the computer. Today: every bit of every register, and the anti-jitter of every physical button you press. <details class="proc"><summary>the passage that supports</summary><blockquote>“The flip-flop dates from 1918 with the work of English radio physicists William Henry Eccles (1875–1966) and F.W. Jordan (1881–1941).”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 17 — Feedback and Flip-Flops</cite></blockquote></details></dd></div><div class="campo"><dt>where you get stuck<span class="selo lido">synthesis</span></dt><dd>The feedback. The output returns and becomes an input, so <b>there is no first instant</b> to start tracing the signal. Those who try to follow in chronological order enter a loop and conclude they didn't understand. The way to read is different: stop following the path and look for which combinations <i>sustain themselves</i> — the stable states. <details class="proc"><summary>the passage that supports</summary><blockquote>“The output of the NOR gate on the left is an input to the NOR gate on the right, and the output of that NOR gate is an input to the first NOR gate. This is a type of feedback. Indeed, just as in the oscillator, an output circles back to become an input.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 17 — Feedback and Flip-Flops</cite></blockquote></details></dd></div></dl><div class="instr" id="i-circuito-que-lembra"><h4>The circuit that resembles</h4><p class="comoler">Press <b>S</b>, release. Press <b>R</b>, release. In both cases, the input returns to (0,0) — and the output is different. This is the definition of remembering, and it's what no single gate can do on its own.</p><canvas data-h="240"></canvas><div class="botoes"><button data-acao="setS">S — hold</button><button data-acao="setR">Hold R</button></div><p class="prova">This instrument <b>is</b> the warrant for the arrow below: it constructs the piece in the browser, without the book in hand. The citation continues there, as a second witness.</p></div><details class="seta"><summary>Made of <b>logic gate</b> — construction, and the source says:</summary><blockquote>“the level-triggered D-type flip-flop, which is made from an inverter, two AND gates, and two NOR gates”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 19 — An Assemblage of Memory</cite></blockquote></details></article>
+<article class="degrau" id="flipflop_b"><header><h3 class="nome">edge-triggered flip-flop</h3><span class="regime r-seq">sequential</span><span class="nivel">level 3</span></header><dl class="campos"><div class="campo"><dt>what it is<span class="selo lido">citation</span></dt><dd>Store the data at the <b>instant of transition</b> of the clock, not during the entire time the clock is high. Internally, they are two level-triggered flip-flops in series.<details class="proc"><summary>the passage that supports</summary><blockquote>“An edge-triggered D-type flip-flop is constructed from two stages of level-triggered D-type flip-flops, wired together this way:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 17 — Feedback and Flip-Flops</cite></blockquote></details></dd></div><div class="campo"><dt>why it exists<span class="selo lido">citation</span></dt><dd>Because the level <b>leaks</b>. While the clock is at 1, the data can change — and these changes pass through to the output. In a circuit that feeds back into its own output, this becomes an infinite loop.<details class="proc"><summary>the passage that supports</summary><blockquote>“This is what’s called an “infinite loop.” It occurs because the D-type flip-flop we designed was level-triggered. The Clock input must change its level from 0 to 1 in order for the value of the Data input to be stored in the latch. But during the time that the Clock input is 1, the Data input can change, and those changes will be reflected in the values of the outputs.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 17 — Feedback and Flip-Flops</cite></blockquote></details></dd></div><div class="campo"><dt>where it appears<span class="selo oficio">craft · proposal</span></dt><dd>Every “clock” that is talked about in processor. The 3.6 GHz of your machine are 3.6 billion of these edges per second — not 3.6 billion instants in which the clock is on.<details class="proc"><summary>where this field comes from</summary><blockquote>No book writes where the student locks; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the rite of the house is norm = proposal + ratification, and content is not different. It was not written by a model.</blockquote></details></dd></div><div class="campo"><dt>where you get stuck<span class="selo oficio">craft · proposal</span></dt><dd>The wrong model is “the clock <b>enables</b> the circuit”. It’s not: the event is the <b>transition</b>, not the state. As long as the clock is read as a switch that stays on for a time, the counter makes no sense at all — and almost everyone carries this wrong model without ever being corrected, because in prose the two sound the same.<details class="proc"><summary>where this field comes from</summary><blockquote>No book writes where the student locks; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the rite of the house is norm = proposal + ratification, and content is not different. It was not written by a model.</blockquote></details></dd></div></dl><div class="instr" id="i-nivel-x-borda"><h4>Level × edge, in the same clock</h4><p class="comoler">The two circuits, the same data, the same clock. The light band is the time when the clock is high: the <b>level</b> copies the data during the entire band — it <b>leaks</b>. The <b>edge</b> copies only on the dotted line. This is the passage where almost everyone gets stuck, and in prose the two sound the same.</p><canvas data-h="260"></canvas><div class="botoes"><button data-acao="playpause">pause</button><button data-acao="restart">reset</button></div><p class="prova">This instrument <b>is</b> the warrant for the arrow below: it constructs the piece in the browser, without the book in hand. The citation continues there, as a second witness.</p></div><details class="seta"><summary>is made of <b>level-triggered flip-flop</b> — construction, and the source says:</summary><blockquote>“An edge-triggered D-type flip-flop is constructed from two stages of level-triggered D-type flip-flops, wired together this way:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 17 — Feedback and Flip-Flops</cite></blockquote></details><details class="seta"><summary>Made of <b>logic gate</b> — construction, and the source says:</summary><blockquote>“Here’s the edge-triggered D-type flip-flop with preset and clear built entirely from six 3-input NOR gates and an inverter.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 17 — Feedback and Flip-Flops</cite></blockquote></details></article>
+<article class="degrau" id="contador"><header><h3 class="nome">counter</h3><span class="regime r-seq">sequential</span><span class="nivel">level 4</span></header><dl class="campos"><div class="campo"><dt>what it is<span class="selo lido">citation</span></dt><dd>A row of edge-triggered flip-flops in cascade: each one triggers the next, and the row counts the clock pulses in binary.<details class="proc"><summary>the passage that supports</summary><blockquote>“This is a job for a counter built from a row of cascading flip-flops, such as the one you saw on page 237 of Chapter 17:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 20 — Automating Arithmetic</cite></blockquote></details></dd></div><div class="campo"><dt>why it exists<span class="selo oficio">craft · proposal</span></dt><dd>Because the machine needs to know <b>which is the next</b>. The number that the counter holds becomes the address it will read next — it's the embryo of the program counter.<details class="proc"><summary>where this field comes from</summary><blockquote>No book writes where the student locks; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the rite of the house is norm = proposal + ratification, and content is not different. It was not written by a model.</blockquote></details></dd></div><div class="campo"><dt>where it appears<span class="selo oficio">craft · proposal</span></dt><dd>The <code>PC</code> that the debugger shows paused on a line. The digital clock on the wall. And the loop index, one layer above.<details class="proc"><summary>where this field comes from</summary><blockquote>No book writes where the student locks; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the rite of the house is norm = proposal + ratification, and content is not different. It was not written by a model.</blockquote></details></dd></div><div class="campo"><dt>where you get stuck<span class="selo oficio">craft · proposal</span></dt><dd>Nobody <i>designed</i> binary counting: it <b>emerges</b> naturally when chaining flip-flop to flip-flop, because each one toggles at half the frequency of the previous one. Those who search for the component that “does the counting” don’t find it, and conclude that something is missing. Nothing is missing — the counting is in the wiring.<details class="proc"><summary>where this field comes from</summary><blockquote>No book writes where the student locks; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the rite of the house is norm = proposal + ratification, and content is not different. It was not written by a model.</blockquote></details></dd></div></dl><div class="instr" id="i-contagem-aparece"><h4>The count appears alone</h4><p class="comoler">Give pulses and watch the waves: each stage turns in the <b>half</b> of the frequency of the previous. No one designed the binary count — it is the wiring. If you are looking for the piece that “does the count”, it does not exist.</p><canvas data-h="250"></canvas><div class="botoes"><button data-acao="step">a pulse</button><button data-acao="autorun">automatic</button><button data-acao="clear">reset</button></div><p class="prova">This instrument <b>is</b> the warrant for the arrow below: it constructs the piece in the browser, without the book in hand. The citation continues there, as a second witness.</p></div><details class="seta"><summary>Made of <b>edge-triggered flip-flop</b> — construction, and the source says:</summary><blockquote>“This is a job for a counter built from a row of cascading flip-flops, such as the one you saw on page 237 of Chapter 17:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 20 — Automating Arithmetic</cite></blockquote></details></article>
+<article class="degrau" id="registrador"><header><h3 class="nome">register (latch)</h3><span class="regime r-seq">sequential</span><span class="nivel">level 4</span></header><dl class="campos"><div class="campo"><dt>what it is<span class="selo lido">citation</span></dt><dd>An 8-bit latch that the processor controls by instruction. Holds bytes while the ULA works on them.<details class="proc"><summary>the passage that supports</summary><blockquote>“These latches are called registers, and a primary purpose of these registers is to store bytes as they are processed by the ALU.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 22 — Registers and Busses</cite></blockquote></details></dd></div><div class="campo"><dt>why it exists<span class="selo oficio">craft · proposal</span></dt><dd>Because the ULA needs some place to land the operands and the result <b>inside</b> the processor. Fetching from memory at each step would cost a trip across the bus for each calculation.<details class="proc"><summary>where this field comes from</summary><blockquote>No book writes where the student locks; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the rite of the house is norm = proposal + ratification, and content is not different. It was not written by a model.</blockquote></details></dd></div><div class="campo"><dt>where it appears<span class="selo oficio">craft · proposal</span></dt><dd>When a processor's chip says “16 registers of 64 bits,” these are them. And that's what the compiler is contending with when deciding what stays close and what goes to memory.<details class="proc"><summary>where this field comes from</summary><blockquote>No book writes where the student locks; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the rite of the house is norm = proposal + ratification, and content is not different. It was not written by a model.</blockquote></details></dd></div><div class="campo"><dt>where you get stuck<span class="selo oficio">craft · proposal</span></dt><dd>Thinking that a register is just a small memory. The difference is not in size, but in <b>addressing</b>: memory is accessed by a calculated address; a register is named in the instruction itself. That's why one fits in an instruction and the other doesn't. <details class="proc"><summary>where this field comes from</summary><blockquote>No book writes where the student locks; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the rite of the house is norm = proposal + ratification, and content is not different. It was not written by a model.</blockquote></details></dd></div></dl><details class="seta"><summary>Made of <b>edge-triggered flip-flop</b> — construction, and the source says:</summary><blockquote>“The counter providing the memory address is built from edge-triggered flip-flops, so it probably has a Clear input. The latch is built from edge-triggered flip-flops as well, and edge-triggered flip-flops have been used for generating the control signals.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 20 — Automating Arithmetic</cite></blockquote></details><div class="pordentro"><b>por dentro</b> — pieces from the same layer, with the phrase that supports each one:<details class="dentro"><summary>8-bit latch <span>&larr; flip-flops</span></summary><blockquote>“As you’ll recall, an 8-bit latch uses flip-flops to store an 8-bit value.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 20 — Automating Arithmetic</cite></blockquote></details><details class="dentro"><summary>register array <span>&larr; seven latches and seven tri-state buffers</span></summary><blockquote>“The following circuit contains seven latches and seven tri-state buffers. One 3-to-8 decoder is used to latch the incoming value into one of the registers, and another 3-to-8 decoder is used to enable one of the tri-state buffers to select a value from one of the registers:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 22 — Registers and Busses</cite></blockquote></details><details class="dentro"><summary>register array <span>&larr; latches for seven registers identified by the letters A, B, C, D, E, H, and L</span></summary><blockquote>“The register array contains latches for seven registers identified by the letters A, B, C, D, E, H, and L.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 23 — CPU Control Signals</cite></blockquote></details><details class="dentro"><summary>register <span>&larr; 8-bit latch</span></summary><blockquote>“These latches are called registers, and a primary purpose of these registers is to store bytes as they are processed by the ALU.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 22 — Registers and Busses</cite></blockquote></details><details class="dentro"><summary>16-bit address <span>&larr; H and L registers</span></summary><blockquote>“The H and L registers form a 16-bit address—for example, in the MOV A,M instruction. When used in this way, HL is called a register pair.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 22 — Registers and Busses</cite></blockquote></details></div></article>
+<article class="degrau" id="maquina"><header><h3 class="nome">register machine</h3><span class="regime r-arq">architecture</span><span class="nivel">level 5</span></header><dl class="campos"><div class="campo"><dt>what it is<span class="selo lido">citation</span></dt><dd>Data paths — registers and operations — plus a <b>controller</b> that sequences the operations. Viewed this way, it's literally a wiring diagram. <details class="proc"><summary>the passage that supports</summary><blockquote>“To design a register machine, we must design its data paths (registers and operations) and the controller that sequences these operations. … If we view the arrows as wires and the X buttons as switches, the data-path diagram is very like the wiring diagram for a machine that could be constructed from electrical components.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · SICP §5.1 — Designing Register Machines</cite></blockquote></details></dd></div><div class="campo"><dt>why it exists<span class="selo lido">synthesis</span></dt><dd>Because a loose piece does nothing in order. What was missing was a signal to send the pieces working <b>together</b> to execute an instruction stored in memory — and that's the signal that stitches the machine together. <details class="proc"><summary>the passage that supports</summary><blockquote>“…control signals, so called because they control these components to work together in executing instructions stored in memory. … The CPU control signals are the strings.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · caps. 22–23 — Registers and Busses · CPU Control Signals</cite></blockquote></details></dd></div><div class="campo"><dt>where it appears<span class="selo oficio">craft · proposal</span></dt><dd>It’s the step where the physical construction meets the language description: from here up, one speaks of instruction, assembler, compiler. Below, in wire.<details class="proc"><summary>where this field comes from</summary><blockquote>No book writes where the student locks; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the rite of the house is norm = proposal + ratification, and content is not different. It was not written by a model.</blockquote></details></dd></div><div class="campo"><dt>where you get stuck<span class="selo oficio">craft · proposal</span></dt><dd>The “controller” sounds like someone who decides. It's not: it's <b>more circuit</b> — counter, decoder, and gates, made from the same basic components. As long as there's a little man inside the machine, the ladder isn't closed; and it's exactly here that almost every course stops descending.<details class="proc"><summary>where this field comes from</summary><blockquote>No book writes where the student locks; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the rite of the house is norm = proposal + ratification, and content is not different. It was not written by a model.</blockquote></details></dd></div></dl><details class="seta"><summary>is made of <b>register (latch)</b> — definition, and the source says:</summary><blockquote>“To design a register machine, we must design its data paths (registers and operations) and the controller that sequences these operations. … If we view the arrows as wires and the X buttons as switches, the data-path diagram is very like the wiring diagram for a machine that could be constructed from electrical components.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · §5.1 — Designing Register Machines</cite></blockquote><blockquote>“…control signals, so called because they control these components to work together in executing instructions stored in memory. … The CPU control signals are the strings.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · caps. 22–23 — Registers and Busses · CPU Control Signals</cite></blockquote><p class="duas">Two independent witnesses, arriving from opposite sides of the staircase — one building the machine, the other defining it.</p></details><div class="pordentro"><b>por dentro</b> — pieces from the same layer, with the phrase that supports each one:<details class="dentro"><summary>Triple-Byte Accumulator <span>&larr; a counter to access memory, an adder, and latches</span></summary><blockquote>“Chapter 20 described a Triple-Byte Accumulator that consisted of a counter to access memory, an adder, and latches.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 21 — The Arithmetic Logic Unit</cite></blockquote></details></div></article>
 </div>
 
 <h2>Verified, still outside the ladder</h2>
@@ -141,11 +297,14 @@ seems complete. The problem appears later: in the twin map of this house, the
 <a href="https://github.com/mateusalkimim/math-prerequisite-map">math-prerequisite-map</a>,  
 the entries were written by a local model and one of them claims, in the air until  
 today, that two sets with the same elements can be different. It's false, and passed because no one read it.</p>
-<p class="nota">Here the order has been inverted: the human reading gate comes  
-<b>before</b> the content, and the price is this small map. The bet is that eleven  
-edges that can be verified are worth more than sixty that cannot.</p>
+<p class="nota">This page has the same four fields as that map, and that's why the difference matters: here <b>none of them came from a model</b>. The ones that describe the piece came from Petzold himself, who is a professor and already answers “what it is” and “why it exists” in prose, with a chapter — the passage goes along with each field. The ones that say <b>where the student gets stuck</b> no book writes: they are the judgment of the teacher, enter marked as <b>proposal</b> and await ratification.</p>
 <p class="nota">The new edges enter through a funnel: a local model <b>proposes</b>  
 candidates, a gate checks the phrase character by character against the book, and what survives only becomes an edge after <b>human judgment</b>. In the first round: 48 proposed, 46 passed through the gate, 34 accepted. The model can find; it cannot assert.</p>
+<p class="nota">And the 5 instruments exist because citation is warrant of  
+second hand: it asks you to believe a book that you might not have in hand.  
+The instrument constructs the piece in front of you. When the two agree, the arrow  
+is supported by a published source <b>and</b> by something that moves —  
+it is the highest standard that this house can achieve.</p>
 
 <footer><b>The Ladder of Abstractions</b> — Mateus Alkimim · code <b>MIT</b>, content  
 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br">CC BY-SA 4.0</a>.<br>  
@@ -153,6 +312,525 @@ The quotes belong to their authors and appear under the right of quotation, with
 source and chapter.</footer>
 
 </div>
+<script>/* Os instrumentos da escada — canvas e aritmética, nada mais.
+ *
+ * Contrato herdado do seeing-calculus: sem biblioteca de terceiro, sem rede,
+ * sem servidor. Abre offline. Nada sai da sua máquina porque não há para onde.
+ *
+ * A diferença de propósito, e é a tese desta reforma: no seeing-calculus o
+ * instrumento deixa uma afirmação ser CONFERIDA com a régua. Aqui ele faz o
+ * mesmo com uma ARESTA do mapa. Quando a escada diz "porta lógica ← dois relés
+ * em série", o instrumento liga dois relés em série e monta a tabela-verdade na
+ * sua frente. A citação do Petzold continua lá, como segunda testemunha — mas
+ * ela deixou de ser a única coisa que sustenta a seta.
+ */
+(function () {
+  "use strict";
+
+  var COR = {
+    fio:  "#33465f",   // fio sem corrente
+    vivo: "#6fbf6a",   // corrente passando
+    ferro:"#c1704f",   // o que é físico
+    frio: "#5b8fc9",   // lógica combinacional
+    seq:  "#4fb3a5",   // lógica sequencial
+    ouro: "#c9a266",
+    txt:  "#9fadc0",
+    fraco:"#5b6b86",
+    creme:"#e8e2d6"
+  };
+
+  // roundRect é recente. O contrato deste repositório é abrir OFFLINE em
+  // navegador qualquer, então a peça entra com remendo em vez de depender da
+  // versão de quem abriu.
+  if (typeof CanvasRenderingContext2D !== "undefined" &&
+      !CanvasRenderingContext2D.prototype.roundRect) {
+    CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r) {
+      r = Math.min(r || 0, w / 2, h / 2);
+      this.moveTo(x + r, y);
+      this.arcTo(x + w, y, x + w, y + h, r);
+      this.arcTo(x + w, y + h, x, y + h, r);
+      this.arcTo(x, y + h, x, y, r);
+      this.arcTo(x, y, x + w, y, r);
+      this.closePath();
+      return this;
+    };
+  }
+
+  function ctx2d(cv) {
+    var r = window.devicePixelRatio || 1, c = cv.getContext("2d");
+    var w = cv.clientWidth, h = parseInt(cv.dataset.h || "230", 10);
+    cv.width = w * r; cv.height = h * r; cv.style.height = h + "px";
+    c.setTransform(r, 0, 0, r, 0, 0);
+    c.clearRect(0, 0, w, h);
+    c.__w = w; c.__h = h;
+    return c;
+  }
+  function txt(c, s, x, y, cor, tam, al) {
+    c.fillStyle = cor || COR.txt;
+    c.font = (tam || 12) + "px Inter, system-ui, sans-serif";
+    c.textAlign = al || "left"; c.textBaseline = "middle";
+    c.fillText(s, x, y);
+  }
+  function fio(c, pts, ligado, larg) {
+    c.strokeStyle = ligado ? COR.vivo : COR.fio;
+    c.lineWidth = larg || 2.4; c.lineCap = "round"; c.lineJoin = "round";
+    c.beginPath(); c.moveTo(pts[0][0], pts[0][1]);
+    for (var i = 1; i < pts.length; i++) c.lineTo(pts[i][0], pts[i][1]);
+    c.stroke();
+  }
+  function bolha(c, x, y, ligado, r) {
+    c.beginPath(); c.arc(x, y, r || 5, 0, 6.284);
+    c.fillStyle = ligado ? COR.vivo : "#1e3050"; c.fill();
+    c.strokeStyle = ligado ? COR.vivo : COR.fio; c.lineWidth = 1.4; c.stroke();
+  }
+
+  /* ------------------------------------------------------------------ *
+   * [1] DOIS RELÉS VIRAM UMA PORTA
+   * Prova a aresta  relé → porta lógica.
+   * A tabela-verdade não vem pronta: ela se preenche conforme você visita
+   * as combinações. Enquanto faltar linha, o instrumento diz que falta.
+   * ------------------------------------------------------------------ */
+  function releViraPorta(raiz) {
+    var cv = raiz.querySelector("canvas");
+    var st = { a: false, b: false, serie: true, vistos: {} };
+
+    function chave() { return (st.serie ? "S" : "P") + (st.a ? 1 : 0) + (st.b ? 1 : 0); }
+    function saida() { return st.serie ? (st.a && st.b) : (st.a || st.b); }
+
+    function desenhar() {
+      st.vistos[chave()] = true;
+      var c = ctx2d(cv), w = c.__w, y = 96, on = saida();
+      var xA = w * 0.20, xB = w * 0.44, xL = w * 0.76;
+
+      // trilho de alimentação e retorno
+      if (st.serie) {
+        fio(c, [[40, y], [xA - 26, y]], true);
+        fio(c, [[xA + 26, y], [xB - 26, y]], st.a);
+        fio(c, [[xB + 26, y], [xL - 30, y]], st.a && st.b);
+      } else {
+        fio(c, [[40, y], [40, y - 34], [xA - 26, y - 34]], true);
+        fio(c, [[40, y], [40, y + 34], [xB - 26, y + 34]], true);
+        fio(c, [[xA + 26, y - 34], [xL - 60, y - 34], [xL - 60, y]], st.a);
+        fio(c, [[xB + 26, y + 34], [xL - 60, y + 34], [xL - 60, y]], st.b);
+        fio(c, [[xL - 60, y], [xL - 30, y]], on);
+      }
+      relé(c, xA, st.serie ? y : y - 34, st.a, "A");
+      relé(c, xB, st.serie ? y : y + 34, st.b, "B");
+
+      // lâmpada
+      c.beginPath(); c.arc(xL, y, 15, 0, 6.284);
+      c.fillStyle = on ? "rgba(201,162,102,.92)" : "#132440";
+      c.fill(); c.strokeStyle = on ? COR.ouro : COR.fio; c.lineWidth = 1.8; c.stroke();
+      if (on) { c.beginPath(); c.arc(xL, y, 26, 0, 6.284);
+                c.strokeStyle = "rgba(201,162,102,.30)"; c.lineWidth = 6; c.stroke(); }
+      txt(c, st.serie ? "in series" : "in parallel", 40, 30, COR.creme, 13);
+      txt(c, st.serie ? "only lights up if both are activated"
+                      : "turns on if any are activated",
+          40, 50, COR.fraco, 11.5);
+      tabela(c, w);
+    }
+
+    function relé(c, x, y, ligado, rot) {
+      c.fillStyle = "#132440"; c.strokeStyle = ligado ? COR.ferro : COR.fio;
+      c.lineWidth = 1.6;
+      c.beginPath(); c.roundRect(x - 25, y - 24, 50, 48, 5); c.fill(); c.stroke();
+      // bobina
+      for (var i = 0; i < 4; i++) {
+        c.beginPath(); c.arc(x - 12 + i * 8, y + 12, 4, Math.PI, 0);
+        c.strokeStyle = ligado ? COR.ferro : COR.fio; c.lineWidth = 1.5; c.stroke();
+      }
+      // contato: fecha quando acionado
+      fio(c, [[x - 18, y - 8], [x - 4, y - 8]], ligado, 2);
+      fio(c, [[x + 4, y - 8], [x + 18, y - 8]], ligado, 2);
+      c.strokeStyle = ligado ? COR.vivo : COR.fio; c.lineWidth = 2.2;
+      c.beginPath(); c.moveTo(x - 4, y - 8);
+      c.lineTo(x + 5, ligado ? y - 8 : y - 17); c.stroke();
+      txt(c, rot, x, y - 36, ligado ? COR.creme : COR.fraco, 12, "center");
+    }
+
+    function tabela(c, w) {
+      var pre = st.serie ? "S" : "P", x0 = w - 168, y0 = 152, faltam = 0;
+      txt(c, "A   B   output", x0, y0, COR.fraco, 11.5);
+      [[0,0],[0,1],[1,0],[1,1]].forEach(function (l, i) {
+        var k = pre + l[0] + l[1], visto = !!st.vistos[k];
+        var v = st.serie ? (l[0] && l[1]) : (l[0] || l[1]);
+        if (!visto) faltam++;
+        var y = y0 + 18 + i * 15;
+        var atual = (l[0] === (st.a?1:0) && l[1] === (st.b?1:0));
+        if (atual) { c.fillStyle = "rgba(111,191,106,.12)";
+                     c.fillRect(x0 - 6, y - 7, 150, 14); }
+        txt(c, l[0] + "   " + l[1] + "   " + (visto ? v : "—"), x0, y,
+            visto ? (atual ? COR.creme : COR.txt) : "#3b4a60", 11.5);
+      });
+      var nome = st.serie ? "AND" : "OR";
+      txt(c, faltam ? ("missing" + faltam + "combinations to close the table")
+                    : ("complete table — this is a" + nome),
+          x0 - 6, y0 + 96, faltam ? COR.fraco : COR.vivo, 11.5);
+    }
+
+    raiz.querySelectorAll("[data-acao]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var a = b.dataset.acao;
+        if (a === "inA") st.a = !st.a;
+        if (a === "inB") st.b = !st.b;
+        if (a === "mode") { st.serie = !st.serie;
+          b.textContent = st.serie ? "in series" : "in parallel"; }
+        b.classList.toggle("on", (a === "inA" && st.a) || (a === "inB" && st.b));
+        desenhar();
+      });
+    });
+    desenhar();
+    window.addEventListener("resize", desenhar);
+  }
+
+  /* ------------------------------------------------------------------ *
+   * [2] NÍVEL × BORDA — o instrumento que a escada mais precisava
+   * Prova a aresta  flip-flop de nível → flip-flop de borda, e mostra
+   * POR QUE ela existe: o de nível VAZA enquanto o relógio está alto.
+   * Os dois no MESMO relógio, com o mesmo dado, lado a lado.
+   * ------------------------------------------------------------------ */
+  function nivelXBorda(raiz) {
+    var cv = raiz.querySelector("canvas");
+    var st = { t: 0, tocando: true, dado: [], periodo: 96, ultimo: 0 };
+    // o dado muda algumas vezes DENTRO da janela em que o relógio está alto —
+    // é exatamente aí que os dois circuitos discordam
+    var MUDANCAS = [0,0,1,1,1,0,0,1,0,1,1,0,0,0,1,1,0,1,0,0,1,1,1,0];
+
+    function dadoEm(t) { return MUDANCAS[Math.floor(t / 26) % MUDANCAS.length]; }
+    function relogioEm(t) { return (t % st.periodo) < st.periodo / 2 ? 1 : 0; }
+
+    function simular(ate) {
+      var qn = 0, qb = 0, ant = 0, serie = [];
+      for (var t = 0; t <= ate; t++) {
+        var ck = relogioEm(t), d = dadoEm(t);
+        if (ck === 1) qn = d;                    // NÍVEL: transparente o tempo todo
+        if (ck === 1 && ant === 0) qb = d;       // BORDA: só no instante da subida
+        ant = ck;
+        serie.push([ck, d, qn, qb]);
+      }
+      return serie;
+    }
+
+    function desenhar() {
+      var c = ctx2d(cv), w = c.__w, jan = 560;
+      var t0 = Math.max(0, st.t - jan), s = simular(st.t);
+      var esq = 66, larg = w - esq - 16;
+      function X(t) { return esq + (t - t0) / jan * larg; }
+
+      var linhas = [
+        ["clock", 0, COR.ouro],
+        ["data",    1, COR.frio],
+        ["level",   2, "#c1704f"],
+        ["edge",   3, COR.seq]
+      ];
+      linhas.forEach(function (L, i) {
+        var yb = 40 + i * 44, alt = 22;
+        txt(c, L[0], esq - 10, yb - alt / 2, L[2], 12, "right");
+        // faixa em que o relógio está ALTO — a janela do vazamento
+        if (i === 2) {
+          for (var t = t0; t <= st.t; t++) {
+            if (s[t] && s[t][0] === 1) {
+              c.fillStyle = "rgba(193,112,79,.10)";
+              c.fillRect(X(t), yb - alt - 3, Math.max(1, larg / jan + 0.6), alt + 6);
+            }
+          }
+        }
+        c.strokeStyle = L[2]; c.lineWidth = 1.8; c.beginPath();
+        var iniciou = false;
+        for (var t = t0; t <= st.t; t++) {
+          if (!s[t]) continue;
+          var y = yb - (s[t][L[1]] ? alt : 0);
+          if (!iniciou) { c.moveTo(X(t), y); iniciou = true; } else { c.lineTo(X(t), y); }
+        }
+        c.stroke();
+      });
+
+      // marcas nas bordas de subida
+      for (var t = t0; t <= st.t; t++) {
+        if (s[t] && s[t][0] === 1 && s[t-1] && s[t-1][0] === 0) {
+          c.strokeStyle = "rgba(201,162,102,.35)"; c.lineWidth = 1;
+          c.setLineDash([2, 4]); c.beginPath();
+          c.moveTo(X(t), 18); c.lineTo(X(t), 200); c.stroke(); c.setLineDash([]);
+        }
+      }
+
+      var ag = s[st.t] || [0,0,0,0];
+      var discorda = ag[2] !== ag[3];
+      txt(c, "the LEVEL type copies the data during the ENTIRE bright band. the EDGE type"
+           + "copies only on the dotted line.", esq, 218, COR.fraco, 11.5);
+      txt(c, discorda ? "now they disagree: level =" + ag[2]
+                      + ", edge =" + ag[3]
+                      : "now they agree—wait for the data to change with the"
+                      + "clock high",
+          esq, 238, discorda ? COR.ouro : COR.fraco, 12);
+    }
+
+    function passo() {
+      if (st.tocando) { st.t += 2; desenhar(); }
+      requestAnimationFrame(passo);
+    }
+    raiz.querySelectorAll("[data-acao]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        if (b.dataset.acao === "playpause") {
+          st.tocando = !st.tocando;
+          b.textContent = st.tocando ? "pause" : "continue";
+        }
+        if (b.dataset.acao === "restart") { st.t = 0; }
+        desenhar();
+      });
+    });
+    desenhar(); requestAnimationFrame(passo);
+    window.addEventListener("resize", desenhar);
+  }
+
+  /* ------------------------------------------------------------------ *
+   * [3] O CIRCUITO QUE LEMBRA
+   * Prova a aresta  porta lógica → flip-flop de nível: dois NOR realimentados
+   * têm DOIS estados estáveis para a mesma entrada. A mesma entrada, duas
+   * saídas — que é a definição de lembrar.
+   * ------------------------------------------------------------------ */
+  function circuitoQueLembra(raiz) {
+    var cv = raiz.querySelector("canvas");
+    var st = { r: 0, s: 0, q: 0, hist: [] };
+
+    function passo() {
+      // NOR realimentado: Q = NOR(R, Qbarra) ; Qbarra = NOR(S, Q)
+      if (st.s && !st.r) st.q = 1;
+      else if (st.r && !st.s) st.q = 0;
+      // ambos 0: mantém — é aqui que ele lembra
+      st.hist.push([st.r, st.s, st.q]);
+      if (st.hist.length > 26) st.hist.shift();
+    }
+
+    function nor(c, x, y, entradaViva, saidaViva) {
+      c.fillStyle = "#132440";
+      c.strokeStyle = saidaViva ? COR.seq : COR.fio;
+      c.lineWidth = 1.7;
+      c.beginPath(); c.roundRect(x - 34, y - 17, 62, 34, 5); c.fill(); c.stroke();
+      txt(c, "NOR", x - 3, y, saidaViva ? COR.creme : COR.txt, 11.5, "center");
+      // a bolinha da negacao, que e o que faz NOR ser NOR
+      c.beginPath(); c.arc(x + 31, y, 3.6, 0, 6.284);
+      c.fillStyle = saidaViva ? COR.seq : "#1e3050"; c.fill();
+      c.strokeStyle = saidaViva ? COR.seq : COR.fio; c.lineWidth = 1.2; c.stroke();
+    }
+
+    function desenhar() {
+      var c = ctx2d(cv), w = c.__w, y = 84;
+      var xg = w * 0.30, xg2 = w * 0.30, xq = w * 0.60;
+      nor(c, xg, y - 30, st.r, st.q === 0);
+      nor(c, xg, y + 30, st.s, st.q === 1);
+      // realimentação cruzada
+      fio(c, [[xg + 34, y - 30], [xg + 52, y - 30], [xg + 52, y + 14],
+              [xg - 40, y + 14], [xg - 40, y + 22], [xg - 34, y + 22]], st.q === 0);
+      fio(c, [[xg + 34, y + 30], [xg + 62, y + 30], [xg + 62, y - 14],
+              [xg - 40, y - 14], [xg - 40, y - 22], [xg - 34, y - 22]], st.q === 1);
+      fio(c, [[xg + 34, y - 30], [xq, y - 30]], st.q === 0);
+      txt(c, "R", xg - 52, y - 38, st.r ? COR.creme : COR.fraco, 12, "right");
+      txt(c, "S", xg - 52, y + 38, st.s ? COR.creme : COR.fraco, 12, "right");
+      fio(c, [[xg - 48, y - 38], [xg - 34, y - 38]], st.r);
+      fio(c, [[xg - 48, y + 38], [xg - 34, y + 38]], st.s);
+
+      // a lâmpada da saída
+      c.beginPath(); c.arc(xq + 26, y - 30, 14, 0, 6.284);
+      c.fillStyle = st.q ? "rgba(79,179,165,.9)" : "#132440";
+      c.fill(); c.strokeStyle = st.q ? COR.seq : COR.fio; c.lineWidth = 1.7; c.stroke();
+      txt(c, "Q = " + st.q, xq + 48, y - 30, COR.creme, 13);
+
+      // a tira do histórico: prova que a MESMA entrada dá saídas diferentes
+      var x0 = 40, y0 = 176;
+      txt(c, "history — R and S loose (0,0), and even so Q differs:",
+          x0, y0 - 16, COR.fraco, 11.5);
+      st.hist.forEach(function (h, i) {
+        var x = x0 + i * 17, ambos = (h[0] === 0 && h[1] === 0);
+        c.fillStyle = h[2] ? (ambos ? COR.seq : "rgba(79,179,165,.45)")
+                           : (ambos ? "#25405c" : "#1a2c45");
+        c.fillRect(x, y0, 13, 20);
+        if (ambos) { c.strokeStyle = COR.ouro; c.lineWidth = 1;
+                     c.strokeRect(x + .5, y0 + .5, 12, 19); }
+      });
+      txt(c, "contoured in gold = input (0,0). Compare two of them with Q"
+           + "different: it's the circuit reminding.", x0, y0 + 34, COR.fraco, 11.5);
+    }
+
+    raiz.querySelectorAll("[data-acao]").forEach(function (b) {
+      b.addEventListener("mousedown", function () {
+        if (b.dataset.acao === "setR") st.r = 1;
+        if (b.dataset.acao === "setS") st.s = 1;
+        passo(); desenhar();
+      });
+      b.addEventListener("mouseup", function () {
+        st.r = 0; st.s = 0; passo(); desenhar();
+      });
+      b.addEventListener("mouseleave", function () {
+        if (st.r || st.s) { st.r = 0; st.s = 0; passo(); desenhar(); }
+      });
+    });
+    // semente: S, solta, R, solta — a tira já abre PROVANDO a afirmação,
+    // com duas entradas (0,0) de saídas diferentes. Instrumento que abre
+    // neutro obriga o leitor a descobrir sozinho o que ele deveria mostrar.
+    [[0,0],[0,1],[0,0],[0,0],[1,0],[0,0],[0,0]].forEach(function (e) {
+      st.r = e[0]; st.s = e[1]; passo();
+    });
+    st.r = 0; st.s = 0;
+    desenhar();
+    window.addEventListener("resize", desenhar);
+  }
+
+  /* ------------------------------------------------------------------ *
+   * [4] A CONTAGEM APARECE
+   * Prova a aresta  flip-flop de borda → contador, e desarma a pergunta
+   * "onde está a peça que faz a conta": não há. Cada estágio vira na metade
+   * da frequência do anterior, e o binário É a fiação.
+   * ------------------------------------------------------------------ */
+  function contagemAparece(raiz) {
+    var cv = raiz.querySelector("canvas");
+    var st = { n: 0, bits: 4, tocando: false };
+
+    function desenhar() {
+      var c = ctx2d(cv), w = c.__w;
+      var esq = 56, larg = w - esq - 20, jan = 32;
+      // as ondas: cada estágio na metade da frequência do de cima
+      for (var b = 0; b < st.bits; b++) {
+        var yb = 40 + b * 38, alt = 20, div = Math.pow(2, b + 1);
+        txt(c, b === 0 ? "clock" : ("bit " + (b - 1)), esq - 10, yb - alt / 2,
+            b === 0 ? COR.ouro : COR.seq, 11.5, "right");
+        c.strokeStyle = b === 0 ? COR.ouro : COR.seq; c.lineWidth = 1.7;
+        // A janela é [t0, n]. Quando ainda não houve n pulsos suficientes,
+        // ela encolhe em vez de sumir — antes, com n=0, TODO ponto caía no
+        // `continue` e a onda não era desenhada. O instrumento abria vazio.
+        var t0 = Math.max(0, st.n - jan), span = Math.max(1, st.n - t0);
+        c.beginPath();
+        for (var i = 0; i <= span; i++) {
+          var tt = t0 + i;
+          var v = Math.floor(tt / div) % 2;
+          var x = esq + i / span * larg, y = yb - (v ? alt : 0);
+          if (i === 0) c.moveTo(x, y); else { c.lineTo(x, y); }
+        }
+        c.stroke();
+      }
+      // o número, lido da fiação
+      var bits = [];
+      for (var k = st.bits - 2; k >= 0; k--) bits.push((st.n >> k) & 1);
+      var v = st.n % Math.pow(2, st.bits - 1);
+      txt(c, "the bits, read from top to bottom:", esq, 196, COR.fraco, 11.5);
+      var xs = esq + 200;
+      bits.forEach(function (bit, i) {
+        c.fillStyle = bit ? COR.seq : "#1a2c45";
+        c.fillRect(xs + i * 26, 186, 20, 20);
+        txt(c, String(bit), xs + i * 26 + 10, 196, bit ? "#06231f" : COR.fraco,
+            12, "center");
+      });
+      txt(c, "= " + v + "in decimal", xs + bits.length * 26 + 14, 196,
+          COR.creme, 13);
+      txt(c, "nobody designed the counting: each stage toggles at HALF the"
+           + "frequency of the previous, and the binary is the wiring.",
+          esq, 226, COR.fraco, 11.5);
+    }
+
+    var alvo = null;
+    function tique() {
+      if (st.tocando) { st.n++; desenhar(); }
+      alvo = setTimeout(tique, 420);
+    }
+    raiz.querySelectorAll("[data-acao]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var a = b.dataset.acao;
+        if (a === "step") { st.n++; }
+        if (a === "autorun") { st.tocando = !st.tocando;
+          b.textContent = st.tocando ? "stop" : "automatic"; }
+        if (a === "clear") { st.n = 0; }
+        desenhar();
+      });
+    });
+    desenhar(); tique();
+    window.addEventListener("resize", desenhar);
+  }
+
+  /* ------------------------------------------------------------------ *
+   * [5] DUAS PORTAS VIRAM UMA CONTA
+   * Prova a aresta  porta lógica → somador: XOR dá a soma, AND dá o vai-um.
+   * A conta binária aparece ao lado, para conferir que não é coincidência.
+   * ------------------------------------------------------------------ */
+  function portasViramConta(raiz) {
+    var cv = raiz.querySelector("canvas");
+    var st = { a: 0, b: 0 };
+    function desenhar() {
+      var c = ctx2d(cv), w = c.__w;
+      var s = st.a ^ st.b, co = st.a & st.b;
+      var xg = w * 0.34, y1 = 62, y2 = 128;
+      porta(c, xg, y1, "XOR", s, COR.frio);
+      porta(c, xg, y2, "AND", co, COR.frio);
+      fio(c, [[70, y1 - 10], [xg - 32, y1 - 10]], st.a);
+      fio(c, [[70, y1 + 10], [xg - 32, y1 + 10]], st.b);
+      fio(c, [[70, y2 - 10], [xg - 32, y2 - 10]], st.a);
+      fio(c, [[70, y2 + 10], [xg - 32, y2 + 10]], st.b);
+      txt(c, "A = " + st.a, 40, y1 - 10, st.a ? COR.creme : COR.fraco, 12);
+      txt(c, "B = " + st.b, 40, y1 + 10, st.b ? COR.creme : COR.fraco, 12);
+      fio(c, [[xg + 34, y1], [xg + 78, y1]], s);
+      fio(c, [[xg + 34, y2], [xg + 78, y2]], co);
+      txt(c, "sum =" + s,   xg + 88, y1, s  ? COR.creme : COR.fraco, 13);
+      txt(c, "carry-out =" + co, xg + 88, y2, co ? COR.creme : COR.fraco, 13);
+      // a conta, para conferir
+      var x0 = w - 150;
+      txt(c, "the count:", x0, 46, COR.fraco, 11.5);
+      txt(c, "  " + st.a, x0, 68, COR.creme, 15);
+      txt(c, "+ " + st.b, x0, 88, COR.creme, 15);
+      c.strokeStyle = COR.fio; c.lineWidth = 1;
+      c.beginPath(); c.moveTo(x0, 100); c.lineTo(x0 + 46, 100); c.stroke();
+      txt(c, (co ? "1" : "") + s, x0 + (co ? 6 : 18), 116, COR.ouro, 15);
+      txt(c, "the pair (carry, sum) read as binary number IS the sum.",
+          40, 178, COR.fraco, 11.5);
+      txt(c, st.a && st.b ? "1 + 1 = 10 in binary: two, not ten."
+                          : "try A = 1 and B = 1.",
+          40, 198, st.a && st.b ? COR.ouro : COR.fraco, 12);
+    }
+    function porta(c, x, y, nome, ligado, cor) {
+      c.fillStyle = "#132440"; c.strokeStyle = ligado ? COR.vivo : cor;
+      c.lineWidth = 1.7;
+      c.beginPath(); c.roundRect(x - 32, y - 22, 66, 44, 6); c.fill(); c.stroke();
+      txt(c, nome, x + 1, y, ligado ? COR.creme : COR.txt, 12.5, "center");
+    }
+    raiz.querySelectorAll("[data-acao]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        if (b.dataset.acao === "inA") st.a ^= 1;
+        if (b.dataset.acao === "inB") st.b ^= 1;
+        b.classList.toggle("on", !!(b.dataset.acao === "inA" ? st.a : st.b));
+        desenhar();
+      });
+    });
+    desenhar();
+    window.addEventListener("resize", desenhar);
+  }
+
+  // As chaves SAO os ids dos elementos, caractere a caractere. Isso nao e
+  // estilo: o portao de traducao protege literal que casa com id declarado no
+  // HTML, e um prefixo "i-" so no HTML fez o tradutor traduzir estas chaves e
+  // derrubar quatro instrumentos na pagina em ingles, em silencio.
+  var MONTA = {
+    "i-rele-vira-porta": releViraPorta,
+    "i-nivel-x-borda": nivelXBorda,
+    "i-circuito-que-lembra": circuitoQueLembra,
+    "i-contagem-aparece": contagemAparece,
+    "i-portas-viram-conta": portasViramConta
+  };
+
+  function iniciar() {
+    Object.keys(MONTA).forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) { try { MONTA[id](el); } catch (e) {
+        var av = document.createElement("p");
+        av.className = "warning";
+        av.textContent = "the instrument did not load in this browser (" + e.message
+                       + "). The text and the quote above still apply.";
+        el.appendChild(av);
+      } }
+    });
+  }
+  if (document.readyState === "loading")
+    document.addEventListener("DOMContentLoaded", iniciar);
+  else iniciar();
+})();
+</script>
 <!-- faixa-idioma: gerada por i18n.py, nao editar -->
 <div id="faixa-idioma" style="display:none;position:fixed;top:0;left:0;right:0;
  z-index:99;background:#c9a266;color:#0a1424;font:13px/1.4 Inter,system-ui,
