@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-08-27 22:32:19",
+ "atualizado_em": "2026-08-28 10:44:19",
  "blocos": {
   "01a7ad924e": {
    "en": "Hold R",
@@ -1309,6 +1309,14 @@
    "pt": "“These two relays wired in series are known as an AND gate because it is performing a Boolean AND operation.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 8 — Relays and Gates</cite>",
    "tipo": "prosa"
   },
+  "71c211006f": {
+   "en": "<b>No field on this page was written by a language model.</b> An edge only enters after the sentence that supports it has been checked character by character against the book — and a checked citation can still be refused, if it does not support what the arrow claims.",
+   "modelo": "claude-opus-5",
+   "orfao": false,
+   "pt": "<b>Nenhum campo desta página foi escrito por um modelo de\nlinguagem.</b> Uma aresta só entra depois de a frase que a sustenta ser\nconferida caractere a caractere contra o livro — e uma citação conferida ainda\npode ser recusada, se não sustentar o que a seta afirma.",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "71fb565dcb": {
    "en": null,
    "ja_en": true,
@@ -1552,6 +1560,14 @@
    "qa": "ok",
    "tipo": "prosa"
   },
+  "86b37f1d6c": {
+   "en": "The fields that describe each piece come from Petzold's text, with the chapter and the passage alongside — you can check them without leaving the page. The ones that say <b>where the student gets stuck</b> no book writes: they are the judgment of someone who teaches, and they appear marked as such.",
+   "modelo": "claude-opus-5",
+   "orfao": false,
+   "pt": "Os campos que descrevem cada peça vêm do texto de Petzold, com\ncapítulo e passagem ao lado — dá para conferir sem sair da página. Os que dizem\n<b>onde o aluno trava</b> nenhum livro escreve: são julgamento de quem ensina, e\naparecem marcados como tal.",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "86dea5aa4d": {
    "en": "a pulse",
    "modelo": "phi-4",
@@ -1678,6 +1694,14 @@
    "qa": "ok",
    "tipo": "prosa"
   },
+  "91763e9327": {
+   "en": "How this page was made",
+   "modelo": "claude-opus-5",
+   "orfao": false,
+   "pt": "Como esta página foi feita",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "929363789b": {
    "en": null,
    "ja_en": true,
@@ -1730,6 +1754,14 @@
    "ja_en": true,
    "orfao": false,
    "pt": "“we extend the Scheme evaluator to support a programming paradigm called nondeterministic computing by building into the evaluator a facility to support automatic search”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · §4.3 — Variations on a Scheme: Nondeterministic Computing</cite>",
+   "tipo": "prosa"
+  },
+  "9517304e70": {
+   "en": "These passages were read against the book and still did not become edges — each one carries its reason alongside. Checking the sentence character by character is not the same as supporting the arrow: the text can match exactly and still not claim what the arrow says. <b>“Not read” and “read and does not support” are different states</b>, and the list shows both.",
+   "modelo": "claude-opus-5",
+   "orfao": false,
+   "pt": "Estas passagens foram lidas contra o livro e mesmo assim não\nviraram aresta — cada uma traz o motivo ao lado. Conferir a frase caractere a\ncaractere não é o mesmo que sustentar a seta: o texto pode bater exatamente e\nainda assim não afirmar o que a seta diz. <b>“Não lido” e “lido e não sustenta”\nsão estados diferentes</b>, e a lista mostra os dois.",
+   "qa": "ok",
    "tipo": "prosa"
   },
   "95a8b2bedb": {
@@ -1899,6 +1931,14 @@
    "pt": "diferente: é o circuito lembrando.",
    "qa": "ok",
    "tipo": "js"
+  },
+  "a405b6c83f": {
+   "en": "And the 5 instruments exist because a citation is a second-hand warrant: it asks you to believe a book you may not have in hand. The instrument builds the piece in front of you. When the two agree, the arrow is supported by a published source <b>and</b> by something that runs.",
+   "modelo": "claude-opus-5",
+   "orfao": false,
+   "pt": "E os 5 instrumentos existem porque citação é warrant de\nsegunda mão: ela pede que você acredite num livro que talvez não tenha em mãos.\nO instrumento constrói a peça na sua frente. Quando os dois concordam, a seta\nestá sustentada por uma fonte publicada <b>e</b> por uma coisa que roda.",
+   "qa": "ok",
+   "tipo": "prosa"
   },
   "a4562d2e59": {
    "en": "The feedback. The output returns and becomes an input, so <b>there is no first instant</b> to start tracing the signal. Those who try to follow in chronological order enter a loop and conclude they didn't understand. The way to read is different: stop following the path and look for which combinations <i>sustain themselves</i> — the stable states. <details class=\"proc\">",

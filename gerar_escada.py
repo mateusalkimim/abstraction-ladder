@@ -422,42 +422,28 @@ esperam aqui, à vista, em vez de entrar na escada por conveniência.</p>
 </ul>
 
 <h2>O que falta, e por quê</h2>
-<p class="nota">Esta lista mudou em 27/08/2026. Antes ela dizia só <i>“ninguém
-abriu ainda”</i>. As dez foram lidas, e a leitura mostrou que <b>“não lido” e
-“lido e não sustenta” são estados diferentes</b> — e que esconder a diferença é
-a mesma mentira que esconder a lista inteira. Das dez: <b>três viraram aresta</b>,
-<b>uma já estava no repositório</b> (a linha sobrava), e estas seis ficaram, cada
-uma com o motivo. Nenhuma delas reprovou no portão da citação literal: todas as
-dez passaram caractere a caractere. <b>Passar no portão não é sustentar a
-aresta</b>, e é exatamente aqui que a diferença aparece.</p>
+<p class="nota">Estas passagens foram lidas contra o livro e mesmo assim não
+viraram aresta — cada uma traz o motivo ao lado. Conferir a frase caractere a
+caractere não é o mesmo que sustentar a seta: o texto pode bater exatamente e
+ainda assim não afirmar o que a seta diz. <b>“Não lido” e “lido e não sustenta”
+são estados diferentes</b>, e a lista mostra os dois.</p>
 <ul class="falta">
 {falta}
 </ul>
 
-<h2>Por que assim</h2>
-<p class="nota">Um mapa de computação gerado por modelo custa uma tarde e
-parece completo. O problema aparece depois: no mapa irmão desta casa, o
-<a href="https://github.com/mateusalkimim/math-prerequisite-map">math-prerequisite-map</a>,
-os verbetes foram escritos por um modelo local e um deles afirma, no ar até
-hoje, que dois conjuntos com os mesmos elementos podem ser diferentes. É falso,
-e passou porque ninguém leu.</p>
-<p class="nota">Esta página tem os mesmos quatro campos daquele mapa, e é por
-isso que a diferença importa: aqui <b>nenhum deles saiu de um modelo</b>. Os que
-descrevem a peça saíram do próprio Petzold, que é professor e já responde “o que
-é” e “por que existe” em prosa, com capítulo — a passagem vai junto de cada
-campo. Os que dizem <b>onde o aluno trava</b> nenhum livro escreve: são
-julgamento de quem ensina, entram marcados como <b>proposta</b> e esperam
-ratificação.</p>
-<p class="nota">As arestas novas entram por um funil: um modelo local <b>propõe</b>
-candidatos, um portão confere a frase caractere a caractere contra o livro, e o
-que sobrevive só vira aresta depois de <b>julgamento humano</b>. Na primeira
-rodada: 48 propostos, 46 passaram no portão, 34 aceitos. O modelo pode achar;
-ele não pode afirmar.</p>
+<h2>Como esta página foi feita</h2>
+<p class="nota">Os campos que descrevem cada peça vêm do texto de Petzold, com
+capítulo e passagem ao lado — dá para conferir sem sair da página. Os que dizem
+<b>onde o aluno trava</b> nenhum livro escreve: são julgamento de quem ensina, e
+aparecem marcados como tal.</p>
+<p class="nota"><b>Nenhum campo desta página foi escrito por um modelo de
+linguagem.</b> Uma aresta só entra depois de a frase que a sustenta ser
+conferida caractere a caractere contra o livro — e uma citação conferida ainda
+pode ser recusada, se não sustentar o que a seta afirma.</p>
 <p class="nota">E os {n_inst} instrumentos existem porque citação é warrant de
 segunda mão: ela pede que você acredite num livro que talvez não tenha em mãos.
 O instrumento constrói a peça na sua frente. Quando os dois concordam, a seta
-está sustentada por uma fonte publicada <b>e</b> por uma coisa que roda —
-é o padrão mais alto que esta casa consegue.</p>
+está sustentada por uma fonte publicada <b>e</b> por uma coisa que roda.</p>
 
 <footer>
 <b>A escada de abstrações</b> — Mateus Alkimim · código <b>MIT</b>, conteúdo
