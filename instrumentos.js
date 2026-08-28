@@ -157,11 +157,11 @@
     raiz.querySelectorAll("[data-acao]").forEach(function (b) {
       b.addEventListener("click", function () {
         var a = b.dataset.acao;
-        if (a === "a") st.a = !st.a;
-        if (a === "b") st.b = !st.b;
-        if (a === "modo") { st.serie = !st.serie;
+        if (a === "inA") st.a = !st.a;
+        if (a === "inB") st.b = !st.b;
+        if (a === "mode") { st.serie = !st.serie;
           b.textContent = st.serie ? "em série" : "em paralelo"; }
-        b.classList.toggle("on", (a === "a" && st.a) || (a === "b" && st.b));
+        b.classList.toggle("on", (a === "inA" && st.a) || (a === "inB" && st.b));
         desenhar();
       });
     });
@@ -257,11 +257,11 @@
     }
     raiz.querySelectorAll("[data-acao]").forEach(function (b) {
       b.addEventListener("click", function () {
-        if (b.dataset.acao === "pausa") {
+        if (b.dataset.acao === "playpause") {
           st.tocando = !st.tocando;
           b.textContent = st.tocando ? "pausar" : "continuar";
         }
-        if (b.dataset.acao === "reiniciar") { st.t = 0; }
+        if (b.dataset.acao === "restart") { st.t = 0; }
         desenhar();
       });
     });
@@ -340,8 +340,8 @@
 
     raiz.querySelectorAll("[data-acao]").forEach(function (b) {
       b.addEventListener("mousedown", function () {
-        if (b.dataset.acao === "r") st.r = 1;
-        if (b.dataset.acao === "s") st.s = 1;
+        if (b.dataset.acao === "setR") st.r = 1;
+        if (b.dataset.acao === "setS") st.s = 1;
         passo(); desenhar();
       });
       b.addEventListener("mouseup", function () {
@@ -421,10 +421,10 @@
     raiz.querySelectorAll("[data-acao]").forEach(function (b) {
       b.addEventListener("click", function () {
         var a = b.dataset.acao;
-        if (a === "pulso") { st.n++; }
-        if (a === "auto") { st.tocando = !st.tocando;
+        if (a === "step") { st.n++; }
+        if (a === "autorun") { st.tocando = !st.tocando;
           b.textContent = st.tocando ? "parar" : "automático"; }
-        if (a === "zerar") { st.n = 0; }
+        if (a === "clear") { st.n = 0; }
         desenhar();
       });
     });
@@ -478,9 +478,9 @@
     }
     raiz.querySelectorAll("[data-acao]").forEach(function (b) {
       b.addEventListener("click", function () {
-        if (b.dataset.acao === "a") st.a ^= 1;
-        if (b.dataset.acao === "b") st.b ^= 1;
-        b.classList.toggle("on", !!(b.dataset.acao === "a" ? st.a : st.b));
+        if (b.dataset.acao === "inA") st.a ^= 1;
+        if (b.dataset.acao === "inB") st.b ^= 1;
+        b.classList.toggle("on", !!(b.dataset.acao === "inA" ? st.a : st.b));
         desenhar();
       });
     });
@@ -488,17 +488,21 @@
     window.addEventListener("resize", desenhar);
   }
 
+  // As chaves SAO os ids dos elementos, caractere a caractere. Isso nao e
+  // estilo: o portao de traducao protege literal que casa com id declarado no
+  // HTML, e um prefixo "i-" so no HTML fez o tradutor traduzir estas chaves e
+  // derrubar quatro instrumentos na pagina em ingles, em silencio.
   var MONTA = {
-    "rele-vira-porta": releViraPorta,
-    "nivel-x-borda": nivelXBorda,
-    "circuito-que-lembra": circuitoQueLembra,
-    "contagem-aparece": contagemAparece,
-    "portas-viram-conta": portasViramConta
+    "i-rele-vira-porta": releViraPorta,
+    "i-nivel-x-borda": nivelXBorda,
+    "i-circuito-que-lembra": circuitoQueLembra,
+    "i-contagem-aparece": contagemAparece,
+    "i-portas-viram-conta": portasViramConta
   };
 
   function iniciar() {
     Object.keys(MONTA).forEach(function (id) {
-      var el = document.getElementById("i-" + id);
+      var el = document.getElementById(id);
       if (el) { try { MONTA[id](el); } catch (e) {
         var av = document.createElement("p");
         av.className = "aviso";

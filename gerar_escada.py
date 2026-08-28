@@ -47,32 +47,36 @@ INSTRUMENTOS = {
               "tabela-verdade não vem pronta; ela se preenche conforme você "
               "visita as combinações, e enquanto faltar linha o instrumento diz "
               "quantas faltam.",
-              [("modo", "em série"), ("a", "relé A"), ("b", "relé B")], 230),
+              [("mode", "em série"), ("inA", "relé A"), ("inB", "relé B")], 230),
     "somador": ("portas-viram-conta", "Duas portas viram uma conta",
               "O XOR dá a soma, o AND dá o vai-um. A conta em binário aparece ao "
               "lado para você conferir que não é coincidência — e o caso que "
               "interessa é <b>1 + 1</b>.",
-              [("a", "A"), ("b", "B")], 220),
+              [("inA", "A"), ("inB", "B")], 220),
     "flipflop": ("circuito-que-lembra", "O circuito que lembra",
               "Aperte <b>S</b>, solte. Aperte <b>R</b>, solte. Nos dois casos a "
               "entrada volta a ser (0,0) — e a saída é diferente. É essa a "
               "definição de lembrar, e é a coisa que nenhuma porta sozinha faz.",
-              [("s", "S — segurar"), ("r", "R — segurar")], 240),
+              [("setS", "S — segurar"), ("setR", "R — segurar")], 240),
     "flipflop_b": ("nivel-x-borda", "Nível × borda, no mesmo relógio",
               "Os dois circuitos, o mesmo dado, o mesmo relógio. A faixa clara é "
               "o tempo em que o relógio está alto: o de <b>nível</b> copia o dado "
               "durante toda ela — ele <b>vaza</b>. O de <b>borda</b> copia só na "
               "linha pontilhada. Esta é a passagem em que quase todo mundo trava, "
               "e em prosa os dois soam iguais.",
-              [("pausa", "pausar"), ("reiniciar", "reiniciar")], 260),
+              [("playpause", "pausar"), ("restart", "reiniciar")], 260),
     "contador": ("contagem-aparece", "A contagem aparece sozinha",
               "Dê pulsos e olhe as ondas: cada estágio vira na <b>metade</b> da "
               "frequência do anterior. Ninguém projetou a contagem binária — ela "
               "é a fiação. Se você está procurando a peça que “faz a conta”, ela "
               "não existe.",
-              [("pulso", "um pulso"), ("auto", "automático"), ("zerar", "zerar")], 250),
+              [("step", "um pulso"), ("autorun", "automático"), ("clear", "zerar")], 250),
 }
 
+# O valor de `data-acao` e IDENTIFICADOR e por isso e token neutro, nunca uma
+# palavra que tambem aparece na tela. "reiniciar" e "zerar" eram as duas
+# coisas ao mesmo tempo, e no ingles a mesma cadeia teria de ser traduzida
+# como rotulo e preservada como gancho — o que nenhuma tabela resolve.
 MARCA_CLASSE = {
     "a": ("citação", "lido"),
     "b": ("síntese", "lido"),
