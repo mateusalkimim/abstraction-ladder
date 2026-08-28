@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-08-27 22:22:47",
+ "atualizado_em": "2026-08-27 22:32:19",
  "blocos": {
   "01a7ad924e": {
    "en": "Hold R",
@@ -109,7 +109,7 @@
    "decisao_humana": "O modelo grudou um <details class=\"proc\"> no fim do bloco, que não existe no original — ele copia o padrão dos blocos vizinhos. Removido deterministicamente; o texto traduzido não foi tocado.",
    "en": "<b>compiler ← evaluator</b><span>SICP §5.5</span>",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "<b>compilador ← avaliador</b><span>SICP §5.5</span>",
    "qa": "ok",
    "tipo": "prosa"
@@ -150,7 +150,7 @@
    "decisao_humana": "O modelo grudou um <details class=\"proc\"> no fim do bloco, que não existe no original — ele copia o padrão dos blocos vizinhos. Removido deterministicamente; o texto traduzido não foi tocado.",
    "en": "<b>memory (RAM) ← flip-flop, decoder, and selector</b><span>Petzold chap. 19</span>",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "<b>memória (RAM) ← flip-flop, decodificador e seletor</b><span>Petzold cap. 19</span>",
    "qa": "ok",
    "tipo": "prosa"
@@ -377,6 +377,14 @@
    "qa": "ok",
    "tipo": "prosa"
   },
+  "1a5c8fc12b": {
+   "en": "The name is misleading: <b>“random” does not mean unpredictable</b> — it means that any position costs the same, in any order. The opposite of it is the tape, which requires going through everything until you arrive. Whoever reads “random” as “at random” loses the only property that gives the piece its name.<details class=\"proc\">",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "O nome engana: <b>“aleatório” não quer dizer imprevisível</b> — quer dizer que qualquer posição custa o mesmo, em qualquer ordem. O contrário dela é a fita, que obriga a passar por tudo até chegar. Quem lê “aleatório” como “ao acaso” perde a única propriedade que dá nome à peça.<details class=\"proc\">",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "1a7ecf1a35": {
    "en": null,
    "ja_en": true,
@@ -479,6 +487,14 @@
    "qa": "ok",
    "tipo": "prosa"
   },
+  "24442bc25b": {
+   "en": "16×8 RAM array <span>&larr; 16 of these 16×8 memory arrays</span>",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "16×8 RAM array <span>&larr; 16 of these 16×8 memory arrays</span>",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "25188a30a0": {
    "en": "is made of <b>register (latch)</b> — definition, and the source says:",
    "modelo": "phi-4",
@@ -499,6 +515,13 @@
    "ja_en": true,
    "orfao": false,
    "pt": "“Now that we have an evaluator expressed as a Lisp program, we can experiment with alternative choices in language design simply by modifying the evaluator. Indeed, new languages are often invented by first writing an evaluator that embeds the new language within an existing high-level language.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · SICP §4.2 — Variations on a Scheme: Lazy Evaluation</cite>",
+   "tipo": "prosa"
+  },
+  "260878128e": {
+   "en": null,
+   "ja_en": true,
+   "orfao": false,
+   "pt": "“Compared with interpretation, compilation can provide a great increase in the efficiency of program execution, as we will explain below in the overview of the compiler. On the other hand, an interpreter provides a more powerful environment for interactive program development and debugging, because the source program being executed is available at run time to be examined and modified.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · SICP §5.5 — Compilation</cite>",
    "tipo": "prosa"
   },
   "272ed58754": {
@@ -541,9 +564,17 @@
    "pt": "“the explicit-control evaluator can serve as an implementation of a Scheme interpreter, written in a language that is very similar to the native machine language of conventional computers.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · SICP §5.4 — The Explicit-Control Evaluator</cite>",
    "tipo": "prosa"
   },
+  "2ae32eeeda": {
+   "en": "Translates a source program into an equivalent program — the object program — written in the machine's native language.<details class=\"proc\">",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Traduz um programa-fonte num programa equivalente — o programa-objeto — escrito na língua nativa da máquina.<details class=\"proc\">",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "2c67162547": {
-   "decisao_humana": "O modelo grudou um <details class=\"proc\"> no fim do bloco, que não existe no original — ele copia o padrão dos blocos vizinhos. Removido deterministicamente; o texto traduzido não foi tocado.",
-   "en": "<tspan x=\"200\" dy=\"0\">ULA</tspan>",
+   "decisao_humana": "Sigla do glossário: ULA (Unidade Lógica e Aritmética) é ALU em inglês. O bloco foi traduzido antes de o glossário existir e não voltou para a fila, porque o hash do português não mudou — sigla fica com a forma do idioma.",
+   "en": "<tspan x=\"200\" dy=\"0\">ALU</tspan>",
    "modelo": "phi-4",
    "orfao": false,
    "pt": "<tspan x=\"200\" dy=\"0\">ULA</tspan>",
@@ -632,7 +663,7 @@
   "343d847169": {
    "en": "<b>8×8 RAM array</b> &larr; eight 8×1 RAM arrays",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "<b>8×8 RAM array</b> &larr; eight 8×1 RAM arrays",
    "qa": "ok",
    "tipo": "prosa"
@@ -827,7 +858,8 @@
    "tipo": "svg"
   },
   "4d753e18ae": {
-   "en": "An 8-bit latch that the processor controls by instruction. Holds bytes while the ULA works on them.<details class=\"proc\">",
+   "decisao_humana": "Sigla do glossário: ULA (Unidade Lógica e Aritmética) é ALU em inglês. O bloco foi traduzido antes de o glossário existir e não voltou para a fila, porque o hash do português não mudou — sigla fica com a forma do idioma.",
+   "en": "An 8-bit latch that the processor controls by instruction. Holds bytes while the ALU works on them.<details class=\"proc\">",
    "modelo": "phi-4",
    "orfao": false,
    "pt": "Um latch de 8 bits que o processador comanda por instrução. Guarda bytes enquanto a ULA trabalha neles.<details class=\"proc\">",
@@ -857,6 +889,14 @@
    "pt": "full adder <span>&larr; two half adders and an OR gate</span>",
    "qa": "ok",
    "tipo": "prosa"
+  },
+  "4fd8a1bde1": {
+   "en": "<tspan x=\"470\" dy=\"0\">memory (RAM)</tspan>",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "<tspan x=\"470\" dy=\"0\">memória (RAM)</tspan>",
+   "qa": "ok",
+   "tipo": "svg"
   },
   "514802106d": {
    "en": "read — not an edge, a contrast",
@@ -890,6 +930,13 @@
    "qa": "ok",
    "tipo": "js"
   },
+  "538e4cec8b": {
+   "en": null,
+   "ja_en": true,
+   "orfao": false,
+   "pt": "“This configuration of flip-flops, decoder, and selector is sometimes known as read/write memory”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 19 — An Assemblage of Memory</cite>",
+   "tipo": "prosa"
+  },
   "53e07a32bf": {
    "en": "use strict",
    "modelo": "phi-4",
@@ -903,6 +950,13 @@
    "ja_en": true,
    "orfao": false,
    "pt": "“The NAND gate is drawn just like the AND gate but with a circle at the output, meaning the output is the inverse of the AND gate:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 8 — Relays and Gates</cite>",
+   "tipo": "prosa"
+  },
+  "55118dad8f": {
+   "en": null,
+   "ja_en": true,
+   "orfao": false,
+   "pt": "“A compiler for a given source language and machine translates a source program into an equivalent program (called the object program) written in the machine's native language.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · SICP §5.5 — Compilation</cite>",
    "tipo": "prosa"
   },
   "55dea1e89f": {
@@ -1077,6 +1131,13 @@
    "qa": "ok",
    "tipo": "prosa"
   },
+  "696eea630f": {
+   "en": null,
+   "ja_en": true,
+   "orfao": false,
+   "pt": "“This configuration of flip-flops, decoder, and selector is sometimes known as read/write memory because you can store values (that is, write them) and later determine what those values are (that is, read them). Because you can change the Address signals to any one of the eight values at will, this type of memory is more commonly known as random access memory, or RAM”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 19 — An Assemblage of Memory</cite>",
+   "tipo": "prosa"
+  },
   "6997feecbb": {
    "en": "the count:",
    "modelo": "phi-4",
@@ -1212,7 +1273,7 @@
   "6f0120fc67": {
    "en": "The published statement said <i>“← register”</i> and the book does not say that: it says <i>“this configuration of flip-flops, decoder, and selector is sometimes known as read/write memory”</i>. The edge exists and is supported — with the correct origin node. Ready to enter.",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "A afirmação publicada dizia <i>“← registrador”</i> e o livro não diz isso: diz <i>“this configuration of flip-flops, decoder, and selector is sometimes known as read/write memory”</i>. A aresta existe e está sustentada — com o nó de origem certo. Pronta para entrar.",
    "qa": "ok",
    "tipo": "prosa"
@@ -1266,7 +1327,7 @@
   "72d3cad4b6": {
    "en": "<b>16×8 RAM array</b> &larr; 16 of these 16×8 memory arrays",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "<b>16×8 RAM array</b> &larr; 16 of these 16×8 memory arrays",
    "qa": "ok",
    "tipo": "prosa"
@@ -1381,6 +1442,14 @@
    "qa": "ok",
    "tipo": "prosa"
   },
+  "7c518c730c": {
+   "en": "These 5 constructions passed through the gate of literal citation, but the step where they land has not yet been read — so they wait here, in view, instead of entering the ladder for convenience.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Estas 5 construções passaram no portão da\ncitação literal, mas o degrau em que elas pousam ainda não foi lido — então elas\nesperam aqui, à vista, em vez de entrar na escada por conveniência.",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "7de0f309fa": {
    "en": "<tspan x=\"470\" dy=\"0\">paradigm</tspan>",
    "modelo": "phi-4",
@@ -1444,6 +1513,14 @@
    "pt": "“Relays have an advantage over switches in that relays can be switched on and off by other relays rather than by fingers. This means that logic gates can be combined to perform more complex tasks, such as simple functions in arithmetic and, eventually, the workings of entire computers.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 8 — Relays and Gates</cite>",
    "tipo": "prosa"
   },
+  "853b7cef52": {
+   "en": "A configuration of flip-flops, decoder, and selector. Since the address can change to any value at any time, it is called <b>random access</b> memory.<details class=\"proc\">",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Uma configuração de flip-flops, decodificador e seletor. Como o endereço pode mudar para qualquer valor a qualquer momento, ela se chama memória de <b>acesso aleatório</b>.<details class=\"proc\">",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "856cf8d28c": {
    "en": null,
    "ja_en": true,
@@ -1483,6 +1560,14 @@
    "qa": "ok",
    "tipo": "prosa"
   },
+  "86df36fb60": {
+   "en": "The RAM lattices of your machine, and each level of cache before them. It is also what your process calls <i>heap</i>: a large space in which only the address distinguishes one thing from another.<details class=\"proc\">",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Os pentes de RAM da sua máquina, e cada nível de cache antes deles. Também é o que o seu processo chama de <i>heap</i>: um espaço grande em que só o endereço distingue uma coisa da outra.<details class=\"proc\">",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "870b2aa784": {
    "en": "<span class=\"regime r-seq\">sequential</span><span class=\"nivel\">level 4</span>",
    "modelo": "phi-4",
@@ -1513,6 +1598,14 @@
    "pt": "nível 4",
    "qa": "ok",
    "tipo": "svg"
+  },
+  "8bed65047a": {
+   "en": "8×8 RAM array <span>&larr; eight 8×1 RAM arrays</span>",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "8×8 RAM array <span>&larr; eight 8×1 RAM arrays</span>",
+   "qa": "ok",
+   "tipo": "prosa"
   },
   "8bed6e8114": {
    "en": null,
@@ -1624,6 +1717,14 @@
    "qa": "ok",
    "tipo": "prosa"
   },
+  "945b6d6e48": {
+   "en": "Because interpreting is expensive: compared to interpretation, compilation gives a significant efficiency gain in execution. The price is the other side — the interpreter is better for development and debugging, because the source remains at hand during execution.<details class=\"proc\">",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Porque interpretar custa caro: comparada com a interpretação, a compilação dá um grande ganho de eficiência na execução. O preço é o outro lado — o interpretador é melhor para desenvolver e depurar, porque o fonte continua à mão em tempo de execução.<details class=\"proc\">",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "94ffc26973": {
    "en": null,
    "ja_en": true,
@@ -1643,6 +1744,14 @@
    "modelo": "phi-4",
    "orfao": false,
    "pt": "relé B",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
+  "980f7cf87f": {
+   "en": "memory (RAM)",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "memória (RAM)",
    "qa": "ok",
    "tipo": "prosa"
   },
@@ -1740,6 +1849,14 @@
    "pt": "dado",
    "qa": "ok",
    "tipo": "js"
+  },
+  "a088aa87a1": {
+   "en": "byte of memory <span>&larr; 8 bits of memory</span>",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "byte of memory <span>&larr; 8 bits of memory</span>",
+   "qa": "ok",
+   "tipo": "prosa"
   },
   "a2aa97c96e": {
    "en": "current and iron",
@@ -1884,6 +2001,14 @@
    "pt": "“A relay is like a sounder in that an incoming current is used to power an electromagnet that pulls down a metal lever. The lever, however, is used as part of a switch connecting a battery to an outgoing wire.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 7 — Telegraphs and Relays</cite>",
    "tipo": "prosa"
   },
+  "b1393a1bf6": {
+   "en": "Assume that compiling and interpreting are rival teams, and that one won. SICP itself says the opposite: modern environments use <b>mixed strategy</b>, with compiled and interpreted procedures calling each other. The useful question is not which is better — it is <i>what is gained and what is lost by deciding early</i>.<details class=\"proc\">",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Achar que compilar e interpretar são times rivais, e que um venceu. O próprio SICP diz o contrário: os ambientes modernos usam <b>estratégia mista</b>, com procedimentos compilados e interpretados chamando uns aos outros. A pergunta útil não é qual é melhor — é <i>o que se ganha e o que se perde ao decidir cedo</i>.<details class=\"proc\">",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "b292e8e9ac": {
    "en": "<span class=\"regime r-comb\">combinational</span><span class=\"nivel\">level 1</span>",
    "modelo": "phi-4",
@@ -1948,7 +2073,7 @@
   "bb38495035": {
    "en": "read — rewritten, ready to enter",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "lida — reescrita, pronta para entrar",
    "qa": "ok",
    "tipo": "prosa"
@@ -1962,7 +2087,8 @@
    "tipo": "prosa"
   },
   "bcb05b914e": {
-   "en": "Because the ULA needs some place to land the operands and the result <b>inside</b> the processor. Fetching from memory at each step would cost a trip across the bus for each calculation.<details class=\"proc\">",
+   "decisao_humana": "Sigla do glossário: ULA (Unidade Lógica e Aritmética) é ALU em inglês. O bloco foi traduzido antes de o glossário existir e não voltou para a fila, porque o hash do português não mudou — sigla fica com a forma do idioma.",
+   "en": "Because the ALU needs some place to land the operands and the result <b>inside</b> the processor. Fetching from memory at each step would cost a trip across the bus for each calculation.<details class=\"proc\">",
    "modelo": "phi-4",
    "orfao": false,
    "pt": "Porque a ULA precisa de algum lugar para pousar os operandos e o resultado <b>dentro</b> do processador. Ir buscar na memória a cada passo custaria uma viagem pelo barramento a cada conta.<details class=\"proc\">",
@@ -2048,7 +2174,7 @@
   "c67acfd734": {
    "en": "The published statement said <i>“← assembler and evaluator”</i>, and the assembler doesn't appear in the sentence: <i>“translates programs written in Scheme into sequences of instructions to be executed using the explicit-control evaluator machine’s data paths”</i>. The half that the book sustains is ready to enter; the other is not.",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "A afirmação publicada dizia <i>“← assembler e avaliador”</i>, e o assembler não aparece na frase: <i>“translates programs written in Scheme into sequences of instructions to be executed using the explicit-control evaluator machine’s data paths”</i>. A metade que o livro sustenta está pronta para entrar; a outra não.",
    "qa": "ok",
    "tipo": "prosa"
@@ -2164,12 +2290,27 @@
    "qa": "ok",
    "tipo": "prosa"
   },
+  "ce2fcec31b": {
+   "en": null,
+   "ja_en": true,
+   "orfao": false,
+   "pt": "“We write and we later read. We save and we later retrieve. We store and we later access. The function of memory is to keep the information intact between those two events.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 19 — An Assemblage of Memory</cite>",
+   "tipo": "prosa"
+  },
   "ce9b1f2b91": {
    "en": null,
    "ja_en": true,
    "orfao": false,
    "pt": "“We can say that this circuit has two stable states when both switches are open. Such a circuit is called a flip-flop… A flip-flop circuit retains information. It “remembers.” It only remembers what switch was most recently closed, but that is significant.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 17 — Feedback and Flip-Flops</cite>",
    "tipo": "prosa"
+  },
+  "ceaf1ee641": {
+   "en": "<tspan x=\"740\" dy=\"0\">compiler</tspan>",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "<tspan x=\"740\" dy=\"0\">compilador</tspan>",
+   "qa": "ok",
+   "tipo": "svg"
   },
   "d2d28157c5": {
    "en": "The two circuits, the same data, the same clock. The light band is the time when the clock is high: the <b>level</b> copies the data during the entire band — it <b>leaks</b>. The <b>edge</b> copies only on the dotted line. This is the passage where almost everyone gets stuck, and in prose the two sound the same.",
@@ -2180,7 +2321,8 @@
    "tipo": "prosa"
   },
   "d3a81c31f4": {
-   "en": "<b>ULA ← adder and gates</b><span>Petzold cap. 21</span>",
+   "decisao_humana": "Sigla do glossário: ULA (Unidade Lógica e Aritmética) é ALU em inglês. O bloco foi traduzido antes de o glossário existir e não voltou para a fila, porque o hash do português não mudou — sigla fica com a forma do idioma.",
+   "en": "<b>ALU ← adder and gates</b><span>Petzold cap. 21</span>",
    "modelo": "phi-4",
    "orfao": true,
    "pt": "<b>ULA ← somador e portas</b><span>Petzold cap. 21</span>",
@@ -2271,7 +2413,7 @@
   "de3f96addf": {
    "en": "These 8 constructions passed through the citation literal gate, but the step where they land has not yet been read — so they wait here, in view, instead of entering the ladder for convenience.",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "Estas 8 construções passaram no portão da\ncitação literal, mas o degrau em que elas pousam ainda não foi lido — então elas\nesperam aqui, à vista, em vez de entrar na escada por conveniência.",
    "qa": "ok",
    "tipo": "prosa"
@@ -2352,6 +2494,13 @@
    "ja_en": true,
    "orfao": false,
    "pt": "“For example, here’s how to combine the inputs of a NAND gate to create an inverter:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 8 — Relays and Gates</cite>",
+   "tipo": "prosa"
+  },
+  "e325b8c97e": {
+   "en": null,
+   "ja_en": true,
+   "orfao": false,
+   "pt": "“The compiler that we implement in this section translates programs written in Scheme into sequences of instructions to be executed using the explicit-control evaluator machine's data paths.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · §5.5 — Compilation</cite>",
    "tipo": "prosa"
   },
   "e34b36ffa1": {
@@ -2464,6 +2613,14 @@
    "qa": "ok",
    "tipo": "prosa"
   },
+  "ecaae5eaaa": {
+   "en": "is made of <b>evaluator</b> — dependency, and the source says:",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "é feito de <b>avaliador</b> — dependência, e a fonte diz:",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "ecc022d986": {
    "en": "It’s the step where the physical construction meets the language description: from here up, one speaks of instruction, assembler, compiler. Below, in wire.<details class=\"proc\">",
    "modelo": "phi-4",
@@ -2491,7 +2648,7 @@
   "ef28c06b45": {
    "en": "<b>byte of memory</b> &larr; 8 bits of memory",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "<b>byte of memory</b> &larr; 8 bits of memory",
    "qa": "ok",
    "tipo": "prosa"
@@ -2525,6 +2682,14 @@
    "ja_en": true,
    "orfao": false,
    "pt": "“The H and L registers form a 16-bit address—for example, in the MOV A,M instruction. When used in this way, HL is called a register pair.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 22 — Registers and Busses</cite>",
+   "tipo": "prosa"
+  },
+  "f1b7f1643b": {
+   "en": "Because writing and reading are two separate events in time, and something needs to keep the information intact <b>between the two</b>. That is the function of memory, and it is prior to the computer.<details class=\"proc\">",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Porque escrever e ler são dois eventos separados no tempo, e alguma coisa precisa manter a informação intacta <b>entre os dois</b>. É essa a função da memória, e ela é anterior ao computador.<details class=\"proc\">",
+   "qa": "ok",
    "tipo": "prosa"
   },
   "f579c52396": {
@@ -2615,6 +2780,14 @@
    "modelo": "phi-4",
    "orfao": false,
    "pt": "avaliador",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
+  "faee4421d4": {
+   "en": "<code>gcc</code>, <code>rustc</code>, the JIT that your virtual machine triggers when a loop heats up. And the <i>shader compiler</i> that runs when you open a game — the \"compiling shaders\" screen is literally this step working.<details class=\"proc\">",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "<code>gcc</code>, <code>rustc</code>, o JIT que a sua máquina virtual dispara quando um laço esquenta. E o <i>shader compiler</i> que roda quando você abre um jogo — a tela de “compilando shaders” é literalmente este degrau trabalhando.<details class=\"proc\">",
    "qa": "ok",
    "tipo": "prosa"
   },

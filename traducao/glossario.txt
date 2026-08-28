@@ -62,3 +62,6 @@ procurada — nenhuma frase encontrada = searched — no sentence found
 lida — não é aresta, é contraste = read — not an edge, a contrast
 # o SELO tem ponto médio; dentro de frase corrida, não
 campos de ofício em proposta = craft fields in proposal
+memória (RAM) = memory (RAM)
+compilador = compiler
+acesso aleatório = random access

@@ -51,6 +51,7 @@ COLUNA = {
     "ula": "L",
     "registrador": "C", "contador": "R", "maquina": "C",
     "assembler": "L", "avaliador": "C", "paradigma": "C",
+    "memoria": "C", "compilador": "R",
 }
 REGIME = {
     "eletroima": "fisica", "rele": "fisica",
@@ -62,6 +63,7 @@ REGIME = {
     # forma é uma só, e quem carrega o regime é a cor — que a §2 permite desde
     # que a chave esteja na mesma tela, e está.
     "assembler": "lingua", "avaliador": "lingua", "paradigma": "lingua",
+    "memoria": "seq", "compilador": "lingua",
 }
 COR = {
     "fisica": ("#3a2418", "#c1704f", "#e6b499"),
@@ -79,8 +81,10 @@ NOME_REGIME = {
 }
 
 # fronteira: o que se sabe que existe e ninguém leu. Desenhada, não escondida.
+# O compilador saiu daqui em 2026-08-27: virou degrau. Sobram os dois que
+# seguem sem sustentação, e o mapa continua mostrando que a estrada não acaba.
 FRONTEIRA_CIMA = [
-    ("sistema operacional", "L"), ("instrução", "C"), ("compilador", "R"),
+    ("sistema operacional", "L"), ("instrução", "C"),
 ]
 FRONTEIRA_ULA  = ("ULA", "L")          # acima do somador
 FRONTEIRA_RAM  = ("memória (RAM)", "C") # ao lado do registrador... ver abaixo

@@ -59,6 +59,15 @@ DEGRAUS = [
     ("paradigma",   "paradigma",                   7,
      "Não é escola nem estilo: é o que aparece quando se <b>modifica o "
      "avaliador</b>. Trocar a regra de avaliação troca a linguagem."),
+
+    # --- as duas reescritas, aceitas em 2026-08-27 ---
+    ("memoria",     "memória (RAM)",               3,
+     "Guarda muitos valores e devolve <b>aquele que o endereço pedir</b>. "
+     "O acesso é livre: qualquer posição, a qualquer momento, ao mesmo custo."),
+    ("compilador",  "compilador",                  7,
+     "Traduz o programa-fonte num programa equivalente escrito na língua "
+     "nativa da máquina. Em vez de interpretar a cada vez, ele traduz <b>uma "
+     "vez só</b>."),
 ]
 
 # (de, para, classe, fonte, referência, citação verificada)
@@ -105,6 +114,14 @@ ARESTAS += [
      'The evaluator can be executed by the register-machine simulator of section 5.2.'),
     ("avaliador", "paradigma", "construção", "sicp", '§4.3 — Variations on a Scheme: Nondeterministic Computing',
      'we extend the Scheme evaluator to support a programming paradigm called nondeterministic computing by building into the evaluator a facility to support automatic search'),
+
+    # As duas REESCRITAS, aceitas em 2026-08-27. Elas entraram na lista dizendo
+    # uma coisa que o livro não dizia — "RAM ← registrador" e "compilador ←
+    # assembler e avaliador" — e entram na escada dizendo o que ele diz.
+    ("flipflop", "memoria", "construção", "petzold", 'cap. 19 — An Assemblage of Memory',
+     'This configuration of flip-flops, decoder, and selector is sometimes known as read/write memory'),
+    ("avaliador", "compilador", "dependência", "sicp", '§5.5 — Compilation',
+     'The compiler that we implement in this section translates programs written in Scheme into sequences of instructions to be executed using the explicit-control evaluator machine\'s data paths.'),
 ]
 
 SEGUNDA_TESTEMUNHA = {
@@ -155,13 +172,13 @@ CONSTRUCAO = [
     (None, 'seven-segment decoder', 'BCD decoder',
      "petzold", 'cap. 18 — Let’s Build a Clock!',
      'If your seven-segment display will always be displaying a digit, then a seven-segment decoder can be built from a BCD decoder as shown here:'),
-    (None, 'byte of memory', '8 bits of memory',
+    ('memoria', 'byte of memory', '8 bits of memory',
      "petzold", 'cap. 19 — An Assemblage of Memory',
      'it’s fairly easy to assemble an entire byte of memory by wiring together 8 bits of memory.'),
-    (None, '8×8 RAM array', 'eight 8×1 RAM arrays',
+    ('memoria', '8×8 RAM array', 'eight 8×1 RAM arrays',
      "petzold", 'cap. 19 — An Assemblage of Memory',
      'if you have eight 8×1 RAM arrays and you connect all the Address signals together and all the Write signals together, you can make an 8×8 RAM array'),
-    (None, '16×8 RAM array', '16 of these 16×8 memory arrays',
+    ('memoria', '16×8 RAM array', '16 of these 16×8 memory arrays',
      "petzold", 'cap. 19 — An Assemblage of Memory',
      'you’ll need 16 of these 16×8 memory arrays, wired up like this'),
     # Pousou em 2026-08-27: a ULA virou degrau, e esta construcao — que estava
@@ -212,12 +229,6 @@ NAO_LIDO = [
      "— isso é identidade, não composição. Um relógio não é <b>feito</b> de "
      "oscilador segundo esta frase; ele é <b>chamado</b> assim. A referência "
      "publicada dizia cap. 18 e está corrigida."),
-    ("memória (RAM) ← flip-flop, decodificador e seletor", "Petzold cap. 19",
-     "lida, reescrita",
-     "A afirmação publicada dizia <i>“← registrador”</i> e o livro não diz isso: "
-     "diz <i>“this configuration of flip-flops, decoder, and selector is "
-     "sometimes known as read/write memory”</i>. A aresta existe e está "
-     "sustentada — com o nó de origem certo. Pronta para entrar."),
     ("instrução ← sinais de controle", "Petzold cap. 23", "lida, não sustenta",
      "A frase diz que os sinais <i>“control these components to work together in "
      "executing instructions”</i>: eles <b>executam</b> a instrução, não a "
@@ -226,12 +237,6 @@ NAO_LIDO = [
      "O capítulo define o que um sistema operacional <b>é</b> e o que ele "
      "oferece (API, interface), mas não afirma sobre o que ele se apoia. "
      "Nenhuma frase encontrada sustenta a aresta."),
-    ("compilador ← avaliador", "SICP §5.5", "lida, reescrita",
-     "A afirmação publicada dizia <i>“← assembler e avaliador”</i>, e o "
-     "assembler não aparece na frase: <i>“translates programs written in Scheme "
-     "into sequences of instructions to be executed using the explicit-control "
-     "evaluator machine’s data paths”</i>. A metade que o livro sustenta está "
-     "pronta para entrar; a outra não."),
     ("interpretação × compilação", "SICP §5.5", "lida, não é aresta",
      "O contraste está sustentado com folga — <i>“compared with interpretation, "
      "compilation can provide a great increase in the efficiency of program "

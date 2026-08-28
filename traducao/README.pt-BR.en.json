@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-08-27 22:23:02",
+ "atualizado_em": "2026-08-27 22:32:47",
  "blocos": {
   "0001cdebc0": {
    "decisao_humana": "Vocabulário fechado do glossário (traducao/glossario.txt). A mesma cadeia saiu de três jeitos entre a página e o README; o selo e os nomes dos degraus são termo fixo, não escolha de bloco.",
@@ -18,11 +18,27 @@
    "qa": "ok",
    "tipo": "md"
   },
+  "052bb506f6": {
+   "en": "- **The edges come from two books**, read: Petzold, *Code* (2nd ed.) and Abelson & Sussman, *SICP* (2nd ed.). The citations appear under fair use, with source and chapter, and belong to their authors.\n- **15 edges between steps, supported by 17 citations**, and **24 constructions verified** — pieces made of pieces from the same layer.\n- **An edge has two independent witnesses** — `register → register machine`. Petzold builds the machine from gates; SICP defines it as data paths plus controller and declares that its diagram corresponds to *\"a machine that could be built from electrical components\"*. The two arrive from opposite sides at the same object.\n- **How the edges enter, since 27/08/2026.** A local model sweeps the chapter and **proposes** candidates — it is a prospector, never an author. Each candidate carries the sentence that would sustain it, and a gate verifies that sentence **character by character** against the original in English; what doesn't match dies there, without costing human reading. What survives has the citation proven and **is not yet an edge**: it goes to human judgment, item by item, and only then ascends. In the first round, 48 were proposed → 46 passed the gate → **34 accepted by me** (27 directly and 7 after correcting a circular, anaphoric, or duplicated label — the citation remains intact), and **12 discarded**, each decision recorded with the reason.\n- **The rule that this preserves**: every citation verified against the source, every interpretation accepted by a human. The model can find; it cannot assert.\n- **What the gate does not catch**, and therefore human judgment continues: a real citation that does not sustain the edge. Of the 46 verified, 11 fell exactly there — `CPU ← Intel 8080` is an instance, not a composition; `ALU ← arithmetic operations` is a function, not pieces; and one carried as warrant the sentence *\"Much of this module should look familiar:\"*, which asserts nothing.\n- **The translation also has an owner.** The English is derived from the Portuguese by a local model, block by block, with the table keyed by hash of the original. Where the machine did not decide, a person decided, and **the decision is written in the table** — including why. Example: the four field labels came out in six variants, and `onde se trava` became *\"where it locks\"* in seven of the nine steps. There \"travar\" is the student getting stuck, not a lock.\n- No network, no telemetry, no dependency. The page opens offline.\n- The books **are not** in this repository: they are third-party work and remain outside.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "- **As arestas vêm de dois livros**, lidos: Petzold, *Code* (2ª ed.) e\n  Abelson & Sussman, *SICP* (2ª ed.). As citações aparecem sob direito de\n  citação, com fonte e capítulo, e pertencem aos seus autores.\n- **15 arestas entre degraus, sustentadas por 17 citações**, e **24 construções\n  verificadas** — peças feitas de peças da mesma camada.\n- **Uma aresta tem duas testemunhas independentes** — `registrador → máquina de\n  registradores`. Petzold constrói a máquina a partir de portas; SICP a define\n  como caminhos de dados mais controlador e declara que seu diagrama corresponde\n  a *\"uma máquina que poderia ser construída de componentes elétricos\"*. Os dois\n  chegam de lados opostos ao mesmo objeto.\n- **Como as arestas entram, desde 27/08/2026.** Um modelo local varre o capítulo\n  e **propõe** candidatos — ele é garimpeiro, nunca autor. Cada candidato carrega\n  a frase que o sustentaria, e um portão confere essa frase **caractere a\n  caractere** contra o original em inglês; o que não bate morre ali, sem custar\n  leitura humana. O que sobrevive tem a citação provada e **ainda não é aresta**:\n  vai para julgamento humano, item a item, e só então sobe. Na primeira rodada\n  foram 48 propostos → 46 passaram no portão → **34 aceitos por mim** (27 direto e\n  7 depois de corrigir um rótulo circular, anafórico ou duplicado — a citação\n  segue intacta), e **12 descartadas**, cada decisão registrada com o motivo.\n- **A regra que isso preserva**: toda citação verificada contra a fonte, toda\n  interpretação aceita por um humano. O modelo pode achar; ele não pode afirmar.\n- **O que o portão não pega**, e por isso o julgamento humano continua: citação\n  real que não sustenta a aresta. Das 46 verificadas, 11 caíram exatamente aí —\n  `CPU ← Intel 8080` é instância, não composição; `ULA ← operações aritméticas` é\n  função, não peças; e uma trazia como warrant a frase *\"Much of this module\n  should look familiar:\"*, que não afirma nada.\n- **A tradução também tem dono.** O inglês é derivado do português por um modelo\n  local, bloco a bloco, com a tabela chaveada por hash do original. Onde a\n  máquina não decidiu, decidiu uma pessoa, e **a decisão está escrita na tabela**\n  — inclusive por quê. Exemplo: os quatro rótulos de campo saíram em seis\n  variantes, e `onde se trava` virou *\"where it locks\"* em sete dos nove degraus.\n  Ali \"travar\" é o aluno empacar, não uma fechadura.\n- Sem rede, sem telemetria, sem dependência. A página abre offline.\n- Os livros **não estão** neste repositório: são obra de terceiro e ficam fora.",
+   "qa": "ok",
+   "tipo": "md"
+  },
   "066ce281b2": {
    "en": "The machine came from the  \n[math-prerequisite-map](https://github.com/mateusalkimim/math-prerequisite-map): we, edges with declared warrant, and the page generated from the source. The new relative is the  \n[seeing-calculus](https://github.com/mateusalkimim/seeing-calculus).",
    "modelo": "phi-4",
    "orfao": true,
    "pt": "A máquina veio do\n[math-prerequisite-map](https://github.com/mateusalkimim/math-prerequisite-map):\nnós, arestas com warrant declarado, e a página gerada da fonte. O parente novo é o\n[seeing-calculus](https://github.com/mateusalkimim/seeing-calculus).",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "0a0c94d4f8": {
+   "en": "- **The ten that were missing were read on 27/08/2026**, and the result is on the\n  page with the reason for each one. All ten passed through the citation gate;\n  **five became edges** (ALU, assembler, evaluator→paradigm, and the two\n  **rewritten** — RAM and compiler — after correcting the source node they\n  named incorrectly), one **was already in the repository** and the line was\n  leftover, one was **downgraded** to a note (contrast is not an edge) and three\n  remain unsupported. Passing through the gate is not sustaining the edge, and\n  that's where the difference appears;\n- **12 craft fields in proposal**, in the six new steps, awaiting reading and\n  ratification;\n- **5 constructions verified that have not yet landed on any step** (PSW,\n  oscillator, transistor, seven-segment decoder, speaker wire). The ones from the\n  ALU and the three from the RAM landed on 27/08/2026, when these two became a\n  step — what was \"verified and without a place\" became the texture of a step.\n  The citation is proven; the step below them is the one that was not read. They\n  remain visible, in their own section, instead of entering the ladder for\n  convenience;\n- **Four steps still do not have an instrument** — electromagnet, relay, register\n  and register machine. The two at the bottom are physics, and the top one is too\n  large for a `canvas`;\n- **The ladder has a measured end.** From chapter 5 to 20 of Petzold, only one\n  proposal was not sustained; from chapters 21 to 24, eight of eleven. That's\n  where the book stops building and starts describing a chip that already exists\n  — and that's why the proven steps end before the 8080;\n- **The substance axis** (pixel/tensor/state → GPU/NPU/CPU) has no edges yet,\n  although the bibliography exists in the archive;\n- **Programming languages** are not here and will not be until there is a source:\n  the archive does not have a project book or a comparison of languages. What the\n  SICP sustains is classification by **mechanism** — interpreted × compiled,\n  paradigm as a variation of the evaluator — and not by history or adoption;\n- **The thesis that AI is the first layer that breaks determinism** is mine, with\n  no book behind it. When it enters, it enters as a warrant of class `orientacao`,\n  dated — never disguised as a fact of a book.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "- **as dez que faltavam foram lidas em 27/08/2026**, e o resultado está na\n  página com o motivo de cada uma. Todas as dez passaram no portão da citação\n  literal; **cinco viraram aresta** (ULA, assembler, avaliador→paradigma, e as duas\n  **reescritas** — RAM e compilador — depois de corrigido o nó de origem que\n  elas nomeavam errado), uma **já estava no repositório** e a linha sobrava, uma\n  foi **rebaixada** a nota (contraste não é aresta) e três seguem sem\n  sustentação.\n  Passar no portão não é sustentar a aresta, e é aí que a diferença aparece;\n- **12 campos de ofício em proposta**, nos seis degraus novos, aguardando\n  leitura e ratificação;\n- **5 construções verificadas que ainda não pousaram em degrau nenhum** (PSW,\n  oscilador, transistor, decodificador de sete segmentos, fio de alto-falante).\n  As da ULA e as três da RAM pousaram em 27/08/2026, quando esses dois viraram\n  degrau — o que era \"verificado e sem lugar\" virou textura de um degrau. A citação\n  está provada; o degrau abaixo delas é que não foi lido. Ficam à vista, em seção\n  própria, em vez de entrar na escada por conveniência;\n- **quatro degraus ainda não têm instrumento** — eletroímã, relé, registrador e\n  máquina de registradores. Os dois de baixo são física, e o de cima é grande\n  demais para um `canvas`;\n- **a escada tem um fim medido.** Do capítulo 5 ao 20 de Petzold, uma só proposta\n  não sustentava; dos capítulos 21 ao 24, oito de onze. É onde o livro para de\n  construir e passa a descrever um chip que já existe — e é por isso que os\n  degraus provados param antes do 8080;\n- **o eixo da substância** (pixel/tensor/estado → GPU/NPU/CPU) não tem nenhuma\n  aresta ainda, embora a bibliografia exista no acervo;\n- **as linguagens de programação** não estão aqui e não estarão até haver fonte:\n  o acervo não tem livro de projeto ou comparação de linguagens. O que o SICP\n  sustenta é classificação por **mecanismo** — interpretada × compilada, paradigma\n  como variação do avaliador — e não por história ou adoção;\n- **a tese de que a IA é a primeira camada que quebra o determinismo** é minha, sem\n  livro atrás. Quando entrar, entra como warrant de classe `orientacao`, datado —\n  nunca disfarçada de fato de livro.",
    "qa": "ok",
    "tipo": "md"
   },
@@ -113,7 +129,7 @@
    "decisao_humana": "Sigla do glossário: ULA em português é ALU em inglês.",
    "en": "- **The ten that were missing were read on 27/08/2026**, and the result is on the\n  page with the reason for each one. All ten passed through the citation literal\n  gate; **three survived the judgment** and became edges (ALU, assembler,\n  evaluator→paradigm), one **was already in the repository** and the line was\n  redundant, two were **rewritten** because they named the wrong source node, one\n  was **downgraded** to a note (contrast is not an edge) and three remain\n  unsupported. Passing through the gate does not sustain the edge, and that's where\n  the difference appears;\n- **8 craft fields in proposal**, in the four new steps, awaiting reading and\n  ratification;\n- **8 constructions verified that have not yet landed on any step** (RAM, PSW,\n  oscillator, transistor, seven-segment decoder). The one for the ALU landed on\n  27/08/2026, when the ALU became a step. The citation is proven; the step below them\n  was not read. They remain visible, in their own section, instead of entering the\n  ladder for convenience;\n- **Four steps still do not have an instrument** — electromagnet, relay, register\n  and register machine. The two at the bottom are physics, and the top one is too\n  large for a `canvas`;\n- **The ladder has a measured end.** From chapter 5 to 20 of Petzold, only one\n  proposal was unsupported; from chapters 21 to 24, eight of eleven. That's where\n  the book stops building and starts describing a chip that already exists — and\n  that's why the proven steps stop before the 8080;\n- **The substance axis** (pixel/tensor/state → GPU/NPU/CPU) has no edges yet,\n  although the bibliography exists in the archive;\n- **Programming languages** are not here and will not be until there is a source:\n  the archive does not have a project book or language comparison. What SICP\n  sustains is classification by **mechanism** — interpreted × compiled, paradigm\n  as a variation of the evaluator — and not by history or adoption;\n- **The thesis that AI is the first layer that breaks determinism** is mine, with\n  no book behind it. When it enters, it enters as a warrant of class `orientacao`,\n  dated — never disguised as a book fact.",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "- **as dez que faltavam foram lidas em 27/08/2026**, e o resultado está na\n  página com o motivo de cada uma. Todas as dez passaram no portão da citação\n  literal; **três sobreviveram ao julgamento** e viraram aresta (ULA, assembler,\n  avaliador→paradigma), uma **já estava no repositório** e a linha sobrava, duas\n  foram **reescritas** porque nomeavam o nó de origem errado, uma foi\n  **rebaixada** a nota (contraste não é aresta) e três seguem sem sustentação.\n  Passar no portão não é sustentar a aresta, e é aí que a diferença aparece;\n- **8 campos de ofício em proposta**, nos quatro degraus novos, aguardando\n  leitura e ratificação;\n- **8 construções verificadas que ainda não pousaram em degrau nenhum** (RAM,\n  PSW, oscilador, transistor, decodificador de sete segmentos). A da ULA pousou\n  em 27/08/2026, quando a ULA virou degrau. A citação\n  está provada; o degrau abaixo delas é que não foi lido. Ficam à vista, em seção\n  própria, em vez de entrar na escada por conveniência;\n- **quatro degraus ainda não têm instrumento** — eletroímã, relé, registrador e\n  máquina de registradores. Os dois de baixo são física, e o de cima é grande\n  demais para um `canvas`;\n- **a escada tem um fim medido.** Do capítulo 5 ao 20 de Petzold, uma só proposta\n  não sustentava; dos capítulos 21 ao 24, oito de onze. É onde o livro para de\n  construir e passa a descrever um chip que já existe — e é por isso que os\n  degraus provados param antes do 8080;\n- **o eixo da substância** (pixel/tensor/estado → GPU/NPU/CPU) não tem nenhuma\n  aresta ainda, embora a bibliografia exista no acervo;\n- **as linguagens de programação** não estão aqui e não estarão até haver fonte:\n  o acervo não tem livro de projeto ou comparação de linguagens. O que o SICP\n  sustenta é classificação por **mecanismo** — interpretada × compilada, paradigma\n  como variação do avaliador — e não por história ou adoção;\n- **a tese de que a IA é a primeira camada que quebra o determinismo** é minha, sem\n  livro atrás. Quando entrar, entra como warrant de classe `orientacao`, datado —\n  nunca disfarçada de fato de livro.",
    "qa": "ok",
    "tipo": "md"
@@ -145,7 +161,7 @@
   "423459be13": {
    "en": "- **The edges come from two books**, read: Petzold, *Code* (2nd ed.) and Abelson & Sussman, *SICP* (2nd ed.). The citations appear under fair use, with source and chapter, and belong to their authors.\n- **13 edges between steps, supported by 15 citations**, and **24 constructions verified** — pieces made of pieces from the same layer.\n- **An edge has two independent witnesses** — `register → register machine`. Petzold builds the machine from gates; SICP defines it as data paths plus controller and declares that its diagram corresponds to *\"a machine that could be built from electrical components\"*. The two arrive from opposite sides at the same object.\n- **How the edges enter, since 27/08/2026.** A local model sweeps the chapter and **proposes** candidates — it is a prospector, never an author. Each candidate carries the sentence that would sustain it, and a gate checks that sentence **character by character** against the original in English; what doesn't match dies there, without costing human reading. What survives has the citation proven and **is not yet an edge**: it goes to human judgment, item by item, and only then ascends. In the first round, 48 were proposed → 46 passed the gate → **34 accepted by me** (27 directly and 7 after correcting a circular, anaphoric, or duplicated label — the citation remains intact), and **12 discarded**, each decision recorded with the reason.\n- **The rule that this preserves**: every citation verified against the source, every interpretation accepted by a human. The model can find; it cannot assert.\n- **What the gate does not catch**, and therefore human judgment continues: a real citation that does not sustain the edge. Of the 46 verified, 11 fell exactly there — `CPU ← Intel 8080` is an instance, not a composition; `ALU ← arithmetic operations` is a function, not pieces; and one carried as warrant the sentence *\"Much of this module should look familiar:\"*, which asserts nothing.\n- **The translation also has an owner.** The English is derived from the Portuguese by a local model, block by block, with the table keyed by hash of the original. Where the machine did not decide, a person decided, and **the decision is written in the table** — including why. Example: the four field labels came out in six variants, and `onde se trava` became *\"where it locks\"* in seven of the nine steps. There \"travar\" is the student getting stuck, not a lock.\n- No network, no telemetry, no dependency. The page opens offline.\n- The books **are not** in this repository: they are third-party work and remain outside.",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "- **As arestas vêm de dois livros**, lidos: Petzold, *Code* (2ª ed.) e\n  Abelson & Sussman, *SICP* (2ª ed.). As citações aparecem sob direito de\n  citação, com fonte e capítulo, e pertencem aos seus autores.\n- **13 arestas entre degraus, sustentadas por 15 citações**, e **24 construções\n  verificadas** — peças feitas de peças da mesma camada.\n- **Uma aresta tem duas testemunhas independentes** — `registrador → máquina de\n  registradores`. Petzold constrói a máquina a partir de portas; SICP a define\n  como caminhos de dados mais controlador e declara que seu diagrama corresponde\n  a *\"uma máquina que poderia ser construída de componentes elétricos\"*. Os dois\n  chegam de lados opostos ao mesmo objeto.\n- **Como as arestas entram, desde 27/08/2026.** Um modelo local varre o capítulo\n  e **propõe** candidatos — ele é garimpeiro, nunca autor. Cada candidato carrega\n  a frase que o sustentaria, e um portão confere essa frase **caractere a\n  caractere** contra o original em inglês; o que não bate morre ali, sem custar\n  leitura humana. O que sobrevive tem a citação provada e **ainda não é aresta**:\n  vai para julgamento humano, item a item, e só então sobe. Na primeira rodada\n  foram 48 propostos → 46 passaram no portão → **34 aceitos por mim** (27 direto e\n  7 depois de corrigir um rótulo circular, anafórico ou duplicado — a citação\n  segue intacta), e **12 descartadas**, cada decisão registrada com o motivo.\n- **A regra que isso preserva**: toda citação verificada contra a fonte, toda\n  interpretação aceita por um humano. O modelo pode achar; ele não pode afirmar.\n- **O que o portão não pega**, e por isso o julgamento humano continua: citação\n  real que não sustenta a aresta. Das 46 verificadas, 11 caíram exatamente aí —\n  `CPU ← Intel 8080` é instância, não composição; `ULA ← operações aritméticas` é\n  função, não peças; e uma trazia como warrant a frase *\"Much of this module\n  should look familiar:\"*, que não afirma nada.\n- **A tradução também tem dono.** O inglês é derivado do português por um modelo\n  local, bloco a bloco, com a tabela chaveada por hash do original. Onde a\n  máquina não decidiu, decidiu uma pessoa, e **a decisão está escrita na tabela**\n  — inclusive por quê. Exemplo: os quatro rótulos de campo saíram em seis\n  variantes, e `onde se trava` virou *\"where it locks\"* em sete dos nove degraus.\n  Ali \"travar\" é o aluno empacar, não uma fechadura.\n- Sem rede, sem telemetria, sem dependência. A página abre offline.\n- Os livros **não estão** neste repositório: são obra de terceiro e ficam fora.",
    "qa": "ok",
    "tipo": "md"
@@ -153,7 +169,7 @@
   "4bebbb86aa": {
    "en": "- **`conferir_citacoes.py`** — each citation checked against the book, character by character. Today: **67 check out, 0 fail, 0 without the source in the collection** — the SICP was dissected on 27/08/2026 and the two citations that were previously unverifiable now check out. It **never returns \"ok\" for lack of proof**: without the book at hand, it exits with an error;\n- **`conferir_mapa.py`** — measures what the diagram standard mandates rather than promises. It caught an arc that grazed the box of a node, and a key of color that fell five pixels outside the frame;\n- **`conferir_instrumentos.py`** — the only one that finds an entire class of defect: it **clicks**. In the first translation of this page, `\"[data-acao]\"` became `\"[data-action]\"` — an impeccable translation of a CSS selector. The five instruments lost their listeners and all the buttons became mute, with the HTML intact, the console clean, and **all other gates in green**. No text probe finds this.",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "- **`conferir_citacoes.py`** — cada citação conferida contra o livro, caractere a\n  caractere. Hoje: **67 conferem, 0 reprovam, 0 sem a fonte no acervo** — o SICP foi\n  dissecado em 27/08/2026 e as duas citações que antes eram inverificáveis\n  passaram a conferir. Ele **nunca devolve \"ok\" por ausência de prova**: sem o\n  livro à mão, sai com erro;\n- **`conferir_mapa.py`** — mede o que a norma de diagramas manda em vez de\n  prometer. Pegou um arco que raspava a caixa de um nó, e uma chave de cor que\n  caía cinco pixels fora do quadro;\n- **`conferir_instrumentos.py`** — o único que acha uma classe inteira de\n  defeito: ele **clica**. Na primeira tradução desta página, `\"[data-acao]\"`\n  virou `\"[data-action]\"` — tradução impecável de um seletor CSS. Os cinco\n  instrumentos ficaram sem ouvinte e todos os botões mudos, com o HTML íntegro,\n  o console limpo e **todos os outros portões em verde**. Nenhuma sonda de texto\n  acha isso.",
    "qa": "ok",
    "tipo": "md"
@@ -241,7 +257,7 @@
   "900ed383c3": {
    "en": "The **13 \"what it is\" fields are all citations from the book**: no concept on this ladder was defined by me. There is no label for *\"a model wrote it\"*, and it's intentional.",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "Os **13 campos \"o que é\" são todos citação do livro**: nenhum conceito desta\nescada foi definido por mim. Não existe selo para *\"um modelo escreveu\"*, e é de\npropósito.",
    "qa": "ok",
    "tipo": "md"
@@ -274,7 +290,7 @@
   "96cd254cdc": {
    "en": "| seal | how many | what it means |\n|---|---|---|\n| `citation` | 15 | faithful translation of a passage, and the passage opens to the side |\n| `synthesis` | 12 | summary of the cited passage — the passage opens alongside, so you can check if the summary is honest |\n| `craft · ratified` | 17 | judgment of the teacher, which no book writes — **ratified on 2026-08-27**, and each field stamps the date |\n| `craft · proposal` | 8 | the same, in the four steps that entered **after** the ratification. Ratification does not extend by analogy to text that no one has read |",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "| selo | quantos | o que significa |\n|---|---|---|\n| `citação` | 15 | tradução fiel de uma passagem, e a passagem abre ao lado |\n| `síntese` | 12 | resumo de passagem citada — a passagem abre junto, para você conferir se o resumo é honesto |\n| `ofício · ratificado` | 17 | julgamento de quem ensina, que nenhum livro escreve — **ratificado em 2026-08-27**, e cada campo estampa a data |\n| `ofício · proposta` | 8 | os mesmos, nos quatro degraus que entraram **depois** da ratificação. Ratificação não se estende por analogia a texto que ninguém leu |",
    "qa": "ok",
    "tipo": "md"
@@ -362,7 +378,7 @@
   "b93d444735": {
    "en": "Here the order has been inverted — the gate of human reading comes **before** the content — and the price is this small map. The bet is that thirteen verifiable edges are worth more than sixty that are not.",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "Aqui a ordem se inverteu — o portão da leitura humana vem **antes** do conteúdo —\ne o preço é este mapa pequeno. A aposta é que treze arestas conferíveis valem mais\nque sessenta que não.",
    "qa": "ok",
    "tipo": "md"
@@ -379,7 +395,7 @@
   "bb18ab86b1": {
    "en": "**The four fields.** 52 of them, 4 per step, and **none came from a model**. Each one carries its own seal of origin:",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "**Os quatro campos.** 52 deles, 4 por degrau, e **nenhum saiu de um modelo**.\nCada um carrega o seu próprio selo de procedência:",
    "qa": "ok",
    "tipo": "md"
@@ -389,6 +405,14 @@
    "modelo": "phi-4",
    "orfao": false,
    "pt": "Um mapa de computação gerado por modelo custa uma tarde e parece completo. O\nproblema aparece depois: no mapa irmão desta casa, os verbetes foram escritos por\num modelo local e um deles afirma, publicado até hoje, que dois conjuntos com os\nmesmos elementos podem ser diferentes. É falso, e passou porque ninguém leu.",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "cf55fb7ac0": {
+   "en": "| seal | how many | what it means |\n|---|---|---|\n| `citation` | 19 | faithful translation of a passage, and the passage opens beside |\n| `synthesis` | 12 | summary of the cited passage — the passage opens alongside, for you to check if the summary is honest |\n| `craft · ratified` | 17 | judgment of who teaches, that no book writes — **ratified on 2026-08-27**, and each field stamps the date |\n| `craft · proposal` | 12 | the same, in the six steps that entered **after** the ratification. Ratification does not extend by analogy to text that no one read |",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "| selo | quantos | o que significa |\n|---|---|---|\n| `citação` | 19 | tradução fiel de uma passagem, e a passagem abre ao lado |\n| `síntese` | 12 | resumo de passagem citada — a passagem abre junto, para você conferir se o resumo é honesto |\n| `ofício · ratificado` | 17 | julgamento de quem ensina, que nenhum livro escreve — **ratificado em 2026-08-27**, e cada campo estampa a data |\n| `ofício · proposta` | 12 | os mesmos, nos seis degraus que entraram **depois** da ratificação. Ratificação não se estende por analogia a texto que ninguém leu |",
    "qa": "ok",
    "tipo": "md"
   },
@@ -433,6 +457,14 @@
    "qa": "ok",
    "tipo": "md"
   },
+  "de8e07de70": {
+   "en": "Here the order was inverted — the gate of human reading comes **before** the content —\nand the price is this small map. The bet is that fifteen verifiable edges are worth more\nthan sixty that are not.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Aqui a ordem se inverteu — o portão da leitura humana vem **antes** do conteúdo —\ne o preço é este mapa pequeno. A aposta é que quinze arestas conferíveis valem mais\nque sessenta que não.",
+   "qa": "ok",
+   "tipo": "md"
+  },
   "e21ac519c1": {
    "en": "## What's Here",
    "modelo": "phi-4",
@@ -449,6 +481,22 @@
    "qa": "ok",
    "tipo": "cerca"
   },
+  "eb50a89877": {
+   "en": "The **15 fields \"what it is\" are all citations from the book**: no concept from this\nladder was defined by me. There is no seal for *\"a model wrote\"*, and it is on purpose.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Os **15 campos \"o que é\" são todos citação do livro**: nenhum conceito desta\nescada foi definido por mim. Não existe selo para *\"um modelo escreveu\"*, e é de\npropósito.",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "f0aa7bac71": {
+   "en": "**The four fields.** 60 of them, 4 per step, and **none came from a model**.\nEach one carries its own seal of origin:",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "**Os quatro campos.** 60 deles, 4 por degrau, e **nenhum saiu de um modelo**.\nCada um carrega o seu próprio selo de procedência:",
+   "qa": "ok",
+   "tipo": "md"
+  },
   "f1d6da28ce": {
    "en": "## The Place in the Larger Cycle",
    "modelo": "phi-4",
@@ -462,6 +510,14 @@
    "modelo": "phi-4",
    "orfao": true,
    "pt": "O funil não afrouxa essa ordem: ele só barateia o **achar**. O julgamento continua\nsendo humano, e a prova continua sendo a frase no livro.",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "f73b2955a2": {
+   "en": "- **`verify_citations.py`** — each citation verified against the book, character by character. Today: **73 verify, 0 fail, 0 without the source in the collection** — the SICP was dissected on 27/08/2026 and the two citations that were previously unverifiable now verify. It **never returns \"ok\" for lack of proof**: without the book at hand, it exits with an error;\n- **`verify_map.py`** — measures what the diagram norm mandates instead of promising. It caught an arc that scraped the box of a node, and a color key that fell five pixels outside the frame;\n- **`verify_tools.py`** — the only one that finds an entire class of defect: it **clicks**. In the first translation of this page, `\"[data-acao]\"` became `\"[data-action]\"` — an impeccable translation of a CSS selector. The five tools were left without listeners and all the buttons were silent, with the HTML intact, the console clean and **all other gates in green**. No text probe finds this.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "- **`conferir_citacoes.py`** — cada citação conferida contra o livro, caractere a\n  caractere. Hoje: **73 conferem, 0 reprovam, 0 sem a fonte no acervo** — o SICP foi\n  dissecado em 27/08/2026 e as duas citações que antes eram inverificáveis\n  passaram a conferir. Ele **nunca devolve \"ok\" por ausência de prova**: sem o\n  livro à mão, sai com erro;\n- **`conferir_mapa.py`** — mede o que a norma de diagramas manda em vez de\n  prometer. Pegou um arco que raspava a caixa de um nó, e uma chave de cor que\n  caía cinco pixels fora do quadro;\n- **`conferir_instrumentos.py`** — o único que acha uma classe inteira de\n  defeito: ele **clica**. Na primeira tradução desta página, `\"[data-acao]\"`\n  virou `\"[data-action]\"` — tradução impecável de um seletor CSS. Os cinco\n  instrumentos ficaram sem ouvinte e todos os botões mudos, com o HTML íntegro,\n  o console limpo e **todos os outros portões em verde**. Nenhuma sonda de texto\n  acha isso.",
    "qa": "ok",
    "tipo": "md"
   },

@@ -28,17 +28,17 @@ sequencial, arquitetura) e a chave fica na mesma tela. As arestas que ninguém
 leu estão **desenhadas**, tracejadas, subindo para fora do mapa — porque mapa
 que esconde o que falta mente sobre o próprio tamanho.
 
-**Os quatro campos.** 52 deles, 4 por degrau, e **nenhum saiu de um modelo**.
+**Os quatro campos.** 60 deles, 4 por degrau, e **nenhum saiu de um modelo**.
 Cada um carrega o seu próprio selo de procedência:
 
 | selo | quantos | o que significa |
 |---|---|---|
-| `citação` | 15 | tradução fiel de uma passagem, e a passagem abre ao lado |
+| `citação` | 19 | tradução fiel de uma passagem, e a passagem abre ao lado |
 | `síntese` | 12 | resumo de passagem citada — a passagem abre junto, para você conferir se o resumo é honesto |
 | `ofício · ratificado` | 17 | julgamento de quem ensina, que nenhum livro escreve — **ratificado em 2026-08-27**, e cada campo estampa a data |
-| `ofício · proposta` | 8 | os mesmos, nos quatro degraus que entraram **depois** da ratificação. Ratificação não se estende por analogia a texto que ninguém leu |
+| `ofício · proposta` | 12 | os mesmos, nos seis degraus que entraram **depois** da ratificação. Ratificação não se estende por analogia a texto que ninguém leu |
 
-Os **13 campos "o que é" são todos citação do livro**: nenhum conceito desta
+Os **15 campos "o que é" são todos citação do livro**: nenhum conceito desta
 escada foi definido por mim. Não existe selo para *"um modelo escreveu"*, e é de
 propósito.
 
@@ -111,7 +111,7 @@ deveriam achar e falham se não acharem. Um portão que nunca reprovou não prov
 nada.
 
 - **`conferir_citacoes.py`** — cada citação conferida contra o livro, caractere a
-  caractere. Hoje: **67 conferem, 0 reprovam, 0 sem a fonte no acervo** — o SICP foi
+  caractere. Hoje: **73 conferem, 0 reprovam, 0 sem a fonte no acervo** — o SICP foi
   dissecado em 27/08/2026 e as duas citações que antes eram inverificáveis
   passaram a conferir. Ele **nunca devolve "ok" por ausência de prova**: sem o
   livro à mão, sai com erro;
@@ -145,7 +145,7 @@ conferida.
 - **As arestas vêm de dois livros**, lidos: Petzold, *Code* (2ª ed.) e
   Abelson & Sussman, *SICP* (2ª ed.). As citações aparecem sob direito de
   citação, com fonte e capítulo, e pertencem aos seus autores.
-- **13 arestas entre degraus, sustentadas por 15 citações**, e **24 construções
+- **15 arestas entre degraus, sustentadas por 17 citações**, e **24 construções
   verificadas** — peças feitas de peças da mesma camada.
 - **Uma aresta tem duas testemunhas independentes** — `registrador → máquina de
   registradores`. Petzold constrói a máquina a partir de portas; SICP a define
@@ -195,7 +195,7 @@ ratificados em **27/08/2026**, e cada um estampa a data. Ela não é enfeite: di
 dela volta a ser proposta até ser relido.
 
 Aqui a ordem se inverteu — o portão da leitura humana vem **antes** do conteúdo —
-e o preço é este mapa pequeno. A aposta é que treze arestas conferíveis valem mais
+e o preço é este mapa pequeno. A aposta é que quinze arestas conferíveis valem mais
 que sessenta que não.
 
 O funil não afrouxa essa ordem: ele só barateia o **achar**. O julgamento continua
@@ -206,16 +206,18 @@ ao lado, quando a peça pode ser construída.
 
 - **as dez que faltavam foram lidas em 27/08/2026**, e o resultado está na
   página com o motivo de cada uma. Todas as dez passaram no portão da citação
-  literal; **três sobreviveram ao julgamento** e viraram aresta (ULA, assembler,
-  avaliador→paradigma), uma **já estava no repositório** e a linha sobrava, duas
-  foram **reescritas** porque nomeavam o nó de origem errado, uma foi
-  **rebaixada** a nota (contraste não é aresta) e três seguem sem sustentação.
+  literal; **cinco viraram aresta** (ULA, assembler, avaliador→paradigma, e as duas
+  **reescritas** — RAM e compilador — depois de corrigido o nó de origem que
+  elas nomeavam errado), uma **já estava no repositório** e a linha sobrava, uma
+  foi **rebaixada** a nota (contraste não é aresta) e três seguem sem
+  sustentação.
   Passar no portão não é sustentar a aresta, e é aí que a diferença aparece;
-- **8 campos de ofício em proposta**, nos quatro degraus novos, aguardando
+- **12 campos de ofício em proposta**, nos seis degraus novos, aguardando
   leitura e ratificação;
-- **8 construções verificadas que ainda não pousaram em degrau nenhum** (RAM,
-  PSW, oscilador, transistor, decodificador de sete segmentos). A da ULA pousou
-  em 27/08/2026, quando a ULA virou degrau. A citação
+- **5 construções verificadas que ainda não pousaram em degrau nenhum** (PSW,
+  oscilador, transistor, decodificador de sete segmentos, fio de alto-falante).
+  As da ULA e as três da RAM pousaram em 27/08/2026, quando esses dois viraram
+  degrau — o que era "verificado e sem lugar" virou textura de um degrau. A citação
   está provada; o degrau abaixo delas é que não foi lido. Ficam à vista, em seção
   própria, em vez de entrar na escada por conveniência;
 - **quatro degraus ainda não têm instrumento** — eletroímã, relé, registrador e

@@ -435,6 +435,69 @@ CONCEITOS = {
    "coisa útil, que é <i>o que exatamente muda no avaliador</i>.", em=None),
 },
 
+"memoria": {
+ "o_que_e": C(
+   "Uma configuração de flip-flops, decodificador e seletor. Como o endereço "
+   "pode mudar para qualquer valor a qualquer momento, ela se chama memória de "
+   "<b>acesso aleatório</b>.",
+   "cap. 19 — An Assemblage of Memory",
+   "This configuration of flip-flops, decoder, and selector is sometimes known "
+   "as read/write memory because you can store values (that is, write them) and "
+   "later determine what those values are (that is, read them). Because you can "
+   "change the Address signals to any one of the eight values at will, this type "
+   "of memory is more commonly known as random access memory, or RAM"),
+ "por_que_existe": C(
+   "Porque escrever e ler são dois eventos separados no tempo, e alguma coisa "
+   "precisa manter a informação intacta <b>entre os dois</b>. É essa a função "
+   "da memória, e ela é anterior ao computador.",
+   "cap. 19 — An Assemblage of Memory",
+   "We write and we later read. We save and we later retrieve. We store and we "
+   "later access. The function of memory is to keep the information intact "
+   "between those two events."),
+ "onde_aparece": O(
+   "Os pentes de RAM da sua máquina, e cada nível de cache antes deles. "
+   "Também é o que o seu processo chama de <i>heap</i>: um espaço grande em "
+   "que só o endereço distingue uma coisa da outra.", em=None),
+ "onde_se_trava": O(
+   "O nome engana: <b>“aleatório” não quer dizer imprevisível</b> — quer dizer "
+   "que qualquer posição custa o mesmo, em qualquer ordem. O contrário dela é "
+   "a fita, que obriga a passar por tudo até chegar. Quem lê “aleatório” como "
+   "“ao acaso” perde a única propriedade que dá nome à peça.", em=None),
+},
+
+"compilador": {
+ "o_que_e": C(
+   "Traduz um programa-fonte num programa equivalente — o programa-objeto — "
+   "escrito na língua nativa da máquina.",
+   "SICP §5.5 — Compilation",
+   "A compiler for a given source language and machine translates a source "
+   "program into an equivalent program (called the object program) written in "
+   "the machine's native language."),
+ "por_que_existe": C(
+   "Porque interpretar custa caro: comparada com a interpretação, a compilação "
+   "dá um grande ganho de eficiência na execução. O preço é o outro lado — o "
+   "interpretador é melhor para desenvolver e depurar, porque o fonte continua "
+   "à mão em tempo de execução.",
+   "SICP §5.5 — Compilation",
+   "Compared with interpretation, compilation can provide a great increase in "
+   "the efficiency of program execution, as we will explain below in the "
+   "overview of the compiler. On the other hand, an interpreter provides a more "
+   "powerful environment for interactive program development and debugging, "
+   "because the source program being executed is available at run time to be "
+   "examined and modified."),
+ "onde_aparece": O(
+   "<code>gcc</code>, <code>rustc</code>, o JIT que a sua máquina virtual "
+   "dispara quando um laço esquenta. E o <i>shader compiler</i> que roda "
+   "quando você abre um jogo — a tela de “compilando shaders” é literalmente "
+   "este degrau trabalhando.", em=None),
+ "onde_se_trava": O(
+   "Achar que compilar e interpretar são times rivais, e que um venceu. O "
+   "próprio SICP diz o contrário: os ambientes modernos usam <b>estratégia "
+   "mista</b>, com procedimentos compilados e interpretados chamando uns aos "
+   "outros. A pergunta útil não é qual é melhor — é <i>o que se ganha e o que "
+   "se perde ao decidir cedo</i>.", em=None),
+},
+
 }
 
 # Os quatro campos, na ordem em que a página os mostra, com o rótulo.
