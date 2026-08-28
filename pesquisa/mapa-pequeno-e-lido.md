@@ -10,15 +10,14 @@ completo**. É essa aparência o problema: ela não distingue a aresta que algu�
 verificou da aresta que soou plausível, e o leitor não tem como saber qual é
 qual.
 
-O caso desta casa é concreto e ainda está no ar. No mapa irmão de matemática, os
-cinquenta verbetes foram escritos por um modelo local, **zero revisados por
-humano**, e um deles afirma que dois conjuntos com os mesmos elementos podem ser
-diferentes — a negação direta do axioma que *define* igualdade de conjuntos. E
-está no campo "onde se trava", isto é, apresentado como *o erro que o leitor
-deve evitar*. **Ensina o erro na posição da correção.**
+O caso é concreto, e o formato do erro importa mais que o caso. Um verbete
+gerado pode afirmar que dois conjuntos com os mesmos elementos são diferentes —
+a negação direta do axioma que *define* igualdade de conjuntos — e ficar no
+campo "onde se trava", isto é, apresentado como *o erro que o leitor deve
+evitar*. **Ensina o erro na posição da correção.**
 
-Ele passou por uma razão estrutural, não por descuido: o verificador cobria um
-campo de quatro, e não era esse.
+Um erro assim passa por razão estrutural, não por descuido: quando existe
+verificação, ela costuma cobrir um campo de quatro, e não é esse.
 
 ## A inversão
 
@@ -26,8 +25,8 @@ A resposta usual é revisar depois. Não funciona em escala: quem revisa cinquen
 verbetes plausíveis não encontra o falso, porque todos parecem iguais — a
 plausibilidade é justamente o que o modelo otimiza.
 
-A resposta deste repositório é **inverter a ordem**: o portão da leitura humana
-vem antes do conteúdo. Uma aresta só existe se alguém abriu o livro e copiou a
+A resposta deste repositório é **inverter a ordem**: a leitura humana vem
+antes do conteúdo. Uma aresta só existe se alguém abriu o livro e copiou a
 frase. E o gerador **aborta** se a citação estiver vazia — a regra não é
 convenção que se esquece, é condição de a página existir.
 

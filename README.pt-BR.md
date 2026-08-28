@@ -35,8 +35,8 @@ Cada um carrega o seu próprio selo de procedência:
 |---|---|---|
 | `citação` | 19 | tradução fiel de uma passagem, e a passagem abre ao lado |
 | `síntese` | 12 | resumo de passagem citada — a passagem abre junto, para você conferir se o resumo é honesto |
-| `ofício · ratificado` | 17 | julgamento de quem ensina, que nenhum livro escreve — **ratificado em 2026-08-27**, e cada campo estampa a data |
-| `ofício · proposta` | 12 | os mesmos, nos seis degraus que entraram **depois** da ratificação. Ratificação não se estende por analogia a texto que ninguém leu |
+| `ofício · confirmado` | 17 | julgamento de quem ensina, que nenhum livro escreve — **confirmado pelo autor em 2026-08-27**, e cada campo estampa a data |
+| `ofício · não confirmado` | 12 | os mesmos, nos seis degraus que entraram **depois** dessa data. A confirmação não se estende por analogia a texto que ninguém leu |
 
 Os **15 campos "o que é" são todos citação do livro**: nenhum conceito desta
 escada foi definido por mim. Não existe selo para *"um modelo escreveu"*, e é de
@@ -98,16 +98,16 @@ conferir_idioma.py       cada página está no idioma da pasta em que mora
 
 i18n.py, gerar_en.py, gerar_porta.py   a máquina bilíngue, para quem clonar
 traducao/             a tabela pt→en, chaveada por hash do original
-pharo/                por que um mapa pequeno e lido vence um grande e gerado
+pesquisa/                por que um mapa pequeno e lido vence um grande e gerado
 docs/INSTALACAO.md    passo a passo
 LICENSE               MIT, para o código
 LICENSE-CONTENT       CC BY-SA 4.0, para o conteúdo
 ```
 
-## Os portões
+## As conferências
 
 Nenhum deles é promessa: todos têm **controle negativo** — plantam o defeito que
-deveriam achar e falham se não acharem. Um portão que nunca reprovou não provou
+deveriam achar e falham se não acharem. Uma conferência que nunca reprovou não provou
 nada.
 
 - **`conferir_citacoes.py`** — cada citação conferida contra o livro, caractere a
@@ -122,7 +122,7 @@ nada.
   defeito: ele **clica**. Na primeira tradução desta página, `"[data-acao]"`
   virou `"[data-action]"` — tradução impecável de um seletor CSS. Os cinco
   instrumentos ficaram sem ouvinte e todos os botões mudos, com o HTML íntegro,
-  o console limpo e **todos os outros portões em verde**. Nenhuma sonda de texto
+  o console limpo e **todas as outras conferências em verde**. Nenhuma sonda de texto
   acha isso.
 
 ## O lugar no ciclo maior
@@ -154,17 +154,16 @@ conferida.
   chegam de lados opostos ao mesmo objeto.
 - **Como as arestas entram, desde 27/08/2026.** Um modelo local varre o capítulo
   e **propõe** candidatos — ele é garimpeiro, nunca autor. Cada candidato carrega
-  a frase que o sustentaria, e um portão confere essa frase **caractere a
+  a frase que o sustentaria, e a conferência compara essa frase **caractere a
   caractere** contra o original em inglês; o que não bate morre ali, sem custar
   leitura humana. O que sobrevive tem a citação provada e **ainda não é aresta**:
-  vai para julgamento humano, item a item, e só então sobe. Na primeira rodada
-  foram 48 propostos → 46 passaram no portão → **34 aceitos por mim** (27 direto e
-  7 depois de corrigir um rótulo circular, anafórico ou duplicado — a citação
-  segue intacta), e **12 descartadas**, cada decisão registrada com o motivo.
+  vai para julgamento humano, item a item, e só então sobe — e a maioria do que
+  passa na conferência literal ainda assim não vira aresta. Cada decisão fica
+  registrada com o motivo.
 - **A regra que isso preserva**: toda citação verificada contra a fonte, toda
   interpretação aceita por um humano. O modelo pode achar; ele não pode afirmar.
-- **O que o portão não pega**, e por isso o julgamento humano continua: citação
-  real que não sustenta a aresta. Das 46 verificadas, 11 caíram exatamente aí —
+- **O que a conferência não pega**, e por isso o julgamento humano continua:
+  citação real que não sustenta a aresta. Vários casos caíram exatamente aí —
   `CPU ← Intel 8080` é instância, não composição; `ULA ← operações aritméticas` é
   função, não peças; e uma trazia como warrant a frase *"Much of this module
   should look familiar:"*, que não afirma nada.
@@ -179,24 +178,21 @@ conferida.
 
 ## Por que assim
 
-Um mapa de computação gerado por modelo custa uma tarde e parece completo. O
-problema aparece depois: no mapa irmão desta casa, os verbetes foram escritos por
-um modelo local e um deles afirma, publicado até hoje, que dois conjuntos com os
-mesmos elementos podem ser diferentes. É falso, e passou porque ninguém leu.
+Um mapa de computação escrito por um modelo de linguagem custa uma tarde e
+parece completo. O preço aparece depois: uma afirmação plausível e errada fica
+publicada porque ninguém a leu, e ninguém tem como saber quais das outras
+sessenta estão no mesmo estado.
 
-Esta página tem **os mesmos quatro campos daquele mapa**, e é por isso que a
-diferença importa. Aqui nenhum deles saiu de um modelo: os que descrevem a peça
-saíram do próprio Petzold — que é professor, e já responde *o que é* e *por que
-existe* em prosa, com capítulo —, e a passagem vai junto de cada campo. Os que
-dizem **onde o aluno trava** nenhum livro escreve: são ofício de quem ensina, e
-entram pelo rito da casa — proposta primeiro, ratificação depois. Os 17 foram
-ratificados em **27/08/2026**, e cada um estampa a data. Ela não é enfeite: diz
-**a partir de quando alguém responde pelo texto**, e um campo que mudar depois
-dela volta a ser proposta até ser relido.
+**Aqui nenhum campo saiu de um modelo.** Os que descrevem a peça saíram do
+próprio Petzold — que é professor, e já responde *o que é* e *por que existe*
+em prosa, com capítulo —, e a passagem vai junto de cada campo. Os que dizem
+**onde o aluno trava** nenhum livro escreve: são ofício de quem ensina, entram
+sem confirmação e ganham a data em que o autor passa a responder por eles. A
+data não é enfeite: diz **a partir de quando alguém responde pelo texto**, e um
+campo que mudar depois dela deixa de estar confirmado até ser relido.
 
-Aqui a ordem se inverteu — o portão da leitura humana vem **antes** do conteúdo —
-e o preço é este mapa pequeno. A aposta é que quinze arestas conferíveis valem mais
-que sessenta que não.
+A leitura humana vem **antes** do conteúdo, e o preço é este mapa pequeno. A
+aposta é que quinze arestas conferíveis valem mais que sessenta que não.
 
 O funil não afrouxa essa ordem: ele só barateia o **achar**. O julgamento continua
 sendo humano, e a prova continua sendo a frase no livro — agora com um instrumento
@@ -205,15 +201,15 @@ ao lado, quando a peça pode ser construída.
 ## Estado, e o que falta
 
 - **as dez que faltavam foram lidas em 27/08/2026**, e o resultado está na
-  página com o motivo de cada uma. Todas as dez passaram no portão da citação
+  página com o motivo de cada uma. Todas as dez passaram na conferência da citação
   literal; **cinco viraram aresta** (ULA, assembler, avaliador→paradigma, e as duas
   **reescritas** — RAM e compilador — depois de corrigido o nó de origem que
   elas nomeavam errado), uma **já estava no repositório** e a linha sobrava, uma
   foi **rebaixada** a nota (contraste não é aresta) e três seguem sem
   sustentação.
-  Passar no portão não é sustentar a aresta, e é aí que a diferença aparece;
-- **12 campos de ofício em proposta**, nos seis degraus novos, aguardando
-  leitura e ratificação;
+  Passar na conferência não é sustentar a aresta, e é aí que a diferença aparece;
+- **12 campos de ofício sem confirmação**, nos seis degraus novos, aguardando
+  a leitura do autor;
 - **5 construções verificadas que ainda não pousaram em degrau nenhum** (PSW,
   oscilador, transistor, decodificador de sete segmentos, fio de alto-falante).
   As da ULA e as três da RAM pousaram em 27/08/2026, quando esses dois viraram

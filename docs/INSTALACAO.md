@@ -46,5 +46,5 @@ O gerador **aborta** se a citação estiver vazia ou se a aresta apontar para um
 degrau que não existe. Isso é proposital: seta sem warrant não é desenhada.
 
 Confira que ele ainda aborta, apagando uma citação de propósito e rodando de
-novo — é o controle negativo, e vale a mesma regra do resto da casa: portão que
+novo — é o controle negativo, e vale a mesma regra em toda parte: conferência que
 nunca reprovou não vale nada.

@@ -38,4 +38,4 @@ An edge only enters **after being read**. The procedure is:
 
 The generator **aborts** if the citation is empty or if the edge points to a step that does not exist. This is intentional: an arrow without warrant is not drawn.
 
-Check that it still aborts, by deleting a citation on purpose and running again — this is the negative control, and the same rule applies to the rest of the house: a gate that never failed is worthless.
+Check that it still aborts, by deleting a citation on purpose and running it again — that is the negative control, and the same rule applies everywhere: a check that never failed is worth nothing.

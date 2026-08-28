@@ -23,8 +23,8 @@ Each one carries its own seal of origin:
 |---|---|---|
 | `citation` | 19 | faithful translation of a passage, and the passage opens beside |
 | `synthesis` | 12 | summary of the cited passage — the passage opens alongside, for you to check if the summary is honest |
-| `craft · ratified` | 17 | judgment of who teaches, that no book writes — **ratified on 2026-08-27**, and each field stamps the date |
-| `craft · proposal` | 12 | the same, in the six steps that entered **after** the ratification. Ratification does not extend by analogy to text that no one read |
+| `craft · confirmed` | 17 | judgment of who teaches, that no book writes — **confirmed by the author on 2026-08-27**, and each field stamps the date |
+| `craft · unconfirmed` | 12 | the same, in the six steps that entered **after** the confirmation. Confirmation does not extend by analogy to text that no one read |
 
 The **15 fields "what it is" are all citations from the book**: no concept from this
 ladder was defined by me. There is no seal for *"a model wrote"*, and it is on purpose.
@@ -68,31 +68,21 @@ Step by step in [`docs/INSTALLATION.md`](docs/INSTALACAO.en.md).
 ## What's Here
 
 ```
-index.html            the door — redirects by language  
-pt/index.html         the page, in Portuguese — GENERATED, do not edit by hand  
-en/index.html         the same page in English — DERIVED from pt/ + translation/  
+index.html            the door — routes by language
+pt/index.html         the page, in Portuguese — GENERATED, do not edit by hand
+en/index.html         the same page in English — DERIVED from pt/ + traducao/
 
-degraus.py            the steps, the edges, and the <b>CITATIONS</b> that support them  
-conceitos.py          the four fields of each step, with provenance by field  
-mapa.py               the SVG map, citing the norm of diagrams that governs it  
-instrumentos.js       the five instruments  
-gerar_escada.py       the generator, which aborts if warrant is missing  
+degraus.py            the steps, the edges and the CITATIONS that support them
+conceitos.py          the four fields of each step, with provenance per field
+mapa.py               the SVG of the map, citing the diagram standard it follows
+instrumentos.js       the five instruments
+gerar_escada.py       the generator, which aborts if a warrant is missing
 
-conferir_citacoes.py     verifies each citation against the book, section by section  
-conferir_mapa.py         geometry of the map: intersection, edge crossing node  
-conferir_pagina.py       measures the SCREEN in three resolutions  
-conferir_instrumentos.py <b>CLICKS</b> each button and verifies that the drawing changed  
-conferir_idioma.py       each page is in the language of the folder it resides in  
-
-i18n.py, gerar_en.py, gerar_porta.py   the bilingual machine, for those who clone  
-traducao/             the table pt→en, keyed by hash of the original  
-pharo/                why a small and readable map beats a large and generated one  
-docs/INSTALACAO.md    step by step  
-LICENSE               MIT, for the code  
-LICENSE-CONTENT       CC BY-SA 4.0, for the content
+conferir_citacoes.py     checks each citation against the book, passage by passage
+conferir_mapa.py         map geometry: crossings, edge running through a node
 ```
 
-## The Gates
+## The checks
 
 None of them is a promise: all have **negative control** — they plant the  
 defect they should find and fail if they don't find it. A gate that never  
@@ -100,7 +90,7 @@ failed did not prove anything.
 
 - **`verify_citations.py`** — each citation verified against the book, character by character. Today: **73 verify, 0 fail, 0 without the source in the collection** — the SICP was dissected on 27/08/2026 and the two citations that were previously unverifiable now verify. It **never returns "ok" for lack of proof**: without the book at hand, it exits with an error;
 - **`verify_map.py`** — measures what the diagram norm mandates instead of promising. It caught an arc that scraped the box of a node, and a color key that fell five pixels outside the frame;
-- **`verify_tools.py`** — the only one that finds an entire class of defect: it **clicks**. In the first translation of this page, `"[data-acao]"` became `"[data-action]"` — an impeccable translation of a CSS selector. The five tools were left without listeners and all the buttons were silent, with the HTML intact, the console clean and **all other gates in green**. No text probe finds this.
+- **`verify_tools.py`** — the only one that finds an entire class of defect: it **clicks**. In the first translation of this page, `"[data-acao]"` became `"[data-action]"` — an impeccable translation of a CSS selector. The five tools were left without listeners and all the buttons were silent, with the HTML intact, the console clean and **all other checks in green**. No text probe finds this.
 
 ## The Place in the Larger Cycle
 
@@ -119,23 +109,29 @@ assertion to be verified.
 
 ## Provenance and Guarantees
 
-- **The edges come from two books**, read: Petzold, *Code* (2nd ed.) and Abelson & Sussman, *SICP* (2nd ed.). The citations appear under fair use, with source and chapter, and belong to their authors.
-- **15 edges between steps, supported by 17 citations**, and **24 constructions verified** — pieces made of pieces from the same layer.
-- **An edge has two independent witnesses** — `register → register machine`. Petzold builds the machine from gates; SICP defines it as data paths plus controller and declares that its diagram corresponds to *"a machine that could be built from electrical components"*. The two arrive from opposite sides at the same object.
-- **How the edges enter, since 27/08/2026.** A local model sweeps the chapter and **proposes** candidates — it is a prospector, never an author. Each candidate carries the sentence that would sustain it, and a gate verifies that sentence **character by character** against the original in English; what doesn't match dies there, without costing human reading. What survives has the citation proven and **is not yet an edge**: it goes to human judgment, item by item, and only then ascends. In the first round, 48 were proposed → 46 passed the gate → **34 accepted by me** (27 directly and 7 after correcting a circular, anaphoric, or duplicated label — the citation remains intact), and **12 discarded**, each decision recorded with the reason.
-- **The rule that this preserves**: every citation verified against the source, every interpretation accepted by a human. The model can find; it cannot assert.
-- **What the gate does not catch**, and therefore human judgment continues: a real citation that does not sustain the edge. Of the 46 verified, 11 fell exactly there — `CPU ← Intel 8080` is an instance, not a composition; `ALU ← arithmetic operations` is a function, not pieces; and one carried as warrant the sentence *"Much of this module should look familiar:"*, which asserts nothing.
-- **The translation also has an owner.** The English is derived from the Portuguese by a local model, block by block, with the table keyed by hash of the original. Where the machine did not decide, a person decided, and **the decision is written in the table** — including why. Example: the four field labels came out in six variants, and `onde se trava` became *"where it locks"* in seven of the nine steps. There "travar" is the student getting stuck, not a lock.
-- No network, no telemetry, no dependency. The page opens offline.
-- The books **are not** in this repository: they are third-party work and remain outside.
+- **Edges come from two books**, read: Petzold, *Code* (2nd ed.) and Abelson & Sussman, *SICP* (2nd ed.). The citations appear under fair use, with source and chapter, and belong to their authors.
+- **9 edges between steps, supported by 11 citations**, and **24 constructions verified** — pieces made of pieces from the same layer.
+- **An edge has two independent witnesses** — `register → register machine`. Petzold builds the machine from checks; SICP defines it as data paths plus controller and declares that its diagram corresponds to *"a machine that could be built from electrical components"*. The two arrive from opposite sides at the same object.
+- **How the edges enter, since 27/08/2026.** A local model sweeps the chapter and **proposes** candidates — it is a prospector, never an author. Each candidate carries the sentence that would support it, and the check compares that sentence **character by character** against the English original; whatever does not match dies there, without costing a human reading. What survives has its citation proven and is **still not an edge**: it goes to human judgment, item by item, and only then does it rise — and most of what passes the literal check still does not become an edge. Every decision is recorded with its reason.
+.
 
 ## Why This Way
 
-A computation map generated by a model costs an afternoon and seems complete. The problem appears later: in the sibling map of this house, the entries were written by a local model and one of them claims, published until today, that two sets with the same elements can be different. It is false, and it passed because no one read it.
+A computation map written by a language model costs an afternoon and looks
+complete. The price shows up later: a plausible, wrong claim stays published
+because nobody read it, and nobody can tell which of the other sixty are in the
+same state.
 
-This page has **the same four fields as that map**, and that's why the difference matters. Here, none of them came from a model: those that describe the piece came from Petzold himself—who is a professor and has already answered *what it is* and *why it exists* in prose, with a chapter—and the passage goes along with each field. Those that say **where the student gets stuck** no book writes: they are the craft of those who teach, and they enter through the ritual of the house—proposal first, ratification later. The 17 were ratified on **2026-08-27**, and each one stamps the date. It's not decoration: it says **from when someone is responsible for the text**, and a field that changes after that reverts to being a proposal until it is reread.
+**No field here came from a model.** The ones that describe the piece came from
+Petzold himself — a teacher, who already answers *what it is* and *why it
+exists* in prose, with a chapter — and the passage travels with each field. The
+ones that say **where the student gets stuck** no book writes: they are the
+craft of someone who teaches, they enter unconfirmed, and they earn the date on
+which the author starts answering for them. The date is not decoration: it says
+**from when someone answers for the text**, and a field that changes after it
+stops being confirmed until it is read again.
 
-Here the order was inverted — the gate of human reading comes **before** the content —
+Here the order was inverted — the check of human reading comes **before** the content —
 and the price is this small map. The bet is that fifteen verifiable edges are worth more
 than sixty that are not.
 
@@ -151,10 +147,10 @@ beside it, when the piece can be constructed.
   **rewritten** — RAM and compiler — after correcting the source node they
   named incorrectly), one **was already in the repository** and the line was
   leftover, one was **downgraded** to a note (contrast is not an edge) and three
-  remain unsupported. Passing through the gate is not sustaining the edge, and
+  remain unsupported. Passing through the check is not sustaining the edge, and
   that's where the difference appears;
 - **12 craft fields in proposal**, in the six new steps, awaiting reading and
-  ratification;
+  confirmation;
 - **5 constructions verified that have not yet landed on any step** (PSW,
   oscillator, transistor, seven-segment decoder, speaker wire). The ones from the
   ALU and the three from the RAM landed on 27/08/2026, when these two became a

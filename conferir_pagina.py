@@ -4,7 +4,7 @@
 Roda:  CHROME=/caminho/do/chrome python3 conferir_pagina.py pt/index.html
        CONTROLE=1 ...  planta um elemento largo e exige que a sonda acuse
 
-Duas cicatrizes desta casa estão gravadas aqui:
+Duas cicatrizes deste projeto estão gravadas aqui:
 
   a RÉGUA — transbordo se mede contra `documentElement.clientWidth`, nunca
   contra `innerWidth`, que ESTICA junto com o defeito. Dois números crescendo

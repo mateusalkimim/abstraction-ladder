@@ -11,7 +11,7 @@
 # formas".
 
 # --- os selos de procedência (vocabulário FECHADO) ---
-ofício · proposta = craft · proposal
+ofício · não confirmado = craft · unconfirmed
 citação = citation
 síntese = synthesis
 
@@ -38,13 +38,13 @@ vai-um = carry
 escada de abstrações = abstraction ladder
 degrau = step
 warrant = warrant
-portão = gate
+conferência = check
 regime = regime
 segunda testemunha = second witness
 
-# --- ratificação (2026-08-27) ---
-ofício · ratificado = craft · ratified
-ratificado = ratified
+# --- confirmação do autor (2026-08-27) ---
+ofício · confirmado = craft · confirmed
+confirmado = confirmed
 proposta = proposal
 
 # --- degraus e regimes que entram em 2026-08-27 ---
@@ -53,7 +53,7 @@ assembler = assembler
 avaliador = evaluator
 paradigma = paradigm
 linguagem = language
-ofício · proposta = craft · proposal
+ofício · não confirmado = craft · unconfirmed
 
 # --- estados da lista do que falta ---
 lida — a frase não sustenta = read — the sentence does not sustain it
@@ -61,7 +61,7 @@ lida — reescrita, pronta para entrar = read — rewritten, ready to enter
 procurada — nenhuma frase encontrada = searched — no sentence found
 lida — não é aresta, é contraste = read — not an edge, a contrast
 # o SELO tem ponto médio; dentro de frase corrida, não
-campos de ofício em proposta = craft fields in proposal
+campos de ofício sem confirmação = unconfirmed craft fields
 memória (RAM) = memory (RAM)
 compilador = compiler
 acesso aleatório = random access

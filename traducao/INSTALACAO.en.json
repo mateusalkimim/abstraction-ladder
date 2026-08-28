@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-08-27 14:38:53",
+ "atualizado_em": "2026-08-28 11:32:51",
  "blocos": {
   "0a5c82562c": {
    "en": "# Installation",
@@ -57,6 +57,14 @@
    "qa": "ok",
    "tipo": "md"
   },
+  "8b42a3ee5f": {
+   "en": "Check that it still aborts, by deleting a citation on purpose and running it again — that is the negative control, and the same rule applies everywhere: a check that never failed is worth nothing.",
+   "modelo": "claude-opus-5",
+   "orfao": false,
+   "pt": "Confira que ele ainda aborta, apagando uma citação de propósito e rodando de\nnovo — é o controle negativo, e vale a mesma regra em toda parte: conferência que\nnunca reprovou não vale nada.\n",
+   "qa": "ok",
+   "tipo": "md"
+  },
   "9082264b75": {
    "en": "There is no installation to **use**: `index.html` is a self-contained page, opens offline in any modern browser.",
    "modelo": "phi-4",
@@ -86,14 +94,6 @@
    "modelo": "phi-4",
    "orfao": false,
    "pt": "Só quem for **editar** o mapa precisa disto. Python 3, biblioteca padrão, nenhum\npacote.",
-   "qa": "ok",
-   "tipo": "md"
-  },
-  "9cb0113cbd": {
-   "en": "Check that it still aborts, by deleting a citation on purpose and running again — this is the negative control, and the same rule applies to the rest of the house: a gate that never failed is worthless.",
-   "modelo": "phi-4",
-   "orfao": false,
-   "pt": "Confira que ele ainda aborta, apagando uma citação de propósito e rodando de\nnovo — é o controle negativo, e vale a mesma regra do resto da casa: portão que\nnunca reprovou não vale nada.\n",
    "qa": "ok",
    "tipo": "md"
   },

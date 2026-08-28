@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-08-28 10:44:19",
+ "atualizado_em": "2026-08-28 11:30:19",
  "blocos": {
   "01a7ad924e": {
    "en": "Hold R",
@@ -73,14 +73,6 @@
    "qa": "ok",
    "tipo": "prosa"
   },
-  "073196ddfe": {
-   "en": "where it appears<span class=\"selo oficio\">craft · ratified</span>",
-   "modelo": "phi-4",
-   "orfao": false,
-   "pt": "onde aparece<span class=\"selo oficio\">ofício · ratificado</span>",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
   "073d7ee723": {
    "en": "<b>operating system ← machine</b><span>Petzold chap. 26</span>",
    "modelo": "phi-4",
@@ -89,28 +81,11 @@
    "qa": "ok",
    "tipo": "prosa"
   },
-  "08f013c1fc": {
-   "en": "<b>compiler ← assembler and evaluator</b><span>SICP §5.5</span>",
-   "modelo": "phi-4",
-   "orfao": true,
-   "pt": "<b>compilador ← assembler e avaliador</b><span>SICP §5.5</span>",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
   "09261eb38b": {
    "en": "The circuit that resembles",
    "modelo": "phi-4",
    "orfao": false,
    "pt": "O circuito que lembra",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
-  "0caadb959a": {
-   "decisao_humana": "O modelo grudou um <details class=\"proc\"> no fim do bloco, que não existe no original — ele copia o padrão dos blocos vizinhos. Removido deterministicamente; o texto traduzido não foi tocado.",
-   "en": "<b>compiler ← evaluator</b><span>SICP §5.5</span>",
-   "modelo": "phi-4",
-   "orfao": true,
-   "pt": "<b>compilador ← avaliador</b><span>SICP §5.5</span>",
    "qa": "ok",
    "tipo": "prosa"
   },
@@ -145,15 +120,6 @@
    "pt": "histórico — R e S soltos (0,0), e mesmo assim Q difere:",
    "qa": "ok",
    "tipo": "js"
-  },
-  "0f1dbab2ed": {
-   "decisao_humana": "O modelo grudou um <details class=\"proc\"> no fim do bloco, que não existe no original — ele copia o padrão dos blocos vizinhos. Removido deterministicamente; o texto traduzido não foi tocado.",
-   "en": "<b>memory (RAM) ← flip-flop, decoder, and selector</b><span>Petzold chap. 19</span>",
-   "modelo": "phi-4",
-   "orfao": true,
-   "pt": "<b>memória (RAM) ← flip-flop, decodificador e seletor</b><span>Petzold cap. 19</span>",
-   "qa": "ok",
-   "tipo": "prosa"
   },
   "0f6f83216d": {
    "en": "prewired gate bank <span>&larr; relays</span>",
@@ -226,14 +192,6 @@
    "qa": "ok",
    "tipo": "prosa"
   },
-  "139e77183d": {
-   "en": "No textbook, there's no mention of where the student gets stuck; that comes from the classroom. This field is the author's didactic judgment, <b>ratified on 2026-08-27</b> — the house's rite is proposal and ratification, and content is no different from a norm. The date indicates from when someone is responsible for the text; if it changes, it reverts to a proposal until it's reviewed again. It wasn't written by a model.",
-   "modelo": "phi-4",
-   "orfao": false,
-   "pt": "Nenhum livro escreve onde o aluno trava; isso vem da sala de aula. Este campo é julgamento didático do autor, <b>ratificado em 2026-08-27</b> — o rito da casa é proposta mais ratificação, e conteúdo não é diferente de norma. A data diz a partir de quando alguém responde pelo texto; se ele mudar, volta a ser proposta até ser relido. Ele não foi escrito por modelo.",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
   "14b85fa8e8": {
    "en": "loading",
    "modelo": "phi-4",
@@ -264,14 +222,6 @@
    "pt": "o instrumento não subiu neste navegador (",
    "qa": "ok",
    "tipo": "js"
-  },
-  "15e315439d": {
-   "en": "why it exists<span class=\"selo oficio\">craft · ratified</span>",
-   "modelo": "phi-4",
-   "orfao": false,
-   "pt": "por que existe<span class=\"selo oficio\">ofício · ratificado</span>",
-   "qa": "ok",
-   "tipo": "prosa"
   },
   "165daeb2b1": {
    "en": null,
@@ -326,29 +276,12 @@
    "qa": "ok",
    "tipo": "prosa"
   },
-  "18a8307884": {
-   "en": "And the 5 instruments exist because citation is warrant of  \nsecond hand: it asks you to believe a book that you might not have in hand.  \nThe instrument constructs the piece in front of you. When the two agree, the arrow  \nis supported by a published source <b>and</b> by something that moves —  \nit is the highest standard that this house can achieve.",
-   "modelo": "phi-4",
-   "orfao": false,
-   "pt": "E os 5 instrumentos existem porque citação é warrant de\nsegunda mão: ela pede que você acredite num livro que talvez não tenha em mãos.\nO instrumento constrói a peça na sua frente. Quando os dois concordam, a seta\nestá sustentada por uma fonte publicada <b>e</b> por uma coisa que roda —\né o padrão mais alto que esta casa consegue.",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
   "1998c3c150": {
    "decisao_humana": "O modelo grudou um <details class=\"proc\"> no fim do bloco, que não existe no original — ele copia o padrão dos blocos vizinhos. Removido deterministicamente; o texto traduzido não foi tocado.",
    "en": "The sentence says that <i>“an oscillator is sometimes referred to as a clock”</i> — this is identity, not composition. A clock is not <b>made</b> of an oscillator according to this sentence; it is <b>called</b> that. The published reference said chap. 18 and has been corrected.",
    "modelo": "phi-4",
    "orfao": false,
    "pt": "A frase diz que <i>“an oscillator is sometimes referred to as a clock”</i> — isso é identidade, não composição. Um relógio não é <b>feito</b> de oscilador segundo esta frase; ele é <b>chamado</b> assim. A referência publicada dizia cap. 18 e está corrigida.",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
-  "19d1997e67": {
-   "decisao_humana": "Rótulo estrutural: os quatro campos são os mesmos nos 9 degraus e têm de ler igual. A tradução bloco a bloco produziu seis variantes, e 'where it locks' inverteu o sentido ('travar' aqui é o aluno empacar, não fechadura). Vocabulário fechado, fixado em 2026-08-27.",
-   "en": "where you get stuck<span class=\"selo oficio\">craft · proposal</span>",
-   "modelo": "phi-4",
-   "orfao": false,
-   "pt": "onde se trava<span class=\"selo oficio\">ofício · proposta</span>",
    "qa": "ok",
    "tipo": "prosa"
   },
@@ -368,14 +301,6 @@
    "pt": "<tspan x=\"470\" dy=\"0\">registrador (latch)</tspan>",
    "qa": "ok",
    "tipo": "svg"
-  },
-  "1a31e3999c": {
-   "en": "A computation map generated by a model takes an afternoon and  \nseems complete. The problem appears later: in the twin map of this house, the  \n<a href=\"https://github.com/mateusalkimim/math-prerequisite-map\">math-prerequisite-map</a>,  \nthe entries were written by a local model and one of them claims, in the air until  \ntoday, that two sets with the same elements can be different. It's false, and passed because no one read it.",
-   "modelo": "phi-4",
-   "orfao": false,
-   "pt": "Um mapa de computação gerado por modelo custa uma tarde e\nparece completo. O problema aparece depois: no mapa irmão desta casa, o\n<a href=\"https://github.com/mateusalkimim/math-prerequisite-map\">math-prerequisite-map</a>,\nos verbetes foram escritos por um modelo local e um deles afirma, no ar até\nhoje, que dois conjuntos com os mesmos elementos podem ser diferentes. É falso,\ne passou porque ninguém leu.",
-   "qa": "ok",
-   "tipo": "prosa"
   },
   "1a5c8fc12b": {
    "en": "The name is misleading: <b>“random” does not mean unpredictable</b> — it means that any position costs the same, in any order. The opposite of it is the tape, which requires going through everything until you arrive. Whoever reads “random” as “at random” loses the only property that gives the piece its name.<details class=\"proc\">",
@@ -399,14 +324,6 @@
    "pt": "frequência do anterior, e o binário é a fiação.",
    "qa": "ok",
    "tipo": "js"
-  },
-  "1d80f30415": {
-   "en": "From electromagnet to machine of latches, one step at a time.  \nEach step responds <b>what it is</b>, <b>why it exists</b>, <b>where it appears</b> and  \n<b>where it locks</b> — and 5 of the passages you do not need to accept by  \nword: they <b>assemble the piece on this screen</b>.",
-   "modelo": "phi-4",
-   "orfao": true,
-   "pt": "Do eletroímã à máquina de registradores, um degrau de cada vez.\nCada degrau responde <b>o que é</b>, <b>por que existe</b>, <b>onde aparece</b> e\n<b>onde se trava</b> — e 5 das passagens você não precisa aceitar de\npalavra: elas <b>montam a peça aqui na tela</b>.",
-   "qa": "ok",
-   "tipo": "prosa"
   },
   "1fc63a8bfa": {
    "en": "<tspan x=\"470\" dy=\"0\">relay</tspan>",
@@ -613,14 +530,6 @@
    "qa": "ok",
    "tipo": "prosa"
   },
-  "30d1577cec": {
-   "en": "No book writes where the student locks; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the rite of the house is norm = proposal + ratification, and content is not different. It was not written by a model.",
-   "modelo": "phi-4",
-   "orfao": true,
-   "pt": "Nenhum livro escreve onde o aluno trava; isso vem da sala de aula. Este campo é julgamento didático do autor e está em <b>PROPOSTA</b> — o rito da casa é norma = proposta + ratificação, e conteúdo não é diferente. Ele não foi escrito por modelo.",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
   "3101c9af5b": {
    "en": "The <code>PC</code> that the debugger shows paused on a line. The digital clock on the wall. And the loop index, one layer above.<details class=\"proc\">",
    "modelo": "phi-4",
@@ -660,14 +569,6 @@
    "pt": "“The oscillators in real computers are somewhat more sophisticated, however, consisting of quartz crystals wired in such a way that they vibrate very consistently and very quickly.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 17 — Feedback and Flip-Flops</cite>",
    "tipo": "prosa"
   },
-  "343d847169": {
-   "en": "<b>8×8 RAM array</b> &larr; eight 8×1 RAM arrays",
-   "modelo": "phi-4",
-   "orfao": true,
-   "pt": "<b>8×8 RAM array</b> &larr; eight 8×1 RAM arrays",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
   "353f0acb2d": {
    "en": "Because the adder alone solves a column. An 8-bit processor needs to handle 16, 24, 32-bit numbers — and that's adding byte by byte, from the least significant up, each carrying the carry from the previous one. The ALU is the adder <b>with the machine around it</b> that makes this sequence.  \n<details class=\"proc\">",
    "modelo": "phi-4",
@@ -704,14 +605,6 @@
    "ja_en": true,
    "orfao": false,
    "pt": "“Before it can generate the instruction execution procedures, the assembler must know what all the labels refer to, so it begins by scanning the controller text to separate the labels from the instructions.”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · SICP §5.2.2 — The Assembler</cite>",
-   "tipo": "prosa"
-  },
-  "395f5c58ed": {
-   "en": "where you get stuck<span class=\"selo oficio\">craft · ratified</span>",
-   "modelo": "phi-4",
-   "orfao": false,
-   "pt": "onde se trava<span class=\"selo oficio\">ofício · ratificado</span>",
-   "qa": "ok",
    "tipo": "prosa"
   },
   "3c1fcfacde": {
@@ -799,6 +692,15 @@
    "ja_en": true,
    "orfao": false,
    "pt": "“The entire arithmetic logic unit combines the Add/Subtract module and the Logic module with some rather messy support circuity:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 21 — The Arithmetic Logic Unit</cite>",
+   "tipo": "prosa"
+  },
+  "439b8f2225": {
+   "en": "why it exists<span class=\"selo oficio\">craft · confirmed</span>",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "por que existe<span class=\"selo oficio\">ofício · confirmado</span>",
+   "qa": "ok",
+   "reaproveitado_de": "por que existe<span class=\"selo oficio\">ofício · ratificado<",
    "tipo": "prosa"
   },
   "45c7191373": {
@@ -1014,19 +916,19 @@
    "qa": "ok",
    "tipo": "js"
   },
-  "5d282f82cd": {
-   "en": "This list changed on 27/08/2026. Before, it said only <i>“nobody opened yet”</i>. The ten were read, and the reading showed that <b>“not read” and “read and does not sustain” are different states</b>—and that hiding the difference is the same lie as hiding the entire list. Of the ten: <b>three became an edge</b>, <b>one was already in the repository</b> (the line was redundant), and these six remained, each with the reason. None of them failed at the citation literal gate: all ten passed character by character. <b>Passing the gate does not sustain the edge</b>, and it is exactly here that the difference appears.",
-   "modelo": "phi-4",
-   "orfao": false,
-   "pt": "Esta lista mudou em 27/08/2026. Antes ela dizia só <i>“ninguém\nabriu ainda”</i>. As dez foram lidas, e a leitura mostrou que <b>“não lido” e\n“lido e não sustenta” são estados diferentes</b> — e que esconder a diferença é\na mesma mentira que esconder a lista inteira. Das dez: <b>três viraram aresta</b>,\n<b>uma já estava no repositório</b> (a linha sobrava), e estas seis ficaram, cada\numa com o motivo. Nenhuma delas reprovou no portão da citação literal: todas as\ndez passaram caractere a caractere. <b>Passar no portão não é sustentar a\naresta</b>, e é exatamente aqui que a diferença aparece.",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
   "5d9b7ce306": {
    "en": "electromagnet",
    "modelo": "phi-4",
    "orfao": false,
    "pt": "eletroímã",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
+  "5dd3e8d91d": {
+   "en": "No book writes where the student gets stuck; that comes from the classroom. This field is the author's teaching judgment, <b>confirmed by the writer on 2026-08-27</b>. The date says from when someone answers for the text; if the text changes, the field stops being confirmed until it is read again. It was not written by a model.",
+   "modelo": "claude-opus-5",
+   "orfao": false,
+   "pt": "Nenhum livro escreve onde o aluno trava; isso vem da sala de aula. Este campo é julgamento didático do autor, <b>confirmado por quem escreve em 2026-08-27</b>. A data diz a partir de quando alguém responde pelo texto; se o texto mudar, o campo deixa de estar confirmado até ser relido. Ele não foi escrito por modelo.",
    "qa": "ok",
    "tipo": "prosa"
   },
@@ -1262,22 +1164,6 @@
    "qa": "ok",
    "tipo": "js"
   },
-  "6eae20c66a": {
-   "en": "<b>How to read.</b> The map ascends: the electromagnet is the ground, the machine is the top — and the dotted golden line marks the place where the subject <b>stops being electricity and becomes logic</b>. The node's color indicates the regime; the key is right below it. A solid arrow has a verified citation against the book; a dashed arrow is something no one has read yet, and it is drawn because <b>a map that hides what is missing lies about its own size</b>.<br><br>  \nWithin each step, the four fields come with a <b>stamp of origin</b>:  \n<span class=\"selo lido\">citation</span> when the text is from the book,  \n<span class=\"selo lido\">synthesis</span> when it is a summary of a cited passage — and the passage opens beside it, so you can check if the summary is honest —, and  \n<span class=\"selo oficio\">craft · ratified</span> when it is a judgment of the teacher, which no book writes — and each one brings <b>the date when the author stood by it</b>, because a field that changes after that date reverts to being a proposal.  \n<b>There is no stamp for “a model wrote”</b>, and it is on purpose: see the last section.",
-   "modelo": "phi-4",
-   "orfao": false,
-   "pt": "\n<b>Como ler.</b> O mapa sobe: o eletroímã é o chão, a máquina é o topo — e a\nlinha pontilhada dourada marca o lugar em que o assunto <b>deixa de ser\neletricidade e passa a ser lógica</b>. A cor do nó diz o regime; a chave está\nlogo abaixo dele. Seta cheia tem citação conferida contra o livro; seta\ntracejada é o que ninguém leu ainda, e ela está desenhada porque\n<b>mapa que esconde o que falta mente sobre o próprio tamanho</b>.<br><br>\nDentro de cada degrau, os quatro campos vêm com um <b>selo de procedência</b>:\n<span class=\"selo lido\">citação</span> quando o texto é do livro,\n<span class=\"selo lido\">síntese</span> quando é resumo de passagem citada — e a\npassagem abre ao lado, para você conferir se o resumo é honesto —, e\n<span class=\"selo oficio\">ofício · ratificado</span> quando é julgamento de quem\nensina, que nenhum livro escreve — e cada um traz <b>a data em que o autor\nrespondeu por ele</b>, porque campo que mudar depois dela volta a ser proposta.\n<b>Não existe selo para “um modelo escreveu”</b>, e é de propósito: veja a\núltima seção.\n",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
-  "6f0120fc67": {
-   "en": "The published statement said <i>“← register”</i> and the book does not say that: it says <i>“this configuration of flip-flops, decoder, and selector is sometimes known as read/write memory”</i>. The edge exists and is supported — with the correct origin node. Ready to enter.",
-   "modelo": "phi-4",
-   "orfao": true,
-   "pt": "A afirmação publicada dizia <i>“← registrador”</i> e o livro não diz isso: diz <i>“this configuration of flip-flops, decoder, and selector is sometimes known as read/write memory”</i>. A aresta existe e está sustentada — com o nó de origem certo. Pronta para entrar.",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
   "6f39806c70": {
    "en": "The contrast is well supported — <i>“compared with interpretation, compilation can provide a great increase in the efficiency of program execution”</i> — but <b>×</b> is not a relationship that this ladder knows how to draw: it connects what is done with what. It stays as a note, not as an arrow. The published reference said §5.5.7 and is corrected.",
    "modelo": "phi-4",
@@ -1332,14 +1218,6 @@
    "qa": "ok",
    "tipo": "prosa"
   },
-  "72d3cad4b6": {
-   "en": "<b>16×8 RAM array</b> &larr; 16 of these 16×8 memory arrays",
-   "modelo": "phi-4",
-   "orfao": true,
-   "pt": "<b>16×8 RAM array</b> &larr; 16 of these 16×8 memory arrays",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
   "73cc4d2993": {
    "en": "The loop that decides what an expression means — described in terms of operations on registers and stacks, and therefore executable by the register machine itself.<details class=\"proc\">",
    "modelo": "phi-4",
@@ -1353,14 +1231,6 @@
    "modelo": "phi-4",
    "orfao": false,
    "pt": "é feito de <b>relé</b> — construção, e a fonte diz:",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
-  "7514237d8e": {
-   "en": "The new edges enter through a funnel: a local model <b>proposes</b>  \ncandidates, a gate checks the phrase character by character against the book, and what survives only becomes an edge after <b>human judgment</b>. In the first round: 48 proposed, 46 passed through the gate, 34 accepted. The model can find; it cannot assert.",
-   "modelo": "phi-4",
-   "orfao": false,
-   "pt": "As arestas novas entram por um funil: um modelo local <b>propõe</b>\ncandidatos, um portão confere a frase caractere a caractere contra o livro, e o\nque sobrevive só vira aresta depois de <b>julgamento humano</b>. Na primeira\nrodada: 48 propostos, 46 passaram no portão, 34 aceitos. O modelo pode achar;\nele não pode afirmar.",
    "qa": "ok",
    "tipo": "prosa"
   },
@@ -1395,14 +1265,6 @@
    "pt": "<tspan x=\"470\" dy=\"0\">avaliador</tspan>",
    "qa": "ok",
    "tipo": "svg"
-  },
-  "77cc793e3c": {
-   "en": "<b>paradigm as variation of the evaluator</b><span>SICP §§4.2–4.4</span>",
-   "modelo": "phi-4",
-   "orfao": true,
-   "pt": "<b>paradigma como variação do avaliador</b><span>SICP §§4.2–4.4</span>",
-   "qa": "ok",
-   "tipo": "prosa"
   },
   "78aa38f721": {
    "en": "from here up, the subject is logic, not electricity",
@@ -1447,14 +1309,6 @@
    "modelo": "phi-4",
    "orfao": false,
    "pt": "É de 1918, dos físicos de rádio Eccles e Jordan — anterior ao computador. Hoje: cada bit de cada registrador, e o antitrepidação de todo botão físico que você aperta.<details class=\"proc\">",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
-  "7c518c730c": {
-   "en": "These 5 constructions passed through the gate of literal citation, but the step where they land has not yet been read — so they wait here, in view, instead of entering the ladder for convenience.",
-   "modelo": "phi-4",
-   "orfao": false,
-   "pt": "Estas 5 construções passaram no portão da\ncitação literal, mas o degrau em que elas pousam ainda não foi lido — então elas\nesperam aqui, à vista, em vez de entrar na escada por conveniência.",
    "qa": "ok",
    "tipo": "prosa"
   },
@@ -1505,14 +1359,6 @@
    "pt": "agora eles discordam: nível = ",
    "qa": "ok",
    "tipo": "js"
-  },
-  "829076927f": {
-   "en": "No book writes where the student gets stuck; that comes from the classroom. This field is a didactic judgment by the author, <b>ratified by him on 2026-08-27</b> — the house's ritual is proposal plus ratification, and content is no different from a norm. The date indicates from when someone stands by the text; if it changes, it reverts to being a proposal until it is reread. It was not written by a model.",
-   "modelo": "phi-4",
-   "orfao": true,
-   "pt": "Nenhum livro escreve onde o aluno trava; isso vem da sala de aula. Este campo é julgamento didático do autor, <b>ratificado por ele em 2026-08-27</b> — o rito da casa é proposta mais ratificação, e conteúdo não é diferente de norma. A data diz a partir de quando alguém responde pelo texto; se ele mudar, volta a ser proposta até ser relido. Ele não foi escrito por modelo.",
-   "qa": "ok",
-   "tipo": "prosa"
   },
   "82ed1302db": {
    "en": null,
@@ -1646,12 +1492,13 @@
    "qa": "ok",
    "tipo": "js"
   },
-  "8d5ff55973": {
-   "en": "<b>electromagnet ← current and iron</b><span>Petzold chap. 6</span>",
+  "8df814abb6": {
+   "en": "where you get stuck<span class=\"selo oficio\">craft · confirmed</span>",
    "modelo": "phi-4",
-   "orfao": true,
-   "pt": "<b>eletroímã ← corrente e ferro</b><span>Petzold cap. 6</span>",
+   "orfao": false,
+   "pt": "onde se trava<span class=\"selo oficio\">ofício · confirmado</span>",
    "qa": "ok",
+   "reaproveitado_de": "onde se trava<span class=\"selo oficio\">ofício · ratificado</",
    "tipo": "prosa"
   },
   "8e2c596afe": {
@@ -1659,14 +1506,6 @@
    "modelo": "phi-4",
    "orfao": false,
    "pt": "Porque o texto do controlador tem <b>rótulos</b>, e um rótulo é uma promessa de endereço que ainda não existe. Antes de gerar qualquer execução, o assembler varre o texto inteiro só para descobrir a que posição cada rótulo se refere. É essa varredura que ele existe para fazer.<details class=\"proc\">",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
-  "8e417c6b17": {
-   "en": "<b>assembler ← register machine</b><span>SICP §5.2</span>",
-   "modelo": "phi-4",
-   "orfao": true,
-   "pt": "<b>assembler ← máquina de registradores</b><span>SICP §5.2</span>",
    "qa": "ok",
    "tipo": "prosa"
   },
@@ -1686,12 +1525,13 @@
    "qa": "ok",
    "tipo": "prosa"
   },
-  "9067472157": {
-   "en": "<b>memory (RAM) ← register</b><span>Petzold chap. 19</span>",
+  "900d54f4b3": {
+   "en": "<b>How to read.</b> The map ascends: the electromagnet is the ground, the machine is the top — and the dotted golden line marks the place where the subject <b>stops being electricity and becomes logic</b>. The node's color indicates the regime; the key is right below it. A solid arrow has a verified citation against the book; a dashed arrow is something no one has read yet, and it is drawn because <b>a map that hides what is missing lies about its own size</b>.<br><br>  \nWithin each step, the four fields come with a <b>stamp of origin</b>:  \n<span class=\"selo lido\">citation</span> when the text is from the book,  \n<span class=\"selo lido\">synthesis</span> when it is a summary of a cited passage — and the passage opens beside it, so you can check if the summary is honest —, and  \n<span class=\"selo oficio\">craft · confirmed</span> when it is a judgment of the teacher, which no book writes — and each one brings <b>the date when the author stood by it</b>, because a field that changes after that date reverts to being a proposal.  \n<b>There is no stamp for “a model wrote”</b>, and it is on purpose: see the last section.",
    "modelo": "phi-4",
-   "orfao": true,
-   "pt": "<b>memória (RAM) ← registrador</b><span>Petzold cap. 19</span>",
+   "orfao": false,
+   "pt": "\n<b>Como ler.</b> O mapa sobe: o eletroímã é o chão, a máquina é o topo — e a\nlinha pontilhada dourada marca o lugar em que o assunto <b>deixa de ser\neletricidade e passa a ser lógica</b>. A cor do nó diz o regime; a chave está\nlogo abaixo dele. Seta cheia tem citação conferida contra o livro; seta\ntracejada é o que ninguém leu ainda, e ela está desenhada porque\n<b>mapa que esconde o que falta mente sobre o próprio tamanho</b>.<br><br>\nDentro de cada degrau, os quatro campos vêm com um <b>selo de procedência</b>:\n<span class=\"selo lido\">citação</span> quando o texto é do livro,\n<span class=\"selo lido\">síntese</span> quando é resumo de passagem citada — e a\npassagem abre ao lado, para você conferir se o resumo é honesto —, e\n<span class=\"selo oficio\">ofício · confirmado</span> quando é julgamento de quem\nensina, que nenhum livro escreve — e cada um traz <b>a data em que o autor\nrespondeu por ele</b>, porque campo que mudar depois dela deixa de estar\nconfirmado.\n<b>Não existe selo para “um modelo escreveu”</b>, e é de propósito: veja a\núltima seção.\n",
    "qa": "ok",
+   "reaproveitado_de": "<b>Como ler.</b> O mapa sobe: o eletroímã é o chão, a máquin",
    "tipo": "prosa"
   },
   "91763e9327": {
@@ -1890,40 +1730,6 @@
    "qa": "ok",
    "tipo": "prosa"
   },
-  "a2aa97c96e": {
-   "en": "current and iron",
-   "modelo": "phi-4",
-   "orfao": true,
-   "pt": "corrente e ferro",
-   "qa": "ok",
-   "tipo": "svg"
-  },
-  "a38f85399e": {
-   "en": "No book writes where the student gets stuck; that comes from the classroom. This field is the didactic judgment of the author and is in <b>PROPOSAL</b> — the house ritual is proposal plus ratification, and content is no different from norm. It wasn't written by model.",
-   "modelo": "phi-4",
-   "orfao": false,
-   "pt": "Nenhum livro escreve onde o aluno trava; isso vem da sala de aula. Este campo é julgamento didático do autor e está em <b>PROPOSTA</b> — o rito da casa é proposta mais ratificação, e conteúdo não é diferente de norma. Ele não foi escrito por modelo.",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
-  "a39d42b1b6": {
-   "decisao_humana": "'ofício · proposta' é vocabulário da casa e o modelo o deixou intacto. Em inglês o selo diz de onde o campo veio: não de um livro, mas da prática de quem ensina — 'craft · proposal'. Decidido em 2026-08-27, não derivado por modelo.",
-   "en": "where it appears<span class=\"selo oficio\">craft · proposal</span>",
-   "modelo": "phi-4",
-   "orfao": false,
-   "pt": "onde aparece<span class=\"selo oficio\">ofício · proposta</span>",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
-  "a3b7acc0e1": {
-   "decisao_humana": "'ofício · proposta' é vocabulário da casa e o modelo o deixou intacto. Em inglês o selo diz de onde o campo veio: não de um livro, mas da prática de quem ensina — 'craft · proposal'. Decidido em 2026-08-27, não derivado por modelo.",
-   "en": "why it exists<span class=\"selo oficio\">craft · proposal</span>",
-   "modelo": "phi-4",
-   "orfao": true,
-   "pt": "por que existe<span class=\"selo oficio\">ofício · proposta</span>",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
   "a3bf942bdb": {
    "en": "different: it's the circuit reminding.",
    "modelo": "phi-4",
@@ -1956,14 +1762,6 @@
    "qa": "ok",
    "tipo": "js"
   },
-  "a506306d89": {
-   "en": "<b>instruction ← control signals</b><span>Petzold caps. 23–24</span>",
-   "modelo": "phi-4",
-   "orfao": true,
-   "pt": "<b>instrução ← sinais de controle</b><span>Petzold caps. 23–24</span>",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
   "a561cfaf00": {
    "en": null,
    "ja_en": true,
@@ -1986,19 +1784,20 @@
    "pt": "“The next logic gate requires two relays that are wired in parallel, like this:”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 8 — Relays and Gates</cite>",
    "tipo": "prosa"
   },
+  "a822066201": {
+   "en": "No book writes where the student gets stuck; that comes from the classroom. This field is the author's teaching judgment and <b>has not been confirmed yet</b>: it is missing the date on which the writer starts to answer for this text. It was not written by a model.",
+   "modelo": "claude-opus-5",
+   "orfao": false,
+   "pt": "Nenhum livro escreve onde o aluno trava; isso vem da sala de aula. Este campo é julgamento didático do autor e <b>ainda não foi confirmado</b>: falta a data em que quem escreve passa a responder por este texto. Ele não foi escrito por modelo.",
+   "qa": "ok",
+   "tipo": "prosa"
+  },
   "a94eb368ba": {
    "en": "The start of your car, the contactor for the air conditioner, the control panel of a warehouse's automation. And, historically, the entire computer. <details class=\"proc\">",
    "modelo": "phi-4",
    "orfao": false,
    "pt": "A partida do seu carro, o contator do ar-condicionado, o painel de automação de um galpão. E, historicamente, o computador inteiro.<details class=\"proc\">",
    "qa": "ok",
-   "tipo": "prosa"
-  },
-  "a95c317393": {
-   "en": null,
-   "ja_en": true,
-   "orfao": true,
-   "pt": "<b>the entire arithmetic logic unit</b> &larr; the Add/Subtract module and the Logic module",
    "tipo": "prosa"
   },
   "aa3fe03b76": {
@@ -2102,22 +1901,6 @@
    "qa": "ok",
    "tipo": "js"
   },
-  "baf73f76ce": {
-   "en": "This page has the same four fields as that map, and that's why the difference matters: here <b>none of them came from a model</b>. The ones that describe the piece came from Petzold himself, who is a professor and already answers “what it is” and “why it exists” in prose, with a chapter — the passage goes along with each field. The ones that say <b>where the student gets stuck</b> no book writes: they are the judgment of the teacher, enter marked as <b>proposal</b> and await ratification.",
-   "modelo": "phi-4",
-   "orfao": false,
-   "pt": "Esta página tem os mesmos quatro campos daquele mapa, e é por\nisso que a diferença importa: aqui <b>nenhum deles saiu de um modelo</b>. Os que\ndescrevem a peça saíram do próprio Petzold, que é professor e já responde “o que\né” e “por que existe” em prosa, com capítulo — a passagem vai junto de cada\ncampo. Os que dizem <b>onde o aluno trava</b> nenhum livro escreve: são\njulgamento de quem ensina, entram marcados como <b>proposta</b> e esperam\nratificação.",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
-  "bb38495035": {
-   "en": "read — rewritten, ready to enter",
-   "modelo": "phi-4",
-   "orfao": true,
-   "pt": "lida — reescrita, pronta para entrar",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
   "bbe662c0c3": {
    "en": "<span class=\"regime r-comb\">combinational</span><span class=\"nivel\">level 2</span>",
    "modelo": "phi-4",
@@ -2165,6 +1948,15 @@
    "pt": "“The output of the NOR gate on the left is an input to the NOR gate on the right, and the output of that NOR gate is an input to the first NOR gate. This is a type of feedback. Indeed, just as in the oscillator, an output circles back to become an input.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 17 — Feedback and Flip-Flops</cite>",
    "tipo": "prosa"
   },
+  "c2c2fa2c3e": {
+   "en": "These 5 constructions passed through the check of literal citation, but the step where they land has not yet been read — so they wait here, in view, instead of entering the ladder for convenience.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Estas 5 construções passaram na conferência\nliteral da citação, mas o degrau em que elas pousam ainda não foi lido — então elas\nesperam aqui, à vista, em vez de entrar na escada por conveniência.",
+   "qa": "ok",
+   "reaproveitado_de": "Estas 5 construções passaram no portão da citação literal, m",
+   "tipo": "prosa"
+  },
   "c2f934cb8c": {
    "en": "AND",
    "modelo": "phi-4",
@@ -2178,15 +1970,6 @@
    "modelo": "phi-4",
    "orfao": false,
    "pt": "Achar que o assembler “traduz palavra por palavra”. Ele não consegue: precisa de <b>duas passadas</b>, porque um salto para a frente aponta para um rótulo que ele ainda não viu. Quem não enxerga as duas passadas não entende por que montar é mais que substituir.<details class=\"proc\">",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
-  "c43b1a9b58": {
-   "decisao_humana": "O modelo verteu o mesmo selo de tres maneiras ao longo da pagina ('craft', 'profession', e 'ofício' intacto). Selo é vocabulário fechado: uma cadeia, sempre a mesma, senão o leitor acha que sao tres categorias diferentes. Uniformizado em 2026-08-27.",
-   "en": "<b>How to read.</b> The map rises: the electromagnet is the floor, the machine is the top — and the dotted golden line marks the place where the subject <b>stops being electricity and becomes logic</b>. The node's color indicates the regime; the key is right below it. A solid arrow has a citation checked against the book; a dashed arrow is what no one has read yet, and it is drawn because <b>a map that hides what is missing lies about its own size</b>.<br><br>  \nWithin each step, the four fields come with a <b>source label</b>: <span class=\"selo lido\">citation</span> when the text is from the book, <span class=\"selo lido\">synthesis</span> when it is a summary of a cited passage — and the passage opens to the side, so you can check if the summary is honest —, and <span class=\"selo oficio\">craft · proposal</span> when it is the judgment of the teacher, which no book writes. <b>There is no label for “a model wrote”</b>, and it is on purpose: see the last section.",
-   "modelo": "phi-4",
-   "orfao": true,
-   "pt": "\n<b>Como ler.</b> O mapa sobe: o eletroímã é o chão, a máquina é o topo — e a\nlinha pontilhada dourada marca o lugar em que o assunto <b>deixa de ser\neletricidade e passa a ser lógica</b>. A cor do nó diz o regime; a chave está\nlogo abaixo dele. Seta cheia tem citação conferida contra o livro; seta\ntracejada é o que ninguém leu ainda, e ela está desenhada porque\n<b>mapa que esconde o que falta mente sobre o próprio tamanho</b>.<br><br>\nDentro de cada degrau, os quatro campos vêm com um <b>selo de procedência</b>:\n<span class=\"selo lido\">citação</span> quando o texto é do livro,\n<span class=\"selo lido\">síntese</span> quando é resumo de passagem citada — e a\npassagem abre ao lado, para você conferir se o resumo é honesto —, e\n<span class=\"selo oficio\">ofício · proposta</span> quando é julgamento de quem\nensina, que nenhum livro escreve. <b>Não existe selo para “um modelo escreveu”</b>,\ne é de propósito: veja a última seção.\n",
    "qa": "ok",
    "tipo": "prosa"
   },
@@ -2209,14 +1992,6 @@
    "ja_en": true,
    "orfao": false,
    "pt": "“As you’ll recall, an 8-bit latch uses flip-flops to store an 8-bit value.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 20 — Automating Arithmetic</cite>",
-   "tipo": "prosa"
-  },
-  "c67acfd734": {
-   "en": "The published statement said <i>“← assembler and evaluator”</i>, and the assembler doesn't appear in the sentence: <i>“translates programs written in Scheme into sequences of instructions to be executed using the explicit-control evaluator machine’s data paths”</i>. The half that the book sustains is ready to enter; the other is not.",
-   "modelo": "phi-4",
-   "orfao": true,
-   "pt": "A afirmação publicada dizia <i>“← assembler e avaliador”</i>, e o assembler não aparece na frase: <i>“translates programs written in Scheme into sequences of instructions to be executed using the explicit-control evaluator machine’s data paths”</i>. A metade que o livro sustenta está pronta para entrar; a outra não.",
-   "qa": "ok",
    "tipo": "prosa"
   },
   "c764824095": {
@@ -2360,23 +2135,6 @@
    "qa": "ok",
    "tipo": "prosa"
   },
-  "d3a81c31f4": {
-   "decisao_humana": "Sigla do glossário: ULA (Unidade Lógica e Aritmética) é ALU em inglês. O bloco foi traduzido antes de o glossário existir e não voltou para a fila, porque o hash do português não mudou — sigla fica com a forma do idioma.",
-   "en": "<b>ALU ← adder and gates</b><span>Petzold cap. 21</span>",
-   "modelo": "phi-4",
-   "orfao": true,
-   "pt": "<b>ULA ← somador e portas</b><span>Petzold cap. 21</span>",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
-  "d4c09a42e1": {
-   "en": "What's left to read",
-   "modelo": "phi-4",
-   "orfao": true,
-   "pt": "O que falta ler",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
   "d51eddd7bb": {
    "decisao_humana": "Rótulo estrutural: os quatro campos são os mesmos nos 9 degraus e têm de ler igual. A tradução bloco a bloco produziu seis variantes, e 'where it locks' inverteu o sentido ('travar' aqui é o aluno empacar, não fechadura). Vocabulário fechado, fixado em 2026-08-27.",
    "en": "where it appears<span class=\"selo lido\">synthesis</span>",
@@ -2448,30 +2206,6 @@
    "ja_en": true,
    "orfao": false,
    "pt": "“we extend the Scheme evaluator to support a programming paradigm called nondeterministic computing by building into the evaluator a facility to support automatic search”<cite>Harold Abelson &amp; Gerald Jay Sussman, <i>Structure and Interpretation of Computer Programs</i>, 2ª ed. · SICP §4.3 — Variations on a Scheme: Nondeterministic Computing</cite>",
-   "tipo": "prosa"
-  },
-  "de3f96addf": {
-   "en": "These 8 constructions passed through the citation literal gate, but the step where they land has not yet been read — so they wait here, in view, instead of entering the ladder for convenience.",
-   "modelo": "phi-4",
-   "orfao": true,
-   "pt": "Estas 8 construções passaram no portão da\ncitação literal, mas o degrau em que elas pousam ainda não foi lido — então elas\nesperam aqui, à vista, em vez de entrar na escada por conveniência.",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
-  "de5f238c73": {
-   "en": "<b>interpretation × compilation</b><span>SICP §5.5.7</span>",
-   "modelo": "phi-4",
-   "orfao": true,
-   "pt": "<b>interpretação × compilação</b><span>SICP §5.5.7</span>",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
-  "de826d24a4": {
-   "en": "Why this way",
-   "modelo": "phi-4",
-   "orfao": false,
-   "pt": "Por que assim",
-   "qa": "ok",
    "tipo": "prosa"
   },
   "dea5f0e145": {
@@ -2630,14 +2364,6 @@
    "qa": "ok",
    "tipo": "js"
   },
-  "eb5230e407": {
-   "en": "<b>clock ← oscillator</b><span>Petzold cap. 18</span>",
-   "modelo": "phi-4",
-   "orfao": true,
-   "pt": "<b>relógio ← oscilador</b><span>Petzold cap. 18</span>",
-   "qa": "ok",
-   "tipo": "prosa"
-  },
   "ebad570e1e": {
    "en": null,
    "ja_en": true,
@@ -2677,20 +2403,13 @@
    "qa": "ok",
    "tipo": "js"
   },
-  "edd9dcc822": {
-   "en": "Each line here is an edge that the bibliography supports and that  \nnobody has opened yet. They enter when they are read, with the citation — not before.",
+  "ef1c54ebf5": {
+   "en": "where it appears<span class=\"selo oficio\">craft · confirmed</span>",
    "modelo": "phi-4",
-   "orfao": true,
-   "pt": "Cada linha aqui é uma aresta que a bibliografia sustenta e que\nninguém abriu ainda. Elas entram quando forem lidas, com a citação — não antes.",
+   "orfao": false,
+   "pt": "onde aparece<span class=\"selo oficio\">ofício · confirmado</span>",
    "qa": "ok",
-   "tipo": "prosa"
-  },
-  "ef28c06b45": {
-   "en": "<b>byte of memory</b> &larr; 8 bits of memory",
-   "modelo": "phi-4",
-   "orfao": true,
-   "pt": "<b>byte of memory</b> &larr; 8 bits of memory",
-   "qa": "ok",
+   "reaproveitado_de": "onde aparece<span class=\"selo oficio\">ofício · ratificado</s",
    "tipo": "prosa"
   },
   "efd02e1f6e": {
@@ -2708,14 +2427,6 @@
    "pt": "<tspan x=\"740\" dy=\"0\">contador</tspan>",
    "qa": "ok",
    "tipo": "svg"
-  },
-  "f106c5cb7d": {
-   "en": "These 9 constructions passed through the  \nliteral quotation gate, but the step where they land has not been read yet — so they  \nwait here, in view, instead of entering the ladder for convenience.",
-   "modelo": "phi-4",
-   "orfao": true,
-   "pt": "Estas 9 construções passaram no portão da\ncitação literal, mas o degrau em que elas pousam ainda não foi lido — então elas\nesperam aqui, à vista, em vez de entrar na escada por conveniência.",
-   "qa": "ok",
-   "tipo": "prosa"
   },
   "f15025a4c4": {
    "en": null,
@@ -2870,11 +2581,29 @@
    "qa": "ok",
    "tipo": "js"
   },
+  "fe6d0be8f3": {
+   "en": "where you get stuck<span class=\"selo oficio\">craft · confirmed</span>",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "onde se trava<span class=\"selo oficio\">ofício · não confirmado</span>",
+   "qa": "ok",
+   "reaproveitado_de": "onde se trava<span class=\"selo oficio\">ofício · ratificado</",
+   "tipo": "prosa"
+  },
   "fe9e426c5f": {
    "en": null,
    "ja_en": true,
    "orfao": false,
    "pt": "“It’s just the accumulator in one byte and the ALU flags in another byte.”<cite>Charles Petzold, <i>Code: The Hidden Language of Computer Hardware and Software</i>, 2ª ed. · cap. 24 — Loops, Jumps, and Calls</cite>",
+   "tipo": "prosa"
+  },
+  "fec4ece3a8": {
+   "en": "where it appears<span class=\"selo oficio\">craft · confirmed</span>",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "onde aparece<span class=\"selo oficio\">ofício · não confirmado</span>",
+   "qa": "ok",
+   "reaproveitado_de": "onde aparece<span class=\"selo oficio\">ofício · ratificado</s",
    "tipo": "prosa"
   }
  },

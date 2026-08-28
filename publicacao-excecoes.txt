@@ -12,5 +12,7 @@
 # 1a2b3c4d5e | "the operator" aqui e o produto interno, nao uma pessoa
 
 # --- varredura de 2026-08-28 ---
-35e13ce789 | objeto físico (tranca/campainha), não o instrumento (traducao/index.en.json)
-a4a760d400 | objeto físico (tranca/campainha), não o instrumento (pt/index.html)
+
+# --- redeclaradas em 2026-08-28, depois da limpeza (o sha segue o trecho) ---
+c79248ee34 | objeto físico (a tranca elétrica), não o instrumento
+054d93a57b | objeto físico (a tranca elétrica), não o instrumento

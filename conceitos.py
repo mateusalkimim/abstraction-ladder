@@ -10,11 +10,10 @@ componentes que nunca definia. Este arquivo paga essa dívida.
 
 A REGRA, e ela é o motivo de o arquivo não ter sido gerado por modelo
 ---------------------------------------------------------------------
-O mapa irmão desta casa, o `math-prerequisite-map`, tem estes mesmos quatro
-campos escritos por um phi-4 local, e **um deles afirma, no ar até hoje, que
-dois conjuntos com os mesmos elementos podem ser diferentes**. É falso, e passou
-porque ninguém leu. Copiar aquele molde traria para cá exatamente o defeito que
-este repositório existe para recusar.
+Quatro campos por peça é um molde barato de preencher com um modelo de
+linguagem: sai numa tarde e parece completo. O preço aparece depois, quando uma
+afirmação plausível e errada fica publicada porque ninguém a leu — e um campo
+sobre onde o aluno trava não tem como ser conferido contra fonte nenhuma.
 
 A saída, neste domínio, é que **não é preciso modelo nenhum**: o Petzold é
 professor, e o livro já responde *o que é* e *por que existe*, em prosa, com
@@ -24,9 +23,8 @@ capítulo. Então cada campo carrega a sua classe:
   (b) SÍNTESE — o campo é resumo meu de passagem citada, e a passagem vai junto
       para o leitor conferir se o resumo é honesto;
   (d) OFÍCIO  — julgamento didático de quem ensina. Nenhum livro escreve "onde
-      o aluno trava"; isso vem da sala de aula. **Entra como PROPOSTA e a
-      página o marca como tal até o operador ratificar** — rito da casa:
-      norma é proposta + ratificação, e conteúdo não é diferente.
+      o aluno trava"; isso vem da sala de aula. **Entra sem confirmação, e a
+      página o marca como tal até o autor responder por ele** com data.
 
 Não há classe para "o modelo escreveu". Se um campo não tem fonte nem dono, ele
 não entra — fica em branco, e a página diz que está em branco.
@@ -35,14 +33,14 @@ Fonte da prosa citada: o `livro.md` da dissecação `petzold-code-2ed` do
 Mouseion (classe A, epub nato-digital), conferido capítulo a capítulo.
 """
 
-# (texto em português, classe, referência, passagem original, ratificado_em)
+# (texto em portugues, classe, referencia, passagem original, confirmado_em)
 # classe: "a" citação · "b" síntese de passagem citada · "d" ofício
 #
-# RATIFICAÇÃO (2026-08-27). Os 17 campos de classe "d" nasceram em PROPOSTA —
-# rito da casa: norma é proposta mais ratificação, e conteúdo não é diferente.
-# Nesta data o operador os leu e ratificou, e o selo deixou de dizer "proposta".
-# A data não é enfeite: ela diz A PARTIR DE QUANDO alguém responde pelo texto,
-# e um campo que mudar depois dela volta para proposta até ser relido.
+# CONFIRMACAO (2026-08-27). Os 17 campos de classe "d" nasceram sem
+# confirmacao. Nesta data o autor os leu e respondeu por eles, e o selo deixou
+# de dizer "nao confirmado". A data nao e enfeite: ela diz A PARTIR DE QUANDO
+# alguem responde pelo texto, e um campo que mudar depois dela deixa de estar
+# confirmado ate ser relido.
 RATIFICADO_EM = "2026-08-27"
 
 C = lambda t, ref, cit: (t, "a", ref, cit, None)
@@ -310,10 +308,10 @@ CONCEITOS = {
 },
 
 # ---- entram em 2026-08-27, com as arestas aceitas da leitura das dez ----
-# Os campos de OFÍCIO destes quatro nascem em PROPOSTA: a ratificação de
-# 2026-08-27 cobriu os 17 que existiam naquele momento, e ratificação não se
-# estende por analogia a texto que o operador não leu. O selo dirá "proposta"
-# até ele os ler — que é o mecanismo funcionando, não uma pendência esquecida.
+# Os campos de OFICIO destes quatro nascem SEM confirmacao: a de 2026-08-27
+# cobriu os 17 que existiam naquele momento, e confirmacao nao se estende por
+# analogia a texto que o autor nao leu. O selo dira "nao confirmado" ate ele os
+# ler — que e o mecanismo funcionando, nao uma pendencia esquecida.
 
 "ula": {
  "o_que_e": C(
@@ -512,5 +510,5 @@ CLASSES = {
     "a": ("citação",  "o campo é tradução fiel da passagem ao lado"),
     "b": ("síntese",  "resumo de passagem citada — a passagem vai junto para conferir"),
     "d": ("ofício",   "julgamento de quem ensina; nenhum livro escreve isto. "
-                      "PROPOSTA — aguarda ratificação do operador"),
+                      "Não confirmado — aguarda a leitura do autor"),
 }

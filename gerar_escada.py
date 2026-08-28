@@ -80,10 +80,10 @@ INSTRUMENTOS = {
 MARCA_CLASSE = {
     "a": ("citação", "lido"),
     "b": ("síntese", "lido"),
-    "d": ("ofício · ratificado", "oficio"),
-    # um campo de ofício SEM data de ratificação volta a ser proposta — é o que
-    # torna a data uma medida e não um carimbo
-    "d?": ("ofício · proposta", "oficio"),
+    "d": ("ofício · confirmado", "oficio"),
+    # um campo de ofício SEM data de confirmação volta a nao estar confirmado
+    # — e o que torna a data uma medida e nao um carimbo
+    "d?": ("ofício · não confirmado", "oficio"),
 }
 
 CSS = """
@@ -227,20 +227,19 @@ def campos_de(chave):
             proc = ('<details class="proc"><summary>de onde vem este campo'
                     '</summary><blockquote>Nenhum livro escreve onde o aluno '
                     'trava; isso vem da sala de aula. Este campo é julgamento '
-                    'didático do autor, <b>ratificado em '
-                    f'{ratificado}</b> — o rito da casa é proposta mais '
-                    'ratificação, e conteúdo não é diferente de norma. A data '
-                    'diz a partir de quando alguém responde pelo texto; se ele '
-                    'mudar, volta a ser proposta até ser relido. Ele não foi '
-                    'escrito por modelo.</blockquote></details>')
+                    'didático do autor, <b>confirmado por quem escreve em '
+                    f'{ratificado}</b>. A data diz a partir de quando alguém '
+                    'responde pelo texto; se o texto mudar, o campo deixa de '
+                    'estar confirmado até ser relido. Ele não foi escrito por '
+                    'modelo.</blockquote></details>')
         else:
             proc = ('<details class="proc"><summary>de onde vem este campo'
                     '</summary><blockquote>Nenhum livro escreve onde o aluno '
                     'trava; isso vem da sala de aula. Este campo é julgamento '
-                    'didático do autor e está em <b>PROPOSTA</b> — o rito da '
-                    'casa é proposta mais ratificação, e conteúdo não é '
-                    'diferente de norma. Ele não foi escrito por modelo.'
-                    '</blockquote></details>')
+                    'didático do autor e <b>ainda não foi confirmado</b>: '
+                    'falta a data em que quem escreve passa a responder por '
+                    'este texto. Ele não foi escrito por '
+                    'modelo.</blockquote></details>')
         fora.append(
             f'<div class="campo"><dt>{rotulo}<span class="selo {css}">{marca}'
             f'</span></dt><dd>{texto}{proc}</dd></div>')
@@ -265,7 +264,7 @@ def instrumento_de(chave):
 def main():
     nos = {i: (nome, nivel, diz) for i, nome, nivel, diz in D.DEGRAUS}
 
-    # --- os portões que abortam ---------------------------------------------
+    # --- as conferencias que abortam ----------------------------------------
     for de, para, classe, fonte, ref, cit in D.ARESTAS:
         if not cit.strip():
             print(f"ABORTADO: a aresta {de}→{para} não tem citação. "
@@ -283,7 +282,7 @@ def main():
             print(f"ABORTADO: a construção {peca} cita degrau inexistente "
                   f"{degrau!r}.", file=sys.stderr)
             return 1
-    # portão novo: campo sem procedência aborta igual a aresta sem citação
+    # conferencia nova: campo sem procedencia aborta igual a aresta sem citacao
     for chave in nos:
         if chave not in CO.CONCEITOS:
             print(f"ABORTADO: o degrau {chave!r} não tem os quatro campos.",
@@ -401,9 +400,10 @@ Dentro de cada degrau, os quatro campos vêm com um <b>selo de procedência</b>:
 <span class="selo lido">citação</span> quando o texto é do livro,
 <span class="selo lido">síntese</span> quando é resumo de passagem citada — e a
 passagem abre ao lado, para você conferir se o resumo é honesto —, e
-<span class="selo oficio">ofício · ratificado</span> quando é julgamento de quem
+<span class="selo oficio">ofício · confirmado</span> quando é julgamento de quem
 ensina, que nenhum livro escreve — e cada um traz <b>a data em que o autor
-respondeu por ele</b>, porque campo que mudar depois dela volta a ser proposta.
+respondeu por ele</b>, porque campo que mudar depois dela deixa de estar
+confirmado.
 <b>Não existe selo para “um modelo escreveu”</b>, e é de propósito: veja a
 última seção.
 </div>
@@ -414,8 +414,8 @@ respondeu por ele</b>, porque campo que mudar depois dela volta a ser proposta.
 </div>
 
 <h2>Verificado, ainda fora da escada</h2>
-<p class="nota">Estas {len(dentro.get(None, []))} construções passaram no portão da
-citação literal, mas o degrau em que elas pousam ainda não foi lido — então elas
+<p class="nota">Estas {len(dentro.get(None, []))} construções passaram na conferência
+literal da citação, mas o degrau em que elas pousam ainda não foi lido — então elas
 esperam aqui, à vista, em vez de entrar na escada por conveniência.</p>
 <ul class="soltas">
 {soltas}

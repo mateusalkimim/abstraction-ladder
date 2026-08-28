@@ -103,7 +103,7 @@ ARESTAS = [
 
 # A ÚNICA aresta com duas testemunhas independentes, de lados opostos da escada.
 # Aceitas em 2026-08-27, depois da leitura das dez que faltavam. As três
-# passaram no portão literal E no julgamento do operador — e as outras sete
+# passaram na conferencia literal E no julgamento do autor — e as outras sete
 # não entraram, cada uma com o motivo escrito em NAO_LIDO.
 ARESTAS += [
     ("somador", "ula", "construção", "petzold", 'cap. 21 — The Arithmetic Logic Unit',
@@ -191,7 +191,7 @@ CONSTRUCAO = [
      'It’s just the accumulator in one byte and the ALU flags in another byte.'),
 
     # Rótulo corrigido no julgamento (circular, anafórico ou duplicado);
-    # a citação é a mesma que passou no portão, intacta.
+    # a citacao e a mesma que passou na conferencia, intacta.
     (None, 'speaker wire', 'a pair of two insulated wires',
      "petzold", 'cap. 5 — Communicating Around Corners',
      'Speaker wire consists of a pair of two insulated wires conveniently stuck together, so it’s a good choice for our telegraph system.'),

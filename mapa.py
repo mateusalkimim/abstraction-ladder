@@ -6,7 +6,7 @@ da Hipátia, estado PROPOSTA):
 
   §1.1  Cruzamento de aresta é o defeito nº 1, e ganha de qualquer outra regra
         desta norma. Este layout tem ZERO cruzamentos, e o `conferir_mapa.py`
-        mede isso — não é promessa, é portão.
+        mede isso — nao e promessa, e verificacao.
   §1.2  Direção declarada UMA vez e não misturada: aqui é de baixo para cima.
         O eletroímã é o chão; a máquina é o topo. (A página antiga dizia "de
         baixo para cima" no título e renderizava de cima para baixo.)

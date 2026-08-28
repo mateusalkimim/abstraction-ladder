@@ -5,7 +5,7 @@
 A §1.1 da norma-de-diagramas diz que cruzamento de aresta é o defeito nº 1 e
 que, em conflito com qualquer outra regra, o cruzamento perde. Uma norma assim
 só vale com instrumento: "desenhei sem cruzar" é impressão, e impressão foi o
-que produziu metade dos defeitos desta casa.
+que produziu metade dos defeitos deste projeto.
 
 Mede quatro coisas, todas geométricas:
   [1] cruzamento entre arestas (amostrando as curvas de Bézier em segmentos);
