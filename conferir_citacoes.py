@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Confere TODA citação de degraus.py contra o livro, caractere a caractere.
+"""Confere TODA citação do repositório contra o livro, caractere a caractere.
+
+Alcança degraus.py (arestas, construções, 2ª testemunha) E conceitos.py (as
+passagens que sustentam os quatro campos de cada degrau). A extensão para
+conceitos.py entrou em 2026-08-27 junto com os campos: acrescentar 19 passagens
+novas a um repositório cuja tese é "citação conferida", sem estendê-las ao
+portão, seria furar a própria regra no ato de aplicá-la.
 
 O README deste repositório afirma que toda citação foi verificada contra a
 fonte. Afirmação sem instrumento é promessa — e promessa sem recibo é o defeito
@@ -23,6 +29,7 @@ import sys
 import unicodedata
 
 import degraus as D
+import conceitos as CO
 
 ACERVO = os.environ.get("ACERVO", "")
 LIVROS = {"petzold": "petzold-code-2ed/livro.md"}   # fonte → caminho no acervo
@@ -51,7 +58,17 @@ def main():
         if os.path.exists(p):
             fontes[f] = normalizar(open(p, encoding="utf-8").read())
 
-    itens = ([(f"aresta {a[0]}→{a[1]}", a[3], a[5]) for a in D.ARESTAS]
+    campos = []
+    for chave, no in CO.CONCEITOS.items():
+        for campo, _rot in CO.CAMPOS:
+            texto, classe, ref, cit = no[campo]
+            if not cit:
+                continue      # classe "ofício": não alega fonte, nada a conferir
+            fonte = "sicp" if "SICP" in (ref or "") else "petzold"
+            campos.append((f"campo {chave}.{campo}", fonte, cit))
+
+    itens = (campos
+             + [(f"aresta {a[0]}→{a[1]}", a[3], a[5]) for a in D.ARESTAS]
              + [(f"construção {c[1]}", c[3], c[5]) for c in D.CONSTRUCAO]
              + [(f"2ª testemunha {k[0]}→{k[1]}", v[0], v[2])
                 for k, v in D.SEGUNDA_TESTEMUNHA.items()])
