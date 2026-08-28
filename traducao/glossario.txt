@@ -1,0 +1,43 @@
+# Glossário pt-BR → en-US deste repositório.
+#
+# Existe porque a mesma cadeia saiu traduzida de jeitos diferentes na MESMA
+# página, três vezes: "ofício · proposta" virou "craft", "profession" e ficou
+# intacto; os quatro rótulos de campo saíram em SEIS variantes; e
+# "registrador (latch)" virou "register (latch)" no texto e "latch (latch)" no
+# rótulo do SVG. Tradução bloco a bloco não tem como saber que uma cadeia é
+# vocabulário fechado — quem sabe é esta lista.
+#
+# Uma linha por termo. O tradutor recebe isto como "use exatamente estas
+# formas".
+
+# --- os selos de procedência (vocabulário FECHADO) ---
+ofício · proposta = craft · proposal
+citação = citation
+síntese = synthesis
+
+# --- os quatro campos, iguais nos nove degraus ---
+o que é = what it is
+por que existe = why it exists
+onde aparece = where it appears
+onde se trava = where you get stuck
+
+# --- os degraus, na terminologia do Petzold ---
+eletroímã = electromagnet
+relé = relay
+porta lógica = logic gate
+somador = adder
+flip-flop de nível = level-triggered flip-flop
+flip-flop de borda = edge-triggered flip-flop
+contador = counter
+registrador (latch) = register (latch)
+máquina de registradores = register machine
+ULA = ALU
+vai-um = carry
+
+# --- vocabulário da casa ---
+escada de abstrações = abstraction ladder
+degrau = step
+warrant = warrant
+portão = gate
+regime = regime
+segunda testemunha = second witness

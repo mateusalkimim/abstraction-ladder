@@ -1,10 +1,19 @@
 {
- "atualizado_em": "2026-08-27 14:35:48",
+ "atualizado_em": "2026-08-27 21:45:15",
  "blocos": {
+  "0001cdebc0": {
+   "decisao_humana": "Vocabulário fechado do glossário (traducao/glossario.txt). A mesma cadeia saiu de três jeitos entre a página e o README; o selo e os nomes dos degraus são termo fixo, não escolha de bloco.",
+   "en": "| label | how many | what it means |\n|---|---|---|\n| `citation` | 10 | faithful translation of a passage, and the passage opens to the side |\n| `synthesis` | 9 | summary of the cited passage — the passage opens nearby, so you can check if the summary is honest |\n| `craft · proposal` | 17 | judgment of who teaches, which no book writes. In **proposal**, awaiting ratification |",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "| selo | quantos | o que significa |\n|---|---|---|\n| `citação` | 10 | tradução fiel de uma passagem, e a passagem abre ao lado |\n| `síntese` | 9 | resumo de passagem citada — a passagem abre junto, para você conferir se o resumo é honesto |\n| `ofício · proposta` | 17 | julgamento de quem ensina, que nenhum livro escreve. Em **proposta**, aguardando ratificação |",
+   "qa": "ok",
+   "tipo": "md"
+  },
   "0360b676cf": {
    "en": "**A map of computation that only admits what someone has read.** From the relay to the register machine, one step at a time — and **each arrow opens the supporting sentence**, copied from the book, with chapter. Nothing enters by plausibility, by consensus, nor because a model wrote it.",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "**Um mapa da computação que só admite o que alguém leu.** Do relé à máquina de\nregistradores, um degrau por vez — e **cada seta abre a frase que a sustenta**,\ncopiada do livro, com capítulo. Nada entra por plausibilidade, por consenso, nem\nporque um modelo escreveu.",
    "qa": "ok",
    "tipo": "md"
@@ -12,7 +21,7 @@
   "066ce281b2": {
    "en": "The machine came from the  \n[math-prerequisite-map](https://github.com/mateusalkimim/math-prerequisite-map): we, edges with declared warrant, and the page generated from the source. The new relative is the  \n[seeing-calculus](https://github.com/mateusalkimim/seeing-calculus).",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "A máquina veio do\n[math-prerequisite-map](https://github.com/mateusalkimim/math-prerequisite-map):\nnós, arestas com warrant declarado, e a página gerada da fonte. O parente novo é o\n[seeing-calculus](https://github.com/mateusalkimim/seeing-calculus).",
    "qa": "ok",
    "tipo": "md"
@@ -25,10 +34,18 @@
    "qa": "ok",
    "tipo": "md"
   },
+  "0c3d7ccd13": {
+   "en": "- **17 of the 36 fields are in `proposal`** and await ratification. These are the fields that indicate where the student struggles, and it is precisely the field that no book writes about;\n- **10 known but unread edges**, listed on the page with the reference of where they are. They will be entered once read, with the citation;\n- **9 constructions verified that have not yet landed on any step** (RAM, ULA, PSW, oscillator, transistor, seven-segment decoder). The citation is proven; the step below them has not been read. They are visible in their own section, instead of being entered into the staircase for convenience;\n- **four steps still do not have an instrument** — electromagnet, relay, recorder, and register machine. The two at the bottom are physics, and the top one is too large for a `canvas`;\n- **there is no glossary of the terms of the house**, and this produced the six variants of label in the translation;\n- **the staircase has a measured end.** From chapter 5 to 20 of Petzold, a single proposal did not sustain; from chapters 21 to 24, eight of eleven. This is where the book stops building and starts describing a chip that already exists — and this is why the proven steps stop before the 8080;\n- **the axis of substance** (pixel/tensor/state → GPU/NPU/CPU) has no edges yet, although the bibliography exists in the archive;\n- **programming languages** are not here and will not be until there is a source: the archive does not have a book on design or comparison of languages. What SICP supports is classification by **mechanism** — interpreted × compiled, paradigm as a variation of the evaluator — and not by history or adoption;\n- **the thesis that AI is the first layer that breaks determinism** is mine, without a book behind it. When it enters, it enters as a warrant of class `orientation`, dated — never disguised as a fact of a book.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "- **17 dos 36 campos estão em `proposta`** e aguardam ratificação. São os que\n  dizem onde o aluno trava, e é justamente o campo que nenhum livro escreve;\n- **10 arestas conhecidas e não lidas**, listadas na página com a referência de\n  onde estão. Elas entram quando forem lidas, com a citação;\n- **9 construções verificadas que ainda não pousaram em degrau nenhum** (RAM,\n  ULA, PSW, oscilador, transistor, decodificador de sete segmentos). A citação\n  está provada; o degrau abaixo delas é que não foi lido. Ficam à vista, em seção\n  própria, em vez de entrar na escada por conveniência;\n- **quatro degraus ainda não têm instrumento** — eletroímã, relé, registrador e\n  máquina de registradores. Os dois de baixo são física, e o de cima é grande\n  demais para um `canvas`;\n- **não há glossário dos termos da casa**, e foi isso que produziu as seis\n  variantes de rótulo na tradução;\n- **a escada tem um fim medido.** Do capítulo 5 ao 20 de Petzold, uma só proposta\n  não sustentava; dos capítulos 21 ao 24, oito de onze. É onde o livro para de\n  construir e passa a descrever um chip que já existe — e é por isso que os\n  degraus provados param antes do 8080;\n- **o eixo da substância** (pixel/tensor/estado → GPU/NPU/CPU) não tem nenhuma\n  aresta ainda, embora a bibliografia exista no acervo;\n- **as linguagens de programação** não estão aqui e não estarão até haver fonte:\n  o acervo não tem livro de projeto ou comparação de linguagens. O que o SICP\n  sustenta é classificação por **mecanismo** — interpretada × compilada, paradigma\n  como variação do avaliador — e não por história ou adoção;\n- **a tese de que a IA é a primeira camada que quebra o determinismo** é minha, sem\n  livro atrás. Quando entrar, entra como warrant de classe `orientacao`, datado —\n  nunca disfarçada de fato de livro.",
+   "qa": "ok",
+   "tipo": "md"
+  },
   "1872c9e619": {
    "en": "- **Edges come from two books**, read: Petzold, *Code* (2nd ed.) and\n  Abelson & Sussman, *SICP* (2nd ed.). The citations appear under fair use,\n  with source and chapter, and belong to their authors.\n- **An edge has two independent witnesses** — `register → register machine`. Petzold\n  builds the machine from gates; SICP defines it as data paths plus controller\n  and declares that its diagram corresponds to *\"a machine that could be built\n  from electrical components\"*. The two arrive at the same object from opposite\n  directions.\n- **How edges enter, since 27/08/2026.** A local model sweeps the chapter and\n  **proposes** candidates — it is a prospector, never an author. Each candidate\n  carries the sentence that would support it, and a gate checks that sentence\n  **character by character** against the original in English; what doesn't match\n  dies there, without costing human reading. What survives has the citation\n  proven and **is not yet an edge**: it goes to human judgment, item by item, and\n  only then rises. In the first round, 48 were proposed → 46 passed the gate →\n  **34 accepted by me** (27 directly and 7 after correcting a circular, anaphoric,\n  or duplicated label — the citation remains intact), and **12 discarded**, each\n  decision recorded with the reason.\n- **The rule this preserves**: every citation verified against the source, every\n  interpretation accepted by a human. The model can find; it cannot assert.\n- **What the gate doesn't catch**, and why human judgment continues: a real\n  citation that does not support the edge. Of the 46 verified, 11 fell exactly\n  here — `CPU ← Intel 8080` is an instance, not a composition; `ULA ← arithmetic\n  operations` is a function, not pieces; and one carried as a warrant the sentence\n  *\"Much of this module should look familiar:\"*, which states nothing.\n- **No entry generated by a model.** The descriptions of the steps are mine and\n  short; where there is no reading, there is no text.\n- No network, no telemetry, no dependency. The page opens offline.\n- The books **are not** in this repository: they are third-party work and stay\n  out.",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "- **As arestas vêm de dois livros**, lidos: Petzold, *Code* (2ª ed.) e\n  Abelson & Sussman, *SICP* (2ª ed.). As citações aparecem sob direito de\n  citação, com fonte e capítulo, e pertencem aos seus autores.\n- **Uma aresta tem duas testemunhas independentes** — `registrador → máquina de\n  registradores`. Petzold constrói a máquina a partir de portas; SICP a define\n  como caminhos de dados mais controlador e declara que seu diagrama corresponde\n  a *\"uma máquina que poderia ser construída de componentes elétricos\"*. Os dois\n  chegam de lados opostos ao mesmo objeto.\n- **Como as arestas entram, desde 27/08/2026.** Um modelo local varre o capítulo\n  e **propõe** candidatos — ele é garimpeiro, nunca autor. Cada candidato carrega\n  a frase que o sustentaria, e um portão confere essa frase **caractere a\n  caractere** contra o original em inglês; o que não bate morre ali, sem custar\n  leitura humana. O que sobrevive tem a citação provada e **ainda não é aresta**:\n  vai para julgamento humano, item a item, e só então sobe. Na primeira rodada\n  foram 48 propostos → 46 passaram no portão → **34 aceitos por mim** (27 direto e\n  7 depois de corrigir um rótulo circular, anafórico ou duplicado — a citação\n  segue intacta), e **12 descartadas**, cada decisão registrada com o motivo.\n- **A regra que isso preserva**: toda citação verificada contra a fonte, toda\n  interpretação aceita por um humano. O modelo pode achar; ele não pode afirmar.\n- **O que o portão não pega**, e por isso o julgamento humano continua: citação\n  real que não sustenta a aresta. Das 46 verificadas, 11 caíram exatamente aí —\n  `CPU ← Intel 8080` é instância, não composição; `ULA ← operações aritméticas` é\n  função, não peças; e uma trazia como warrant a frase *\"Much of this module\n  should look familiar:\"*, que não afirma nada.\n- **Nenhum verbete gerado por modelo.** As descrições dos degraus são minhas e\n  curtas; onde não há leitura, não há texto.\n- Sem rede, sem telemetria, sem dependência. A página abre offline.\n- Os livros **não estão** neste repositório: são obra de terceiro e ficam fora.",
    "qa": "ok",
    "tipo": "md"
@@ -36,17 +53,33 @@
   "191477f217": {
    "en": "index.html          the page — GENERATED, do not edit by hand\ndegraus.py          the steps, the edges, and the QUOTATIONS that support them\ngerar_escada.py     the generator, which aborts if there is no warrant\nconferir_citacoes.py  verifies each quotation against the book, section by section\npharo/              why a small and readable map wins over a large and generated one\ndocs/INSTALACAO.md  step by step\nLICENSE             MIT, for the code\nLICENSE-CONTENT     CC BY-SA 4.0, for the content",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "index.html          a página — GERADA, não editar à mão\ndegraus.py          os degraus, as arestas e as CITAÇÕES que as sustentam\ngerar_escada.py     o gerador, que aborta se faltar warrant\nconferir_citacoes.py  confere cada citação contra o livro, trecho a trecho\npharo/              por que um mapa pequeno e lido vence um grande e gerado\ndocs/INSTALACAO.md  passo a passo\nLICENSE             MIT, para o código\nLICENSE-CONTENT     CC BY-SA 4.0, para o conteúdo",
    "qa": "ok",
    "reparo": "o modelo traduziu o CAMINHO docs/INSTALACAO.md; arquivo nao muda de nome com o idioma",
    "tipo": "cerca"
+  },
+  "1b14e4ae42": {
+   "en": "<!-- language: line generated by i18n.py -->  \n> [!NOTE]  \n> ### 🌍 **[Read this page in English →](README.md)**",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "<!-- idioma: linha gerada por i18n.py -->\n> [!NOTE]\n> ### 🌍 **[Read this page in English →](README.md)**",
+   "qa": "ok",
+   "tipo": "md"
   },
   "2070fc1e0e": {
    "en": "## Quick Start",
    "modelo": "phi-4",
    "orfao": false,
    "pt": "## Início rápido",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "21245713b1": {
+   "en": "## The Three Layers",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "## As três camadas",
    "qa": "ok",
    "tipo": "md"
   },
@@ -58,10 +91,50 @@
    "qa": "ok",
    "tipo": "md"
   },
+  "296772d20a": {
+   "en": "python3 gerar_escada.py      # pt/index.html, the matrix  \npython3 gerar_en.py          # en/index.html, derived from the translation table",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "python3 gerar_escada.py      # pt/index.html, a matriz\npython3 gerar_en.py          # en/index.html, derivado da tabela de tradução",
+   "qa": "ok",
+   "tipo": "cerca"
+  },
+  "32f6a86c81": {
+   "en": "The quote continues there, as a second witness. But it is no longer the only thing  \nthat supports the arrow — and that is the difference between asking you to believe  \na book that you might not have on hand, and showing.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "A citação continua ali, como segunda testemunha. Mas deixou de ser a única coisa\nque sustenta a seta — e essa é a diferença entre pedir que você acredite num\nlivro que talvez não tenha em mãos, e mostrar.",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "3c673490f8": {
+   "en": "The machine came from  \n[math-prerequisite-map](https://github.com/mateusalkimim/math-prerequisite-map):  \nwe, edges with declared warrant, and the generated page from the source. The spirit  \nof the instruments came from  \n[seeing-calculus](https://github.com/mateusalkimim/seeing-calculus), and it is the  \nsame contract: they do not illustrate what a text has already said, they allow the  \nassertion to be verified.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "A máquina veio do\n[math-prerequisite-map](https://github.com/mateusalkimim/math-prerequisite-map):\nnós, arestas com warrant declarado, e a página gerada da fonte. O espírito dos\ninstrumentos veio do\n[seeing-calculus](https://github.com/mateusalkimim/seeing-calculus), e é o mesmo\ncontrato: eles não ilustram o que um texto já disse, eles deixam a afirmação ser\nconferida.",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "3e1a54d421": {
+   "en": "**The map.** An SVG generated, that ascends: the electromagnet is the ground, the  \nmachine is the top, and a golden ruler marks the place where the subject **leaves  \nelectricity and becomes logic**. The color of the node indicates the regime (physics,  \ncombinational, sequential, architecture) and the key is on the same screen. The  \nedges that no one read are **drawn**, dashed, ascending out of the map — because a  \nmap that hides what is missing lies about its own size.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "**O mapa.** Um SVG gerado, que sobe: o eletroímã é o chão, a máquina é o topo, e\numa régua dourada marca o lugar em que o assunto **deixa de ser eletricidade e\npassa a ser lógica**. A cor do nó diz o regime (física, combinacional,\nsequencial, arquitetura) e a chave fica na mesma tela. As arestas que ninguém\nleu estão **desenhadas**, tracejadas, subindo para fora do mapa — porque mapa\nque esconde o que falta mente sobre o próprio tamanho.",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "40ea391015": {
+   "en": "**The instruments.** Five, in `canvas` and arithmetic — without library, without  \nnetwork, without server. And they do not illustrate: **they are the warrant of the  \nedge**. When the ladder says *\"logic gate ← two relays in series\"*, the instrument  \nconnects the two relays and builds the truth table in front of you, without the book  \nin hand.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "**Os instrumentos.** Cinco, em `canvas` e aritmética — sem biblioteca, sem rede,\nsem servidor. E eles não ilustram: **eles são o warrant da aresta**. Quando a\nescada diz *\"porta lógica ← dois relés em série\"*, o instrumento liga os dois\nrelés e monta a tabela-verdade na sua frente, sem o livro na mão.",
+   "qa": "ok",
+   "tipo": "md"
+  },
   "522b3d2335": {
    "en": "Available online at <https://mateusalkimim.github.io/abstraction-ladder/>.",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "No ar em <https://mateusalkimim.github.io/abstraction-ladder/>.",
    "qa": "ok",
    "tipo": "md"
@@ -77,7 +150,7 @@
   "56b1c1f222": {
    "en": "Here the order is inverted — the human reading gate comes **before** the content —  \nand the cost is this small map. The bet is that eleven verifiable edges are worth  \nmore than sixty that are not.",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "Aqui a ordem se inverteu — o portão da leitura humana vem **antes** do conteúdo — e\no preço é este mapa pequeno. A aposta é que onze arestas conferíveis valem mais\nque sessenta que não.",
    "qa": "ok",
    "tipo": "md"
@@ -85,7 +158,7 @@
   "7085ca57a9": {
    "en": "<!-- language: line generated by i18n.py -->  \n*[Read this in English](README.en.md)*",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "<!-- idioma: linha gerada por i18n.py -->\n*[Read this in English](README.en.md)*",
    "qa": "ok",
    "tipo": "md"
@@ -93,8 +166,16 @@
   "72edb23154": {
    "en": "Today: **11 edges read** and **24 constructions verified**, against **10 edges  \nthat are known to exist but have not yet been opened**, listed on the page itself.  \nA map that hides what is missing lies about its own size.",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "Hoje: **11 arestas lidas** e **24 construções verificadas**, contra **10 arestas\nque se sabe existirem e ainda não foram abertas**, listadas na própria página.\nMapa que esconde o que falta mente sobre o próprio tamanho.",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "7395989db8": {
+   "en": "**A map of computation that only admits what someone has read — and constructs in front of you what it claims.** From the electromagnet to the register machine, one step at a time. Each step answers **what it is**, **why it exists**, **where it appears**, and **where it breaks**; each arrow opens the sentence of the book that supports it; and five of the passages you do not need to accept at face value, because they **assemble the piece right here on the screen**.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "**Um mapa da computação que só admite o que alguém leu — e que constrói na sua\nfrente o que afirma.** Do eletroímã à máquina de registradores, um degrau por\nvez. Cada degrau responde **o que é**, **por que existe**, **onde aparece** e\n**onde se trava**; cada seta abre a frase do livro que a sustenta; e cinco das\npassagens você não precisa aceitar de palavra, porque elas **montam a peça aqui\nna tela**.",
    "qa": "ok",
    "tipo": "md"
   },
@@ -106,18 +187,50 @@
    "qa": "ok",
    "tipo": "md"
   },
+  "90a576f802": {
+   "en": "- **Edges come from two books**, read: Petzold, *Code* (2nd ed.) and Abelson & Sussman, *SICP* (2nd ed.). The citations appear under fair use, with source and chapter, and belong to their authors.\n- **9 edges between steps, supported by 11 citations**, and **24 constructions verified** — pieces made of pieces from the same layer.\n- **An edge has two independent witnesses** — `register → register machine`. Petzold builds the machine from gates; SICP defines it as data paths plus controller and declares that its diagram corresponds to *\"a machine that could be built from electrical components\"*. The two arrive from opposite sides at the same object.\n- **How the edges entered, since 27/08/2026.** A local model sweeps the chapter and **proposes** candidates — it is a prospector, never an author. Each candidate carries the sentence that would support it, and a gate checks that sentence **character by character** against the original in English; what doesn't match dies there, without costing human reading. What survives has the citation proven and **is not yet an edge**: it goes to human judgment, item by item, and only then rises. In the first round, 48 were proposed → 46 passed the gate → **34 accepted by me** (27 directly and 7 after correcting a circular, anaphoric, or duplicated label — the citation remains intact), and **12 discarded**, each decision recorded with the reason.\n- **The rule that this preserves**: every citation verified against the source, every interpretation accepted by a human. The model can find; it cannot assert.\n- **What the gate doesn't catch**, and therefore human judgment continues: a real citation that does not support the edge. Of the 46 verified, 11 fell exactly there — `CPU ← Intel 8080` is an instance, not a composition; `ULA ← arithmetic operations` is a function, not pieces; and one carried as a warrant the sentence *\"Much of this module should look familiar:\"*, which states nothing.\n- **The translation also has an owner.** The English is derived from the Portuguese by a local model, block by block, with the table keyed by the hash of the original. Where the machine did not decide, a person decided, and **the decision is written in the table** — including why. Example: the four field labels came out in six variants, and `onde se trava` became *\"where it locks\"* in seven of the nine steps. There \"travar\" is the student getting stuck, not a lock.\n- No network, no telemetry, no dependency. The page opens offline.\n- The books **are not** in this repository: they are third-party work and stay out.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "- **As arestas vêm de dois livros**, lidos: Petzold, *Code* (2ª ed.) e\n  Abelson & Sussman, *SICP* (2ª ed.). As citações aparecem sob direito de\n  citação, com fonte e capítulo, e pertencem aos seus autores.\n- **9 arestas entre degraus, sustentadas por 11 citações**, e **24 construções\n  verificadas** — peças feitas de peças da mesma camada.\n- **Uma aresta tem duas testemunhas independentes** — `registrador → máquina de\n  registradores`. Petzold constrói a máquina a partir de portas; SICP a define\n  como caminhos de dados mais controlador e declara que seu diagrama corresponde\n  a *\"uma máquina que poderia ser construída de componentes elétricos\"*. Os dois\n  chegam de lados opostos ao mesmo objeto.\n- **Como as arestas entram, desde 27/08/2026.** Um modelo local varre o capítulo\n  e **propõe** candidatos — ele é garimpeiro, nunca autor. Cada candidato carrega\n  a frase que o sustentaria, e um portão confere essa frase **caractere a\n  caractere** contra o original em inglês; o que não bate morre ali, sem custar\n  leitura humana. O que sobrevive tem a citação provada e **ainda não é aresta**:\n  vai para julgamento humano, item a item, e só então sobe. Na primeira rodada\n  foram 48 propostos → 46 passaram no portão → **34 aceitos por mim** (27 direto e\n  7 depois de corrigir um rótulo circular, anafórico ou duplicado — a citação\n  segue intacta), e **12 descartadas**, cada decisão registrada com o motivo.\n- **A regra que isso preserva**: toda citação verificada contra a fonte, toda\n  interpretação aceita por um humano. O modelo pode achar; ele não pode afirmar.\n- **O que o portão não pega**, e por isso o julgamento humano continua: citação\n  real que não sustenta a aresta. Das 46 verificadas, 11 caíram exatamente aí —\n  `CPU ← Intel 8080` é instância, não composição; `ULA ← operações aritméticas` é\n  função, não peças; e uma trazia como warrant a frase *\"Much of this module\n  should look familiar:\"*, que não afirma nada.\n- **A tradução também tem dono.** O inglês é derivado do português por um modelo\n  local, bloco a bloco, com a tabela chaveada por hash do original. Onde a\n  máquina não decidiu, decidiu uma pessoa, e **a decisão está escrita na tabela**\n  — inclusive por quê. Exemplo: os quatro rótulos de campo saíram em seis\n  variantes, e `onde se trava` virou *\"where it locks\"* em sete dos nove degraus.\n  Ali \"travar\" é o aluno empacar, não uma fechadura.\n- Sem rede, sem telemetria, sem dependência. A página abre offline.\n- Os livros **não estão** neste repositório: são obra de terceiro e ficam fora.",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "92a0b263e0": {
+   "en": "- **`conferir_citacoes.py`** — each citation checked against the book, character by character. Today: **53 check out, 0 fail, 2 without the source in the collection** (the two from SICP, whose book has not yet been dissected). It **never returns \"ok\" for absence of proof**: without the book at hand, it exits with an error;\n- **`conferir_mapa.py`** — measures what the diagram norm mandates instead of promising. Caught an arc that scraped the box of a node, and a color key that fell five pixels outside the frame;\n- **`conferir_instrumentos.py`** — the only one that finds an entire class of defect: it **clicks**. In the first translation of this page, `\"[data-acao]\"` became `\"[data-action]\"` — an impeccable translation of a CSS selector. The five instruments lost their listener and all buttons became mute, with the HTML intact, the console clean and **all other gates in green**. No text probe finds this.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "- **`conferir_citacoes.py`** — cada citação conferida contra o livro, caractere a\n  caractere. Hoje: **53 conferem, 0 reprovam, 2 sem a fonte no acervo** (as duas\n  do SICP, cujo livro ainda não está dissecado). Ele **nunca devolve \"ok\" por\n  ausência de prova**: sem o livro à mão, sai com erro;\n- **`conferir_mapa.py`** — mede o que a norma de diagramas manda em vez de\n  prometer. Pegou um arco que raspava a caixa de um nó, e uma chave de cor que\n  caía cinco pixels fora do quadro;\n- **`conferir_instrumentos.py`** — o único que acha uma classe inteira de\n  defeito: ele **clica**. Na primeira tradução desta página, `\"[data-acao]\"`\n  virou `\"[data-action]\"` — tradução impecável de um seletor CSS. Os cinco\n  instrumentos ficaram sem ouvinte e todos os botões mudos, com o HTML íntegro,\n  o console limpo e **todos os outros portões em verde**. Nenhuma sonda de texto\n  acha isso.",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "9a890ce3b8": {
+   "en": "Live at <https://mateusalkimim.github.io/abstraction-ladder/> — in\n[English](https://mateusalkimim.github.io/abstraction-ladder/en/) and in\n[Portuguese](https://mateusalkimim.github.io/abstraction-ladder/pt/).",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "No ar em <https://mateusalkimim.github.io/abstraction-ladder/> — em\n[inglês](https://mateusalkimim.github.io/abstraction-ladder/en/) e em\n[português](https://mateusalkimim.github.io/abstraction-ladder/pt/).",
+   "qa": "ok",
+   "tipo": "md"
+  },
   "9f3e4db299": {
    "en": "The guarantee is this, and it is structural: **the generator aborts if an edge  \ncomes without citation.** It is not a convention that can be forgotten — the page  \nis not written.",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "A garantia é essa, e ela é estrutural: **o gerador aborta se uma aresta vier sem\ncitação.** Não é convenção que se pode esquecer — a página não é escrita.",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "a59a5f7048": {
+   "en": "The guarantee is structural, not a convention that can be forgotten: **the generator aborts** if an edge comes without citation, or if a field claims a source and does not bring the passage.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "A garantia é estrutural, não é convenção que se pode esquecer: **o gerador\naborta** se uma aresta vier sem citação, ou se um campo alegar fonte e não\ntrouxer a passagem.",
    "qa": "ok",
    "tipo": "md"
   },
   "ad7d5d5c23": {
    "en": "**Every citation is verified against the source by machine** — 35 of 36 today;  \nthe one that is missing is the one from SICP, whose book has not yet been  \ndissected in the archive, and this is stated here instead of rounded to \"all\".  \nThe verifier is  \n[`verify_citations.py`](conferir_citacoes.py) and it **never returns \"ok\" for lack  \nof proof**: without the book at hand, it exits with an error.",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "**Toda citação é conferida contra a fonte por máquina** — 35 das 36 hoje; a única\nque falta é a de SICP, cujo livro ainda não está dissecado no acervo, e isso está\ndito aqui em vez de arredondado para \"todas\". O verificador é\n[`conferir_citacoes.py`](conferir_citacoes.py) e ele **nunca devolve \"ok\" por\nausência de prova**: sem o livro à mão, sai com erro.",
    "qa": "ok",
    "tipo": "md"
@@ -146,10 +259,34 @@
    "qa": "ok",
    "tipo": "md"
   },
+  "b276ae5292": {
+   "en": "This page has **the same four fields as that map**, and that's why the difference matters. Here none of them came from a template: the ones that describe the piece came from Petzold himself — who is a teacher, and already answers *what it is* and *why it exists* in prose, with a chapter —, and the passage goes along with each field. The ones that say **where the student gets stuck** no book writes: they are the work of those who teach, enter marked as a proposal, and await ratification.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Esta página tem **os mesmos quatro campos daquele mapa**, e é por isso que a\ndiferença importa. Aqui nenhum deles saiu de um modelo: os que descrevem a peça\nsaíram do próprio Petzold — que é professor, e já responde *o que é* e *por que\nexiste* em prosa, com capítulo —, e a passagem vai junto de cada campo. Os que\ndizem **onde o aluno trava** nenhum livro escreve: são ofício de quem ensina,\nentram marcados como proposta, e esperam ratificação.",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "b325d924ba": {
+   "en": "## The Gates",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "## Os portões",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "b4bce9e21c": {
+   "en": "The **9 \"what is\" fields are all quotes from the book**: no concept from this  \nladder was defined by me. There is no label for *\"a model wrote\"*, and it is  \nintentional.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Os **9 campos \"o que é\" são todos citação do livro**: nenhum conceito desta\nescada foi definido por mim. Não existe selo para *\"um modelo escreveu\"*, e é de\npropósito.",
+   "qa": "ok",
+   "tipo": "md"
+  },
   "ba9ada98ac": {
    "en": "- **10 known and unread edges**, listed on the page with a reference to where they are. They enter when they are read, with the citation;\n- **9 constructions verified that have not yet landed on any step** (RAM, ULA, PSW, oscillator, transistor, seven-segment decoder). The citation is proven; the step below them is that which was not read. They are visible in their own section, instead of entering the staircase for convenience;\n- **the staircase has a measured end.** From chapter 5 to 20 of Petzold, only one proposal did not sustain; from chapters 21 to 24, eight of eleven. This is where the book stops building and starts describing a chip that already exists — and that's why the proven steps stop before the 8080;\n- **the axis of substance** (pixel/tensor/state → GPU/NPU/CPU) has no edge yet, although the bibliography exists in the archive;\n- **programming languages** are not here and will not be until there is a source: the archive does not have a project book or a comparison of languages. What SICP supports is classification by **mechanism** — interpreted × compiled, paradigm as a variation of the evaluator — and not by history or adoption;\n- **the thesis that AI is the first layer that breaks determinism** is mine, without a book behind it. When it enters, it enters as a warrant of class `orientation`, dated — never disguised as a fact of a book.",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "- **10 arestas conhecidas e não lidas**, listadas na página com a referência de\n  onde estão. Elas entram quando forem lidas, com a citação;\n- **9 construções verificadas que ainda não pousaram em degrau nenhum** (RAM,\n  ULA, PSW, oscilador, transistor, decodificador de sete segmentos). A citação\n  está provada; o degrau\n  abaixo delas é que não foi lido. Ficam à vista, em seção própria, em vez de\n  entrar na escada por conveniência;\n- **a escada tem um fim medido.** Do capítulo 5 ao 20 de Petzold, uma só proposta\n  não sustentava; dos capítulos 21 ao 24, oito de onze. É onde o livro para de\n  construir e passa a descrever um chip que já existe — e é por isso que os\n  degraus provados param antes do 8080;\n- **o eixo da substância** (pixel/tensor/estado → GPU/NPU/CPU) não tem nenhuma\n  aresta ainda, embora a bibliografia exista no acervo;\n- **as linguagens de programação** não estão aqui e não estarão até haver fonte:\n  o acervo não tem livro de projeto ou comparação de linguagens. O que o SICP\n  sustenta é classificação por **mecanismo** — interpretada × compilada, paradigma\n  como variação do avaliador — e não por história ou adoção;\n- **a tese de que a IA é a primeira camada que quebra o determinismo** é minha, sem\n  livro atrás. Quando entrar, entra como warrant de classe `orientacao`, datado —\n  nunca disfarçada de fato de livro.",
    "qa": "ok",
    "tipo": "md"
@@ -162,11 +299,36 @@
    "qa": "ok",
    "tipo": "md"
   },
+  "cf6a3292c0": {
+   "decisao_humana": "Vocabulário fechado do glossário (traducao/glossario.txt). A mesma cadeia saiu de três jeitos entre a página e o README; o selo e os nomes dos degraus são termo fixo, não escolha de bloco.",
+   "en": "| instrument | the edge it proves |  \n|---|---|  \n| two relays turn into a gate | relay → logic gate |  \n| two gates turn into a sum | logic gate → adder |  \n| the circuit that remembers | logic gate → level-triggered flip-flop |  \n| level × edge, on the same clock | level-triggered flip-flop → edge-triggered flip-flop |  \n| the count appears alone | edge-triggered flip-flop → counter |",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "| instrumento | a aresta que ele prova |\n|---|---|\n| dois relés viram uma porta | relé → porta lógica |\n| duas portas viram uma conta | porta lógica → somador |\n| o circuito que lembra | porta lógica → flip-flop de nível |\n| nível × borda, no mesmo relógio | flip-flop de nível → flip-flop de borda |\n| a contagem aparece sozinha | flip-flop de borda → contador |",
+   "qa": "ok",
+   "tipo": "md"
+  },
   "d67560d038": {
    "en": "## Provenance and Guarantees",
    "modelo": "phi-4",
    "orfao": false,
    "pt": "## Proveniência e garantias",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "da32df3d1d": {
+   "en": "None of them is a promise: all have **negative control** — they plant the  \ndefect they should find and fail if they don't find it. A gate that never  \nfailed did not prove anything.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Nenhum deles é promessa: todos têm **controle negativo** — plantam o defeito que\ndeveriam achar e falham se não acharem. Um portão que nunca reprovou não provou\nnada.",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "dbecec6a81": {
+   "en": "**The four fields.** 36 of them, 4 per step, and **none came from a model**.  \nEach one carries its own label of origin:",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "**Os quatro campos.** 36 deles, 4 por degrau, e **nenhum saiu de um modelo**.\nCada um carrega o seu próprio selo de procedência:",
    "qa": "ok",
    "tipo": "md"
   },
@@ -177,6 +339,14 @@
    "pt": "## O que tem aqui",
    "qa": "ok",
    "tipo": "md"
+  },
+  "eb3fbe0fd2": {
+   "en": "index.html            the door — redirects by language  \npt/index.html         the page, in Portuguese — GENERATED, do not edit by hand  \nen/index.html         the same page in English — DERIVED from pt/ + translation/  \n\ndegraus.py            the steps, the edges, and the <b>CITATIONS</b> that support them  \nconceitos.py          the four fields of each step, with provenance by field  \nmapa.py               the SVG map, citing the norm of diagrams that governs it  \ninstrumentos.js       the five instruments  \ngerar_escada.py       the generator, which aborts if warrant is missing  \n\nconferir_citacoes.py     verifies each citation against the book, section by section  \nconferir_mapa.py         geometry of the map: intersection, edge crossing node  \nconferir_pagina.py       measures the SCREEN in three resolutions  \nconferir_instrumentos.py <b>CLICKS</b> each button and verifies that the drawing changed  \nconferir_idioma.py       each page is in the language of the folder it resides in  \n\ni18n.py, gerar_en.py, gerar_porta.py   the bilingual machine, for those who clone  \ntraducao/             the table pt→en, keyed by hash of the original  \npharo/                why a small and readable map beats a large and generated one  \ndocs/INSTALACAO.md    step by step  \nLICENSE               MIT, for the code  \nLICENSE-CONTENT       CC BY-SA 4.0, for the content",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "index.html            a porta — encaminha por idioma\npt/index.html         a página, em português — GERADA, não editar à mão\nen/index.html         a mesma página em inglês — DERIVADA de pt/ + traducao/\n\ndegraus.py            os degraus, as arestas e as CITAÇÕES que as sustentam\nconceitos.py          os quatro campos de cada degrau, com procedência por campo\nmapa.py               o SVG do mapa, citando a norma de diagramas que o rege\ninstrumentos.js       os cinco instrumentos\ngerar_escada.py       o gerador, que aborta se faltar warrant\n\nconferir_citacoes.py     confere cada citação contra o livro, trecho a trecho\nconferir_mapa.py         geometria do mapa: cruzamento, aresta atravessando nó\nconferir_pagina.py       mede a TELA em três resoluções\nconferir_instrumentos.py APERTA cada botão e confere que o desenho mudou\nconferir_idioma.py       cada página está no idioma da pasta em que mora\n\ni18n.py, gerar_en.py, gerar_porta.py   a máquina bilíngue, para quem clonar\ntraducao/             a tabela pt→en, chaveada por hash do original\npharo/                por que um mapa pequeno e lido vence um grande e gerado\ndocs/INSTALACAO.md    passo a passo\nLICENSE               MIT, para o código\nLICENSE-CONTENT       CC BY-SA 4.0, para o conteúdo",
+   "qa": "ok",
+   "tipo": "cerca"
   },
   "f1d6da28ce": {
    "en": "## The Place in the Larger Cycle",
@@ -189,8 +359,24 @@
   "f38a3e58b8": {
    "en": "The funnel does not loosen this order: it only makes **finding** cheaper. The judgment remains human, and the proof remains the sentence in the book.",
    "modelo": "phi-4",
-   "orfao": false,
+   "orfao": true,
    "pt": "O funil não afrouxa essa ordem: ele só barateia o **achar**. O julgamento continua\nsendo humano, e a prova continua sendo a frase no livro.",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "fb2e1f59d0": {
+   "en": "The funnel does not loosen this order: it only cheapens the **finding**. The judgment remains  \nhuman, and the proof remains the phrase in the book — now with an instrument  \nbeside it, when the piece can be constructed.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "O funil não afrouxa essa ordem: ele só barateia o **achar**. O julgamento continua\nsendo humano, e a prova continua sendo a frase no livro — agora com um instrumento\nao lado, quando a peça pode ser construída.",
+   "qa": "ok",
+   "tipo": "md"
+  },
+  "fcfe7590a0": {
+   "en": "Here the order has been reversed — the door to human reading comes **before** the content —  \nand the price is this small map. The bet is that nine verifiable edges are worth more  \nthan sixty that are not.",
+   "modelo": "phi-4",
+   "orfao": false,
+   "pt": "Aqui a ordem se inverteu — o portão da leitura humana vem **antes** do conteúdo —\ne o preço é este mapa pequeno. A aposta é que nove arestas conferíveis valem mais\nque sessenta que não.",
    "qa": "ok",
    "tipo": "md"
   },

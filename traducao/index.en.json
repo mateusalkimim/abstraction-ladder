@@ -720,7 +720,8 @@
    "tipo": "prosa"
   },
   "59f79a2b92": {
-   "en": "<tspan x=\"740\" dy=\"0\">level flip-flop</tspan>",
+   "decisao_humana": "Termo do Petzold: 'level-triggered' e 'edge-triggered' D-type flip-flop. O par tem de ser simétrico — a página dizia 'level flip-flop' e 'edge-triggered flip-flop', sugerindo que só um deles é disparado por alguma coisa. Glossário: traducao/glossario.txt.",
+   "en": "<tspan x=\"740\" dy=\"0\">level-triggered flip-flop</tspan>",
    "modelo": "phi-4",
    "orfao": false,
    "pt": "<tspan x=\"740\" dy=\"0\">flip-flop de nível</tspan>",

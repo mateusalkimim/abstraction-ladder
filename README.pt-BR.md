@@ -4,25 +4,59 @@
 
 # A escada de abstrações — `abstraction-ladder`
 
-**Um mapa da computação que só admite o que alguém leu.** Do relé à máquina de
-registradores, um degrau por vez — e **cada seta abre a frase que a sustenta**,
-copiada do livro, com capítulo. Nada entra por plausibilidade, por consenso, nem
-porque um modelo escreveu.
+**Um mapa da computação que só admite o que alguém leu — e que constrói na sua
+frente o que afirma.** Do eletroímã à máquina de registradores, um degrau por
+vez. Cada degrau responde **o que é**, **por que existe**, **onde aparece** e
+**onde se trava**; cada seta abre a frase do livro que a sustenta; e cinco das
+passagens você não precisa aceitar de palavra, porque elas **montam a peça aqui
+na tela**.
 
-A garantia é essa, e ela é estrutural: **o gerador aborta se uma aresta vier sem
-citação.** Não é convenção que se pode esquecer — a página não é escrita.
+A garantia é estrutural, não é convenção que se pode esquecer: **o gerador
+aborta** se uma aresta vier sem citação, ou se um campo alegar fonte e não
+trouxer a passagem.
 
-No ar em <https://mateusalkimim.github.io/abstraction-ladder/>.
+No ar em <https://mateusalkimim.github.io/abstraction-ladder/> — em
+[inglês](https://mateusalkimim.github.io/abstraction-ladder/en/) e em
+[português](https://mateusalkimim.github.io/abstraction-ladder/pt/).
 
-Hoje: **11 arestas lidas** e **24 construções verificadas**, contra **10 arestas
-que se sabe existirem e ainda não foram abertas**, listadas na própria página.
-Mapa que esconde o que falta mente sobre o próprio tamanho.
+## As três camadas
 
-**Toda citação é conferida contra a fonte por máquina** — 35 das 36 hoje; a única
-que falta é a de SICP, cujo livro ainda não está dissecado no acervo, e isso está
-dito aqui em vez de arredondado para "todas". O verificador é
-[`conferir_citacoes.py`](conferir_citacoes.py) e ele **nunca devolve "ok" por
-ausência de prova**: sem o livro à mão, sai com erro.
+**O mapa.** Um SVG gerado, que sobe: o eletroímã é o chão, a máquina é o topo, e
+uma régua dourada marca o lugar em que o assunto **deixa de ser eletricidade e
+passa a ser lógica**. A cor do nó diz o regime (física, combinacional,
+sequencial, arquitetura) e a chave fica na mesma tela. As arestas que ninguém
+leu estão **desenhadas**, tracejadas, subindo para fora do mapa — porque mapa
+que esconde o que falta mente sobre o próprio tamanho.
+
+**Os quatro campos.** 36 deles, 4 por degrau, e **nenhum saiu de um modelo**.
+Cada um carrega o seu próprio selo de procedência:
+
+| selo | quantos | o que significa |
+|---|---|---|
+| `citação` | 10 | tradução fiel de uma passagem, e a passagem abre ao lado |
+| `síntese` | 9 | resumo de passagem citada — a passagem abre junto, para você conferir se o resumo é honesto |
+| `ofício · proposta` | 17 | julgamento de quem ensina, que nenhum livro escreve. Em **proposta**, aguardando ratificação |
+
+Os **9 campos "o que é" são todos citação do livro**: nenhum conceito desta
+escada foi definido por mim. Não existe selo para *"um modelo escreveu"*, e é de
+propósito.
+
+**Os instrumentos.** Cinco, em `canvas` e aritmética — sem biblioteca, sem rede,
+sem servidor. E eles não ilustram: **eles são o warrant da aresta**. Quando a
+escada diz *"porta lógica ← dois relés em série"*, o instrumento liga os dois
+relés e monta a tabela-verdade na sua frente, sem o livro na mão.
+
+| instrumento | a aresta que ele prova |
+|---|---|
+| dois relés viram uma porta | relé → porta lógica |
+| duas portas viram uma conta | porta lógica → somador |
+| o circuito que lembra | porta lógica → flip-flop de nível |
+| nível × borda, no mesmo relógio | flip-flop de nível → flip-flop de borda |
+| a contagem aparece sozinha | flip-flop de borda → contador |
+
+A citação continua ali, como segunda testemunha. Mas deixou de ser a única coisa
+que sustenta a seta — e essa é a diferença entre pedir que você acredite num
+livro que talvez não tenha em mãos, e mostrar.
 
 ## Início rápido
 
@@ -36,7 +70,8 @@ Ou <https://mateusalkimim.github.io/abstraction-ladder/>. Para regerar a página
 (só Python 3, biblioteca padrão):
 
 ```bash
-python3 gerar_escada.py
+python3 gerar_escada.py      # pt/index.html, a matriz
+python3 gerar_en.py          # en/index.html, derivado da tabela de tradução
 ```
 
 Passo a passo em [`docs/INSTALACAO.md`](docs/INSTALACAO.md).
@@ -44,15 +79,49 @@ Passo a passo em [`docs/INSTALACAO.md`](docs/INSTALACAO.md).
 ## O que tem aqui
 
 ```
-index.html          a página — GERADA, não editar à mão
-degraus.py          os degraus, as arestas e as CITAÇÕES que as sustentam
-gerar_escada.py     o gerador, que aborta se faltar warrant
-conferir_citacoes.py  confere cada citação contra o livro, trecho a trecho
-pharo/              por que um mapa pequeno e lido vence um grande e gerado
-docs/INSTALACAO.md  passo a passo
-LICENSE             MIT, para o código
-LICENSE-CONTENT     CC BY-SA 4.0, para o conteúdo
+index.html            a porta — encaminha por idioma
+pt/index.html         a página, em português — GERADA, não editar à mão
+en/index.html         a mesma página em inglês — DERIVADA de pt/ + traducao/
+
+degraus.py            os degraus, as arestas e as CITAÇÕES que as sustentam
+conceitos.py          os quatro campos de cada degrau, com procedência por campo
+mapa.py               o SVG do mapa, citando a norma de diagramas que o rege
+instrumentos.js       os cinco instrumentos
+gerar_escada.py       o gerador, que aborta se faltar warrant
+
+conferir_citacoes.py     confere cada citação contra o livro, trecho a trecho
+conferir_mapa.py         geometria do mapa: cruzamento, aresta atravessando nó
+conferir_pagina.py       mede a TELA em três resoluções
+conferir_instrumentos.py APERTA cada botão e confere que o desenho mudou
+conferir_idioma.py       cada página está no idioma da pasta em que mora
+
+i18n.py, gerar_en.py, gerar_porta.py   a máquina bilíngue, para quem clonar
+traducao/             a tabela pt→en, chaveada por hash do original
+pharo/                por que um mapa pequeno e lido vence um grande e gerado
+docs/INSTALACAO.md    passo a passo
+LICENSE               MIT, para o código
+LICENSE-CONTENT       CC BY-SA 4.0, para o conteúdo
 ```
+
+## Os portões
+
+Nenhum deles é promessa: todos têm **controle negativo** — plantam o defeito que
+deveriam achar e falham se não acharem. Um portão que nunca reprovou não provou
+nada.
+
+- **`conferir_citacoes.py`** — cada citação conferida contra o livro, caractere a
+  caractere. Hoje: **53 conferem, 0 reprovam, 2 sem a fonte no acervo** (as duas
+  do SICP, cujo livro ainda não está dissecado). Ele **nunca devolve "ok" por
+  ausência de prova**: sem o livro à mão, sai com erro;
+- **`conferir_mapa.py`** — mede o que a norma de diagramas manda em vez de
+  prometer. Pegou um arco que raspava a caixa de um nó, e uma chave de cor que
+  caía cinco pixels fora do quadro;
+- **`conferir_instrumentos.py`** — o único que acha uma classe inteira de
+  defeito: ele **clica**. Na primeira tradução desta página, `"[data-acao]"`
+  virou `"[data-action]"` — tradução impecável de um seletor CSS. Os cinco
+  instrumentos ficaram sem ouvinte e todos os botões mudos, com o HTML íntegro,
+  o console limpo e **todos os outros portões em verde**. Nenhuma sonda de texto
+  acha isso.
 
 ## O lugar no ciclo maior
 
@@ -63,14 +132,19 @@ warrant hoje, e por isso só ele está publicado.
 
 A máquina veio do
 [math-prerequisite-map](https://github.com/mateusalkimim/math-prerequisite-map):
-nós, arestas com warrant declarado, e a página gerada da fonte. O parente novo é o
-[seeing-calculus](https://github.com/mateusalkimim/seeing-calculus).
+nós, arestas com warrant declarado, e a página gerada da fonte. O espírito dos
+instrumentos veio do
+[seeing-calculus](https://github.com/mateusalkimim/seeing-calculus), e é o mesmo
+contrato: eles não ilustram o que um texto já disse, eles deixam a afirmação ser
+conferida.
 
 ## Proveniência e garantias
 
 - **As arestas vêm de dois livros**, lidos: Petzold, *Code* (2ª ed.) e
   Abelson & Sussman, *SICP* (2ª ed.). As citações aparecem sob direito de
   citação, com fonte e capítulo, e pertencem aos seus autores.
+- **9 arestas entre degraus, sustentadas por 11 citações**, e **24 construções
+  verificadas** — peças feitas de peças da mesma camada.
 - **Uma aresta tem duas testemunhas independentes** — `registrador → máquina de
   registradores`. Petzold constrói a máquina a partir de portas; SICP a define
   como caminhos de dados mais controlador e declara que seu diagrama corresponde
@@ -92,8 +166,12 @@ nós, arestas com warrant declarado, e a página gerada da fonte. O parente novo
   `CPU ← Intel 8080` é instância, não composição; `ULA ← operações aritméticas` é
   função, não peças; e uma trazia como warrant a frase *"Much of this module
   should look familiar:"*, que não afirma nada.
-- **Nenhum verbete gerado por modelo.** As descrições dos degraus são minhas e
-  curtas; onde não há leitura, não há texto.
+- **A tradução também tem dono.** O inglês é derivado do português por um modelo
+  local, bloco a bloco, com a tabela chaveada por hash do original. Onde a
+  máquina não decidiu, decidiu uma pessoa, e **a decisão está escrita na tabela**
+  — inclusive por quê. Exemplo: os quatro rótulos de campo saíram em seis
+  variantes, e `onde se trava` virou *"where it locks"* em sete dos nove degraus.
+  Ali "travar" é o aluno empacar, não uma fechadura.
 - Sem rede, sem telemetria, sem dependência. A página abre offline.
 - Os livros **não estão** neste repositório: são obra de terceiro e ficam fora.
 
@@ -104,22 +182,36 @@ problema aparece depois: no mapa irmão desta casa, os verbetes foram escritos p
 um modelo local e um deles afirma, publicado até hoje, que dois conjuntos com os
 mesmos elementos podem ser diferentes. É falso, e passou porque ninguém leu.
 
-Aqui a ordem se inverteu — o portão da leitura humana vem **antes** do conteúdo — e
-o preço é este mapa pequeno. A aposta é que onze arestas conferíveis valem mais
+Esta página tem **os mesmos quatro campos daquele mapa**, e é por isso que a
+diferença importa. Aqui nenhum deles saiu de um modelo: os que descrevem a peça
+saíram do próprio Petzold — que é professor, e já responde *o que é* e *por que
+existe* em prosa, com capítulo —, e a passagem vai junto de cada campo. Os que
+dizem **onde o aluno trava** nenhum livro escreve: são ofício de quem ensina,
+entram marcados como proposta, e esperam ratificação.
+
+Aqui a ordem se inverteu — o portão da leitura humana vem **antes** do conteúdo —
+e o preço é este mapa pequeno. A aposta é que nove arestas conferíveis valem mais
 que sessenta que não.
 
 O funil não afrouxa essa ordem: ele só barateia o **achar**. O julgamento continua
-sendo humano, e a prova continua sendo a frase no livro.
+sendo humano, e a prova continua sendo a frase no livro — agora com um instrumento
+ao lado, quando a peça pode ser construída.
 
 ## Estado, e o que falta
 
+- **17 dos 36 campos estão em `proposta`** e aguardam ratificação. São os que
+  dizem onde o aluno trava, e é justamente o campo que nenhum livro escreve;
 - **10 arestas conhecidas e não lidas**, listadas na página com a referência de
   onde estão. Elas entram quando forem lidas, com a citação;
 - **9 construções verificadas que ainda não pousaram em degrau nenhum** (RAM,
   ULA, PSW, oscilador, transistor, decodificador de sete segmentos). A citação
-  está provada; o degrau
-  abaixo delas é que não foi lido. Ficam à vista, em seção própria, em vez de
-  entrar na escada por conveniência;
+  está provada; o degrau abaixo delas é que não foi lido. Ficam à vista, em seção
+  própria, em vez de entrar na escada por conveniência;
+- **quatro degraus ainda não têm instrumento** — eletroímã, relé, registrador e
+  máquina de registradores. Os dois de baixo são física, e o de cima é grande
+  demais para um `canvas`;
+- **não há glossário dos termos da casa**, e foi isso que produziu as seis
+  variantes de rótulo na tradução;
 - **a escada tem um fim medido.** Do capítulo 5 ao 20 de Petzold, uma só proposta
   não sustentava; dos capítulos 21 ao 24, oito de onze. É onde o livro para de
   construir e passa a descrever um chip que já existe — e é por isso que os
